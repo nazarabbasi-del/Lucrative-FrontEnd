@@ -1,0 +1,19 @@
+{
+  "name": "lucrative-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lucrative AI marketing site — built from Figma screenshots.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "serve": "npx serve dist"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0"
+  }
+}
