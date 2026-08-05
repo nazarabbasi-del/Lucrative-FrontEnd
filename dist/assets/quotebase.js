@@ -21798,7 +21798,7 @@
   function QuotebaseHero() {
     return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "container hero-grid", children: [
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebroww", children: "Quotebase for Contracting" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebroww", children: "Lucrative Quote" }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h1", { children: [
           "Generate sales quotes in seconds with ",
           /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "text-blue", children: "Quotebase" })
@@ -22324,20 +22324,34 @@
       a: "Most teams run one per quarter, weekly during a migration, or right before a major AI or automation rollout &mdash; whenever you want a clean, priced baseline of your data."
     }
   ];
-  function LoftFAQ() {
+  function FAQ() {
     const [open, setOpen] = (0, import_react13.useState)(0);
     return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "container faq-layout", children: [
       /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h2", { children: "FAQ\u2019s" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h2", { children: "FAQ's" }),
         /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { className: "sub", children: "Questions? Answered" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "reveal", children: faqs.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: `faq-item ${open === i ? "open" : ""}`, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("button", { className: "faq-q", onClick: () => setOpen(open === i ? -1 : i), children: [
-          f.q,
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "faq-a", dangerouslySetInnerHTML: { __html: f.a } })
-      ] }, f.q)) })
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "reveal", children: faqs.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(
+        "div",
+        {
+          className: `faq-item ${open === i ? "open" : ""}`,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(
+              "button",
+              {
+                className: "faq-q",
+                onClick: () => setOpen(open === i ? -1 : i),
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "faq-title", children: f.q })
+                ]
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "faq-a", children: f.a })
+          ]
+        },
+        f.q
+      )) })
     ] }) });
   }
 
@@ -22425,7 +22439,7 @@
       /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(QuotebaseMondayTimeline, {}),
       /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(QuotebaseAgentDiagram, {}),
       /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(QuotebaseOutcomes, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(LoftFAQ, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(FAQ, {}),
       /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(QuotebaseClosingCTA, {}),
       /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Footer, {})
     ] });

@@ -44,7 +44,7 @@ export default function LLMDiagram() {
               <p className="foot">YOUR KEY · TOKENS BILLED TO YOU</p>
             </div>
 
-            <span className="llm-flow-label" style={{ left: '23%', top: '38%' }}>CONTEXT →</span>
+            <span className="llm-flow-label" style={{ left: '40%',  top: '38%' }}>CONTEXT →</span>
 
             <div className="llm-bridge-col">
               <div className="llm-bridge"><VLogo size={40} /></div>

@@ -26,7 +26,7 @@ export default function GovernanceHero() {
           ))}
 
           <div className="gov-hero-copy">
-            <p className="eyebrow" style={{ fontSize: 13 }}>Revenue Governance &middot; HubSpot &middot; Salesforce &middot; GoHighLevel</p>
+            <p className="eyebrow" style={{ fontSize: 13 }}> Lucrative Governance &middot; HubSpot &middot; Salesforce &middot; GoHighLevel</p>
             <h1 className="gov-hero-h1">
               CRM audits that<br /><span className="text-blue">actually fix things.</span>
             </h1>

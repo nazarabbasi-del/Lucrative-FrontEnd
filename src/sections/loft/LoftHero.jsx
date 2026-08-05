@@ -9,7 +9,7 @@ export default function LoftHero() {
     <section className="hero" id="top">
       <div className="container hero-grid">
         <div className="reveal">
-          <p className="eyebrow">Loft for Sales</p>
+          <p className="eyebrow">Lucrative Sales</p>
           <h1>
             The CRM that grows with your business,<br /><span className="text-blue">not against it.</span>
           </h1>

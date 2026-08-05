@@ -722,13 +722,29 @@ ul { margin: 0; padding: 0; list-style: none; }
   box-shadow: 0 0 8px currentColor;
 }
 @keyframes orbit-cw {
-  from { transform: rotate(0deg) translateX(var(--r)) rotate(0deg); }
-  to   { transform: rotate(360deg) translateX(var(--r)) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(var(--r));
+  }
+
+  to {
+    transform: rotate(360deg) translateX(var(--r));
+  }
 }
-.orbit-mascot { position:absolute; width:150px; top:50%; transform:translateY(-50%); transition: transform .4s var(--ease); }
+.orbit-mascot { position:absolute; width:200px; top:50%; transform:translateY(-50%); transition: transform .4s var(--ease); }
 .orbit-mascot:hover { transform: translateY(-56%) scale(1.05); }
-.orbit-mascot.left { left: -40px; }
-.orbit-mascot.right { right: -40px; }
+.orbit-mascot.left {
+  left: -225px;
+}
+.orbit-mascot-squiggle {
+  position: absolute;
+  width: 34px;
+  top: -75px;
+  right: -190px;
+  opacity: .85;
+}
+.orbit-mascot.right {
+  right: -225px;
+}
 .orbit-mascot .squiggle { position:absolute; top:-28px; right:10px; width:34px; opacity:.8; }
 @media (max-width: 900px) {
   .orbit-mascot { display:none; }

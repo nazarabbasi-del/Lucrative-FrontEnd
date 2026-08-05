@@ -21852,7 +21852,7 @@
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "foot", children: "YOUR KEY \xB7 TOKENS BILLED TO YOU" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "llm-flow-label", style: { left: "23%", top: "38%" }, children: "CONTEXT \u2192" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "llm-flow-label", style: { left: "40%", top: "38%" }, children: "CONTEXT \u2192" }),
         /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "llm-bridge-col", children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "llm-bridge", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(VLogo, { size: 40 }) }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "llm-bridge-label", children: [
@@ -22732,9 +22732,15 @@
     { text: "Support", top: "50%", left: "2%", color: "var(--red-500)" }
   ];
   var dots = [
-    { color: "#1FB6A6", r: 320, dur: "14s", size: 46 },
-    { color: "#175FA4", r: 236, dur: "10s", size: 34 },
-    { color: "#E8A63D", r: 148, dur: "7s", size: 20 }
+    // Outer ring
+    { color: "#1FB6A6", r: 320, dur: "14s", delay: "0s" },
+    { color: "#1FB6A6", r: 320, dur: "14s", delay: "-7s" },
+    // Middle ring
+    { color: "#175FA4", r: 236, dur: "10s", delay: "0s" },
+    { color: "#175FA4", r: 236, dur: "10s", delay: "-5s" },
+    // Inner ring
+    { color: "#E8A63D", r: 148, dur: "7s", delay: "0s" },
+    { color: "#E8A63D", r: 148, dur: "7s", delay: "-3.5s" }
   ];
   function OrbitDiagram() {
     return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "container", children: [
@@ -22749,32 +22755,83 @@
         "No silos. No duplicated work."
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "orbit-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("img", { src: mascot_triangle_bee_default, alt: "", className: "orbit-mascot left" }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { style: { position: "relative" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("img", { src: mascot_blue_bench_default, alt: "", className: "orbit-mascot right" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("img", { src: icon_squiggle_default, alt: "", className: "squiggle", style: { position: "absolute", width: 34, top: -160, right: -70, opacity: 0.85 } })
-        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+          "img",
+          {
+            src: mascot_triangle_bee_default,
+            alt: "",
+            className: "orbit-mascot left"
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+          "img",
+          {
+            src: mascot_blue_bench_default,
+            alt: "",
+            className: "orbit-mascot right"
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+          "img",
+          {
+            src: icon_squiggle_default,
+            alt: "",
+            className: "orbit-mascot-squiggle"
+          }
+        ),
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "orbit-ring r1" }),
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "orbit-ring r2" }),
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "orbit-ring r3" }),
-        labels.map((l) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("span", { className: "orbit-label", style: { top: l.top, left: l.left, transform: "translate(-50%,-50%)", color: l.color }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) }),
+        labels.map((l) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
+          "span",
+          {
+            className: "orbit-label",
+            style: {
+              top: l.top,
+              left: l.left,
+              transform: "translate(-50%, -50%)",
+              color: l.color
+            },
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+                "svg",
+                {
+                  width: "12",
+                  height: "12",
+                  viewBox: "0 0 24 24",
+                  fill: "none",
+                  children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+                    "path",
+                    {
+                      d: "M5 13l4 4L19 7",
+                      stroke: "currentColor",
+                      strokeWidth: "3",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round"
+                    }
+                  )
+                }
+              ),
+              l.text
+            ]
+          },
           l.text
-        ] }, l.text)),
+        )),
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(VLogo, { size: 40 }) }),
         dots.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
           "div",
           {
             className: "orbit-dot",
             style: {
-              "--r": `${d.r / 2}px`,
-              width: 10,
-              height: 10,
-              marginTop: -5,
-              marginLeft: -5,
+              "--r": `${d.r}px`,
+              width: "10px",
+              height: "10px",
+              marginTop: "-5px",
+              marginLeft: "-5px",
               background: d.color,
               color: d.color,
-              animation: `orbit-cw ${d.dur} linear infinite`
+              animation: `orbit-cw ${d.dur} linear infinite`,
+              animationDelay: d.delay
             }
           },
           i

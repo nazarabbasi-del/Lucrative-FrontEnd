@@ -9,7 +9,7 @@ export default function QuotebaseHero() {
     <section className="hero" id="top">
       <div className="container hero-grid">
         <div className="reveal">
-          <p className="eyebroww">Quotebase for Contracting</p>
+          <p className="eyebroww">Lucrative Quote</p>
           <h1>
             Generate sales quotes in seconds with <span className="text-blue">Quotebase</span>
           </h1>

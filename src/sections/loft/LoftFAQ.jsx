@@ -31,24 +31,39 @@ const faqs = [
   },
 ];
 
-export default function LoftFAQ() {
+export default function FAQ() {
   const [open, setOpen] = useState(0);
 
   return (
     <section className="section section--grey" id="faq">
       <div className="container faq-layout">
         <div className="reveal">
-          <h2>FAQ&rsquo;s</h2>
+          <h2>FAQ's</h2>
           <p className="sub">Questions? Answered</p>
         </div>
+
         <div className="reveal">
           {faqs.map((f, i) => (
-            <div className={`faq-item ${open === i ? 'open' : ''}`} key={f.q}>
-              <button className="faq-q" onClick={() => setOpen(open === i ? -1 : i)}>
-                {f.q}
-                <span className="icon">{open === i ? '−' : '+'}</span>
+            <div
+              className={`faq-item ${open === i ? 'open' : ''}`}
+              key={f.q}
+            >
+              <button
+                className="faq-q"
+                onClick={() => setOpen(open === i ? -1 : i)}
+              >
+                <span className="icon">
+                  {open === i ? '−' : '+'}
+                </span>
+
+                <span className="faq-title">
+                  {f.q}
+                </span>
               </button>
-              <div className="faq-a" dangerouslySetInnerHTML={{ __html: f.a }} />
+
+              <div className="faq-a">
+                {f.a}
+              </div>
             </div>
           ))}
         </div>

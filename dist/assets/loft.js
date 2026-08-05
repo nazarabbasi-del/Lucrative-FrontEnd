@@ -21796,7 +21796,7 @@
   function LoftHero() {
     return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "container hero-grid", children: [
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", children: "Loft for Sales" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", children: "Lucrative Sales" }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h1", { children: [
           "The CRM that grows with your business,",
           /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
@@ -21867,16 +21867,77 @@
   // src/sections/loft/LoftUnifiedBrain.jsx
   var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
   var labels = [
-    { text: "One customer timeline", top: "0%", left: "50%", color: "var(--teal-600)" },
-    { text: "No duplicate contacts", top: "24%", left: "86%", color: "var(--blue-600)" },
-    { text: "No syncing issues", top: "76%", left: "86%", color: "var(--blue-600)" },
-    { text: "AI insights everywhere", top: "100%", left: "50%", color: "var(--gold-600)" },
-    { text: "No manual updates", top: "50%", left: "2%", color: "var(--red-500)" }
+    {
+      text: "One customer timeline",
+      top: "0%",
+      left: "50%",
+      color: "var(--teal-600)"
+    },
+    {
+      text: "No duplicate contacts",
+      top: "24%",
+      left: "86%",
+      color: "var(--blue-600)"
+    },
+    {
+      text: "No syncing issues",
+      top: "76%",
+      left: "86%",
+      color: "var(--blue-600)"
+    },
+    {
+      text: "AI insights everywhere",
+      top: "100%",
+      left: "50%",
+      color: "var(--gold-600)"
+    },
+    {
+      text: "No manual updates",
+      top: "50%",
+      left: "2%",
+      color: "var(--red-500)"
+    }
   ];
   var dots = [
-    { color: "#1FB6A6", r: 320, dur: "14s", size: 46 },
-    { color: "#175FA4", r: 236, dur: "10s", size: 34 },
-    { color: "#E8A63D", r: 148, dur: "7s", size: 20 }
+    // Outer ring
+    {
+      color: "#1FB6A6",
+      r: 320,
+      dur: "14s",
+      delay: "0s"
+    },
+    {
+      color: "#1FB6A6",
+      r: 320,
+      dur: "14s",
+      delay: "-7s"
+    },
+    // Middle ring
+    {
+      color: "#175FA4",
+      r: 236,
+      dur: "10s",
+      delay: "0s"
+    },
+    {
+      color: "#175FA4",
+      r: 236,
+      dur: "10s",
+      delay: "-5s"
+    },
+    // Inner ring
+    {
+      color: "#E8A63D",
+      r: 148,
+      dur: "7s",
+      delay: "0s"
+    },
+    {
+      color: "#E8A63D",
+      r: 148,
+      dur: "7s",
+      delay: "-3.5s"
+    }
   ];
   function LoftUnifiedBrain() {
     return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "container", children: [
@@ -21885,31 +21946,77 @@
         /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("br", {}),
         "One AI brain."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "section-sub reveal", children: "Loft unifies your whole revenue stack into one intelligent platform that automatically updates and gives your visibility" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "section-sub reveal", children: "Loft unifies your whole revenue stack into one intelligent platform that automatically updates and gives you visibility" }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "orbit-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("img", { src: mascot_triangle_sparkle_default, alt: "", className: "orbit-mascot left" }),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("img", { src: mascot_flower_bench_default, alt: "", className: "orbit-mascot right" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+          "img",
+          {
+            src: mascot_triangle_sparkle_default,
+            alt: "",
+            className: "orbit-mascot left"
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+          "img",
+          {
+            src: mascot_flower_bench_default,
+            alt: "",
+            className: "orbit-mascot right"
+          }
+        ),
         /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-ring r1" }),
         /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-ring r2" }),
         /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-ring r3" }),
-        labels.map((l) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "orbit-label", style: { top: l.top, left: l.left, transform: "translate(-50%,-50%)", color: l.color }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) }),
+        labels.map((l) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
+          "span",
+          {
+            className: "orbit-label",
+            style: {
+              top: l.top,
+              left: l.left,
+              transform: "translate(-50%, -50%)",
+              color: l.color
+            },
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+                "svg",
+                {
+                  width: "12",
+                  height: "12",
+                  viewBox: "0 0 24 24",
+                  fill: "none",
+                  children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+                    "path",
+                    {
+                      d: "M5 13l4 4L19 7",
+                      stroke: "currentColor",
+                      strokeWidth: "3",
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round"
+                    }
+                  )
+                }
+              ),
+              l.text
+            ]
+          },
           l.text
-        ] }, l.text)),
+        )),
         /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(VLogo, { size: 40 }) }),
         dots.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "div",
           {
             className: "orbit-dot",
             style: {
-              "--r": `${d.r / 2}px`,
-              width: 10,
-              height: 10,
-              marginTop: -5,
-              marginLeft: -5,
+              "--r": `${d.r}px`,
+              width: "10px",
+              height: "10px",
+              marginTop: "-5px",
+              marginLeft: "-5px",
               background: d.color,
               color: d.color,
-              animation: `orbit-cw ${d.dur} linear infinite`
+              animation: `orbit-cw ${d.dur} linear infinite`,
+              animationDelay: d.delay
             }
           },
           i
@@ -22495,20 +22602,34 @@
       a: "Most teams run one per quarter, weekly during a migration, or right before a major AI or automation rollout &mdash; whenever you want a clean, priced baseline of your data."
     }
   ];
-  function LoftFAQ() {
+  function FAQ() {
     const [open, setOpen] = (0, import_react15.useState)(0);
     return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "container faq-layout", children: [
       /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h2", { children: "FAQ\u2019s" }),
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h2", { children: "FAQ's" }),
         /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { className: "sub", children: "Questions? Answered" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "reveal", children: faqs.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: `faq-item ${open === i ? "open" : ""}`, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("button", { className: "faq-q", onClick: () => setOpen(open === i ? -1 : i), children: [
-          f.q,
-          /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "faq-a", dangerouslySetInnerHTML: { __html: f.a } })
-      ] }, f.q)) })
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "reveal", children: faqs.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
+        "div",
+        {
+          className: `faq-item ${open === i ? "open" : ""}`,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
+              "button",
+              {
+                className: "faq-q",
+                onClick: () => setOpen(open === i ? -1 : i),
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "faq-title", children: f.q })
+                ]
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "faq-a", children: f.a })
+          ]
+        },
+        f.q
+      )) })
     ] }) });
   }
 
@@ -22593,7 +22714,7 @@
       /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftComparison, {}),
       /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftPersonas, {}),
       /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(GovernancePricing, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftFAQ, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(FAQ, {}),
       /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftClosingCTA, {}),
       /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Footer, {})
     ] });

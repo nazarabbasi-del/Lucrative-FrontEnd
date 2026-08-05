@@ -13,54 +13,119 @@ const labels = [
 ];
 
 const dots = [
-  { color: '#1FB6A6', r: 320, dur: '14s', size: 46 },
-  { color: '#175FA4', r: 236, dur: '10s', size: 34 },
-  { color: '#E8A63D', r: 148, dur: '7s', size: 20 },
+  // Outer ring
+  { color: '#1FB6A6', r: 320, dur: '14s', delay: '0s' },
+  { color: '#1FB6A6', r: 320, dur: '14s', delay: '-7s' },
+
+  // Middle ring
+  { color: '#175FA4', r: 236, dur: '10s', delay: '0s' },
+  { color: '#175FA4', r: 236, dur: '10s', delay: '-5s' },
+
+  // Inner ring
+  { color: '#E8A63D', r: 148, dur: '7s', delay: '0s' },
+  { color: '#E8A63D', r: 148, dur: '7s', delay: '-3.5s' },
 ];
 
 export default function OrbitDiagram() {
   return (
     <section className="section orbit-section">
       <div className="container">
-        <h2 className="section-title reveal">Every customer. Every workflow.<br />One AI brain.</h2>
-        <p className="section-sub reveal">Every module shares the same customer record, governance engine, and AI intelligence.<br />No silos. No duplicated work.</p>
+
+        <h2 className="section-title reveal">
+          Every customer. Every workflow.
+          <br />
+          One AI brain.
+        </h2>
+
+        <p className="section-sub reveal">
+          Every module shares the same customer record, governance engine, and AI intelligence.
+          <br />
+          No silos. No duplicated work.
+        </p>
 
         <div className="orbit-wrap reveal">
-          <img src={mascotBee} alt="" className="orbit-mascot left" />
-          <div style={{ position: 'relative' }}>
-            <img src={mascotBench} alt="" className="orbit-mascot right" />
-            <img src={squiggle} alt="" className="squiggle" style={{ position: 'absolute', width: 34, top: -160, right: -70, opacity: .85 }} />
-          </div>
 
+          {/* Left mascot */}
+          <img
+            src={mascotBee}
+            alt=""
+            className="orbit-mascot left"
+          />
+
+          {/* Right mascot */}
+          <img
+            src={mascotBench}
+            alt=""
+            className="orbit-mascot right"
+          />
+
+          {/* Decorative squiggle */}
+          <img
+            src={squiggle}
+            alt=""
+            className="orbit-mascot-squiggle"
+          />
+
+          {/* Orbit rings */}
           <div className="orbit-ring r1" />
           <div className="orbit-ring r2" />
           <div className="orbit-ring r3" />
 
+          {/* Orbit labels */}
           {labels.map((l) => (
-            <span className="orbit-label" key={l.text} style={{ top: l.top, left: l.left, transform: 'translate(-50%,-50%)', color: l.color }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <span
+              className="orbit-label"
+              key={l.text}
+              style={{
+                top: l.top,
+                left: l.left,
+                transform: 'translate(-50%, -50%)',
+                color: l.color,
+              }}
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M5 13l4 4L19 7"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+
               {l.text}
             </span>
           ))}
 
-          <div className="orbit-center"><VLogo size={40} /></div>
+          {/* Center AI brain */}
+          <div className="orbit-center">
+            <VLogo size={40} />
+          </div>
 
+          {/* Moving dots */}
           {dots.map((d, i) => (
             <div
               className="orbit-dot"
               key={i}
               style={{
-                '--r': `${d.r / 2}px`,
-                width: 10,
-                height: 10,
-                marginTop: -5,
-                marginLeft: -5,
+                '--r': `${d.r}px`,
+                width: '10px',
+                height: '10px',
+                marginTop: '-5px',
+                marginLeft: '-5px',
                 background: d.color,
                 color: d.color,
                 animation: `orbit-cw ${d.dur} linear infinite`,
+                animationDelay: d.delay,
               }}
             />
           ))}
+
         </div>
       </div>
     </section>

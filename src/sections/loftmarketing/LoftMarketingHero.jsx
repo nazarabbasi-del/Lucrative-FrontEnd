@@ -93,7 +93,7 @@ export default function LoftMarketingHero() {
     <section className="hero" id="top">
       <div className="container hero-grid">
         <div className="reveal">
-          <p className="eyebrow">Loft for Marketing</p>
+          <p className="eyebrow">Lucrative Marketing</p>
           <h1>
             <span className="text-blue">AI Marketing<br />Workspace</span>
           </h1>

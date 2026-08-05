@@ -21809,7 +21809,7 @@
         p.text
       )),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "gov-hero-copy", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", style: { fontSize: 13 }, children: "Revenue Governance \xB7 HubSpot \xB7 Salesforce \xB7 GoHighLevel" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", style: { fontSize: 13 }, children: " Lucrative Governance \xB7 HubSpot \xB7 Salesforce \xB7 GoHighLevel" }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h1", { className: "gov-hero-h1", children: [
           "CRM audits that",
           /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),

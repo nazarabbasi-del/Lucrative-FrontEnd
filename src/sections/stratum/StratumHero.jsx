@@ -31,7 +31,7 @@ export default function StratumHero() {
           ))}
 
           <div className="gov-hero-copy">
-            <p className="eyebrow" style={{ fontSize: 13 }}>Stratum for Insights</p>
+            <p className="eyebrow" style={{ fontSize: 13 }}>Lucrative Analytics</p>
             <h1 className="gov-hero-h1">
               <span className="text-blue">Stratum</span> turn all your business data into instant answers.
             </h1>
