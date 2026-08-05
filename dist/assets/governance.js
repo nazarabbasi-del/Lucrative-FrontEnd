@@ -21788,38 +21788,92 @@
   var import_react4 = __toESM(require_react(), 1);
   var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
   var floatPills = [
-    { text: "Set Preferences", check: true, top: "18%", left: "-2%" },
-    { text: "Fix issues", check: false, top: "18%", right: "-2%" },
-    { text: "Start Audit", check: true, top: "46%", left: "-8%" },
-    { text: "AI Suggestions", check: false, dark: true, top: "46%", right: "-8%" },
-    { text: "Get Report", check: true, bottom: "-4%", left: "50%", transform: "translateX(-50%)" }
+    {
+      text: "Set Preferences",
+      step: "step1",
+      top: "18%",
+      left: "40px",
+      transform: "translate(-50%, -50%)"
+    },
+    {
+      text: "Fix issues",
+      step: "step4",
+      top: "18%",
+      right: "40px",
+      transform: "translate(50%, -50%)"
+    },
+    {
+      text: "Start Audit",
+      step: "step2",
+      top: "50%",
+      left: "40px",
+      transform: "translate(-50%, -50%)"
+    },
+    {
+      text: "AI Suggestions",
+      dark: true,
+      step: "step5",
+      top: "50%",
+      right: "40px",
+      transform: "translate(50%, -50%)"
+    },
+    {
+      text: "Get Report",
+      step: "step3",
+      bottom: "30px",
+      left: "50%",
+      transform: "translate(-50%, 50%)"
+    }
   ];
   function GovernanceHero() {
     return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "hero gov-hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "gov-hero-frame reveal", children: [
       floatPills.map((p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
         "span",
         {
-          className: `gov-float-pill${p.dark ? " dark" : ""}`,
-          style: { top: p.top, left: p.left, right: p.right, bottom: p.bottom, transform: p.transform },
+          className: `gov-float-pill ${p.step}${p.dark ? " dark" : ""}`,
+          style: {
+            top: p.top,
+            left: p.left,
+            right: p.right,
+            bottom: p.bottom,
+            transform: p.transform
+          },
           children: [
             p.text,
-            p.check ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(IconCheck, {}) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "gov-float-pill-ring" })
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "pill-icon", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "spinner" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(IconCheck, { className: "tick" })
+            ] })
           ]
         },
         p.text
       )),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "gov-hero-copy", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", style: { fontSize: 13 }, children: " Lucrative Governance \xB7 HubSpot \xB7 Salesforce \xB7 GoHighLevel" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+          "p",
+          {
+            className: "eyebrow",
+            style: { fontSize: 13 },
+            children: "Lucrative Governance \xB7 HubSpot \xB7 Salesforce \xB7 GoHighLevel"
+          }
+        ),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h1", { className: "gov-hero-h1", children: [
           "CRM audits that",
           /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
           /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "text-blue", children: "actually fix things." })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "gov-hero-lead", children: "Lucrative scans your CRM and every connected app in five minutes, prices every issue in dollars, then drafts the fix \u2014 and runs it once you approve. Your data gets healthier. Your team keeps the credit." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "hero-ctas", style: { justifyContent: "center" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
-        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
+          "div",
+          {
+            className: "hero-ctas",
+            style: { justifyContent: "center" },
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
+            ]
+          }
+        ),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "gov-trust-row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(IconCheck, {}),

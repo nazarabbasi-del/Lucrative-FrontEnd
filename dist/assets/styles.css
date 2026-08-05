@@ -1432,7 +1432,32 @@ table.comparison tbody tr:hover {
 
 /* --- Hero --- */
 .gov-hero { padding: 50px 0 60px; }
-.gov-hero-frame { position: relative; max-width: 720px; margin: 0 auto; padding: 40px 60px; }
+.gov-hero-frame{
+    position:relative;
+    max-width:1080px;
+    margin:auto;
+    padding:80px 110px;
+    border-radius:40px;
+}
+.gov-hero-frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:40px;
+    right:40px;
+    top:30px;
+    bottom:30px;
+
+    border-left:2px solid #E7EDF5;
+    border-right:2px solid #E7EDF5;
+    border-bottom:2px solid #E7EDF5;
+
+    border-radius:0 0 34px 34px;
+
+    z-index:0;
+}
 .gov-hero-copy { text-align: center; }
 .gov-hero-h1 {
   font-family: var(--font-head);
@@ -1443,25 +1468,33 @@ table.comparison tbody tr:hover {
   margin-top: 16px;
 }
 .gov-hero-lead { max-width: 560px; margin: 20px auto 0; color: var(--text-600); font-size: 20px; font-weight: 400; line-height: 1.7; }
-.gov-trust-row { display: flex; justify-content: flex-start; gap: 26px; flex-wrap: wrap; margin-top: 22px; }
+.gov-trust-row { display: flex; justify-content: center; gap: 26px; flex-wrap: wrap; margin-top: 22px; }
 .gov-trust-row span { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-600); font-weight: 600; }
 .gov-trust-row svg { color: var(--blue-600); }
 
-.gov-float-pill {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--white);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-400);
-  box-shadow: var(--shadow-sm);
-  white-space: nowrap;
-  animation: floaty 6s ease-in-out infinite;
+.gov-float-pill{
+
+    position:absolute;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 22px;
+
+    background:#fff;
+
+    border:1px solid #DCE5F1;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    color:#7B8796;
+
+    z-index:5;
+
+    transition:.35s;
 }
 .gov-float-pill svg { color: var(--blue-600); }
 .gov-float-pill.dark { background: var(--navy-900); color: #fff; border-color: var(--navy-900); }
@@ -2092,4 +2125,413 @@ table.comparison tbody tr:hover {
   .qb-agent-col, .qb-agent-node--vert, .qb-agent-center { width:100%; max-width:340px; }
   .qb-agent-col--left .qb-agent-node::after, .qb-agent-col--right .qb-agent-node::before { display:none; }
   .qb-agent-center::before { display:none; }
+}
+
+/* ==========================================
+   Workflow Animation
+========================================== */
+
+@keyframes workflow {
+
+  0% {
+    background:#fff;
+    color:#7B8796;
+    border-color:#DCE5F1;
+  }
+
+  12% {
+    background:#E9F4FF;
+    border-color:#73B7FF;
+    box-shadow:0 0 0 8px rgba(80,160,255,.15);
+    color:#1760A5;
+  }
+
+  25% {
+    background:#163B6D;
+    border-color:#163B6D;
+    color:#fff;
+    box-shadow:none;
+  }
+
+  100% {
+    background:#163B6D;
+    border-color:#163B6D;
+    color:#fff;
+  }
+
+}
+@keyframes pulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+
+.pill-1,
+.pill-2,
+.pill-3{
+
+animation-name:workflow,pulse;
+
+animation-duration:9s,1.5s;
+
+animation-iteration-count:infinite,infinite;
+}
+.pill-1{
+    left:0;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.pill-2{
+    right:0;
+    top:50%;
+    transform:translate(50%,-50%);
+}
+
+.pill-3{
+    left:50%;
+    bottom:0;
+    transform:translate(-50%,50%);
+}
+.pill-icon{
+    width:16px;
+    height:16px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.spinner{
+    width:14px;
+    height:14px;
+    border:2px solid #BFD8FF;      /* Light blue ring */
+    border-top-color:#2563EB;      /* Dark blue moving part */
+    border-radius:50%;
+    position:absolute;
+    opacity:0;
+}
+.tick{
+    position:absolute;
+    opacity:0;
+    color:#fff;
+    stroke:#fff;
+
+}
+@keyframes spin{
+
+from{
+    transform:rotate(0deg);
+}
+
+to{
+    transform:rotate(360deg);
+}
+
+}
+@keyframes step1{
+
+0%,8%{
+    background:#fff;
+    color:#6F7C90;
+    border-color:#DCE5F1;
+}
+
+8%,18%{
+    background:#EAF5FF;
+    color:#2563EB;
+    border-color:#73B7FF;
+}
+
+18%,100%{
+    background:#163B6D;
+    color:#fff;
+    border-color:#163B6D;
+}
+
+}
+@keyframes step2{
+
+0%,25%{
+    background:#fff;
+    color:#6F7C90;
+    border-color:#DCE5F1;
+}
+
+25%,35%{
+    background:#EAF5FF;
+    color:#2563EB;
+    border-color:#73B7FF;
+}
+
+35%,100%{
+    background:#163B6D;
+    color:#fff;
+    border-color:#163B6D;
+}
+
+}
+@keyframes step3{
+
+0%,52%{
+    background:#fff;
+    color:#6F7C90;
+    border-color:#DCE5F1;
+}
+
+52%,62%{
+    background:#EAF5FF;
+    color:#2563EB;
+    border-color:#73B7FF;
+}
+
+62%,100%{
+    background:#163B6D;
+    color:#fff;
+    border-color:#163B6D;
+}
+
+}
+.pill-1 .spinner{
+    opacity:0;
+    animation:
+        spin .8s linear infinite,
+        showSpinner1 12s linear infinite;
+}
+
+.pill-2 .spinner{
+    opacity:0;
+    animation:
+        spin .8s linear infinite,
+        showSpinner3 12s linear infinite;
+}
+
+.pill-3 .spinner{
+    opacity:0;
+    animation:
+        spin .8s linear infinite,
+        showSpinner2 12s linear infinite;
+}
+.pill-1 .tick{
+    opacity:0;
+    animation:showTick1 12s linear infinite;
+}
+
+
+.pill-2 .tick{
+    opacity:0;
+    animation:showTick3 12s linear infinite;
+}
+
+.pill-3 .tick{
+    opacity:0;
+    animation:showTick2 12s linear infinite;
+}
+
+@keyframes showSpinner1{
+    0%,15%{opacity:1;}
+    16%,100%{opacity:0;}
+}
+
+@keyframes showTick1{
+    0%,15%{opacity:0;}
+    16%,100%{opacity:1;}
+}
+
+
+@keyframes showSpinner2{
+    0%,33%{opacity:0;}
+    34%,49%{opacity:1;}
+    50%,100%{opacity:0;}
+}
+
+@keyframes showTick2{
+    0%,49%{opacity:0;}
+    50%,100%{opacity:1;}
+}
+
+
+@keyframes showSpinner3{
+    0%,67%{opacity:0;}
+    68%,83%{opacity:1;}
+    84%,100%{opacity:0;}
+}
+
+@keyframes showTick3{
+    0%,83%{opacity:0;}
+    84%,100%{opacity:1;}
+}
+
+/* ---------- Governance Hero Workflow ---------- */
+
+.step1{ animation: step1 10s infinite; }
+.step2{ animation: step2 10s infinite; }
+.step3{ animation: step3 10s infinite; }
+.step4{ animation: step4New 10s infinite; }
+.step5{ animation: step5New 10s infinite; }
+
+@keyframes step4New{
+
+0%,80%{
+    background:#fff;
+    color:#7B8796;
+    border-color:#DCE5F1;
+}
+
+90%{
+    background:#E9F4FF;
+    color:#1760A5;
+    border-color:#73B7FF;
+    box-shadow:0 0 0 8px rgba(80,160,255,.15);
+}
+
+100%{
+    background:#163B6D;
+    border-color:#163B6D;
+    color:#fff;
+}
+
+}
+
+@keyframes step5New{
+
+0%,60%{
+    background:#fff;
+    color:#7B8796;
+    border-color:#DCE5F1;
+}
+
+70%{
+    background:#E9F4FF;
+    color:#1760A5;
+    border-color:#73B7FF;
+    box-shadow:0 0 0 8px rgba(80,160,255,.15);
+}
+
+82%,100%{
+    background:#163B6D;
+    border-color:#163B6D;
+    color:#fff;
+}
+
+}
+
+/* ==========================
+   GOVERNANCE SPINNER
+========================== */
+
+.step1 .spinner{
+    animation: spin .8s linear infinite, govShowSpinner1 10s infinite;
+}
+
+.step2 .spinner{
+    animation: spin .8s linear infinite, govShowSpinner2 10s infinite;
+}
+
+.step3 .spinner{
+    animation: spin .8s linear infinite, govShowSpinner3 10s infinite;
+}
+
+.step5 .spinner{
+    animation: spin .8s linear infinite, govShowSpinner4 10s infinite;
+}
+
+.step4 .spinner{
+    animation: spin .8s linear infinite, govShowSpinner5 10s infinite;
+}
+
+/* ==========================
+   GOVERNANCE TICK
+========================== */
+
+.step1 .tick{
+    animation: govShowTick1 10s infinite;
+}
+
+.step2 .tick{
+    animation: govShowTick2 10s infinite;
+}
+
+.step3 .tick{
+    animation: govShowTick3 10s infinite;
+}
+
+.step5 .tick{
+    animation: govShowTick4 10s infinite;
+}
+
+.step4 .tick{
+    animation: govShowTick5 10s infinite;
+}
+
+/* ==========================
+   SPINNER VISIBILITY
+========================== */
+
+@keyframes govShowSpinner1{
+    0%,10%{opacity:1;}
+    11%,100%{opacity:0;}
+}
+
+@keyframes govShowSpinner2{
+    0%,20%{opacity:0;}
+    20%,30%{opacity:1;}
+    31%,100%{opacity:0;}
+}
+
+@keyframes govShowSpinner3{
+    0%,40%{opacity:0;}
+    40%,50%{opacity:1;}
+    51%,100%{opacity:0;}
+}
+
+@keyframes govShowSpinner4{
+    0%,60%{opacity:0;}
+    60%,70%{opacity:1;}
+    71%,100%{opacity:0;}
+}
+
+@keyframes govShowSpinner5{
+    0%,80%{opacity:0;}
+    80%,90%{opacity:1;}
+    91%,100%{opacity:0;}
+}
+
+/* ==========================
+   TICK VISIBILITY
+========================== */
+
+@keyframes govShowTick1{
+    0%,10%{opacity:0;}
+    11%,100%{opacity:1;}
+}
+
+@keyframes govShowTick2{
+    0%,30%{opacity:0;}
+    31%,100%{opacity:1;}
+}
+
+@keyframes govShowTick3{
+    0%,50%{opacity:0;}
+    51%,100%{opacity:1;}
+}
+
+@keyframes govShowTick4{
+    0%,70%{opacity:0;}
+    71%,100%{opacity:1;}
+}
+
+@keyframes govShowTick5{
+    0%,90%{opacity:0;}
+    91%,100%{opacity:1;}
 }

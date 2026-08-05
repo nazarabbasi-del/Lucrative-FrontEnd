@@ -2,11 +2,10 @@ import React from 'react';
 import { IconCheck } from '../../icons.jsx';
 
 const floatPills = [
-  { text: 'Ask', check: true, top: '20%', left: '-4%' },
-  { text: 'Approve', check: false, dark: true, top: '20%', right: '-4%' },
-  { text: 'Understand', check: true, bottom: '-4%', left: '50%', transform: 'translateX(-50%)' },
+  { text: 'Ask' },
+  { text: 'Approve', dark: true },
+  { text: 'Understand' },
 ];
-
 const checklist = [
   'Connect in under 5 minutes',
   '16+ integrations available',
@@ -19,14 +18,16 @@ export default function StratumHero() {
     <section className="hero gov-hero" id="top">
       <div className="container">
         <div className="gov-hero-frame reveal">
-          {floatPills.map((p) => (
+          {floatPills.map((p, index) => (
             <span
               key={p.text}
-              className={`gov-float-pill${p.dark ? ' dark' : ''}`}
-              style={{ top: p.top, left: p.left, right: p.right, bottom: p.bottom, transform: p.transform }}
+              className={`gov-float-pill pill-${index + 1}${p.dark ? ' dark' : ''}`}
             >
               {p.text}
-              {p.check ? <IconCheck /> : <span className="gov-float-pill-ring" />}
+              <span className="pill-icon">
+              <span className="spinner"></span>
+              <IconCheck className="tick" />
+              </span>
             </span>
           ))}
 

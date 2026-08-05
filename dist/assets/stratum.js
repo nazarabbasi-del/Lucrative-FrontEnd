@@ -21785,9 +21785,9 @@
   var import_react4 = __toESM(require_react(), 1);
   var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
   var floatPills = [
-    { text: "Ask", check: true, top: "20%", left: "-4%" },
-    { text: "Approve", check: false, dark: true, top: "20%", right: "-4%" },
-    { text: "Understand", check: true, bottom: "-4%", left: "50%", transform: "translateX(-50%)" }
+    { text: "Ask" },
+    { text: "Approve", dark: true },
+    { text: "Understand" }
   ];
   var checklist = [
     "Connect in under 5 minutes",
@@ -21797,14 +21797,16 @@
   ];
   function StratumHero() {
     return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "hero gov-hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "gov-hero-frame reveal", children: [
-      floatPills.map((p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
+      floatPills.map((p, index) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
         "span",
         {
-          className: `gov-float-pill${p.dark ? " dark" : ""}`,
-          style: { top: p.top, left: p.left, right: p.right, bottom: p.bottom, transform: p.transform },
+          className: `gov-float-pill pill-${index + 1}${p.dark ? " dark" : ""}`,
           children: [
             p.text,
-            p.check ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(IconCheck, {}) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "gov-float-pill-ring" })
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "pill-icon", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "spinner" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(IconCheck, { className: "tick" })
+            ] })
           ]
         },
         p.text
