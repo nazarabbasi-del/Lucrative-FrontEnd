@@ -190,9 +190,7 @@ export default function ProblemTabs() {
                     <div className="copy">
                       <h3>{t.title}</h3>
                       <p>{t.desc}</p>
-                      {i >= 3 && (
-                        <img src={mascots[i]} alt="" style={{ width: 110, marginTop: 24, opacity: .9 }} />
-                      )}
+              
                     </div>
                     <div className="tab-visual">{t.visual}</div>
                   </div>

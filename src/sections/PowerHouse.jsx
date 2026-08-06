@@ -85,11 +85,55 @@ function PipelineBarsCard() {
 }
 
 const cards = [
-  { tag: 'Revenue Operations', tagColor: 'var(--blue-600)', title: 'RevOps framework', pills: ['No SQL', 'Answers in seconds'], visual: <ScoreCard />, size: 'lg' },
-  { tag: 'AI Data Governance', tagColor: 'var(--gold-600)', title: 'AI Based Data Governance & hygiene', pills: ['Semantic layer', "Your funnel, resolved"], visual: <GovernanceCard />, size: 'lg' },
-  { tag: 'Migration', tagColor: 'var(--teal-600)', title: 'One Click Migration from your old system', pills: ['Markov + Shapley', '8 models, one view'], visual: <MigrationCard />, size: 'sm' },
-  { tag: 'Sales', tagColor: 'var(--red-600)', title: 'AI Native Sales Coach', pills: ['Randomized holdouts', '95% confidence'], visual: <HoldoutCard />, size: 'sm' },
-  { tag: 'Lead Scoring', tagColor: 'var(--blue-600)', title: 'AI Scoring for Leads and Accounts', pills: ['Prompt to dashboard', 'Always live'], visual: <PipelineBarsCard />, size: 'sm' },
+  {
+    tag: 'Revenue Operations',
+    tagColor: '#185FA5',
+    tagBg: '#185FA51A',
+    title: 'Zero bloated sales que',
+    pills: ['No SQL', 'Answers in seconds'],
+    visual: <ScoreCard />,
+    size: 'lg'
+  },
+
+  {
+    tag: 'Lead View',
+    tagColor: '#EDB23E',
+    tagBg: '#EDB23E1A',
+    title: 'AI Based Data Governance & hygiene',
+    pills: ['Semantic layer', 'Your funnel, resolved'],
+    visual: <GovernanceCard />,
+    size: 'lg'
+  },
+
+  {
+    tag: 'Marketing Mission Control',
+    tagColor: '#12AFAE',
+    tagBg: '#12AFAE1A',
+    title: 'One Click Migration from your old system',
+    pills: ['Markov + Shapley', '8 models, one view'],
+    visual: <MigrationCard />,
+    size: 'sm'
+  },
+
+  {
+    tag: 'Sales',
+    tagColor: '#EC736E',
+    tagBg: '#EC736E1A',
+    title: 'AI Native Sales Coach',
+    pills: ['Randomized holdouts', '95% confidence'],
+    visual: <HoldoutCard />,
+    size: 'sm'
+  },
+
+  {
+    tag: 'AI Lead scoring based on your preferences',
+    tagColor: '#0F2E4D',
+    tagBg: '#0F2E4D1A',
+    title: 'AI Scoring for Leads and Accounts',
+    pills: ['Prompt to dashboard', 'Always live'],
+    visual: <PipelineBarsCard />,
+    size: 'sm'
+  },
 ];
 
 export default function PowerHouse() {
@@ -111,7 +155,7 @@ export default function PowerHouse() {
           {cards.filter((c) => c.size === 'lg').map((c) => (
             <div className="ph-card reveal" style={{ '--tagc': c.tagColor }} key={c.title}>
               {c.visual}
-              <span className="tag-pill" style={{ color: c.tagColor, marginTop: 20 }}>{c.tag}</span>
+              <span className="tag-pill" style={{ color: c.tagColor, marginTop: 20,backgroundColor: c.tagBg }}>{c.tag}</span>
               <h3>{c.title}</h3>
               <div className="ph-pills">{c.pills.map((p) => <span className="cap-pill" key={p}>{p}</span>)}</div>
             </div>
@@ -121,7 +165,7 @@ export default function PowerHouse() {
           {cards.filter((c) => c.size === 'sm').map((c) => (
             <div className="ph-card reveal" style={{ '--tagc': c.tagColor }} key={c.title}>
               {c.visual}
-              <span className="tag-pill" style={{ color: c.tagColor, marginTop: 20 }}>{c.tag}</span>
+              <span className="tag-pill" style={{ color: c.tagColor, marginTop: 20, backgroundColor: c.tagBg }}>{c.tag}</span>
               <h3>{c.title}</h3>
               <div className="ph-pills">{c.pills.map((p) => <span className="cap-pill" key={p}>{p}</span>)}</div>
             </div>

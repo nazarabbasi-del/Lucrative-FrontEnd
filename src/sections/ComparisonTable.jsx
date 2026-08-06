@@ -3,15 +3,15 @@ import { IconCheck } from '../icons.jsx';
 import { VLogo } from '../icons.jsx';
 
 const rows = [
-  ['AI-native platform', 'yes', 'Partial', 'Partial', 'No'],
+  ['AI-native platform', 'yes', 'Add-ons', 'Partial', 'No'],
   ['Built-in CRM', 'yes', 'muted-yes', 'muted-yes', 'No'],
   ['AI business intelligence', 'yes', 'Limited', 'Limited', 'No'],
-  ['CRM governance', 'yes', 'Add-ons', 'No', 'No'],
-  ['AI quote generation', 'yes', 'CPQ required', 'No', 'No'],
+  ['CRM governance', 'yes', 'No', 'No', 'No'],
+  ['AI quote generation', 'yes', 'CPQ required', 'Limited', 'No'],
   ['Deterministic pricing', 'yes', 'Add-on', 'No', 'No'],
   ['Unified customer intelligence', 'yes', 'Partial', 'Partial', 'No'],
-  ['Natural-language analytics', 'yes', 'Limited', 'No', 'No'],
-  ['Bring your own LLM', 'yes', 'No', 'No', 'No'],
+  ['Conversational Analytics analytics', 'yes', 'Limited', 'No', 'No'],
+  ['30 days unused seat waiver', 'yes', 'No', 'No', 'No'],
   ['Prompt-driven suite control', 'yes', 'No', 'No', 'No'],
 ];
 
@@ -59,14 +59,7 @@ export default function ComparisonTable() {
           </table>
         </div>
 
-        <div className="mini-cta reveal">
-          <p className="mini-cta-tag">Truly built to scale your business work with AI hands to hands</p>
-          <div className="mini-cta-btns">
-            <a href="#audit" className="btn btn-primary">Signup Now</a>
-            <a href="#video" className="btn btn-outline">Watch Demo</a>
-          </div>
-          <a href="#top" className="logo mini-cta-logo">LUCRAT<VLogo size={20} />E&nbsp;AI</a>
-        </div>
+        
       </div>
     </section>
   );

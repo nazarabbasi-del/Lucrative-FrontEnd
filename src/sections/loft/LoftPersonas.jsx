@@ -1,85 +1,172 @@
 import React, { useState } from 'react';
 import CountUp from '../governance/anim/CountUp.jsx';
+
 import avatarBlue from '../../assets/avatar-blue.png';
+import avatarCloud from '../../assets/avatar-cloud.png';
+import avatarFlower from '../../assets/avatar-flower.png';
 import avatarTriangle from '../../assets/avatar-triangle.png';
+
 import personaCloud from '../../assets/persona-cloud.png';
 import personaGhost from '../../assets/persona-ghost.png';
 import personaFlower from '../../assets/persona-flower.png';
 
 const personas = [
   {
-    key: 'Unified Platform', avatar: avatarBlue, img: avatarBlue, tag: 'UNIFIED PLATFORM', color: '#175FA4',
+    key: 'Unified Platform',
+    avatar: avatarBlue,
+    img: avatarBlue,
+    tag: 'UNIFIED PLATFORM',
+    color: '#175FA4',
+
     title: 'One unified platform',
-    desc: 'Stop asking for headcount you won&rsquo;t get. Lucrative gives one RevOps person the leverage of a governance team &mdash; a scored audit every quarter, quantified findings, and drafted fixes you approve.',
-    quote: '&ldquo;Governance without hiring another admin.&rdquo;',
+
+    desc: 'Stop asking for headcount you won’t get. Lucrative gives one RevOps person the leverage of a governance team — a scored audit every quarter, quantified findings, and drafted fixes you approve.',
+
+    quote: '“Governance without hiring another admin.”',
+
     card: {
-      label: 'YOUR WEEKLY BRIEF', amount: { to: 412, prefix: '$', suffix: 'K' }, sub: 'HubSpot &middot; Marketing Hub Enterprise',
+      label: 'YOUR FIRST AUDIT',
+      amount: {
+        to: 87,
+        suffix: '/100',
+      },
+      sub: 'HubSpot · Marketing Hub Enterprise',
+
       rows: [
-        ['Scale Founder Story', '#D5453F', { to: 3.1, decimals: 1, suffix: 'x' }],
-        ['Q4 nurture stalling', '#D6931F', { to: -18, suffix: '%' }],
-        ['Retest paid search geo', '#175FA4', null],
+        ['Legacy fields to retire', '#D5453F', { to: 23 }],
+        ['Orphaned workflows', '#D6931F', { to: 8 }],
+        [
+          'Marketing seats freed',
+          '#175FA4',
+          { to: 2.4, decimals: 1, prefix: '$', suffix: 'k/month' },
+        ],
       ],
-      foot: 'On brief. One brief. Every channel, ranked by dollars.',
+
+      foot: 'One workspace. One score to defend at every QBR.',
     },
   },
+
   {
-    key: 'Cost', avatar: personaCloud, img: personaCloud, tag: 'COST', color: '#2F72C4',
-    title: 'Pay for what you use. Nothing else.',
-    desc: 'No seat fees, no feature-tier billing event every time you grow. Credits don&rsquo;t expire and every plan gets the same AI &mdash; not a stripped-down version.',
-    quote: '&ldquo;What would switching actually save us this quarter?&rdquo;',
+    key: 'Cost',
+    avatar: avatarCloud,
+    img: personaCloud,
+    tag: 'COST',
+    color: '#2F72C4',
+
+    title: 'Predictable software costs',
+
+    desc: 'Salesforce for the enterprise motion. HubSpot for marketing. GoHighLevel for the acquisitions. Audit each independently in a single workspace and see a unified score you can defend to the board.',
+
+    quote: '“One tool that speaks all three.”',
+
     card: {
-      label: 'YOUR WEEKLY BRIEF', amount: { to: 38, suffix: '%' }, sub: 'Cost &middot; vs. current stack',
+      label: 'UNIFIED WORKSPACE',
+      amount: {
+        to: 3,
+        suffix: ' CRMs · 1 score',
+      },
+      sub: 'Weighted across portals',
+
       rows: [
-        ['Seats consolidated', '#175FA4', { to: 6 }],
-        ['Tools retired', '#D6931F', { to: 3 }],
-        ['Monthly savings', '#12807F', { to: 4.2, decimals: 1, prefix: '$', suffix: 'k' }],
+        ['Salesforce · Enterprise', '#175FA4', { to: 91 }],
+        ['HubSpot · Marketing', '#D6931F', { to: 84 }],
+        ['GoHighLevel · 12 subs', '#12807F', { to: 78 }],
       ],
-      foot: 'One bill. Every seat, accounted for.',
+
+      foot: 'Composite score: 84 · trending up +6 QoQ.',
     },
   },
+
   {
-    key: 'Automation', avatar: personaGhost, img: personaGhost, tag: 'AUTOMATION', color: '#0F2D4D',
-    title: 'Workflows that run themselves.',
-    desc: 'Handoffs, renewals, and escalations move on rails &mdash; no admin babysitting a workflow builder to keep records current.',
-    quote: '&ldquo;Show me every automation that touched this deal.&rdquo;',
+    key: 'Customer Engagement',
+    avatar: personaGhost,
+    img: personaGhost,
+    tag: 'CUSTOMER ENGAGEMENT',
+    color: '#12807F',
+
+    title: 'Faster customer engagement',
+
+    desc: 'New job, unfamiliar portal, zero documentation, no idea what to touch first. Lucrative gives you a ranked list of every issue on day one — and a defensible remediation plan by day three.',
+
+    quote: '“A defensible plan by day three.”',
+
     card: {
-      label: 'YOUR WEEKLY BRIEF', amount: { to: 19, suffix: '+' }, sub: 'Automation &middot; Active workflows',
+      label: 'DAY 1 · RANKED FINDINGS',
+      amount: {
+        to: 142,
+        suffix: ' issues',
+      },
+      sub: 'Ordered by dollar impact',
+
       rows: [
-        ['Deal handoffs completed', '#175FA4', { to: 42 }],
-        ['Escalations routed', '#D5453F', { to: 6 }],
-        ['Manual steps removed', '#12807F', { to: 128 }],
+        ['Duplicate contact merge', '#D5453F', { to: 8.1, decimals: 1, prefix: '$', suffix: 'k' }],
+        ['Broken lifecycle mapping', '#D6931F', { to: 5.4, decimals: 1, prefix: '$', suffix: 'k' }],
+        ['12 orphaned automations', '#175FA4', { to: 2.7, decimals: 1, prefix: '$', suffix: 'k' }],
       ],
-      foot: 'One rulebook. Every handoff, on time.',
+
+      foot: 'First fix takes 4 minutes. You’ll look competent by noon.',
     },
   },
+
   {
-    key: 'Customer Engagement', avatar: personaFlower, img: personaFlower, tag: 'CUSTOMER ENGAGEMENT', color: '#D5453F',
-    title: 'Know who&rsquo;s warming and who&rsquo;s going quiet.',
-    desc: 'Relationship intelligence flags at-risk accounts before renewal instead of after the churn email arrives.',
-    quote: '&ldquo;Which accounts have gone quiet this month?&rdquo;',
+    key: 'Automation',
+    avatar: personaFlower,
+    img: personaFlower,
+    tag: 'AUTOMATION',
+    color: '#D5453F',
+
+    title: 'Built-in automation',
+
+    desc: 'AI models trained on dirty CRM data produce bad output at scale. 63% of organizations lack AI-ready data. Get to AI-ready before your competitors do — with an audit that measures it explicitly.',
+
+    quote: '“Get to AI-ready before your competitors do.”',
+
     card: {
-      label: 'YOUR WEEKLY BRIEF', amount: { to: 94, suffix: '%' }, sub: 'Engagement &middot; Renewal book health',
+      label: 'DAY 1 · RANKED FINDINGS',
+      amount: {
+        to: 62,
+        suffix: '/100',
+      },
+      sub: '12 blockers detected',
+
       rows: [
-        ['Accounts warming', '#12807F', { to: 24 }],
-        ['Accounts at risk', '#D5453F', { to: 7 }],
-        ['Save-plays drafted', '#175FA4', null],
+        ['Fields with >40% nulls', '#D5453F', { to: 17 }],
+        ['Contact records unlabeled', '#D6931F', { to: 31, suffix: '%' }],
+        ['ICP Coverage', '#12807F', { to: 94, suffix: '%' }],
       ],
-      foot: 'One signal. Every account, watched.',
+
+      foot: 'One fix cycle gets you to 84 — most models’ floor.',
     },
   },
+
   {
-    key: 'AI', avatar: avatarTriangle, img: avatarTriangle, tag: 'AI', color: '#D6931F',
-    title: 'An analyst trained on your business.',
-    desc: 'Not a chatbot bolted onto the sidebar &mdash; AI that already knows your funnel, your pipeline definitions, and your deal stages.',
-    quote: '&ldquo;Why did MQLs dip last month?&rdquo;',
+    key: 'AI',
+    avatar: avatarTriangle,
+    img: avatarTriangle,
+    tag: 'AI',
+    color: '#D6931F',
+
+    title: 'AI throughout the platform',
+
+    desc: 'HubSpot Solution Partners, Salesforce consultants, GoHighLevel operators. Run five-minute diagnostics across every client portal in one workspace. Bill the interpretation, skip the twenty-hour data pulls.',
+
+    quote: '“Bill the strategy, not the data-pulling.”',
+
     card: {
-      label: 'YOUR WEEKLY BRIEF', amount: { to: 1.8, decimals: 1, suffix: 's' }, sub: 'AI &middot; Median answer time',
+      label: 'CLIENT PORTFOLIO',
+      amount: {
+        to: 12,
+        suffix: ' client portals',
+      },
+      sub: '12 audits · 60 min · One admin, one afternoon',
+
       rows: [
-        ['Questions answered', '#175FA4', { to: 312 }],
-        ['Recommendations shipped', '#D6931F', { to: 46 }],
-        ['Sources cited', '#12807F', { to: 4 }],
+        ['Acme Manufacturing', '#175FA4', { to: 82 }],
+        ['Brightline Labs', '#D6931F', { to: 74 }],
+        ['+ 10 more portals', '#12807F', { to: 78, suffix: ' avg' }],
       ],
-      foot: 'One prompt. Every answer, sourced.',
+
+      foot: 'Same 100 credits. Whether it’s one portal or twenty.',
     },
   },
 ];
@@ -91,51 +178,144 @@ export default function LoftPersonas() {
   return (
     <section className="section">
       <div className="container">
-        <p className="eyebrow" style={{ textAlign: 'center', width: '100%', fontSize: 13 }}>Use Cases</p>
-        <h2 className="section-title reveal">Why Companies Switch</h2>
-        <p className="section-sub reveal">Pick who sounds like your Monday &mdash; see the first thing they&rsquo;d see.</p>
+
+        <p
+          className="eyebrow"
+          style={{
+            textAlign: 'center',
+            width: '100%',
+            fontSize: 13,
+          }}
+        >
+          Use Cases
+        </p>
+
+        <h2 className="section-title reveal">
+          Why Companies Switch
+        </h2>
+
+        <p className="section-sub reveal">
+          Pick who sounds like your Monday — see the first thing they’d see.
+        </p>
 
         <div className="persona-tabs reveal">
           {personas.map((per, i) => (
-            <button key={per.key} className={`persona-tab ${i === active ? 'active' : ''}`} onClick={() => setActive(i)}>
+            <button
+              key={per.key}
+              type="button"
+              className={`persona-tab ${i === active ? 'active' : ''}`}
+              onClick={() => setActive(i)}
+            >
               <img src={per.avatar} alt="" />
               {per.tag}
             </button>
           ))}
         </div>
 
-        <div className="persona-panel reveal" key={active}>
+        <div className="persona-panel reveal">
           <div>
             <div className="avatar-row">
               <img src={p.img} alt="" />
-              <span className="tag-pill" style={{ color: p.color }}>{p.tag}</span>
-              <span className="index">PERSONA 0{active + 1}/0{personas.length}</span>
+
+              <span
+                className="tag-pill"
+                style={{ color: p.color }}
+              >
+                {p.tag}
+              </span>
+
+              <span className="index">
+                PERSONA 0{active + 1}/0{personas.length}
+              </span>
             </div>
-            <h3 dangerouslySetInnerHTML={{ __html: p.title }} />
-            <p dangerouslySetInnerHTML={{ __html: p.desc }} />
-            <div className="persona-quote" dangerouslySetInnerHTML={{ __html: p.quote }} />
+
+            <h3>{p.title}</h3>
+
+            <p>{p.desc}</p>
+
+            <div className="persona-quote">
+              {p.quote}
+            </div>
           </div>
+
           <div className="pipeline-card">
+
             <div className="top">
-              <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.08em', color: 'var(--text-400)' }}>{p.card.label}</span>
-              <span className="dots"><span style={{ background: '#E8615A' }} /><span style={{ background: '#E8A63D' }} /><span style={{ background: '#37A55F' }} /></span>
+              <span
+                style={{
+                  fontSize: 11,
+                  fontWeight: 800,
+                  letterSpacing: '.08em',
+                  color: 'var(--text-400)',
+                }}
+              >
+                {p.card.label}
+              </span>
+
+              <span className="dots">
+                <span style={{ background: '#E8615A' }} />
+                <span style={{ background: '#E8A63D' }} />
+                <span style={{ background: '#37A55F' }} />
+              </span>
             </div>
-            <div className="amount"><CountUp to={p.card.amount.to} decimals={p.card.amount.decimals} prefix={p.card.amount.prefix} suffix={p.card.amount.suffix} /></div>
-            <div className="sub" dangerouslySetInnerHTML={{ __html: p.card.sub }} />
+
+            <div className="amount">
+              <CountUp
+                to={p.card.amount.to}
+                decimals={p.card.amount.decimals}
+                prefix={p.card.amount.prefix}
+                suffix={p.card.amount.suffix}
+              />
+            </div>
+
+            <div className="sub">
+              {p.card.sub}
+            </div>
+
             {p.card.rows.map(([label, color, val]) => (
-              <div className="pipeline-row" key={label}>
-                <span className="ic" style={{ background: color }}>&bull;</span>
+              <div
+                className="pipeline-row"
+                key={label}
+              >
+                <span
+                  className="ic"
+                  style={{ background: color }}
+                >
+                  &bull;
+                </span>
+
                 <span>{label}</span>
+
                 <span className="right">
-                  {val ? <CountUp to={val.to} suffix={val.suffix} prefix={val.prefix} decimals={val.decimals} comma={val.comma} /> : 'next'}
+                  {val ? (
+                    <CountUp
+                      to={val.to}
+                      suffix={val.suffix}
+                      prefix={val.prefix}
+                      decimals={val.decimals}
+                      comma={val.comma}
+                    />
+                  ) : (
+                    'next'
+                  )}
                 </span>
               </div>
             ))}
+
             <div className="pipeline-foot">
-              <b>{p.card.foot.split('.')[0]}.</b> {p.card.foot.split('.').slice(1).join('.').trim()}
+              <b>
+                {p.card.foot.split('.')[0]}.
+              </b>{' '}
+              {p.card.foot
+                .split('.')
+                .slice(1)
+                .join('.')
+                .trim()}
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

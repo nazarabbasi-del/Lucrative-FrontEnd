@@ -11,7 +11,7 @@ export default function Nav() {
     { label: 'FAQ', href: '#faq' },
   ];
 
-  const services = [
+  const products = [
     { label: 'Lucrative Sales', href: '/loft' },
     { label: 'Lucrative Marketing', href: '/loft-marketing' },
     { label: 'Lucrative Analytics', href: '/stratum' },
@@ -51,7 +51,7 @@ export default function Nav() {
               className="nav-dropdown-trigger"
               aria-expanded={open}
             >
-              <span>Services</span>
+              <span>Products</span>
 
               <span
                 className={`dropdown-arrow ${open ? 'open' : ''}`}
@@ -65,7 +65,7 @@ export default function Nav() {
                 open ? 'show' : ''
               }`}
             >
-              {services.map((service) => (
+              {products.map((service) => (
                 <a
                   key={service.label}
                   href={service.href}

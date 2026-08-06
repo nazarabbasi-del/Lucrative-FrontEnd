@@ -24512,7 +24512,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       { label: "Pricing", href: "#pricing" },
       { label: "FAQ", href: "#faq" }
     ];
-    const services = [
+    const products2 = [
       { label: "Lucrative Sales", href: "/loft" },
       { label: "Lucrative Marketing", href: "/loft-marketing" },
       { label: "Lucrative Analytics", href: "/stratum" },
@@ -24548,7 +24548,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   className: "nav-dropdown-trigger",
                   "aria-expanded": open,
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Services" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Products" }),
                     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                       "span",
                       {
@@ -24563,7 +24563,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                 "div",
                 {
                   className: `nav-dropdown-menu ${open ? "show" : ""}`,
-                  children: services.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                  children: products2.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                     "a",
                     {
                       href: service.href,
@@ -24734,11 +24734,42 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_react7 = __toESM(require_react(), 1);
   var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
   var products = [
-    { tag: "SALES", color: "var(--blue-600)", title: "Lucrative Sales", desc: "Sales intelligence built on the communication and DNA pattern to provide behavioral psychographic analysis." },
-    { tag: "MARKETING", color: "var(--gold-600)", title: "Lucrative Marketing", desc: "Beyond boring Marketing System. AI Driven Marketing Mission Control. Teach your marketing system with painpoint and objective in simple language." },
-    { tag: "ANALYTICS", color: "var(--teal-600)", title: "Lucrative Analytics", desc: "Industr's most innovative way of building reports and dashboard. It has the only unique way to build attribution. Want a robust platform like Tableau & Power BI but better. Choice is yours \u2014 connected to 15+ platforms." },
-    { tag: "CPQ", color: "var(--text-600)", title: " Lucrative Quote", desc: "Natively AI built to make quoting and contracting samples to close Deals Faster." },
-    { tag: "GOVERNANCE", color: "var(--gold-600)", title: "Lucrative Governance", desc: "AI monitors CRM health before problems become expensive.", wide: true }
+    {
+      tag: "SALES",
+      color: "var(--blue-600)",
+      bg: "#185FA51A",
+      title: "Lucrative Sales",
+      desc: "Sales intelligence built on the communication and DNA pattern to provide behavioral psychographic analysis."
+    },
+    {
+      tag: "MARKETING",
+      color: "var(--gold-600)",
+      bg: "#EDB23E1A",
+      title: "Lucrative Marketing",
+      desc: "Beyond boring Marketing System. AI Driven Marketing Mission Control. Teach your marketing system with painpoint and objective in simple language."
+    },
+    {
+      tag: "ANALYTICS",
+      color: "var(--teal-600)",
+      bg: "#12AFAE1A",
+      title: "Lucrative Analytics",
+      desc: "Industr's most innovative way of building reports and dashboard. It has the only unique way to build attribution. Want a robust platform like Tableau & Power BI but better. Choice is yours \u2014 connected to 15+ platforms."
+    },
+    {
+      tag: "CPQ",
+      color: "var(--text-600)",
+      bg: "#0F2E4D1A",
+      title: "Lucrative Quote",
+      desc: "Natively AI built to make quoting and contracting samples to close Deals Faster."
+    },
+    {
+      tag: "GOVERNANCE",
+      color: "var(--gold-600)",
+      bg: "rgba(196, 145, 2, 0.12)",
+      title: "Lucrative Governance",
+      desc: "AI monitors CRM health before problems become expensive.",
+      wide: true
+    }
   ];
   function ProductOverview() {
     return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { className: "section", id: "crms", children: [
@@ -24750,7 +24781,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           className: `overview-card reveal ${p.wide ? "overview-card--wide" : ""}`,
           style: { "--tagc": p.color },
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "tag-pill", style: { color: p.color, backgroundColor: p.bg }, children: p.tag }),
             /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h3", { children: p.title }),
             /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { children: p.desc })
           ]
@@ -24947,11 +24978,51 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] });
   }
   var cards = [
-    { tag: "Revenue Operations", tagColor: "var(--blue-600)", title: "RevOps framework", pills: ["No SQL", "Answers in seconds"], visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ScoreCard, {}), size: "lg" },
-    { tag: "AI Data Governance", tagColor: "var(--gold-600)", title: "AI Based Data Governance & hygiene", pills: ["Semantic layer", "Your funnel, resolved"], visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(GovernanceCard, {}), size: "lg" },
-    { tag: "Migration", tagColor: "var(--teal-600)", title: "One Click Migration from your old system", pills: ["Markov + Shapley", "8 models, one view"], visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MigrationCard, {}), size: "sm" },
-    { tag: "Sales", tagColor: "var(--red-600)", title: "AI Native Sales Coach", pills: ["Randomized holdouts", "95% confidence"], visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(HoldoutCard, {}), size: "sm" },
-    { tag: "Lead Scoring", tagColor: "var(--blue-600)", title: "AI Scoring for Leads and Accounts", pills: ["Prompt to dashboard", "Always live"], visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(PipelineBarsCard, {}), size: "sm" }
+    {
+      tag: "Revenue Operations",
+      tagColor: "#185FA5",
+      tagBg: "#185FA51A",
+      title: "Zero bloated sales que",
+      pills: ["No SQL", "Answers in seconds"],
+      visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ScoreCard, {}),
+      size: "lg"
+    },
+    {
+      tag: "Lead View",
+      tagColor: "#EDB23E",
+      tagBg: "#EDB23E1A",
+      title: "AI Based Data Governance & hygiene",
+      pills: ["Semantic layer", "Your funnel, resolved"],
+      visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(GovernanceCard, {}),
+      size: "lg"
+    },
+    {
+      tag: "Marketing Mission Control",
+      tagColor: "#12AFAE",
+      tagBg: "#12AFAE1A",
+      title: "One Click Migration from your old system",
+      pills: ["Markov + Shapley", "8 models, one view"],
+      visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MigrationCard, {}),
+      size: "sm"
+    },
+    {
+      tag: "Sales",
+      tagColor: "#EC736E",
+      tagBg: "#EC736E1A",
+      title: "AI Native Sales Coach",
+      pills: ["Randomized holdouts", "95% confidence"],
+      visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(HoldoutCard, {}),
+      size: "sm"
+    },
+    {
+      tag: "AI Lead scoring based on your preferences",
+      tagColor: "#0F2E4D",
+      tagBg: "#0F2E4D1A",
+      title: "AI Scoring for Leads and Accounts",
+      pills: ["Prompt to dashboard", "Always live"],
+      visual: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(PipelineBarsCard, {}),
+      size: "sm"
+    }
   ];
   function PowerHouse() {
     return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "container", children: [
@@ -24963,13 +25034,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       ] }, c)) }),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "ph-grid-top", children: cards.filter((c) => c.size === "lg").map((c) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "ph-card reveal", style: { "--tagc": c.tagColor }, children: [
         c.visual,
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "tag-pill", style: { color: c.tagColor, marginTop: 20 }, children: c.tag }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "tag-pill", style: { color: c.tagColor, marginTop: 20, backgroundColor: c.tagBg }, children: c.tag }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: c.title }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "ph-pills", children: c.pills.map((p) => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "cap-pill", children: p }, p)) })
       ] }, c.title)) }),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "ph-grid-bottom", children: cards.filter((c) => c.size === "sm").map((c) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "ph-card reveal", style: { "--tagc": c.tagColor }, children: [
         c.visual,
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "tag-pill", style: { color: c.tagColor, marginTop: 20 }, children: c.tag }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "tag-pill", style: { color: c.tagColor, marginTop: 20, backgroundColor: c.tagBg }, children: c.tag }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: c.title }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "ph-pills", children: c.pills.map((p) => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "cap-pill", children: p }, p)) })
       ] }, c.title)) })
@@ -24980,15 +25051,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_react13 = __toESM(require_react(), 1);
   var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
   var rows = [
-    ["AI-native platform", "yes", "Partial", "Partial", "No"],
+    ["AI-native platform", "yes", "Add-ons", "Partial", "No"],
     ["Built-in CRM", "yes", "muted-yes", "muted-yes", "No"],
     ["AI business intelligence", "yes", "Limited", "Limited", "No"],
-    ["CRM governance", "yes", "Add-ons", "No", "No"],
-    ["AI quote generation", "yes", "CPQ required", "No", "No"],
+    ["CRM governance", "yes", "No", "No", "No"],
+    ["AI quote generation", "yes", "CPQ required", "Limited", "No"],
     ["Deterministic pricing", "yes", "Add-on", "No", "No"],
     ["Unified customer intelligence", "yes", "Partial", "Partial", "No"],
-    ["Natural-language analytics", "yes", "Limited", "No", "No"],
-    ["Bring your own LLM", "yes", "No", "No", "No"],
+    ["Conversational Analytics analytics", "yes", "Limited", "No", "No"],
+    ["30 days unused seat waiver", "yes", "No", "No", "No"],
     ["Prompt-driven suite control", "yes", "No", "No", "No"]
   ];
   function Cell({ v }) {
@@ -25024,19 +25095,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Cell, { v: hs }) }),
           /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Cell, { v: mk }) })
         ] }, label)) })
-      ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "mini-cta reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { className: "mini-cta-tag", children: "Truly built to scale your business work with AI hands to hands" }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "mini-cta-btns", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Signup Now" }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch Demo" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("a", { href: "#top", className: "logo mini-cta-logo", children: [
-          "LUCRAT",
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(VLogo, { size: 20 }),
-          "E\xA0AI"
-        ] })
-      ] })
+      ] }) })
     ] }) });
   }
 
@@ -25070,17 +25129,43 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ];
     return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "visual-card", ref, children: [
       /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h4", { style: { fontSize: 14, fontWeight: 700, marginBottom: 16 }, children: "Marketing Contacts Gap" }),
-      rows5.map((r) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: `bar-row ${r.total ? "total" : ""}`, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "top", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: r.label }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: r.value })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "bar-track", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "bar-fill", style: { width: inView ? `${r.pct}%` : 0 } }) })
-      ] }, r.label)),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "bar-row", style: { marginTop: 18, borderTop: "1px solid var(--border-soft)", paddingTop: 14 }, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "top", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: "Cost Waste \xB7 6,800 unused marketing contact slots" }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { style: { color: "var(--blue-600)" }, children: "$4250/month" })
-      ] }) })
+      rows5.map((r) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+        "div",
+        {
+          className: `bar-row ${r.total ? "total" : ""}`,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "top", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: r.label }),
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: r.value })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "bar-track", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "div",
+              {
+                className: "bar-fill",
+                style: {
+                  width: inView ? `${r.pct}%` : 0
+                }
+              }
+            ) })
+          ]
+        },
+        r.label
+      )),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+        "div",
+        {
+          className: "bar-row",
+          style: {
+            marginTop: 18,
+            borderTop: "1px solid var(--border-soft)",
+            paddingTop: 14
+          },
+          children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "top", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: "Cost Waste \xB7 6,800 unused marketing contact slots" }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { style: { color: "var(--blue-600)" }, children: "$4250/month" })
+          ] })
+        }
+      )
     ] });
   }
   function RevenueIntelligence() {
@@ -25107,7 +25192,17 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "chip chip-up", children: "9%" })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h4", { style: { fontSize: 14, fontWeight: 700, margin: "18px 0 4px" }, children: "AI sales assistant" }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+        "h4",
+        {
+          style: {
+            fontSize: 14,
+            fontWeight: 700,
+            margin: "18px 0 4px"
+          },
+          children: "AI sales assistant"
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "ai-assist-list", children: [
         /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "ai-assist-item", children: [
           /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "tool-row-x" }),
@@ -25150,13 +25245,30 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("br", {}),
             "\u2022 Overall Blended ROI: 4.42x"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { style: { marginTop: 8, fontWeight: 700 }, children: "Top Performing Campaign:" }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+            "div",
+            {
+              style: {
+                marginTop: 8,
+                fontWeight: 700
+              },
+              children: "Top Performing Campaign:"
+            }
+          ),
           /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { children: '"Q2 Enterprise Search - Competitor A" \xB7 Google Ads Spend: $8,200 (24,300 Clicks) \xB7 HubSpot Deals Created: 18 SQLs \xB7 HubSpot Closed-Won: $56,000 (3 Deals) \xB7 Campaign ROI: 6.83x' })
         ] })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "chat-input", children: [
-        "Ask me anything ",
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(IconSend, { style: { marginLeft: "auto", color: "var(--teal-600)" } })
+        "Ask me anything",
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+          IconSend,
+          {
+            style: {
+              marginLeft: "auto",
+              color: "var(--teal-600)"
+            }
+          }
+        )
       ] })
     ] });
   }
@@ -25170,7 +25282,16 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ];
     return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "chat-window", children: [
       /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "chat-head", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "ic", style: { background: "var(--navy-900)" }, children: "Q" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+          "div",
+          {
+            className: "ic",
+            style: {
+              background: "var(--navy-900)"
+            },
+            children: "Q"
+          }
+        ),
         /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "Quotebase" }),
           /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: "Live Session" })
@@ -25187,26 +25308,106 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "chat-cta", children: "Ready to send" })
     ] });
   }
-  function Row({ tag, tagColor, title, sub, boldSub, groups, list, meta, brands, visual, reverse }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: `feature-row reveal ${reverse ? "reverse" : ""}`, style: { "--tagc": tagColor }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "feature-text", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "tag-pill", style: { color: tagColor }, children: tag }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { children: title }),
-        sub && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { style: { fontWeight: boldSub ? 700 : 400, color: boldSub ? "var(--text-900)" : void 0, marginTop: -6 }, children: sub }),
-        groups && groups.map((g, gi) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { style: { marginBottom: gi === groups.length - 1 ? 0 : 16 }, children: g.map((line) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { style: { margin: 0 }, children: line }, line)) }, gi)),
-        list && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "feature-list", children: list.map((item) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { style: { margin: 0 }, children: item }, item)) }),
-        brands && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "brand-row", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(LogoRow, { h: 26 }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "meta", children: meta })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "feature-visual", style: { background: "var(--blue-100)" }, children: visual })
-    ] });
+  function Row({
+    tag,
+    tagColor,
+    tagBg,
+    tagHoverBg,
+    title,
+    sub,
+    boldSub,
+    groups,
+    list,
+    meta,
+    brands,
+    visual,
+    visualBg,
+    reverse
+  }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+      "div",
+      {
+        className: `feature-row reveal ${reverse ? "reverse" : ""}`,
+        style: {
+          "--tagc": tagColor
+        },
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "feature-text", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "span",
+              {
+                className: "tag-pill",
+                style: {
+                  color: tagColor,
+                  backgroundColor: tagBg,
+                  "--tag-hover-bg": tagHoverBg
+                },
+                children: tag
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { children: title }),
+            sub && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "p",
+              {
+                style: {
+                  fontWeight: boldSub ? 700 : 400,
+                  color: boldSub ? "var(--text-900)" : void 0,
+                  marginTop: -6
+                },
+                children: sub
+              }
+            ),
+            groups && groups.map((g, gi) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "div",
+              {
+                style: {
+                  marginBottom: gi === groups.length - 1 ? 0 : 16
+                },
+                children: g.map((line) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                  "p",
+                  {
+                    style: { margin: 0 },
+                    children: line
+                  },
+                  line
+                ))
+              },
+              gi
+            )),
+            list && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "feature-list", children: list.map((item) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "p",
+              {
+                style: { margin: 0 },
+                children: item
+              },
+              item
+            )) }),
+            brands && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "brand-row", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(LogoRow, { h: 26 }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "meta", children: meta })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+            "div",
+            {
+              className: "feature-visual",
+              style: {
+                background: visualBg
+              },
+              children: visual
+            }
+          )
+        ]
+      }
+    );
   }
   var cards2 = [
     {
       tag: "Sales & Marketing",
       tagColor: "var(--blue-600)",
-      title: "Loft",
-      sub: "for Sales, Marketing & Revenue Managment",
+      tagBg: "#E8F1FA",
+      tagHoverBg: "#D6E6F7",
+      visualBg: "var(--blue-100)",
+      title: "Lucrative Sales",
+      sub: "For Sales, Marketing & Revenue Managment",
       list: [
         "AI-powered CRM for sales teams",
         "Marketing automation & customer journeys",
@@ -25223,7 +25424,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     {
       tag: "CONTRACTING",
       tagColor: "var(--text-600)",
-      title: "Quotebase for Contracting",
+      tagBg: "#EEF1F4",
+      tagHoverBg: "#DDE4EA",
+      visualBg: "var(--grey-50)",
+      title: "Lucrative Quote",
       list: [
         "AI quote & proposal generation",
         "Contract lifecycle management",
@@ -25239,10 +25443,17 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     {
       tag: "DATA GOVERNANCE",
       tagColor: "var(--gold-600)",
-      title: "Governance System",
+      tagBg: "#FFF5DF",
+      tagHoverBg: "#FFE9B8",
+      visualBg: "var(--gold-100)",
+      title: "Lucrative Governance",
       groups: [
-        ["Uniquely capable of maintaining your data and system health without operational and technical knowledge"],
-        ["AI driven yet controlled by human before any execution"]
+        [
+          "Uniquely capable of maintaining your data and system health without operational and technical knowledge"
+        ],
+        [
+          "AI driven yet controlled by human before any execution"
+        ]
       ],
       meta: "Marketing Automation \xB7 AI Experiments \xB7 Campaign Intelligence",
       visual: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(RevenueIntelligence, {})
@@ -25250,13 +25461,24 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     {
       tag: "ANALYTICS & INSIGHTS",
       tagColor: "var(--teal-600)",
-      title: "Stratum Insights",
+      tagBg: "#E4F8F7",
+      tagHoverBg: "#CDEFEF",
+      visualBg: "var(--teal-100)",
+      title: "Lucrative Analytics",
       sub: "Most Intelligent analytic tool",
       boldSub: true,
       groups: [
-        ["Build your reports and dashboard with just human data", "Query true attribution building"],
-        ["Build data models with AI Ability to run without your own data warehouse", "Natively integrate with Salesforce, HubSpot and any other external source"],
-        ["Still don't find your connector \u2013 Request for Feature \u2013 Guaranteed 7-10 days delivery"]
+        [
+          "Build your reports and dashboard with just human data",
+          "Query true attribution building"
+        ],
+        [
+          "Build data models with AI Ability to run without your own data warehouse",
+          "Natively integrate with Salesforce, HubSpot and any other external source"
+        ],
+        [
+          "Still don't find your connector \u2013 Request for Feature \u2013 Guaranteed 7-10 days delivery"
+        ]
       ],
       meta: "Natural language analytics \xB7 15+ platform integrations",
       brands: true,
@@ -25274,11 +25496,17 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         const rect = stack.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
         const scrollDistance = stack.offsetHeight - viewportHeight;
-        const travelled = Math.max(0, Math.min(scrollDistance, -rect.top));
+        const travelled = Math.max(
+          0,
+          Math.min(scrollDistance, -rect.top)
+        );
         const progress = scrollDistance > 0 ? travelled / scrollDistance * (cards2.length - 1) : 0;
         const cardElements = stage.querySelectorAll(".lsc26-card");
         cardElements.forEach((card, index) => {
-          const distance = Math.max(index - progress, 0);
+          const distance = Math.max(
+            index - progress,
+            0
+          );
           card.style.transform = `translate3d(0, ${distance * 100}%, 0)`;
           card.style.zIndex = index + 1;
         });
@@ -25294,21 +25522,55 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         }
       };
       updateCards();
-      window.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", updateCards);
+      window.addEventListener(
+        "scroll",
+        onScroll,
+        { passive: true }
+      );
+      window.addEventListener(
+        "resize",
+        updateCards
+      );
       return () => {
-        window.removeEventListener("scroll", onScroll);
-        window.removeEventListener("resize", updateCards);
+        window.removeEventListener(
+          "scroll",
+          onScroll
+        );
+        window.removeEventListener(
+          "resize",
+          updateCards
+        );
       };
     }, []);
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("section", { className: "section", id: "how-it-works", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "lsc26-stack", ref: stackRef, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "lsc26-stage", ref: stageRef, children: cards2.map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
-      "div",
+    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+      "section",
       {
-        className: "lsc26-card",
-        children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Row, { ...c })
-      },
-      c.title
-    )) }) }) }) });
+        className: "section",
+        id: "how-it-works",
+        children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+          "div",
+          {
+            className: "lsc26-stack",
+            ref: stackRef,
+            children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "div",
+              {
+                className: "lsc26-stage",
+                ref: stageRef,
+                children: cards2.map((c) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                  "div",
+                  {
+                    className: "lsc26-card",
+                    children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Row, { ...c })
+                  },
+                  c.title
+                ))
+              }
+            )
+          }
+        ) })
+      }
+    );
   }
 
   // src/sections/ProblemTabs.jsx
@@ -25512,8 +25774,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   children: /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "tab-panel", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "copy", children: [
                       /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h3", { children: t.title }),
-                      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: t.desc }),
-                      i >= 3 && /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("img", { src: mascots[i], alt: "", style: { width: 110, marginTop: 24, opacity: 0.9 } })
+                      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: t.desc })
                     ] }),
                     /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "tab-visual", children: t.visual })
                   ] })
@@ -26780,19 +27041,59 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   function GovernancePersonas() {
     const [active, setActive] = (0, import_react32.useState)(0);
     const p = personas2[active];
-    return /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("section", { className: "section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("p", { className: "eyebrow", style: { textAlign: "center", width: "100%" }, children: "Use Cases" }),
+    return /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+        "p",
+        {
+          className: "eyebrow",
+          style: {
+            textAlign: "center",
+            width: "100%"
+          },
+          children: "Use Cases"
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("h2", { className: "section-title reveal", children: "Who runs governance audits?" }),
       /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("div", { className: "persona-tabs reveal", children: personas2.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("button", { className: `persona-tab ${i === active ? "active" : ""}`, onClick: () => setActive(i), children: [
-        /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("img", { src: per.avatar, alt: "" }),
-        per.tag
-      ] }, per.key)) }),
-      /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "persona-panel reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("div", { className: "persona-tabs reveal", children: personas2.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)(
+        "button",
+        {
+          type: "button",
+          className: `persona-tab ${i === active ? "active" : ""}`,
+          onClick: () => setActive(i),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+              "img",
+              {
+                src: per.avatar,
+                alt: ""
+              }
+            ),
+            per.tag
+          ]
+        },
+        per.key
+      )) }),
+      /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "persona-panel", children: [
         /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "avatar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+              "img",
+              {
+                src: p.img,
+                alt: ""
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+              "span",
+              {
+                className: "tag-pill",
+                style: {
+                  color: p.color
+                },
+                children: p.tag
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("span", { className: "index", children: [
               "PERSONA 0",
               active + 1,
@@ -26805,20 +27106,70 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "pipeline-card", children: [
           /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { style: { fontSize: 11, fontWeight: 800, letterSpacing: ".08em", color: "var(--text-400)" }, children: p.card.label }),
+            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+              "span",
+              {
+                style: {
+                  fontSize: 11,
+                  fontWeight: 800,
+                  letterSpacing: ".08em",
+                  color: "var(--text-400)"
+                },
+                children: p.card.label
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("span", { className: "dots", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { style: { background: "#E8615A" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { style: { background: "#E8A63D" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { style: { background: "#37A55F" } })
+              /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+                "span",
+                {
+                  style: {
+                    background: "#E8615A"
+                  }
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+                "span",
+                {
+                  style: {
+                    background: "#E8A63D"
+                  }
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+                "span",
+                {
+                  style: {
+                    background: "#37A55F"
+                  }
+                }
+              )
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("div", { className: "amount", children: p.card.amount }),
           /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("div", { className: "sub", children: p.card.sub }),
-          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "pipeline-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { className: "ic", style: { background: color }, children: "\u25CF" }),
-            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { children: label }),
-            /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { className: "right", children: val })
-          ] }, label)),
+          p.card.rows.map(
+            ([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)(
+              "div",
+              {
+                className: "pipeline-row",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
+                    "span",
+                    {
+                      className: "ic",
+                      style: {
+                        background: color
+                      },
+                      children: "\u25CF"
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { children: label }),
+                  /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("span", { className: "right", children: val })
+                ]
+              },
+              label
+            )
+          ),
           /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("div", { className: "pipeline-foot", children: [
             /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)("b", { children: [
               p.card.foot.split(".")[0],
@@ -26828,7 +27179,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             p.card.foot.split(".").slice(1).join(".").trim()
           ] })
         ] })
-      ] }, active)
+      ] })
     ] }) });
   }
 
@@ -27320,81 +27671,97 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       tag: "UNIFIED PLATFORM",
       color: "#175FA4",
       title: "One unified platform",
-      desc: "Stop asking for headcount you won&rsquo;t get. Lucrative gives one RevOps person the leverage of a governance team &mdash; a scored audit every quarter, quantified findings, and drafted fixes you approve.",
-      quote: "&ldquo;Governance without hiring another admin.&rdquo;",
+      desc: "Stop asking for headcount you won\u2019t get. Lucrative gives one RevOps person the leverage of a governance team \u2014 a scored audit every quarter, quantified findings, and drafted fixes you approve.",
+      quote: "\u201CGovernance without hiring another admin.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 412, prefix: "$", suffix: "K" },
-        sub: "HubSpot &middot; Marketing Hub Enterprise",
+        label: "YOUR FIRST AUDIT",
+        amount: {
+          to: 87,
+          suffix: "/100"
+        },
+        sub: "HubSpot \xB7 Marketing Hub Enterprise",
         rows: [
-          ["Scale Founder Story", "#D5453F", { to: 3.1, decimals: 1, suffix: "x" }],
-          ["Q4 nurture stalling", "#D6931F", { to: -18, suffix: "%" }],
-          ["Retest paid search geo", "#175FA4", null]
+          ["Legacy fields to retire", "#D5453F", { to: 23 }],
+          ["Orphaned workflows", "#D6931F", { to: 8 }],
+          [
+            "Marketing seats freed",
+            "#175FA4",
+            { to: 2.4, decimals: 1, prefix: "$", suffix: "k/month" }
+          ]
         ],
-        foot: "On brief. One brief. Every channel, ranked by dollars."
+        foot: "One workspace. One score to defend at every QBR."
       }
     },
     {
       key: "Cost",
-      avatar: persona_cloud_default,
+      avatar: avatar_cloud_default,
       img: persona_cloud_default,
       tag: "COST",
       color: "#2F72C4",
-      title: "Pay for what you use. Nothing else.",
-      desc: "No seat fees, no feature-tier billing event every time you grow. Credits don&rsquo;t expire and every plan gets the same AI &mdash; not a stripped-down version.",
-      quote: "&ldquo;What would switching actually save us this quarter?&rdquo;",
+      title: "Predictable software costs",
+      desc: "Salesforce for the enterprise motion. HubSpot for marketing. GoHighLevel for the acquisitions. Audit each independently in a single workspace and see a unified score you can defend to the board.",
+      quote: "\u201COne tool that speaks all three.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 38, suffix: "%" },
-        sub: "Cost &middot; vs. current stack",
+        label: "UNIFIED WORKSPACE",
+        amount: {
+          to: 3,
+          suffix: " CRMs \xB7 1 score"
+        },
+        sub: "Weighted across portals",
         rows: [
-          ["Seats consolidated", "#175FA4", { to: 6 }],
-          ["Tools retired", "#D6931F", { to: 3 }],
-          ["Monthly savings", "#12807F", { to: 4.2, decimals: 1, prefix: "$", suffix: "k" }]
+          ["Salesforce \xB7 Enterprise", "#175FA4", { to: 91 }],
+          ["HubSpot \xB7 Marketing", "#D6931F", { to: 84 }],
+          ["GoHighLevel \xB7 12 subs", "#12807F", { to: 78 }]
         ],
-        foot: "One bill. Every seat, accounted for."
-      }
-    },
-    {
-      key: "Automation",
-      avatar: persona_ghost_default,
-      img: persona_ghost_default,
-      tag: "AUTOMATION",
-      color: "#0F2D4D",
-      title: "Workflows that run themselves.",
-      desc: "Handoffs, renewals, and escalations move on rails &mdash; no admin babysitting a workflow builder to keep records current.",
-      quote: "&ldquo;Show me every automation that touched this deal.&rdquo;",
-      card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 19, suffix: "+" },
-        sub: "Automation &middot; Active workflows",
-        rows: [
-          ["Deal handoffs completed", "#175FA4", { to: 42 }],
-          ["Escalations routed", "#D5453F", { to: 6 }],
-          ["Manual steps removed", "#12807F", { to: 128 }]
-        ],
-        foot: "One rulebook. Every handoff, on time."
+        foot: "Composite score: 84 \xB7 trending up +6 QoQ."
       }
     },
     {
       key: "Customer Engagement",
+      avatar: persona_ghost_default,
+      img: persona_ghost_default,
+      tag: "CUSTOMER ENGAGEMENT",
+      color: "#12807F",
+      title: "Faster customer engagement",
+      desc: "New job, unfamiliar portal, zero documentation, no idea what to touch first. Lucrative gives you a ranked list of every issue on day one \u2014 and a defensible remediation plan by day three.",
+      quote: "\u201CA defensible plan by day three.\u201D",
+      card: {
+        label: "DAY 1 \xB7 RANKED FINDINGS",
+        amount: {
+          to: 142,
+          suffix: " issues"
+        },
+        sub: "Ordered by dollar impact",
+        rows: [
+          ["Duplicate contact merge", "#D5453F", { to: 8.1, decimals: 1, prefix: "$", suffix: "k" }],
+          ["Broken lifecycle mapping", "#D6931F", { to: 5.4, decimals: 1, prefix: "$", suffix: "k" }],
+          ["12 orphaned automations", "#175FA4", { to: 2.7, decimals: 1, prefix: "$", suffix: "k" }]
+        ],
+        foot: "First fix takes 4 minutes. You\u2019ll look competent by noon."
+      }
+    },
+    {
+      key: "Automation",
       avatar: persona_flower_default,
       img: persona_flower_default,
-      tag: "CUSTOMER ENGAGEMENT",
+      tag: "AUTOMATION",
       color: "#D5453F",
-      title: "Know who&rsquo;s warming and who&rsquo;s going quiet.",
-      desc: "Relationship intelligence flags at-risk accounts before renewal instead of after the churn email arrives.",
-      quote: "&ldquo;Which accounts have gone quiet this month?&rdquo;",
+      title: "Built-in automation",
+      desc: "AI models trained on dirty CRM data produce bad output at scale. 63% of organizations lack AI-ready data. Get to AI-ready before your competitors do \u2014 with an audit that measures it explicitly.",
+      quote: "\u201CGet to AI-ready before your competitors do.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 94, suffix: "%" },
-        sub: "Engagement &middot; Renewal book health",
+        label: "DAY 1 \xB7 RANKED FINDINGS",
+        amount: {
+          to: 62,
+          suffix: "/100"
+        },
+        sub: "12 blockers detected",
         rows: [
-          ["Accounts warming", "#12807F", { to: 24 }],
-          ["Accounts at risk", "#D5453F", { to: 7 }],
-          ["Save-plays drafted", "#175FA4", null]
+          ["Fields with >40% nulls", "#D5453F", { to: 17 }],
+          ["Contact records unlabeled", "#D6931F", { to: 31, suffix: "%" }],
+          ["ICP Coverage", "#12807F", { to: 94, suffix: "%" }]
         ],
-        foot: "One signal. Every account, watched."
+        foot: "One fix cycle gets you to 84 \u2014 most models\u2019 floor."
       }
     },
     {
@@ -27403,19 +27770,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       img: avatar_triangle_default,
       tag: "AI",
       color: "#D6931F",
-      title: "An analyst trained on your business.",
-      desc: "Not a chatbot bolted onto the sidebar &mdash; AI that already knows your funnel, your pipeline definitions, and your deal stages.",
-      quote: "&ldquo;Why did MQLs dip last month?&rdquo;",
+      title: "AI throughout the platform",
+      desc: "HubSpot Solution Partners, Salesforce consultants, GoHighLevel operators. Run five-minute diagnostics across every client portal in one workspace. Bill the interpretation, skip the twenty-hour data pulls.",
+      quote: "\u201CBill the strategy, not the data-pulling.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 1.8, decimals: 1, suffix: "s" },
-        sub: "AI &middot; Median answer time",
+        label: "CLIENT PORTFOLIO",
+        amount: {
+          to: 12,
+          suffix: " client portals"
+        },
+        sub: "12 audits \xB7 60 min \xB7 One admin, one afternoon",
         rows: [
-          ["Questions answered", "#175FA4", { to: 312 }],
-          ["Recommendations shipped", "#D6931F", { to: 46 }],
-          ["Sources cited", "#12807F", { to: 4 }]
+          ["Acme Manufacturing", "#175FA4", { to: 82 }],
+          ["Brightline Labs", "#D6931F", { to: 74 }],
+          ["+ 10 more portals", "#12807F", { to: 78, suffix: " avg" }]
         ],
-        foot: "One prompt. Every answer, sourced."
+        foot: "Same 100 credits. Whether it\u2019s one portal or twenty."
       }
     }
   ];
@@ -27423,18 +27793,45 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const [active, setActive] = (0, import_react42.useState)(0);
     const p = personas3[active];
     return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("p", { className: "eyebrow", style: { textAlign: "center", width: "100%", fontSize: 13 }, children: "Use Cases" }),
+      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+        "p",
+        {
+          className: "eyebrow",
+          style: {
+            textAlign: "center",
+            width: "100%",
+            fontSize: 13
+          },
+          children: "Use Cases"
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("h2", { className: "section-title reveal", children: "Why Companies Switch" }),
       /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "persona-tabs reveal", children: personas3.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("button", { className: `persona-tab ${i === active ? "active" : ""}`, onClick: () => setActive(i), children: [
-        /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("img", { src: per.avatar, alt: "" }),
-        per.tag
-      ] }, per.key)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "persona-tabs reveal", children: personas3.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)(
+        "button",
+        {
+          type: "button",
+          className: `persona-tab ${i === active ? "active" : ""}`,
+          onClick: () => setActive(i),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("img", { src: per.avatar, alt: "" }),
+            per.tag
+          ]
+        },
+        per.key
+      )) }),
       /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "persona-panel reveal", children: [
         /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "avatar-row", children: [
             /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+              "span",
+              {
+                className: "tag-pill",
+                style: { color: p.color },
+                children: p.tag
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("span", { className: "index", children: [
               "PERSONA 0",
               active + 1,
@@ -27442,26 +27839,68 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               personas3.length
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("h3", { dangerouslySetInnerHTML: { __html: p.title } }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "persona-quote", dangerouslySetInnerHTML: { __html: p.quote } })
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("h3", { children: p.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("p", { children: p.desc }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "persona-quote", children: p.quote })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "pipeline-card", children: [
           /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { style: { fontSize: 11, fontWeight: 800, letterSpacing: ".08em", color: "var(--text-400)" }, children: p.card.label }),
+            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+              "span",
+              {
+                style: {
+                  fontSize: 11,
+                  fontWeight: 800,
+                  letterSpacing: ".08em",
+                  color: "var(--text-400)"
+                },
+                children: p.card.label
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("span", { className: "dots", children: [
               /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { style: { background: "#E8615A" } }),
               /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { style: { background: "#E8A63D" } }),
               /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { style: { background: "#37A55F" } })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(CountUp, { to: p.card.amount.to, decimals: p.card.amount.decimals, prefix: p.card.amount.prefix, suffix: p.card.amount.suffix }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "sub", dangerouslySetInnerHTML: { __html: p.card.sub } }),
-          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "pipeline-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "ic", style: { background: color }, children: "\u2022" }),
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { children: label }),
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(CountUp, { to: val.to, suffix: val.suffix, prefix: val.prefix, decimals: val.decimals, comma: val.comma }) : "next" })
-          ] }, label)),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+            CountUp,
+            {
+              to: p.card.amount.to,
+              decimals: p.card.amount.decimals,
+              prefix: p.card.amount.prefix,
+              suffix: p.card.amount.suffix
+            }
+          ) }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "sub", children: p.card.sub }),
+          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)(
+            "div",
+            {
+              className: "pipeline-row",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+                  "span",
+                  {
+                    className: "ic",
+                    style: { background: color },
+                    children: "\u2022"
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { children: label }),
+                /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+                  CountUp,
+                  {
+                    to: val.to,
+                    suffix: val.suffix,
+                    prefix: val.prefix,
+                    decimals: val.decimals,
+                    comma: val.comma
+                  }
+                ) : "next" })
+              ]
+            },
+            label
+          )),
           /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "pipeline-foot", children: [
             /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("b", { children: [
               p.card.foot.split(".")[0],
@@ -27471,7 +27910,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             p.card.foot.split(".").slice(1).join(".").trim()
           ] })
         ] })
-      ] }, active)
+      ] })
     ] }) });
   }
 

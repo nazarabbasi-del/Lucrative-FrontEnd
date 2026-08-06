@@ -21778,7 +21778,7 @@
       { label: "Pricing", href: "#pricing" },
       { label: "FAQ", href: "#faq" }
     ];
-    const services = [
+    const products = [
       { label: "Lucrative Sales", href: "/loft" },
       { label: "Lucrative Marketing", href: "/loft-marketing" },
       { label: "Lucrative Analytics", href: "/stratum" },
@@ -21814,7 +21814,7 @@
                   className: "nav-dropdown-trigger",
                   "aria-expanded": open,
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Services" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Products" }),
                     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                       "span",
                       {
@@ -21829,7 +21829,7 @@
                 "div",
                 {
                   className: `nav-dropdown-menu ${open ? "show" : ""}`,
-                  children: services.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                  children: products.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                     "a",
                     {
                       href: service.href,

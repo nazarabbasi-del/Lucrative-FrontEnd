@@ -21771,7 +21771,7 @@
       { label: "Pricing", href: "#pricing" },
       { label: "FAQ", href: "#faq" }
     ];
-    const services = [
+    const products = [
       { label: "Lucrative Sales", href: "/loft" },
       { label: "Lucrative Marketing", href: "/loft-marketing" },
       { label: "Lucrative Analytics", href: "/stratum" },
@@ -21807,7 +21807,7 @@
                   className: "nav-dropdown-trigger",
                   "aria-expanded": open,
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Services" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Products" }),
                     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                       "span",
                       {
@@ -21822,7 +21822,7 @@
                 "div",
                 {
                   className: `nav-dropdown-menu ${open ? "show" : ""}`,
-                  children: services.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                  children: products.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                     "a",
                     {
                       href: service.href,
@@ -22339,6 +22339,9 @@
   // src/assets/avatar-blue.png
   var avatar_blue_default = "assets/img/avatar-blue-2PQGN6LM.png";
 
+  // src/assets/avatar-cloud.png
+  var avatar_cloud_default = "assets/img/avatar-cloud-KZVAGBFV.png";
+
   // src/assets/avatar-triangle.png
   var avatar_triangle_default = "assets/img/avatar-triangle-PFOQXURG.png";
 
@@ -22361,81 +22364,97 @@
       tag: "UNIFIED PLATFORM",
       color: "#175FA4",
       title: "One unified platform",
-      desc: "Stop asking for headcount you won&rsquo;t get. Lucrative gives one RevOps person the leverage of a governance team &mdash; a scored audit every quarter, quantified findings, and drafted fixes you approve.",
-      quote: "&ldquo;Governance without hiring another admin.&rdquo;",
+      desc: "Stop asking for headcount you won\u2019t get. Lucrative gives one RevOps person the leverage of a governance team \u2014 a scored audit every quarter, quantified findings, and drafted fixes you approve.",
+      quote: "\u201CGovernance without hiring another admin.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 412, prefix: "$", suffix: "K" },
-        sub: "HubSpot &middot; Marketing Hub Enterprise",
+        label: "YOUR FIRST AUDIT",
+        amount: {
+          to: 87,
+          suffix: "/100"
+        },
+        sub: "HubSpot \xB7 Marketing Hub Enterprise",
         rows: [
-          ["Scale Founder Story", "#D5453F", { to: 3.1, decimals: 1, suffix: "x" }],
-          ["Q4 nurture stalling", "#D6931F", { to: -18, suffix: "%" }],
-          ["Retest paid search geo", "#175FA4", null]
+          ["Legacy fields to retire", "#D5453F", { to: 23 }],
+          ["Orphaned workflows", "#D6931F", { to: 8 }],
+          [
+            "Marketing seats freed",
+            "#175FA4",
+            { to: 2.4, decimals: 1, prefix: "$", suffix: "k/month" }
+          ]
         ],
-        foot: "On brief. One brief. Every channel, ranked by dollars."
+        foot: "One workspace. One score to defend at every QBR."
       }
     },
     {
       key: "Cost",
-      avatar: persona_cloud_default,
+      avatar: avatar_cloud_default,
       img: persona_cloud_default,
       tag: "COST",
       color: "#2F72C4",
-      title: "Pay for what you use. Nothing else.",
-      desc: "No seat fees, no feature-tier billing event every time you grow. Credits don&rsquo;t expire and every plan gets the same AI &mdash; not a stripped-down version.",
-      quote: "&ldquo;What would switching actually save us this quarter?&rdquo;",
+      title: "Predictable software costs",
+      desc: "Salesforce for the enterprise motion. HubSpot for marketing. GoHighLevel for the acquisitions. Audit each independently in a single workspace and see a unified score you can defend to the board.",
+      quote: "\u201COne tool that speaks all three.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 38, suffix: "%" },
-        sub: "Cost &middot; vs. current stack",
+        label: "UNIFIED WORKSPACE",
+        amount: {
+          to: 3,
+          suffix: " CRMs \xB7 1 score"
+        },
+        sub: "Weighted across portals",
         rows: [
-          ["Seats consolidated", "#175FA4", { to: 6 }],
-          ["Tools retired", "#D6931F", { to: 3 }],
-          ["Monthly savings", "#12807F", { to: 4.2, decimals: 1, prefix: "$", suffix: "k" }]
+          ["Salesforce \xB7 Enterprise", "#175FA4", { to: 91 }],
+          ["HubSpot \xB7 Marketing", "#D6931F", { to: 84 }],
+          ["GoHighLevel \xB7 12 subs", "#12807F", { to: 78 }]
         ],
-        foot: "One bill. Every seat, accounted for."
-      }
-    },
-    {
-      key: "Automation",
-      avatar: persona_ghost_default,
-      img: persona_ghost_default,
-      tag: "AUTOMATION",
-      color: "#0F2D4D",
-      title: "Workflows that run themselves.",
-      desc: "Handoffs, renewals, and escalations move on rails &mdash; no admin babysitting a workflow builder to keep records current.",
-      quote: "&ldquo;Show me every automation that touched this deal.&rdquo;",
-      card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 19, suffix: "+" },
-        sub: "Automation &middot; Active workflows",
-        rows: [
-          ["Deal handoffs completed", "#175FA4", { to: 42 }],
-          ["Escalations routed", "#D5453F", { to: 6 }],
-          ["Manual steps removed", "#12807F", { to: 128 }]
-        ],
-        foot: "One rulebook. Every handoff, on time."
+        foot: "Composite score: 84 \xB7 trending up +6 QoQ."
       }
     },
     {
       key: "Customer Engagement",
+      avatar: persona_ghost_default,
+      img: persona_ghost_default,
+      tag: "CUSTOMER ENGAGEMENT",
+      color: "#12807F",
+      title: "Faster customer engagement",
+      desc: "New job, unfamiliar portal, zero documentation, no idea what to touch first. Lucrative gives you a ranked list of every issue on day one \u2014 and a defensible remediation plan by day three.",
+      quote: "\u201CA defensible plan by day three.\u201D",
+      card: {
+        label: "DAY 1 \xB7 RANKED FINDINGS",
+        amount: {
+          to: 142,
+          suffix: " issues"
+        },
+        sub: "Ordered by dollar impact",
+        rows: [
+          ["Duplicate contact merge", "#D5453F", { to: 8.1, decimals: 1, prefix: "$", suffix: "k" }],
+          ["Broken lifecycle mapping", "#D6931F", { to: 5.4, decimals: 1, prefix: "$", suffix: "k" }],
+          ["12 orphaned automations", "#175FA4", { to: 2.7, decimals: 1, prefix: "$", suffix: "k" }]
+        ],
+        foot: "First fix takes 4 minutes. You\u2019ll look competent by noon."
+      }
+    },
+    {
+      key: "Automation",
       avatar: persona_flower_default,
       img: persona_flower_default,
-      tag: "CUSTOMER ENGAGEMENT",
+      tag: "AUTOMATION",
       color: "#D5453F",
-      title: "Know who&rsquo;s warming and who&rsquo;s going quiet.",
-      desc: "Relationship intelligence flags at-risk accounts before renewal instead of after the churn email arrives.",
-      quote: "&ldquo;Which accounts have gone quiet this month?&rdquo;",
+      title: "Built-in automation",
+      desc: "AI models trained on dirty CRM data produce bad output at scale. 63% of organizations lack AI-ready data. Get to AI-ready before your competitors do \u2014 with an audit that measures it explicitly.",
+      quote: "\u201CGet to AI-ready before your competitors do.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 94, suffix: "%" },
-        sub: "Engagement &middot; Renewal book health",
+        label: "DAY 1 \xB7 RANKED FINDINGS",
+        amount: {
+          to: 62,
+          suffix: "/100"
+        },
+        sub: "12 blockers detected",
         rows: [
-          ["Accounts warming", "#12807F", { to: 24 }],
-          ["Accounts at risk", "#D5453F", { to: 7 }],
-          ["Save-plays drafted", "#175FA4", null]
+          ["Fields with >40% nulls", "#D5453F", { to: 17 }],
+          ["Contact records unlabeled", "#D6931F", { to: 31, suffix: "%" }],
+          ["ICP Coverage", "#12807F", { to: 94, suffix: "%" }]
         ],
-        foot: "One signal. Every account, watched."
+        foot: "One fix cycle gets you to 84 \u2014 most models\u2019 floor."
       }
     },
     {
@@ -22444,19 +22463,22 @@
       img: avatar_triangle_default,
       tag: "AI",
       color: "#D6931F",
-      title: "An analyst trained on your business.",
-      desc: "Not a chatbot bolted onto the sidebar &mdash; AI that already knows your funnel, your pipeline definitions, and your deal stages.",
-      quote: "&ldquo;Why did MQLs dip last month?&rdquo;",
+      title: "AI throughout the platform",
+      desc: "HubSpot Solution Partners, Salesforce consultants, GoHighLevel operators. Run five-minute diagnostics across every client portal in one workspace. Bill the interpretation, skip the twenty-hour data pulls.",
+      quote: "\u201CBill the strategy, not the data-pulling.\u201D",
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 1.8, decimals: 1, suffix: "s" },
-        sub: "AI &middot; Median answer time",
+        label: "CLIENT PORTFOLIO",
+        amount: {
+          to: 12,
+          suffix: " client portals"
+        },
+        sub: "12 audits \xB7 60 min \xB7 One admin, one afternoon",
         rows: [
-          ["Questions answered", "#175FA4", { to: 312 }],
-          ["Recommendations shipped", "#D6931F", { to: 46 }],
-          ["Sources cited", "#12807F", { to: 4 }]
+          ["Acme Manufacturing", "#175FA4", { to: 82 }],
+          ["Brightline Labs", "#D6931F", { to: 74 }],
+          ["+ 10 more portals", "#12807F", { to: 78, suffix: " avg" }]
         ],
-        foot: "One prompt. Every answer, sourced."
+        foot: "Same 100 credits. Whether it\u2019s one portal or twenty."
       }
     }
   ];
@@ -22464,18 +22486,45 @@
     const [active, setActive] = (0, import_react12.useState)(0);
     const p = personas[active];
     return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "eyebrow", style: { textAlign: "center", width: "100%", fontSize: 13 }, children: "Use Cases" }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+        "p",
+        {
+          className: "eyebrow",
+          style: {
+            textAlign: "center",
+            width: "100%",
+            fontSize: 13
+          },
+          children: "Use Cases"
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { className: "section-title reveal", children: "Why Companies Switch" }),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "persona-tabs reveal", children: personas.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("button", { className: `persona-tab ${i === active ? "active" : ""}`, onClick: () => setActive(i), children: [
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("img", { src: per.avatar, alt: "" }),
-        per.tag
-      ] }, per.key)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "persona-tabs reveal", children: personas.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+        "button",
+        {
+          type: "button",
+          className: `persona-tab ${i === active ? "active" : ""}`,
+          onClick: () => setActive(i),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("img", { src: per.avatar, alt: "" }),
+            per.tag
+          ]
+        },
+        per.key
+      )) }),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "persona-panel reveal", children: [
         /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "avatar-row", children: [
             /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+              "span",
+              {
+                className: "tag-pill",
+                style: { color: p.color },
+                children: p.tag
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("span", { className: "index", children: [
               "PERSONA 0",
               active + 1,
@@ -22483,26 +22532,68 @@
               personas.length
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { dangerouslySetInnerHTML: { __html: p.title } }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "persona-quote", dangerouslySetInnerHTML: { __html: p.quote } })
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: p.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { children: p.desc }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "persona-quote", children: p.quote })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "pipeline-card", children: [
           /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { style: { fontSize: 11, fontWeight: 800, letterSpacing: ".08em", color: "var(--text-400)" }, children: p.card.label }),
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+              "span",
+              {
+                style: {
+                  fontSize: 11,
+                  fontWeight: 800,
+                  letterSpacing: ".08em",
+                  color: "var(--text-400)"
+                },
+                children: p.card.label
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("span", { className: "dots", children: [
               /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { style: { background: "#E8615A" } }),
               /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { style: { background: "#E8A63D" } }),
               /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { style: { background: "#37A55F" } })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CountUp, { to: p.card.amount.to, decimals: p.card.amount.decimals, prefix: p.card.amount.prefix, suffix: p.card.amount.suffix }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "sub", dangerouslySetInnerHTML: { __html: p.card.sub } }),
-          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "pipeline-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "ic", style: { background: color }, children: "\u2022" }),
-            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { children: label }),
-            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CountUp, { to: val.to, suffix: val.suffix, prefix: val.prefix, decimals: val.decimals, comma: val.comma }) : "next" })
-          ] }, label)),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+            CountUp,
+            {
+              to: p.card.amount.to,
+              decimals: p.card.amount.decimals,
+              prefix: p.card.amount.prefix,
+              suffix: p.card.amount.suffix
+            }
+          ) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "sub", children: p.card.sub }),
+          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+            "div",
+            {
+              className: "pipeline-row",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+                  "span",
+                  {
+                    className: "ic",
+                    style: { background: color },
+                    children: "\u2022"
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { children: label }),
+                /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+                  CountUp,
+                  {
+                    to: val.to,
+                    suffix: val.suffix,
+                    prefix: val.prefix,
+                    decimals: val.decimals,
+                    comma: val.comma
+                  }
+                ) : "next" })
+              ]
+            },
+            label
+          )),
           /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "pipeline-foot", children: [
             /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("b", { children: [
               p.card.foot.split(".")[0],
@@ -22512,7 +22603,7 @@
             p.card.foot.split(".").slice(1).join(".").trim()
           ] })
         ] })
-      ] }, active)
+      ] })
     ] }) });
   }
 

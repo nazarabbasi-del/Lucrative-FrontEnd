@@ -21775,7 +21775,7 @@
       { label: "Pricing", href: "#pricing" },
       { label: "FAQ", href: "#faq" }
     ];
-    const services = [
+    const products = [
       { label: "Lucrative Sales", href: "/loft" },
       { label: "Lucrative Marketing", href: "/loft-marketing" },
       { label: "Lucrative Analytics", href: "/stratum" },
@@ -21811,7 +21811,7 @@
                   className: "nav-dropdown-trigger",
                   "aria-expanded": open,
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Services" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Products" }),
                     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                       "span",
                       {
@@ -21826,7 +21826,7 @@
                 "div",
                 {
                   className: `nav-dropdown-menu ${open ? "show" : ""}`,
-                  children: services.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                  children: products.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                     "a",
                     {
                       href: service.href,
@@ -22551,19 +22551,59 @@
   function GovernancePersonas() {
     const [active, setActive] = (0, import_react14.useState)(0);
     const p = personas[active];
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("section", { className: "section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "eyebrow", style: { textAlign: "center", width: "100%" }, children: "Use Cases" }),
+    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+        "p",
+        {
+          className: "eyebrow",
+          style: {
+            textAlign: "center",
+            width: "100%"
+          },
+          children: "Use Cases"
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h2", { className: "section-title reveal", children: "Who runs governance audits?" }),
       /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "persona-tabs reveal", children: personas.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("button", { className: `persona-tab ${i === active ? "active" : ""}`, onClick: () => setActive(i), children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("img", { src: per.avatar, alt: "" }),
-        per.tag
-      ] }, per.key)) }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "persona-panel reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "persona-tabs reveal", children: personas.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+        "button",
+        {
+          type: "button",
+          className: `persona-tab ${i === active ? "active" : ""}`,
+          onClick: () => setActive(i),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "img",
+              {
+                src: per.avatar,
+                alt: ""
+              }
+            ),
+            per.tag
+          ]
+        },
+        per.key
+      )) }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "persona-panel", children: [
         /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "avatar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "img",
+              {
+                src: p.img,
+                alt: ""
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "span",
+              {
+                className: "tag-pill",
+                style: {
+                  color: p.color
+                },
+                children: p.tag
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("span", { className: "index", children: [
               "PERSONA 0",
               active + 1,
@@ -22576,20 +22616,70 @@
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "pipeline-card", children: [
           /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { style: { fontSize: 11, fontWeight: 800, letterSpacing: ".08em", color: "var(--text-400)" }, children: p.card.label }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+              "span",
+              {
+                style: {
+                  fontSize: 11,
+                  fontWeight: 800,
+                  letterSpacing: ".08em",
+                  color: "var(--text-400)"
+                },
+                children: p.card.label
+              }
+            ),
             /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("span", { className: "dots", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { style: { background: "#E8615A" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { style: { background: "#E8A63D" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { style: { background: "#37A55F" } })
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                "span",
+                {
+                  style: {
+                    background: "#E8615A"
+                  }
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                "span",
+                {
+                  style: {
+                    background: "#E8A63D"
+                  }
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                "span",
+                {
+                  style: {
+                    background: "#37A55F"
+                  }
+                }
+              )
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "amount", children: p.card.amount }),
           /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "sub", children: p.card.sub }),
-          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "pipeline-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "ic", style: { background: color }, children: "\u25CF" }),
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: label }),
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "right", children: val })
-          ] }, label)),
+          p.card.rows.map(
+            ([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+              "div",
+              {
+                className: "pipeline-row",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                    "span",
+                    {
+                      className: "ic",
+                      style: {
+                        background: color
+                      },
+                      children: "\u25CF"
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: label }),
+                  /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "right", children: val })
+                ]
+              },
+              label
+            )
+          ),
           /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "pipeline-foot", children: [
             /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("b", { children: [
               p.card.foot.split(".")[0],
@@ -22599,7 +22689,7 @@
             p.card.foot.split(".").slice(1).join(".").trim()
           ] })
         ] })
-      ] }, active)
+      ] })
     ] }) });
   }
 

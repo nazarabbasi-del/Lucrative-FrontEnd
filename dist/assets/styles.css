@@ -140,8 +140,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   justify-content: center;
   gap: 8px;
   padding: 13px 26px;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
+  border-radius: 10px;  font-weight: 700;
   font-size: 15px;
   font-family: var(--font-body);
   border: 1.5px solid transparent;
@@ -760,7 +759,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-radius:999px; 
   border:1.5px solid currentColor;
   margin-bottom:16px;
-  background-color: #185FA51A;
   /* `color` is normally set per-card via an inline style; on hover we flip
      the pill to a solid fill using that same color via currentColor. */
   transition: background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
@@ -779,7 +777,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* The pill's own color comes from an inline style per-card, so `color` needs
    !important here to flip its text white once the pill fills solid — a
    stylesheet rule can't out-rank an inline style otherwise. */
-.overview-card.reveal:hover .tag-pill { background: var(--tagc, var(--blue-600)); color: #fff !important; }
 .overview-card--wide { grid-column: 1 / -1; max-width: calc(50% - 11px); margin: 0 auto; }
 @media (max-width: 980px) {
   .overview-card--wide { max-width: 100%; }
@@ -799,7 +796,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .feature-row.reverse .feature-text { order:2; }
 .feature-row.reverse .feature-visual { order:1; }
 .feature-text .tag-pill { }
-.feature-row:hover .tag-pill { background: var(--tagc, var(--blue-600)); color: #fff !important; }
 .feature-text h3 { font-size: clamp(24px,2.6vw,30px); font-weight:500; line-height:1.3; margin-bottom:14px; transition: color .25s var(--ease); }
 .feature-row:hover .feature-text h3 { color: var(--tagc, var(--text-900)); }
 .feature-text p { color:var(--text-600); font-size:15px; line-height:1.75; max-width:460px; }
@@ -899,82 +895,426 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ==========================================================================
    Problem / solution tab section
    ========================================================================== */
-.tabs-layout { display:grid; grid-template-columns: 300px 1fr; gap:56px; margin-top:56px; }
-.tabs-nav-col { position:relative; }
-.tabs-list { display:flex; flex-direction:column; gap:4px; position:sticky; top:100px; }
-.tabs-list button {
-  display:flex; align-items:center; gap:12px;
-  text-align:left; background:none; border:none; border-left:3px solid transparent;
-  padding:12px 18px; font-size:15px; font-weight:600; color:var(--text-500,var(--text-600));
-  border-radius: 0 10px 10px 0; transition: all .25s var(--ease);
-}
-.tabs-list button:hover { background: var(--grey-50); color:var(--text-900); }
-.tabs-list button.active {
-  border-left-color: var(--blue-600); color: var(--blue-600); background: var(--blue-100);
-  font-weight:700;
-}
-.tabs-list-dot {
-  width:7px; height:7px; border-radius:50%; background: var(--border-soft, #ddd); flex-shrink:0;
-  transition: background .25s var(--ease), transform .25s var(--ease);
-}
-.tabs-list button.active .tabs-list-dot { background: var(--blue-600); transform: scale(1.35); }
+/* =========================================================
+   WHY BUSINESSES OUTGROW TRADITIONAL CRMs
+   ========================================================= */
 
-/* Right-side stacking/overlapping storytelling cards, synced to the sticky left nav above. */
-.tabs-stack { position: relative; }
-.tabs-stack-item { position: relative; margin-bottom: 20px;}
-/* Real in-flow spacer (not padding-bottom) — see .fp-stack-spacer note: Chromium only
-   extends a sticky element's stuck range into a containing block's content-box. */
-.tabs-stack-spacer { display:none; }
+.tabs-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 56px;
+  margin-top: 42px;
+  position: relative;
+}
+
+/* ---------------------------------------------------------
+   SECTION HEADING
+   --------------------------------------------------------- */
+
+/* Only this section's heading is left aligned */
+.section--grey:has(.tabs-layout) .section-title {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 560px;
+}
+
+/* Only this section's subtitle */
+.section--grey:has(.tabs-layout) .section-sub {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 560px;
+}
+
+/* ---------------------------------------------------------
+   LEFT NAVIGATION
+   --------------------------------------------------------- */
+
+.tabs-nav-col {
+  position: relative;
+}
+
+.tabs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: sticky;
+  top: 100px;
+}
+
+.tabs-list button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+
+  padding: 12px 18px;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-500, var(--text-600));
+
+  border-radius: 0 10px 10px 0;
+
+  transition:
+    background .25s var(--ease),
+    color .25s var(--ease),
+    border-color .25s var(--ease);
+}
+
+.tabs-list button:hover {
+  background: var(--grey-50);
+  color: var(--text-900);
+}
+
+.tabs-list button.active {
+  border-left-color: var(--blue-600);
+  color: var(--blue-600);
+  background: var(--blue-100);
+  font-weight: 700;
+}
+
+.tabs-list-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-soft, #ddd);
+  flex-shrink: 0;
+
+  transition:
+    background .25s var(--ease),
+    transform .25s var(--ease);
+}
+
+.tabs-list button.active .tabs-list-dot {
+  background: var(--blue-600);
+  transform: scale(1.35);
+}
+
+/* ---------------------------------------------------------
+   RIGHT SIDE
+   --------------------------------------------------------- */
+
+.tabs-stack {
+  position: relative;
+}
+
+/* Individual story items */
+.tabs-stack-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Spacer */
+.tabs-stack-spacer {
+  display: none;
+}
+
+/* Card */
 .tabs-stack-card {
   position: relative;
   background: transparent;
   border-radius: var(--radius-lg);
   padding: 40px;
 }
-@media (max-width: 900px) {
-  .tabs-stack-spacer { height: 22vh; }
-  .tabs-stack-card { top: 78px; padding: 28px 22px; }
+
+/* ---------------------------------------------------------
+   RIGHT CONTENT
+   --------------------------------------------------------- */
+
+.tab-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+  animation: fade-in .5s var(--ease);
 }
 
-.tab-panel { display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:center; animation: fade-in .5s var(--ease); }
-@keyframes fade-in { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
-.tab-panel .copy h3 { font-size:26px; font-weight:700; margin-bottom:12px; }
-.tab-panel .copy p { color:var(--text-600); font-size:15px; line-height:1.7; }
-.tab-visual { }
-.tool-card { background:#fff; border-radius:14px; box-shadow: var(--shadow-md); padding:16px 18px; margin-bottom:12px; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
-.tool-card:hover { transform: translateX(4px) scale(1.012); box-shadow: var(--shadow-lg); }
-.tool-row { display:flex; align-items:center; gap:10px; font-size:13px; }
-.tool-row .x { width:20px;height:20px;border-radius:6px;background:var(--red-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0; transition: transform .25s var(--ease); }
-.tool-card:hover .tool-row .x { transform: rotate(-90deg) scale(1.1); }
-.tool-row .label { flex:1; }
-.tool-row .tag { margin-left:auto; font-size:10px; font-weight:800; color:var(--text-400); }
-.stat-card { background:#fff; border-radius:14px; box-shadow:var(--shadow-md); padding:18px 20px; margin-bottom:12px; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
-.stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-.stat-line { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-top:1px solid var(--border-soft); font-size:13.5px; }
-.stat-line:first-of-type { border-top:none; }
-.stat-line .badge { font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:999px; transition: transform .2s var(--ease); }
-.stat-line:hover .badge { transform: scale(1.08); }
-.badge-red { background:var(--red-100); color:var(--red-600); }
-.badge-gold { background:var(--gold-100); color:var(--gold-600); }
-.badge-grey { background:var(--grey-50); color:var(--text-400); }
-.badge-green { background:var(--green-100); color:var(--green-600); }
-.check-card { background:#fff; border-radius:14px; box-shadow:var(--shadow-md); padding:16px 18px; margin-bottom:12px; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
-.check-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-.check-row { display:flex; align-items:center; gap:10px; font-size:14px; font-weight: 400; padding:6px 0; }
-.check-row .box { width:16px;height:16px;border-radius:5px; flex-shrink:0; transition: transform .2s var(--ease); }
-.check-row:hover .box { transform: scale(1.15); }
-.check-row.checked .box { background:var(--blue-600); }
-.check-row.alert .box { background:var(--red-500); }
-.check-row .right { margin-left:auto; font-size:10.5px; color:var(--text-400); font-weight:700; }
-.stat-big { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-top:1px solid var(--border-soft); }
-.stat-big:first-of-type { border-top:none; }
-.stat-big b { font-family: var(--font-head); font-size:22px; }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tab-panel .copy h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.tab-panel .copy p {
+  color: var(--text-600);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.tab-visual {
+  min-width: 0;
+}
+
+/* ---------------------------------------------------------
+   TOOL CARD
+   --------------------------------------------------------- */
+
+.tool-card {
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+
+  transition:
+    transform .25s var(--ease),
+    box-shadow .25s var(--ease);
+}
+
+.tool-card:hover {
+  transform: translateX(4px) scale(1.012);
+  box-shadow: var(--shadow-lg);
+}
+
+.tool-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.tool-row .x {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--red-500);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  flex-shrink: 0;
+
+  transition: transform .25s var(--ease);
+}
+
+.tool-card:hover .tool-row .x {
+  transform: rotate(-90deg) scale(1.1);
+}
+
+.tool-row .label {
+  flex: 1;
+}
+
+.tool-row .tag {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-400);
+}
+
+/* ---------------------------------------------------------
+   STAT CARD
+   --------------------------------------------------------- */
+
+.stat-card {
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+
+  transition:
+    transform .25s var(--ease),
+    box-shadow .25s var(--ease);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 9px 0;
+
+  border-top: 1px solid var(--border-soft);
+  font-size: 13.5px;
+}
+
+.stat-line:first-of-type {
+  border-top: none;
+}
+
+.stat-line .badge {
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 999px;
+
+  transition: transform .2s var(--ease);
+}
+
+.stat-line:hover .badge {
+  transform: scale(1.08);
+}
+
+.badge-red {
+  background: var(--red-100);
+  color: var(--red-600);
+}
+
+.badge-gold {
+  background: var(--gold-100);
+  color: var(--gold-600);
+}
+
+.badge-grey {
+  background: var(--grey-50);
+  color: var(--text-400);
+}
+
+.badge-green {
+  background: var(--green-100);
+  color: var(--green-600);
+}
+
+/* ---------------------------------------------------------
+   CHECK CARD
+   --------------------------------------------------------- */
+
+.check-card {
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+
+  transition:
+    transform .25s var(--ease),
+    box-shadow .25s var(--ease);
+}
+
+.check-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  padding: 6px 0;
+}
+
+.check-row .box {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  flex-shrink: 0;
+
+  transition: transform .2s var(--ease);
+}
+
+.check-row:hover .box {
+  transform: scale(1.15);
+}
+
+.check-row.checked .box {
+  background: var(--blue-600);
+}
+
+.check-row.alert .box {
+  background: var(--red-500);
+}
+
+.check-row .right {
+  margin-left: auto;
+  font-size: 10.5px;
+  color: var(--text-400);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   LARGE STAT
+   --------------------------------------------------------- */
+
+.stat-big {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 0;
+
+  border-top: 1px solid var(--border-soft);
+}
+
+.stat-big:first-of-type {
+  border-top: none;
+}
+
+.stat-big b {
+  font-family: var(--font-head);
+  font-size: 22px;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .tabs-layout {
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .tabs-stack-card {
+    padding: 28px;
+  }
+}
 
 @media (max-width: 900px) {
-  .tabs-layout { grid-template-columns: 1fr; }
-  .tabs-list { position:static; flex-direction:row; flex-wrap:wrap; }
-  .tab-panel { grid-template-columns: 1fr; }
+  .tabs-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .tabs-list {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tab-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-stack-card {
+    padding: 28px 22px;
+  }
 }
+
 
 /* HOW TO APPLY:
    In styles.css, find the comment that says "Orbit diagram" and select
@@ -1311,7 +1651,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   box-shadow: var(--shadow-lg);
   border-color: var(--tagc, var(--blue-500));
 }
-.ph-card.reveal:hover .tag-pill { background: var(--tagc, var(--blue-600)); color: #fff !important; }
+.ph-card.reveal:hover .tag-pill {
+  background: color-mix(in srgb, var(--tagc) 15%, #fff 85%);
+  color: var(--tagc) !important;
+  border-color: var(--tagc);
+}
 .ph-card.reveal:hover .ph-visual { transform: scale(1.02); }
 .ph-card h3 { font-size:18px; font-weight:500; margin:6px 0 12px; }
 .ph-pills { display:flex; flex-wrap:wrap; gap:8px; }
@@ -1354,7 +1698,30 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 980px) {
   .ph-grid-top, .ph-grid-bottom { grid-template-columns:1fr; }
 }
+.ph-card .tag-pill {
+  display: inline-flex;
+  align-self: flex-start;
 
+  width: auto;
+  max-width: max-content;
+
+  margin-top: 20px !important;
+
+  padding: 4px 9px;
+
+  border: 1px solid currentColor;
+  border-radius: 999px;
+
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  box-sizing: border-box;
+   transition:
+    background-color .25s ease,
+    color .25s ease,
+    border-color .25s ease
+}
 /* ==========================================================================
    Comparison table
    ========================================================================== */
