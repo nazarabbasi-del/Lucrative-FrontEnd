@@ -21769,17 +21769,96 @@
   var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
   function Nav() {
     const [open, setOpen] = (0, import_react3.useState)(false);
-    const links = ["How it works", "CRMs", "Pricing", "FAQ"];
+    const links = [
+      { label: "How it works", href: "#how-it-works" },
+      { label: "CRMs", href: "#crms" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "FAQ", href: "#faq" }
+    ];
+    const services = [
+      { label: "Lucrative Sales", href: "/loft" },
+      { label: "Lucrative Marketing", href: "/loft-marketing" },
+      { label: "Lucrative Analytics", href: "/stratum" },
+      { label: "Lucrative Quote", href: "/quotebase" },
+      { label: "Lucrative Governance", href: "/governance" }
+    ];
     return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("header", { className: "nav", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container", children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("a", { href: "#top", className: "logo", children: [
         "LUCRAT",
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(VLogo, { size: 20 }),
         "E\xA0AI"
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("nav", { className: "nav-links", children: links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: `#${l.toLowerCase().replace(/\s+/g, "-")}`, children: l }, l)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("nav", { className: "nav-links", children: [
+        links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+          "a",
+          {
+            href: link.href,
+            children: link.label
+          },
+          link.label
+        )),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
+          "div",
+          {
+            className: "nav-dropdown",
+            onMouseEnter: () => setOpen(true),
+            onMouseLeave: () => setOpen(false),
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
+                "button",
+                {
+                  type: "button",
+                  className: "nav-dropdown-trigger",
+                  "aria-expanded": open,
+                  children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Services" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                      "span",
+                      {
+                        className: `dropdown-arrow ${open ? "open" : ""}`,
+                        children: "\u2193"
+                      }
+                    )
+                  ]
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                "div",
+                {
+                  className: `nav-dropdown-menu ${open ? "show" : ""}`,
+                  children: services.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                    "a",
+                    {
+                      href: service.href,
+                      className: "nav-dropdown-item",
+                      onClick: () => setOpen(false),
+                      children: service.label
+                    },
+                    service.label
+                  ))
+                }
+              )
+            ]
+          }
+        )
+      ] }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "nav-right", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "#signin", className: "nav-signin", children: "Sign in" }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "#audit", className: "btn btn-primary btn-sm", children: "Start free audit" })
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+          "a",
+          {
+            href: "#signin",
+            className: "nav-signin",
+            children: "Sign in"
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+          "a",
+          {
+            href: "#audit",
+            className: "btn btn-primary btn-sm",
+            children: "Start free audit"
+          }
+        )
       ] })
     ] }) });
   }

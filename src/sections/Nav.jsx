@@ -1,33 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { VLogo } from '../icons.jsx';
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
-  const links = ['How it works', 'CRMs', 'Pricing', 'FAQ'];
+  const links = [
+    { label: 'How it works', href: '#how-it-works' },
+    { label: 'CRMs', href: '#crms' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'FAQ', href: '#faq' },
+  ];
 
   const services = [
-    { label: 'Lucrative Sales', href: '#sales' },
-    { label: 'Lucrative Marketing', href: '#marketing' },
-    { label: 'Lucrative Analytics', href: '#analytics' },
-    { label: 'Lucrative Quote', href: '#quote' },
-    { label: 'Lucrative Governance', href: '#governance' },
+    { label: 'Lucrative Sales', href: '/loft' },
+    { label: 'Lucrative Marketing', href: '/loft-marketing' },
+    { label: 'Lucrative Analytics', href: '/stratum' },
+    { label: 'Lucrative Quote', href: '/quotebase' },
+    { label: 'Lucrative Governance', href: '/governance' },
   ];
 
   return (
     <header className="nav">
       <div className="container">
+
+        {/* Logo */}
         <a href="#top" className="logo">
           LUCRAT<VLogo size={20} />E&nbsp;AI
         </a>
 
+        {/* Main Navigation */}
         <nav className="nav-links">
-          {links.map((l) => (
+
+          {links.map((link) => (
             <a
-              key={l}
-              href={`#${l.toLowerCase().replace(/\s+/g, '-')}`}
+              key={link.label}
+              href={link.href}
             >
-              {l}
+              {link.label}
             </a>
           ))}
 
@@ -37,38 +46,59 @@ export default function Nav() {
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
           >
-            <button className="nav-dropdown-trigger">
-              Services
-              <span className={`dropdown-arrow ${open ? 'open' : ''}`}>
+            <button
+              type="button"
+              className="nav-dropdown-trigger"
+              aria-expanded={open}
+            >
+              <span>Services</span>
+
+              <span
+                className={`dropdown-arrow ${open ? 'open' : ''}`}
+              >
                 ↓
               </span>
             </button>
 
-            {open && (
-              <div className="nav-dropdown-menu">
-                {services.map((service) => (
-                  <a
-                    key={service.label}
-                    href={service.href}
-                    className="nav-dropdown-item"
-                  >
-                    {service.label}
-                  </a>
-                ))}
-              </div>
-            )}
+            <div
+              className={`nav-dropdown-menu ${
+                open ? 'show' : ''
+              }`}
+            >
+              {services.map((service) => (
+                <a
+                  key={service.label}
+                  href={service.href}
+                  className="nav-dropdown-item"
+                  onClick={() => setOpen(false)}
+                >
+                  {service.label}
+                </a>
+              ))}
+            </div>
           </div>
+
         </nav>
 
+        {/* Right Side */}
         <div className="nav-right">
-          <a href="#signin" className="nav-signin">
+
+          <a
+            href="#signin"
+            className="nav-signin"
+          >
             Sign in
           </a>
 
-          <a href="#audit" className="btn btn-primary btn-sm">
+          <a
+            href="#audit"
+            className="btn btn-primary btn-sm"
+          >
             Start free audit
           </a>
+
         </div>
+
       </div>
     </header>
   );
