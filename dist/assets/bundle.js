@@ -25699,19 +25699,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       img: persona_cloud_default,
       tag: "MARKETING",
       color: "#D6931F",
-      title: "Campaigns launch themselves \u2014 from brief to live in one prompt.",
-      desc: "Describe the audience, the pain point, and the goal in plain language. Loft builds the journey, drafts the copy, and keeps optimizing while your team focuses on strategy.",
-      quote: '"We described the audience once. The campaign was live an hour later."',
+      title: "You describe the campaign. Loft launches, scores and optimizes it.",
+      desc: "Explain your audience and goal in plain English. Loft builds the journey, scores every lead, launches the landing page and reports back on what's working \u2014 continuously.",
+      quote: "\u201CCampaigns that write, launch, and improve themselves.\u201D",
       pipeline: {
-        label: "ACTIVE CAMPAIGNS",
-        amount: "12",
-        sub: "Loft for Marketing \xB7 This month",
+        label: "CAMPAIGN \xB7 REENGAGE-Q4",
+        amount: "147 leads",
+        sub: "Loft Marketing \xB7 enrolled today",
         rows: [
-          ["Landing page generated", "#E8A63D", "live"],
-          ["Journey optimized", "#175FA4", "+18% CTR"],
-          ["A/B test concluded", "#37A55F", "winner"]
+          ["Journey drafted from prompt", "#E8A63D", "live"],
+          ["MQL score threshold hit", "#175FA4", "32"],
+          ["Handoffs to Sales", "#37A55F", "11"]
         ],
-        foot: "One campaign brief. Every channel, in sync."
+        foot: "One campaign. Every lead, scored and moving."
       }
     },
     {
@@ -25719,19 +25719,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       img: persona_ghost_default,
       tag: "CUSTOMER SUCCESS",
       color: "#12807F",
-      title: "Every renewal risk surfaces before the call, not after.",
-      desc: "Support tickets, usage data, and CRM notes merge into one health score. AI flags accounts going quiet and drafts the save-play before churn happens.",
-      quote: '"Support tickets and CRM data finally talk to each other."',
+      title: "You see renewal risk weeks before it becomes churn.",
+      desc: "Every touchpoint from Sales, Marketing and Support lands in one customer timeline. AI flags declining engagement, missing QBRs, and open blockers \u2014 before the renewal conversation.",
+      quote: "\u201CNever surprised by a churn call again.\u201D",
       pipeline: {
-        label: "ACCOUNT HEALTH",
-        amount: "94%",
-        sub: "Governance \xB7 Renewal book",
+        label: "HEALTH \xB7 ACME CORP",
+        amount: "87 / 100",
+        sub: "Loft CRM \xB7 Renewal in 62 days",
         rows: [
-          ["Health score updated", "#175FA4", "live"],
-          ["At-risk account flagged", "#E8615A", "Acme Co"],
-          ["Save-play drafted", "#37A55F", "ready"]
+          ["Engagement dropped 40%", "#E8615A", "14D"],
+          ["QBR overdue", "#E8A63D", "1"],
+          ["Renewal play triggered", "#37A55F", "AUTO"]
         ],
-        foot: "One customer record. Every signal, connected."
+        foot: "One timeline. Every risk, before it becomes churn."
       }
     },
     {
@@ -25739,19 +25739,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       img: persona_flower_default,
       tag: "OPERATIONS",
       color: "#175FA4",
-      title: "Reports rebuild themselves \u2014 no more Friday afternoon exports.",
-      desc: "Ask Stratum AI what you want to know, in plain language. It queries every connected platform, builds the chart, and keeps it live \u2014 no dashboards to maintain by hand.",
-      quote: '"Our ops team asks Stratum instead of building another spreadsheet."',
+      title: "You run governance for the whole team \u2014 without hiring another admin.",
+      desc: "Continuous CRM health checks catch stale opps, duplicate accounts, missing owners and policy breaks. AI drafts the fixes; you approve. A quarterly scored audit you can defend at every QBR.",
+      quote: "\u201CGovernance without hiring another admin.\u201D",
       pipeline: {
-        label: "DATA HEALTH",
-        amount: "15+",
-        sub: "Stratum AI \xB7 Connected sources",
+        label: "YOUR FIRST AUDIT",
+        amount: "87 / 100",
+        sub: "HubSpot \xB7 Marketing Hub Enterprise",
         rows: [
-          ["Cross-platform report built", "#175FA4", "9s"],
-          ["Duplicate records merged", "#E8A63D", "312"],
-          ["Attribution model synced", "#37A55F", "live"]
+          ["Legacy fields to retire", "#E8615A", "23"],
+          ["Orphaned workflows", "#E8A63D", "8"],
+          ["Marketing seats freed", "#37A55F", "$4.2k/mo"]
         ],
-        foot: "One prompt. Every platform, queried at once."
+        foot: "One workspace. One score to defend at every QBR."
       }
     },
     {
@@ -25759,19 +25759,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       img: persona_triangle_default,
       tag: "LEADERSHIP",
       color: "#D6931F",
-      title: "Pipeline questions get answered in seconds, not days.",
-      desc: "Ask about EMEA forecast, quota attainment, or revenue leak \u2014 Stratum answers immediately, backed by your live customer record, not a stale export.",
-      quote: `"I ask for EMEA forecast and I have it before I've finished the sentence."`,
+      title: "You ask the question. Stratum answers, in seconds.",
+      desc: "No more waiting three days for a report. Ask Stratum in natural language and it pulls live from 15+ connected platforms \u2014 pipeline coverage, forecast, rep performance, EMEA growth \u2014 with the audit trail behind it.",
+      quote: "\u201CEvery board question, answered before the meeting starts.\u201D",
       pipeline: {
-        label: "EXECUTIVE SUMMARY",
-        amount: "$21.4M",
-        sub: "Company-wide \xB7 Q4 forecast",
+        label: "STRATUM \xB7 EXEC BOARD",
+        amount: "$18.4M",
+        sub: "Q4 forecast \xB7 refreshed 2 min ago",
         rows: [
-          ["Pipeline coverage checked", "#175FA4", "3.2x"],
-          ["Quota attainment reviewed", "#E8A63D", "78%"],
-          ["Revenue leak estimated", "#E8615A", "$1.4M"]
+          ["Pipeline coverage", "#175FA4", "3.2\xD7"],
+          ["Reps missing quota", "#E8A63D", "4"],
+          ["EMEA growth QoQ", "#37A55F", "+22%"]
         ],
-        foot: "One question. Every number, governed."
+        foot: "One prompt. Every board answer, ready."
       }
     }
   ];
@@ -25779,54 +25779,151 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const [active, setActive] = (0, import_react17.useState)(0);
     const p = personas[active];
     return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { className: "eyebrow", style: { textAlign: "center", width: "100%" }, children: "Use Cases" }),
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+        "p",
+        {
+          className: "eyebrow",
+          style: {
+            textAlign: "center",
+            width: "100%"
+          },
+          children: "Use Cases"
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h2", { className: "section-title reveal", children: "Why Companies Switch" }),
       /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they'd see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "persona-tabs reveal", children: personas.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("button", { className: `persona-tab ${i === active ? "active" : ""}`, onClick: () => setActive(i), children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("img", { src: per.img, alt: "" }),
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "persona-tabs reveal", children: personas.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
+        "button",
+        {
+          type: "button",
+          className: `persona-tab ${i === active ? "active" : ""}`,
+          onClick: () => setActive(i),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+              "img",
+              {
+                src: per.img,
+                alt: ""
+              }
+            ),
+            per.key
+          ]
+        },
         per.key
-      ] }, per.key)) }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "persona-panel reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "avatar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("span", { className: "index", children: [
-              "PERSONA 0",
-              active + 1,
-              "/05"
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h3", { children: p.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { children: p.desc }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "persona-quote", children: p.quote })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "pipeline-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { style: { fontSize: 11, fontWeight: 800, letterSpacing: ".08em", color: "var(--text-400)" }, children: p.pipeline.label }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("span", { className: "dots", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { style: { background: "#E8615A" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { style: { background: "#E8A63D" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { style: { background: "#37A55F" } })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "amount", children: p.pipeline.amount }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "sub", children: p.pipeline.sub }),
-          p.pipeline.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "pipeline-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "ic", style: { background: color }, children: "\u25CF" }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: label }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "right", children: val })
-          ] }, label)),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "pipeline-foot", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("b", { children: [
-              p.pipeline.foot.split(".")[0],
-              "."
+      )) }),
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
+        "div",
+        {
+          className: "persona-panel",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "avatar-row", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                  "img",
+                  {
+                    src: p.img,
+                    alt: ""
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                  "span",
+                  {
+                    className: "tag-pill",
+                    style: {
+                      color: p.color
+                    },
+                    children: p.tag
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("span", { className: "index", children: [
+                  "PERSONA 0",
+                  active + 1,
+                  "/05"
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h3", { children: p.title }),
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { children: p.desc }),
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "persona-quote", children: p.quote })
             ] }),
-            " ",
-            p.pipeline.foot.split(".").slice(1).join(".").trim()
-          ] })
-        ] })
-      ] }, active)
+            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "pipeline-card", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "top", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                  "span",
+                  {
+                    style: {
+                      fontSize: 11,
+                      fontWeight: 800,
+                      letterSpacing: ".08em",
+                      color: "var(--text-400)"
+                    },
+                    children: p.pipeline.label
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("span", { className: "dots", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                    "span",
+                    {
+                      style: {
+                        background: "#E8615A"
+                      }
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                    "span",
+                    {
+                      style: {
+                        background: "#E8A63D"
+                      }
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                    "span",
+                    {
+                      style: {
+                        background: "#37A55F"
+                      }
+                    }
+                  )
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "amount", children: p.pipeline.amount }),
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "sub", children: p.pipeline.sub }),
+              p.pipeline.rows.map(
+                ([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
+                  "div",
+                  {
+                    className: "pipeline-row",
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                        "span",
+                        {
+                          className: "ic",
+                          style: {
+                            background: color
+                          },
+                          children: "\u25CF"
+                        }
+                      ),
+                      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: label }),
+                      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "right", children: val })
+                    ]
+                  },
+                  label
+                )
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "pipeline-foot", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("b", { children: [
+                  p.pipeline.foot.split(".")[0],
+                  "."
+                ] }),
+                " ",
+                p.pipeline.foot.split(".").slice(1).join(".").trim()
+              ] })
+            ] })
+          ]
+        },
+        active
+      )
     ] }) });
   }
 
@@ -28919,39 +29016,95 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       tag: "MARKETING",
       color: "#175FA4",
       title: "You own the number. Now own the why.",
-      desc: "Every Monday, know which campaigns are working, which are stalling, and where the next dollar goes &mdash; before the standup starts. No tickets, no CSV stitching.",
-      quote: "&ldquo;Which campaigns generated pipeline last week?&rdquo;",
+      desc: "Every Monday, know which campaigns are working, which are stalling, and where the next dollar goes \u2014 before the standup starts. No tickets, no CSV stitching.",
+      quote: '"Which campaigns generated pipeline last week?"',
       card: {
         label: "YOUR WEEKLY BRIEF",
-        amount: { to: 412, prefix: "$", suffix: "K" },
-        sub: "HubSpot &middot; Marketing Hub Enterprise",
+        amount: {
+          to: 412,
+          prefix: "$",
+          suffix: "K"
+        },
+        sub: "Founder Story \xB7 attributed pipeline",
         rows: [
-          ["Scale Founder Story", "#D5453F", { to: 3.1, decimals: 1, suffix: "x" }],
-          ["Q4 nurture stalling", "#D6931F", { to: -18, suffix: "%" }],
-          ["Retest paid search geo", "#175FA4", null]
+          [
+            "Scale Founder Story",
+            "#175FA4",
+            {
+              to: 3.1,
+              decimals: 1,
+              suffix: "\xD7"
+            }
+          ],
+          [
+            "Q4 nurture stalling",
+            "#D5453F",
+            {
+              to: -18,
+              suffix: "%"
+            }
+          ],
+          [
+            "Retest paid search geo",
+            "#175FA4",
+            null,
+            "next"
+          ]
         ],
-        foot: "On brief. One brief. Every channel, ranked by dollars."
+        foot: "One brief. Every channel, ranked by dollars."
       }
     },
     {
-      key: "Founders",
+      key: "Founder",
       avatar: avatar_triangle_default,
       img: avatar_triangle_default,
-      tag: "FOUNDERS",
+      tag: "FOUNDER",
       color: "#D6931F",
-      title: "You don&rsquo;t need a data team. You need an answer.",
-      desc: "Ask the board question in plain English before the board meeting starts. Stratum pulls from every connected platform and shows its work.",
-      quote: "&ldquo;What&rsquo;s our real blended CAC this quarter?&rdquo;",
+      title: "Board-grade answers, without asking three people.",
+      desc: "Pipeline by source, revenue by motion, growth efficiency \u2014 answered in seconds, not in next week's ops review. Ask before you sleep, present in the morning.",
+      quote: '"Where is revenue coming from this quarter?"',
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 21.4, decimals: 1, prefix: "$", suffix: "M" },
-        sub: "Company-wide &middot; Q4 forecast",
+        label: "YOUR BOARD VIEW",
+        amount: {
+          to: 3.5,
+          decimals: 1,
+          prefix: "$",
+          suffix: "M"
+        },
+        sub: "Q1 pipeline \xB7 pace vs. $4.0M target",
         rows: [
-          ["Pipeline coverage checked", "#175FA4", { to: 3.2, decimals: 1, suffix: "x" }],
-          ["Quota attainment reviewed", "#D6931F", { to: 78, suffix: "%" }],
-          ["Revenue leak estimated", "#D5453F", { to: 1.4, decimals: 1, prefix: "$", suffix: "M" }]
+          [
+            "Outbound motion",
+            "#37A55F",
+            {
+              to: 1.9,
+              decimals: 1,
+              prefix: "$",
+              suffix: "M"
+            }
+          ],
+          [
+            "Product-led signups",
+            "#37A55F",
+            {
+              to: 1.1,
+              decimals: 1,
+              prefix: "$",
+              suffix: "M"
+            }
+          ],
+          [
+            "Partner channel gap",
+            "#E8615A",
+            {
+              to: 500,
+              prefix: "$",
+              suffix: "K",
+              comma: true
+            }
+          ]
         ],
-        foot: "One question. Every number, governed."
+        foot: "One view. Every investor question, pre-answered."
       }
     },
     {
@@ -28960,40 +29113,79 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       img: persona_ghost_default,
       tag: "REVOPS",
       color: "#12807F",
-      title: "You stop being the human export button.",
-      desc: "No more hand-stitching four CSVs into an attribution model every Friday. Stratum keeps the model live and lets anyone ask it a question.",
-      quote: "&ldquo;Show deals stuck over 30 days.&rdquo;",
+      title: "Retire 40 dashboards. Keep one analyst.",
+      desc: "Skip the warehouse project and the BI seat sprawl. The semantic layer already understands your objects, owners, and stages \u2014 every stakeholder self-serves.",
+      quote: '"Deals stuck at Proposal over 30 days, by owner."',
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 94, suffix: "%" },
-        sub: "Governance &middot; Renewal book",
+        label: "YOUR PIPELINE AUDIT",
+        amount: {
+          to: 23
+        },
+        sub: "Deals stalled at Proposal \xB7 30+ days",
         rows: [
-          ["Health score updated", "#175FA4", null],
-          ["At-risk account flagged", "#D5453F", null],
-          ["Save-play drafted", "#12807F", null]
+          [
+            "Enterprise \xB7 West",
+            "#E8615A",
+            {
+              to: 9,
+              suffix: " deals"
+            }
+          ],
+          [
+            "Mid-market \xB7 East",
+            "#E8615A",
+            {
+              to: 8,
+              suffix: " deals"
+            }
+          ],
+          [
+            "Suggested reassignment",
+            "#175FA4",
+            null,
+            "draft"
+          ]
         ],
-        foot: "One customer record. Every signal, connected."
+        foot: "One layer. Every team asking its own questions."
       }
     },
     {
-      key: "Engineering",
+      key: "Agency",
       avatar: persona_flower_default,
       img: persona_flower_default,
-      tag: "ENGINEERING",
+      tag: "AGENCY",
       color: "#D5453F",
-      title: "You stop fielding one-off analytics tickets.",
-      desc: "Marketing and sales get self-serve answers instead of filing a ticket for every new question &mdash; so your sprint stays your sprint.",
-      quote: "&ldquo;Can you pull last month&rsquo;s funnel by source?&rdquo; (not anymore)",
+      title: "Analyst-grade reporting on every retainer.",
+      desc: "Every client account gets AI-analyst reporting from one workspace. Bill the strategy, drop the data-pull hours, and walk into reviews with the why.",
+      quote: '"Compare all clients by campaign efficiency."',
       card: {
-        label: "YOUR WEEKLY BRIEF",
-        amount: { to: 15, suffix: "+" },
-        sub: "Stratum AI &middot; Connected sources",
+        label: "YOUR CLIENT ROSTER",
+        amount: {
+          to: 10,
+          suffix: "\xD7"
+        },
+        sub: "Reporting throughput \xB7 per account manager",
         rows: [
-          ["Cross-platform report built", "#175FA4", null],
-          ["Duplicate records merged", "#D6931F", { to: 312 }],
-          ["Attribution model synced", "#12807F", null]
+          [
+            "Acme Co \xB7 monthly report",
+            "#37A55F",
+            null,
+            "ready"
+          ],
+          [
+            "Northwind \xB7 QBR deck",
+            "#37A55F",
+            null,
+            "ready"
+          ],
+          [
+            "Globex \xB7 channel review",
+            "#E8615A",
+            null,
+            "flagged"
+          ]
         ],
-        foot: "One prompt. Every platform, queried at once."
+        foot: "One workspace. Every client, white-labeled."
       }
     }
   ];
@@ -29001,54 +29193,170 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const [active, setActive] = (0, import_react67.useState)(0);
     const p = personas4[active];
     return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { className: "eyebrow", style: { textAlign: "center", width: "100%", fontSize: 13 }, children: "Whose Monday gets better?" }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h2", { className: "section-title reveal", children: "Four seats. Same table." }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "persona-tabs reveal", children: personas4.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("button", { className: `persona-tab ${i === active ? "active" : ""}`, onClick: () => setActive(i), children: [
-        /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("img", { src: per.avatar, alt: "" }),
-        per.tag
-      ] }, per.key)) }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "persona-panel reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "avatar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("span", { className: "index", children: [
-              "PERSONA 0",
-              active + 1,
-              "/04"
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { dangerouslySetInnerHTML: { __html: p.title } }),
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } }),
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "persona-quote", dangerouslySetInnerHTML: { __html: p.quote } })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "pipeline-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { style: { fontSize: 11, fontWeight: 800, letterSpacing: ".08em", color: "var(--text-400)" }, children: p.card.label }),
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("span", { className: "dots", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { style: { background: "#E8615A" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { style: { background: "#E8A63D" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { style: { background: "#37A55F" } })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(CountUp, { to: p.card.amount.to, decimals: p.card.amount.decimals, prefix: p.card.amount.prefix, suffix: p.card.amount.suffix }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "sub", dangerouslySetInnerHTML: { __html: p.card.sub } }),
-          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "pipeline-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "ic", style: { background: color }, children: "\u2022" }),
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: label }),
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(CountUp, { to: val.to, suffix: val.suffix, prefix: val.prefix, decimals: val.decimals, comma: val.comma }) : "next" })
-          ] }, label)),
-          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "pipeline-foot", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("b", { children: [
-              p.card.foot.split(".")[0],
-              "."
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+        "p",
+        {
+          className: "eyebrow",
+          style: {
+            textAlign: "center",
+            width: "100%",
+            fontSize: 13
+          },
+          children: "Whose Monday gets better?"
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h2", { className: "section-title", children: "Four seats. Same table." }),
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { className: "section-sub", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "persona-tabs", children: personas4.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
+        "button",
+        {
+          type: "button",
+          className: `persona-tab ${i === active ? "active" : ""}`,
+          onClick: () => setActive(i),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+              "img",
+              {
+                src: per.avatar,
+                alt: ""
+              }
+            ),
+            per.tag
+          ]
+        },
+        per.key
+      )) }),
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
+        "div",
+        {
+          className: "persona-panel",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "avatar-row", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                  "img",
+                  {
+                    src: p.img,
+                    alt: ""
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                  "span",
+                  {
+                    className: "tag-pill",
+                    style: {
+                      color: p.color
+                    },
+                    children: p.tag
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("span", { className: "index", children: [
+                  "PERSONA 0",
+                  active + 1,
+                  "/04"
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: p.title }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { children: p.desc }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "persona-quote", children: p.quote })
             ] }),
-            " ",
-            p.card.foot.split(".").slice(1).join(".").trim()
-          ] })
-        ] })
-      ] }, active)
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "pipeline-card", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "top", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                  "span",
+                  {
+                    style: {
+                      fontSize: 11,
+                      fontWeight: 800,
+                      letterSpacing: ".08em",
+                      color: "var(--text-400)"
+                    },
+                    children: p.card.label
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("span", { className: "dots", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                    "span",
+                    {
+                      style: {
+                        background: "#E8615A"
+                      }
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                    "span",
+                    {
+                      style: {
+                        background: "#E8A63D"
+                      }
+                    }
+                  ),
+                  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                    "span",
+                    {
+                      style: {
+                        background: "#37A55F"
+                      }
+                    }
+                  )
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                CountUp,
+                {
+                  to: p.card.amount.to,
+                  decimals: p.card.amount.decimals,
+                  prefix: p.card.amount.prefix,
+                  suffix: p.card.amount.suffix,
+                  comma: p.card.amount.comma
+                }
+              ) }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "sub", children: p.card.sub }),
+              p.card.rows.map(
+                ([label, color, val, fallback]) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
+                  "div",
+                  {
+                    className: "pipeline-row",
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                        "span",
+                        {
+                          className: "ic",
+                          style: {
+                            background: color
+                          },
+                          children: "\u2022"
+                        }
+                      ),
+                      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: label }),
+                      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                        CountUp,
+                        {
+                          to: val.to,
+                          suffix: val.suffix,
+                          prefix: val.prefix,
+                          decimals: val.decimals,
+                          comma: val.comma
+                        }
+                      ) : fallback || "next" })
+                    ]
+                  },
+                  label
+                )
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "pipeline-foot", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("b", { children: [
+                  p.card.foot.split(".")[0],
+                  "."
+                ] }),
+                " ",
+                p.card.foot.split(".").slice(1).join(".").trim()
+              ] })
+            ] })
+          ]
+        },
+        active
+      )
     ] }) });
   }
 
