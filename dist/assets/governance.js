@@ -22051,7 +22051,7 @@
     ] });
   }
 
-  // src/sections/governance/anim/AnimatedBar.jsx
+  // src/sections/governance/anim/Animatedbar.jsx
   var import_react7 = __toESM(require_react(), 1);
   var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
   function AnimatedBar({ to, className = "", duration = 1200, delay = 0, style }) {

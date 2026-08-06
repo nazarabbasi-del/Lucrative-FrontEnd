@@ -1,8 +1,8 @@
 import React from 'react';
 import CountUp from '../governance/anim/CountUp.jsx';
-import AnimatedBar from '../governance/anim/AnimatedBar.jsx';
+import AnimatedBar from '../governance/anim/Animatedbar.jsx';
 import { IconSparkle } from '../../icons.jsx';
-import dashboardIndigo from '../../assets/dashboard-indigo.png';
+import dashboardIndigo from '../../assets/Dashboard-indigo.png';
 
 export default function StratumDashboardShowcase() {
   return (

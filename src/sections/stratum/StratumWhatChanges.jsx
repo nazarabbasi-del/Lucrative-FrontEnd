@@ -1,7 +1,7 @@
 import React from 'react';
 import CountUp from '../governance/anim/CountUp.jsx';
 import AnimatedVerticalBar from '../governance/anim/AnimatedVerticalBar.jsx';
-import AnimatedBar from '../governance/anim/AnimatedBar.jsx';
+import AnimatedBar from '../governance/anim/Animatedbar.jsx';
 import { IconCheck } from '../../icons.jsx';
 
 const attribution = [

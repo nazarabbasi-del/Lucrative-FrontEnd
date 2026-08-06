@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { IconCheck, IconAlert } from '../../icons.jsx';
 import CountUp from '../governance/anim/CountUp.jsx';
-import AnimatedBar from '../governance/anim/AnimatedBar.jsx';
+import AnimatedBar from '../governance/anim/Animatedbar.jsx';
 import mascotWorkflow from '../../assets/mascot-blue-workflow.png';
 
 const tabs = [

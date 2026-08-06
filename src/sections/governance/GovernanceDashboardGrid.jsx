@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconAlert, IconCheck } from '../../icons.jsx';
 import CountUp from './anim/CountUp.jsx';
-import AnimatedBar from './anim/AnimatedBar.jsx';
+import AnimatedBar from './anim/Animatedbar.jsx';
 import AnimatedRing from './anim/AnimatedRing.jsx';
 
 const IconHierarchy = (p) => (

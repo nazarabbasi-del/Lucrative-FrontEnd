@@ -22184,7 +22184,7 @@
     ] });
   }
 
-  // src/sections/governance/anim/AnimatedBar.jsx
+  // src/sections/governance/anim/Animatedbar.jsx
   var import_react9 = __toESM(require_react(), 1);
   var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 

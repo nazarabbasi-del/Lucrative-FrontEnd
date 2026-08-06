@@ -21990,7 +21990,7 @@
     ] });
   }
 
-  // src/sections/governance/anim/AnimatedBar.jsx
+  // src/sections/governance/anim/Animatedbar.jsx
   var import_react7 = __toESM(require_react(), 1);
   var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
   function AnimatedBar({ to, className = "", duration = 1200, delay = 0, style }) {
@@ -21998,8 +21998,8 @@
     return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { ref, className: `gov-bar-fill ${className}`.trim(), style: { width: `${value}%`, ...style } });
   }
 
-  // src/assets/dashboard-indigo.png
-  var dashboard_indigo_default = "assets/img/dashboard-indigo-PO3EV5A2.png";
+  // src/assets/Dashboard-indigo.png
+  var Dashboard_indigo_default = "assets/img/Dashboard-indigo-PO3EV5A2.png";
 
   // src/sections/stratum/StratumDashboardShowcase.jsx
   var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
@@ -22008,7 +22008,7 @@
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Every question, annotated." }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Stratum doesn\u2019t just answer \u2014 it shows its work. Sources, models, confidence." }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "strat-dash-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("img", { src: dashboard_indigo_default, alt: "Stratum dashboard", className: "strat-dash-img" }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("img", { src: Dashboard_indigo_default, alt: "Stratum dashboard", className: "strat-dash-img" }),
         /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "strat-float-chat", style: { top: "4%", right: "-2%" }, children: [
           "Which campaigns generated enterprise pipeline last month?",
           /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("time", { children: "10:12 AM \xB7 Monday" })

@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from '../governance/anim/CountUp.jsx';
-import AnimatedBar from '../governance/anim/AnimatedBar.jsx';
+import AnimatedBar from '../governance/anim/Animatedbar.jsx';
 import { IconSend } from '../../icons.jsx';
 
 const integrations = ['HubSpot', 'Salesforce', 'Snowflake', 'Amazon Redshift', 'Marketo', 'Google Ads', 'Google Analytics 4', 'Meta Ads', 'LinkedIn Ads', 'Mailchimp', 'Klaviyo', 'Pardot', 'Marketing Cloud', 'GoHighLevel'];
