@@ -45,6 +45,12 @@ export default function LLMDiagram() {
             </div>
 
             <span className="llm-flow-label" style={{ left: '40%',  top: '38%' }}>CONTEXT →</span>
+            {/* Mobile-only stand-in for the CONTEXT flow: the SVG paths below
+                are coordinate-locked to the horizontal desktop layout, so on
+                a stacked mobile column we swap them for simple vertical
+                connectors with their own flowing dot (see .llm-connector in
+                styles.css, scoped to the same max-width:900px breakpoint). */}
+            <div className="llm-connector llm-connector--context" aria-hidden="true"><span className="llm-connector-dot" /></div>
 
             <div className="llm-bridge-col">
               <div className="llm-bridge"><VLogo size={40} /></div>
@@ -52,6 +58,7 @@ export default function LLMDiagram() {
             </div>
 
             <span className="llm-flow-label" style={{ left: '58%', top: '38%' }}>ACTION →</span>
+            <div className="llm-connector llm-connector--action" aria-hidden="true"><span className="llm-connector-dot" /></div>
 
             <div className="llm-card">
               <div className="tag"><span className="dot" />LUCRATIVE SUITE</div>

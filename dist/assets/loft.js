@@ -21946,77 +21946,19 @@
   // src/sections/loft/LoftUnifiedBrain.jsx
   var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
   var labels = [
-    {
-      text: "One customer timeline",
-      top: "0%",
-      left: "50%",
-      color: "var(--teal-600)"
-    },
-    {
-      text: "No duplicate contacts",
-      top: "24%",
-      left: "86%",
-      color: "var(--blue-600)"
-    },
-    {
-      text: "No syncing issues",
-      top: "76%",
-      left: "86%",
-      color: "var(--blue-600)"
-    },
-    {
-      text: "AI insights everywhere",
-      top: "100%",
-      left: "50%",
-      color: "var(--gold-600)"
-    },
-    {
-      text: "No manual updates",
-      top: "50%",
-      left: "2%",
-      color: "var(--red-500)"
-    }
+    { text: "One customer timeline", slug: "customer-timeline", color: "var(--teal-600)" },
+    { text: "No duplicate contacts", slug: "duplicate-contacts", color: "var(--blue-600)" },
+    { text: "AI insights everywhere", slug: "ai-insights", color: "var(--gold-600)" },
+    { text: "No manual updates", slug: "manual-updates", color: "var(--red-500)" },
+    { text: "No syncing issues", slug: "syncing-issues", color: "var(--blue-600)" }
   ];
   var dots = [
-    // Outer ring
-    {
-      color: "#1FB6A6",
-      r: 320,
-      dur: "14s",
-      delay: "0s"
-    },
-    {
-      color: "#1FB6A6",
-      r: 320,
-      dur: "14s",
-      delay: "-7s"
-    },
-    // Middle ring
-    {
-      color: "#175FA4",
-      r: 236,
-      dur: "10s",
-      delay: "0s"
-    },
-    {
-      color: "#175FA4",
-      r: 236,
-      dur: "10s",
-      delay: "-5s"
-    },
-    // Inner ring
-    {
-      color: "#E8A63D",
-      r: 148,
-      dur: "7s",
-      delay: "0s"
-    },
-    {
-      color: "#E8A63D",
-      r: 148,
-      dur: "7s",
-      delay: "-3.5s"
-    }
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "0s" },
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "-7s" },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "0s" },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "-5s" },
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "0s" },
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "-3.5s" }
   ];
   function LoftUnifiedBrain() {
     return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "container", children: [
@@ -22049,13 +21991,8 @@
         labels.map((l) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
           "span",
           {
-            className: "orbit-label",
-            style: {
-              top: l.top,
-              left: l.left,
-              transform: "translate(-50%, -50%)",
-              color: l.color
-            },
+            className: `orbit-label orbit-label--${l.slug}`,
+            style: { transform: "translate(-50%, -50%)", color: l.color },
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
                 "svg",
@@ -22085,18 +22022,18 @@
         dots.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "div",
           {
-            className: "orbit-dot",
+            className: `orbit-orbiter ${d.ring}`,
             style: {
-              "--r": `${d.r}px`,
-              width: "10px",
-              height: "10px",
-              marginTop: "-5px",
-              marginLeft: "-5px",
-              background: d.color,
-              color: d.color,
-              animation: `orbit-cw ${d.dur} linear infinite`,
+              animationDuration: d.dur,
               animationDelay: d.delay
-            }
+            },
+            children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+              "span",
+              {
+                className: "orbit-dot",
+                style: { background: d.color, color: d.color }
+              }
+            )
           },
           i
         ))

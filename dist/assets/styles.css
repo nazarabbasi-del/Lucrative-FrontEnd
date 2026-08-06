@@ -274,7 +274,74 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav-links > a:hover::after {
   transform: scaleX(1);
 }
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-900);
+  border-radius: 2px;
+  transition: transform .25s var(--ease), opacity .2s var(--ease);
+}
+/* Bars 1/3 rotate into an X and bar 2 fades out when the menu is open. */
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Dropdown panel — only rendered in the DOM at all while `open` is true
+   (see Nav.jsx), so this just needs to look right; no need for a
+   desktop-only display:none safety net. */
+.nav-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-bottom: 1px solid var(--border-soft);
+  padding: 6px 24px 22px;
+  animation: navMenuDown .22s var(--ease);
+}
+.nav-mobile-menu a.nav-mobile-link {
+  padding: 13px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-700);
+  border-bottom: 1px solid var(--border-soft);
+}
+.nav-mobile-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+}
+/* .nav-signin is display:none at this breakpoint (rule below) so it
+   doesn't double up in the main row; this re-shows just the copy inside
+   the dropdown's own action row. The primary CTA isn't repeated here — it
+   already stays visible in the header row next to the burger. */
+.nav-mobile-actions .nav-signin { display: inline-block; }
+@keyframes navMenuDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  .nav-signin { display: none; }
+}
+@media (max-width: 420px) {
+  .nav-right { gap: 12px; }
+  .logo { font-size: 17px; }
+}
 
 /* =========================================================
    RIGHT SIDE
@@ -909,6 +976,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   .tab-panel { grid-template-columns: 1fr; }
 }
 
+/* HOW TO APPLY:
+   In styles.css, find the comment that says "Orbit diagram" and select
+   EVERYTHING from that comment down to — but not including — the next
+   section's comment, which starts with "LLM connection diagram".
+   Delete that whole range and paste this entire file in its place. */
+
 /* ==========================================================================
    Orbit diagram
    ========================================================================== */
@@ -933,9 +1006,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   top:50%; left:50%; transform: translate(-50%,-50%);
   border: 1.5px dashed rgba(15,45,77,0.18);
 }
-.orbit-ring.r1 { width:100%; height:100%; }
+.orbit-ring.r1 { width:100%; height:100%; border-style:dotted; }
 .orbit-ring.r2 { width:74%; height:74%; }
-.orbit-ring.r3 { width:46%; height:46%; }
+.orbit-ring.r3 { width:46%; height:46%; border-style:dotted; }
 .orbit-center {
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
   width:92px; height:92px; border-radius:24px;
@@ -944,25 +1017,62 @@ ul { margin: 0; padding: 0; list-style: none; }
   box-shadow: var(--shadow-md);
 }
 .orbit-label {
-  position:absolute; background:#fff; border:1px solid var(--border-soft);
+  position:absolute;
+  background:#fff; border:1px solid var(--border-soft);
   border-radius:999px; padding:6px 14px; font-size:12.5px; font-weight:700;
   box-shadow: var(--shadow-sm); display:flex; align-items:center; gap:6px;
   white-space:nowrap;
 }
+/* CRM / Marketing / Finance sit on the outer ring (r1, radius 50%), spaced
+   exactly 120° apart (CRM at 12 o'clock, Marketing/Finance each rotated
+   ±120° from it — a symmetric "Mercedes logo" split, not eyeballed).
+   Support / Sales sit on the middle ring (r2, radius 37%); the innermost
+   ring (r3) carries no labels at all — just the orbiting dots. Each pair
+   of coordinates is the exact point on its ring's circumference at that
+   angle, so the ring's dashed/dotted line disappears cleanly behind the
+   pill's center instead of visibly cutting across a corner of it. */
+.orbit-label--crm { top:0%; left:50%; }
+.orbit-label--marketing { top:75%; left:93.3%; }
+.orbit-label--finance { top:75%; left:6.7%; }
+.orbit-label--support { top:50%; left:13%; }
+.orbit-label--sales { top:69.3%; left:81.6%; }
+
+/* Loft page "One AI brain" diagram reuse — outer ring (r1, radius 50%):
+   One customer timeline / No duplicate contacts / AI insights everywhere,
+   spaced exactly 120° apart same as CRM/Marketing/Finance above. Inner
+   ring (r2, radius 37%): No manual updates / No syncing issues, mirrored
+   left/right same as Support/Sales above (left = triangle mascot side,
+   right = flower mascot side). */
+.orbit-label--customer-timeline { top:0%; left:50%; }
+.orbit-label--duplicate-contacts { top:75%; left:93.3%; }
+.orbit-label--ai-insights { top:75%; left:6.7%; }
+.orbit-label--manual-updates { top:50%; left:13%; }
+.orbit-label--syncing-issues { top:69.3%; left:81.6%; }
+
 .orbit-spin { position:absolute; inset:0; }
+
+/* Orbiter: an invisible ring-sized box (percentage, matching .orbit-ring
+   r1/r2/r3 exactly) that rotates around its own center. The dot is pinned
+   to its right edge, so it sweeps a circle whose radius is always exactly
+   the ring's current radius — at 640px desktop or a 300px phone alike —
+   instead of the old fixed-pixel translateX radius that only matched the
+   diagram at its full 640px desktop size. */
+.orbit-orbiter {
+  position:absolute; top:50%; left:50%; border-radius:50%;
+  animation-name: orbit-cw; animation-timing-function: linear; animation-iteration-count: infinite;
+  pointer-events:none;
+}
+.orbit-orbiter.r1 { width:100%; height:100%; }
+.orbit-orbiter.r2 { width:74%; height:74%; }
+.orbit-orbiter.r3 { width:46%; height:46%; }
 .orbit-dot {
-  position:absolute; width:11px; height:11px; border-radius:50%;
-  top:50%; left:50%;
+  position:absolute; top:50%; left:100%; transform:translate(-50%,-50%);
+  width:11px; height:11px; border-radius:50%;
   box-shadow: 0 0 8px currentColor;
 }
 @keyframes orbit-cw {
-  from {
-    transform: rotate(0deg) translateX(var(--r));
-  }
-
-  to {
-    transform: rotate(360deg) translateX(var(--r));
-  }
+  from { transform: translate(-50%,-50%) rotate(0deg); }
+  to   { transform: translate(-50%,-50%) rotate(360deg); }
 }
 .orbit-mascot { position:absolute; width:200px; top:50%; transform:translateY(-50%); transition: transform .4s var(--ease); }
 .orbit-mascot:hover { transform: translateY(-56%) scale(1.05); }
@@ -980,9 +1090,51 @@ ul { margin: 0; padding: 0; list-style: none; }
   right: -225px;
 }
 .orbit-mascot .squiggle { position:absolute; top:-28px; right:10px; width:34px; opacity:.8; }
+
+/* Mobile keeps CRM/Marketing/Finance at the SAME exact 120°-apart positions
+   as desktop (no per-label overrides) — the "Mercedes logo" split stays
+   identical on every screen size. Two things had to change instead of
+   moving the labels:
+     1. Side padding grows from the default down to 32px on phones, giving
+        Marketing/Finance's pills (which sit near the ring's left/right
+        edge at that angle) room to overflow past the ring itself without
+        running past the actual screen edge.
+     2. The pill text shrinks in three steps as the ring gets smaller
+        (900px, then 480px, then 340px), because the absolute pixel gap
+        between the outer-ring labels (Marketing/Finance) and the
+        middle-ring labels (Sales/Support) shrinks together with the ring
+        — a fixed-size label that was fine at 900px would start overlapping
+        its neighbor by the time the ring is down to phone width, so the
+        text has to shrink in step with the ring to keep the same gap. */
 @media (max-width: 900px) {
-  .orbit-mascot { display:none; }
+  .orbit-mascot, .orbit-mascot-squiggle { display:none; }
+  .orbit-section .container { padding-left:32px; padding-right:32px; }
+  .orbit-wrap { margin-top:56px; }
+  .orbit-label { font-size:10px; padding:4px 9px; gap:4px; }
+  .orbit-label svg { width:9px; height:9px; }
+  .orbit-center { width:64px; height:64px; border-radius:16px; }
+  .orbit-dot { width:8px; height:8px; }
 }
+@media (max-width: 480px) {
+  .orbit-label { font-size:8.5px; padding:3px 6px; gap:3px; }
+  .orbit-label svg { width:7px; height:7px; }
+}
+@media (max-width: 340px) {
+  .orbit-label { font-size:7.5px; padding:2px 5px; gap:2px; }
+  .orbit-label svg { width:6px; height:6px; }
+}
+.orbit-label--sales-marketing { top:0%; left:50%; }
+.orbit-label--no-manual { top:20.7%; left:90.5%; }
+.orbit-label--no-broken { top:100%; left:50%; }
+.orbit-label--dynamic-list { top:50%; left:13%; }
+.orbit-label--revenue-visibility { top:71.7%; left:80%; }
+/* HOW TO APPLY:
+   In styles.css, find the comment that says "LLM connection diagram"
+   (it looks like the block below) and select EVERYTHING from that comment
+   down to — but not including — the next section's comment, which starts
+   with "Persona switcher / use cases". Delete that whole range and paste
+   this entire file in its place. This is the complete section, so nothing
+   needs to be preserved from what you're deleting. */
 
 /* ==========================================================================
    LLM connection diagram
@@ -1029,11 +1181,45 @@ ul { margin: 0; padding: 0; list-style: none; }
 .llm-path { fill:none; stroke-width:1.5; }
 .llm-glow-dot { filter: drop-shadow(0 0 5px currentColor); }
 
-@media (max-width: 900px) {
-  .llm-row { flex-direction:column; gap:36px; }
-  .llm-svg { display:none; }
+/* Connector only exists for the mobile stacked layout (base rule must come
+   before the media query below so its equal-specificity display:none
+   doesn't win the cascade on mobile). */
+.llm-connector { display:none; }
+@keyframes llm-flow-down {
+  0% { top:0; opacity:0; }
+  15% { opacity:1; }
+  85% { opacity:1; }
+  100% { top:100%; opacity:0; }
 }
 
+@media (max-width: 900px) {
+  .llm-row { flex-direction:column; gap:0; }
+  .llm-svg { display:none; }
+  /* Card is a fixed 270px on desktop for the flex row's spacing math; on a
+     stacked mobile column let it shrink on narrow phones (e.g. 320px wide)
+     instead of overflowing the container. */
+  .llm-card { width:100%; max-width:270px; }
+
+  /* Vertical stand-in for the animated CONTEXT/ACTION paths — a short
+     dashed line with a dot that flows top-to-bottom on a loop, replacing
+     the desktop SVG (which is hidden above since its coordinates are
+     locked to the horizontal layout). */
+  .llm-connector { display:flex; justify-content:center; position:relative; width:2px; height:40px; margin:6px auto; }
+  .llm-connector::before {
+    content:''; position:absolute; inset:0; margin:0 auto; width:2px;
+    background: repeating-linear-gradient(to bottom, rgba(232,166,61,0.45) 0 4px, transparent 4px 9px);
+  }
+  .llm-connector--action::before { background: repeating-linear-gradient(to bottom, rgba(74,143,214,0.45) 0 4px, transparent 4px 9px); }
+  .llm-connector-dot {
+    position:absolute; left:50%; top:0; width:6px; height:6px; margin-left:-3px; margin-top:-2px;
+    border-radius:50%; background:#E8A63D; box-shadow:0 0 6px #E8A63D;
+    animation: llm-flow-down 2s linear infinite;
+  }
+  .llm-connector--action .llm-connector-dot { background:#4A8FD6; box-shadow:0 0 6px #4A8FD6; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .llm-connector-dot { animation:none; opacity:1; top:50%; margin-top:-3px; }
+}
 /* ==========================================================================
    Persona switcher / use cases
    ========================================================================== */
@@ -1506,9 +1692,23 @@ table.comparison tbody tr:hover {
    Closing CTA
    ========================================================================== */
 .closing-cta { display:grid; grid-template-columns: 0.9fr 1.1fr; gap:40px; align-items:center; border-radius: var(--radius-lg); padding:50px 56px; }
-.closing-cta img { max-width:500px; margin:0 auto; }
+/* Grid items default to min-width:auto, which means their min-content size
+   (the widest thing inside them that can't shrink) sets a floor on how
+   narrow the column is allowed to get. .btns below holds two nowrap
+   buttons in a row that don't wrap by default, so without this override
+   their combined width becomes that floor — forcing the single mobile
+   column (and the heading/paragraph riding along in it) wider than the
+   phone screen instead of actually wrapping to fit it. */
+.closing-cta > div { min-width: 0; }
+/* width:100% is the actual fix here — the source PNG's natural size (446px)
+   is under the 500px cap, so max-width alone never engaged and the image
+   rendered at its fixed intrinsic size regardless of a narrower mobile
+   column, overflowing off both sides (centered by margin:auto, so it
+   doesn't look obviously "cut off" — it's clipped symmetrically by the
+   page's overflow-x:clip instead of ever becoming visibly a bug). */
+.closing-cta img { width:100%; max-width:500px; height:auto; margin:0 auto; display:block; }
 .closing-cta h2 { text-align:left; font-size: clamp(24px,2.8vw,32px); }
-.closing-cta .btns { display:flex; gap:14px; margin-top:24px; }
+.closing-cta .btns { display:flex; flex-wrap:wrap; gap:14px; margin-top:24px; }
 @media (max-width:900px) {
   .closing-cta { grid-template-columns:1fr; text-align:center; padding:40px 28px; }
   .closing-cta h2 { text-align:center; }
@@ -1664,6 +1864,7 @@ table.comparison tbody tr:hover {
    the "gov-" prefix so nothing here touches the homepage.
    ========================================================= */
 
+
 /* --- Hero --- */
 .gov-hero { padding: 50px 0 60px; }
 .gov-hero-frame{
@@ -1674,25 +1875,25 @@ table.comparison tbody tr:hover {
     border-radius:40px;
 }
 .gov-hero-frame::before{
-
+ 
     content:"";
-
+ 
     position:absolute;
-
+ 
     left:40px;
     right:40px;
     top:30px;
     bottom:30px;
-
+ 
     border-left:2px solid #E7EDF5;
     border-right:2px solid #E7EDF5;
     border-bottom:2px solid #E7EDF5;
-
+ 
     border-radius:0 0 34px 34px;
-
+ 
     z-index:0;
 }
-.gov-hero-copy { text-align: center; }
+.gov-hero-copy { text-align: center; position: relative; z-index: 1; }
 .gov-hero-h1 {
   font-family: var(--font-head);
   font-weight: 600;
@@ -1705,35 +1906,36 @@ table.comparison tbody tr:hover {
 .gov-trust-row { display: flex; justify-content: center; gap: 26px; flex-wrap: wrap; margin-top: 22px; }
 .gov-trust-row span { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-600); font-weight: 600; }
 .gov-trust-row svg { color: var(--blue-600); }
-
+ 
 .gov-float-pill{
-
+ 
     position:absolute;
-
+ 
     display:flex;
     align-items:center;
     gap:10px;
-
+ 
     padding:14px 22px;
-
+ 
     background:#fff;
-
+ 
     border:1px solid #DCE5F1;
-
+ 
     border-radius:14px;
-
+ 
     font-weight:600;
-
+    font-size: 13px;
+    white-space: nowrap;
+ 
     color:#7B8796;
-
+ 
     z-index:5;
-
+ 
     transition:.35s;
 }
 .gov-float-pill svg { color: var(--blue-600); }
 .gov-float-pill.dark { background: var(--navy-900); color: #fff; border-color: var(--navy-900); }
-.gov-float-pill-ring { width: 13px; height: 13px; border-radius: 50%; border: 2px solid rgba(255,255,255,.5); border-top-color: #fff; }
-@media (max-width: 900px) { .gov-float-pill { display: none; } .gov-hero-frame { padding: 0 20px; } }
+
 
 /* --- Dashboard grid --- */
 .gov-dash-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto; gap: 18px; margin-top: 48px; }
@@ -2437,6 +2639,13 @@ animation-iteration-count:infinite,infinite;
     bottom:0;
     transform:translate(-50%,50%);
 }
+@media (max-width: 900px) 
+{
+  .pill-1, .pill-2 { 
+    top: 850px !important;
+  }
+  .pill-3 { bottom: 15px !important; }
+}
 .pill-icon{
     width:16px;
     height:16px;
@@ -2608,164 +2817,291 @@ to{
 
 /* ---------- Governance Hero Workflow ---------- */
 
+
+.pill-icon { position: relative; width: 15px; height: 15px; flex-shrink: 0; }
+.pill-icon .spinner {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(80,160,255,.3);
+  border-top-color: #1760A5;
+  animation: spin .8s linear infinite;
+}
+.gov-float-pill.dark .pill-icon .spinner {
+  border-color: rgba(255,255,255,.3);
+  border-top-color: #fff;
+}
+.pill-icon .tick { position: absolute; inset: 0; width: 15px; height: 15px; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+ 
+/* Each pill's background/border/color cycles through the same 10s loop as
+   its icon: idle (grey) -> flash (blue, while its spinner is showing) ->
+   done (navy, once its tick is showing) -> holds done for the rest of the
+   loop -> hard-cuts back to idle when the loop restarts. The five steps
+   fire in sequence: step1 (0-11%) -> step2 (20-31%) -> step3 (40-51%) ->
+   step5/"AI Suggestions" (60-71%) -> step4/"Fix issues" (80-91%) — note
+   step4 and step5 are intentionally swapped in the timing vs. their
+   number, matching the govShowSpinner4/5 + govShowTick4/5 wiring below. */
 .step1{ animation: step1 10s infinite; }
 .step2{ animation: step2 10s infinite; }
 .step3{ animation: step3 10s infinite; }
 .step4{ animation: step4New 10s infinite; }
 .step5{ animation: step5New 10s infinite; }
-
+ 
+@keyframes step1{
+0%,10%{
+    background:#E9F4FF;
+    color:#1760A5;
+    border-color:#73B7FF;
+    box-shadow:0 0 0 8px rgba(80,160,255,.15);
+}
+20%,100%{
+    background:#163B6D;
+    border-color:#163B6D;
+    color:#fff;
+}
+}
+ 
+@keyframes step2{
+0%,20%{
+    background:#fff;
+    color:#7B8796;
+    border-color:#DCE5F1;
+}
+30%{
+    background:#E9F4FF;
+    color:#1760A5;
+    border-color:#73B7FF;
+    box-shadow:0 0 0 8px rgba(80,160,255,.15);
+}
+40%,100%{
+    background:#163B6D;
+    border-color:#163B6D;
+    color:#fff;
+}
+}
+ 
+@keyframes step3{
+0%,40%{
+    background:#fff;
+    color:#7B8796;
+    border-color:#DCE5F1;
+}
+50%{
+    background:#E9F4FF;
+    color:#1760A5;
+    border-color:#73B7FF;
+    box-shadow:0 0 0 8px rgba(80,160,255,.15);
+}
+60%,100%{
+    background:#163B6D;
+    border-color:#163B6D;
+    color:#fff;
+}
+}
+ 
 @keyframes step4New{
-
+ 
 0%,80%{
     background:#fff;
     color:#7B8796;
     border-color:#DCE5F1;
 }
-
+ 
 90%{
     background:#E9F4FF;
     color:#1760A5;
     border-color:#73B7FF;
     box-shadow:0 0 0 8px rgba(80,160,255,.15);
 }
-
+ 
 100%{
     background:#163B6D;
     border-color:#163B6D;
     color:#fff;
 }
-
+ 
 }
-
+ 
 @keyframes step5New{
-
+ 
 0%,60%{
     background:#fff;
     color:#7B8796;
     border-color:#DCE5F1;
 }
-
+ 
 70%{
     background:#E9F4FF;
     color:#1760A5;
     border-color:#73B7FF;
     box-shadow:0 0 0 8px rgba(80,160,255,.15);
 }
-
+ 
 82%,100%{
     background:#163B6D;
     border-color:#163B6D;
     color:#fff;
 }
-
+ 
 }
-
+ 
 /* ==========================
    GOVERNANCE SPINNER
 ========================== */
-
+ 
 .step1 .spinner{
     animation: spin .8s linear infinite, govShowSpinner1 10s infinite;
 }
-
+ 
 .step2 .spinner{
     animation: spin .8s linear infinite, govShowSpinner2 10s infinite;
 }
-
+ 
 .step3 .spinner{
     animation: spin .8s linear infinite, govShowSpinner3 10s infinite;
 }
-
+ 
 .step5 .spinner{
     animation: spin .8s linear infinite, govShowSpinner4 10s infinite;
 }
-
+ 
 .step4 .spinner{
     animation: spin .8s linear infinite, govShowSpinner5 10s infinite;
 }
-
+ 
 /* ==========================
    GOVERNANCE TICK
 ========================== */
-
+ 
 .step1 .tick{
     animation: govShowTick1 10s infinite;
 }
-
+ 
 .step2 .tick{
     animation: govShowTick2 10s infinite;
 }
-
+ 
 .step3 .tick{
     animation: govShowTick3 10s infinite;
 }
-
+ 
 .step5 .tick{
     animation: govShowTick4 10s infinite;
 }
-
+ 
 .step4 .tick{
     animation: govShowTick5 10s infinite;
 }
-
+ 
 /* ==========================
    SPINNER VISIBILITY
 ========================== */
-
+ 
 @keyframes govShowSpinner1{
     0%,10%{opacity:1;}
     11%,100%{opacity:0;}
 }
-
+ 
 @keyframes govShowSpinner2{
     0%,20%{opacity:0;}
     20%,30%{opacity:1;}
     31%,100%{opacity:0;}
 }
-
+ 
 @keyframes govShowSpinner3{
     0%,40%{opacity:0;}
     40%,50%{opacity:1;}
     51%,100%{opacity:0;}
 }
-
+ 
 @keyframes govShowSpinner4{
     0%,60%{opacity:0;}
     60%,70%{opacity:1;}
     71%,100%{opacity:0;}
 }
-
+ 
 @keyframes govShowSpinner5{
     0%,80%{opacity:0;}
     80%,90%{opacity:1;}
     91%,100%{opacity:0;}
 }
-
+ 
 /* ==========================
    TICK VISIBILITY
 ========================== */
-
+ 
 @keyframes govShowTick1{
     0%,10%{opacity:0;}
     11%,100%{opacity:1;}
 }
-
+ 
 @keyframes govShowTick2{
     0%,30%{opacity:0;}
     31%,100%{opacity:1;}
 }
-
+ 
 @keyframes govShowTick3{
     0%,50%{opacity:0;}
     51%,100%{opacity:1;}
 }
-
+ 
 @keyframes govShowTick4{
     0%,70%{opacity:0;}
     71%,100%{opacity:1;}
 }
-
+ 
 @keyframes govShowTick5{
     0%,90%{opacity:0;}
     91%,100%{opacity:1;}
+}
+ 
+/* Mobile: keep the pills absolutely positioned and floating around the
+   card edges — same idea as desktop — instead of dropping into normal
+   document flow. Two things have to change for that to work at phone
+   width, both because the copy is a single full-width column on mobile
+   instead of a narrow block with side margins to float pills into:
+ 
+   1. HORIZONTAL: the 40px left/right anchor (set inline from JSX, so it
+      needs !important here) pulls in to 34px. Only the ONE side each
+      pill is actually anchored on gets touched (step1/step2 -> left,
+      step4/step5 -> right) — step3 ("Get Report") uses left:50% to stay
+      centered and must be left alone, since setting BOTH left and right
+      !important on an auto-width absolutely-positioned element makes the
+      browser stretch it to span the gap between them instead of sizing
+      to its content (that's a much worse bug than the one being fixed —
+      it's exactly what happened on an earlier pass at this).
+ 
+   2. VERTICAL: desktop's top:18% / top:50% / bottom:30px split the pills
+      into a band above, a band beside the middle of the text, and a band
+      below — that works because the desktop copy column is narrow enough
+      to have empty space on either side at every one of those heights.
+      On mobile the heading/lead text fills the full width and (being a
+      single column instead of two) is much taller, so top:50% now lands
+      partway down the middle of the wrapped heading text with nowhere
+      safe on either side — there is no "beside the text" on a phone.
+      The two safe bands are the small gap the frame's own extra top/
+      bottom padding reserves before the eyebrow and after the trust row.
+      So step1/step4 move up into the top band (top:20px, overriding
+      their 18%) and step2/step5 move down to sit alongside "Get Report"
+      in the bottom band (top:auto + bottom:30px, overriding their 50%)
+      — three pills sharing the bottom band, one anchored to each side,
+      one centered. */
+@media (max-width: 900px) {
+  .gov-hero-frame {
+    padding: 86px 6px 96px;
+  }
+  .gov-hero-frame::before { left: 10px; right: 10px; }
+  .gov-float-pill {
+    padding: 7px 10px;
+    font-size: 10px;
+    gap: 5px;
+  }
+  .step1 { top: 20px !important; left: 34px !important; }
+  .step4 { top: 20px !important; right: 34px !important; }
+  .step2 { top: auto !important; bottom: 30px !important; left: 34px !important; }
+  .step5 { top: auto !important; bottom: 30px !important; right: 34px !important; }
+  .pill-icon, .pill-icon .tick { width: 11px; height: 11px; }
+}
+@media (max-width: 380px) {
+  .gov-float-pill { font-size: 9px; padding: 6px 8px; }
 }

@@ -24666,6 +24666,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "foot", children: "YOUR KEY \xB7 TOKENS BILLED TO YOU" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "llm-flow-label", style: { left: "40%", top: "38%" }, children: "CONTEXT \u2192" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "llm-connector llm-connector--context", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "llm-connector-dot" }) }),
         /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "llm-bridge-col", children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "llm-bridge", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(VLogo, { size: 40 }) }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "llm-bridge-label", children: [
@@ -24674,6 +24675,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "llm-flow-label", style: { left: "58%", top: "38%" }, children: "ACTION \u2192" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "llm-connector llm-connector--action", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "llm-connector-dot" }) }),
         /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "llm-card", children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "tag", children: [
             /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "dot" }),
@@ -25538,22 +25540,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   // src/sections/OrbitDiagram.jsx
   var import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
   var labels = [
-    { text: "CRM", top: "0%", left: "50%", color: "var(--teal-600)" },
-    { text: "Marketing", top: "24%", left: "86%", color: "var(--blue-600)" },
-    { text: "Sales", top: "76%", left: "86%", color: "var(--blue-600)" },
-    { text: "Finance", top: "100%", left: "50%", color: "var(--gold-600)" },
-    { text: "Support", top: "50%", left: "2%", color: "var(--red-500)" }
+    { text: "CRM", slug: "crm", color: "var(--teal-600)" },
+    { text: "Marketing", slug: "marketing", color: "var(--blue-600)" },
+    { text: "Sales", slug: "sales", color: "var(--blue-600)" },
+    { text: "Finance", slug: "finance", color: "var(--gold-600)" },
+    { text: "Support", slug: "support", color: "var(--red-500)" }
   ];
   var dots = [
     // Outer ring
-    { color: "#1FB6A6", r: 320, dur: "14s", delay: "0s" },
-    { color: "#1FB6A6", r: 320, dur: "14s", delay: "-7s" },
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "0s" },
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "-7s" },
     // Middle ring
-    { color: "#175FA4", r: 236, dur: "10s", delay: "0s" },
-    { color: "#175FA4", r: 236, dur: "10s", delay: "-5s" },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "0s" },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "-5s" },
     // Inner ring
-    { color: "#E8A63D", r: 148, dur: "7s", delay: "0s" },
-    { color: "#E8A63D", r: 148, dur: "7s", delay: "-3.5s" }
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "0s" },
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "-3.5s" }
   ];
   function OrbitDiagram() {
     return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "container", children: [
@@ -25598,10 +25600,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         labels.map((l) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
           "span",
           {
-            className: "orbit-label",
+            className: `orbit-label orbit-label--${l.slug}`,
             style: {
-              top: l.top,
-              left: l.left,
               transform: "translate(-50%, -50%)",
               color: l.color
             },
@@ -25634,18 +25634,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         dots.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
           "div",
           {
-            className: "orbit-dot",
-            style: {
-              "--r": `${d.r}px`,
-              width: "10px",
-              height: "10px",
-              marginTop: "-5px",
-              marginLeft: "-5px",
-              background: d.color,
-              color: d.color,
-              animation: `orbit-cw ${d.dur} linear infinite`,
-              animationDelay: d.delay
-            }
+            className: `orbit-orbiter ${d.ring}`,
+            style: { animationDuration: d.dur, animationDelay: d.delay },
+            children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "orbit-dot", style: { background: d.color, color: d.color } })
           },
           i
         ))
@@ -26149,7 +26140,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("img", { src: icon_padlock_default, alt: "", style: { position: "absolute", width: 46, top: -6, right: 30 } })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("h2", { class: "hero-heading", children: "Meet the AI revenue platform your team already wishes they had." }),
+        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("h2", { className: "hero-heading", children: "Meet the AI revenue platform your team already wishes they had." }),
         /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Start with one product. Grow into the complete suite. Bring your own AI." }),
         /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("div", { className: "btns", children: [
           /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
@@ -27012,77 +27003,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   // src/sections/loftmarketing/LoftMarketingBrain.jsx
   var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
   var labels2 = [
-    {
-      text: "Sales & Marketing Aligned",
-      top: "0%",
-      left: "50%",
-      color: "var(--teal-600)"
-    },
-    {
-      text: "No Manual Execution",
-      top: "24%",
-      left: "86%",
-      color: "var(--blue-600)"
-    },
-    {
-      text: "Revenue Visibility",
-      top: "76%",
-      left: "86%",
-      color: "var(--blue-600)"
-    },
-    {
-      text: "No Broken Attributes",
-      top: "100%",
-      left: "50%",
-      color: "var(--gold-600)"
-    },
-    {
-      text: "Dynamic List",
-      top: "50%",
-      left: "2%",
-      color: "var(--red-500)"
-    }
+    { text: "Sales & Marketing Aligned", slug: "sales-marketing", color: "var(--teal-600)" },
+    { text: "No Manual Execution", slug: "no-manual", color: "var(--blue-600)" },
+    { text: "Revenue Visibility", slug: "revenue-visibility", color: "var(--blue-600)" },
+    { text: "No Broken Attributes", slug: "no-broken", color: "var(--gold-600)" },
+    { text: "Dynamic List", slug: "dynamic-list", color: "var(--red-500)" }
   ];
   var dots2 = [
     // Outer ring
-    {
-      color: "#1FB6A6",
-      r: 320,
-      dur: "14s",
-      delay: "0s"
-    },
-    {
-      color: "#1FB6A6",
-      r: 320,
-      dur: "14s",
-      delay: "-7s"
-    },
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "0s" },
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "-7s" },
     // Middle ring
-    {
-      color: "#175FA4",
-      r: 236,
-      dur: "10s",
-      delay: "0s"
-    },
-    {
-      color: "#175FA4",
-      r: 236,
-      dur: "10s",
-      delay: "-5s"
-    },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "0s" },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "-5s" },
     // Inner ring
-    {
-      color: "#E8A63D",
-      r: 148,
-      dur: "7s",
-      delay: "0s"
-    },
-    {
-      color: "#E8A63D",
-      r: 148,
-      dur: "7s",
-      delay: "-3.5s"
-    }
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "0s" },
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "-3.5s" }
   ];
   function LoftMarketingBrain() {
     return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "container", children: [
@@ -27097,76 +27033,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         "No duplicate audiences. \xB7 No disconnected campaigns. \xB7 No guessing attribution."
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "orbit-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
-          "img",
-          {
-            src: mascot_triangle_sparkle_default,
-            alt: "",
-            className: "orbit-mascot left"
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
-          "img",
-          {
-            src: mascot_flower_bench_default,
-            alt: "",
-            className: "orbit-mascot right"
-          }
-        ),
+        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("img", { src: mascot_triangle_sparkle_default, alt: "", className: "orbit-mascot left" }),
+        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("img", { src: mascot_flower_bench_default, alt: "", className: "orbit-mascot right" }),
         /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-ring r1" }),
         /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-ring r2" }),
         /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-ring r3" }),
-        labels2.map((l) => /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)(
-          "span",
-          {
-            className: "orbit-label",
-            style: {
-              top: l.top,
-              left: l.left,
-              transform: "translate(-50%, -50%)",
-              color: l.color
-            },
-            children: [
-              /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
-                "svg",
-                {
-                  width: "12",
-                  height: "12",
-                  viewBox: "0 0 24 24",
-                  fill: "none",
-                  children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
-                    "path",
-                    {
-                      d: "M5 13l4 4L19 7",
-                      stroke: "currentColor",
-                      strokeWidth: "3",
-                      strokeLinecap: "round",
-                      strokeLinejoin: "round"
-                    }
-                  )
-                }
-              ),
-              l.text
-            ]
-          },
+        labels2.map((l) => /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("span", { className: `orbit-label orbit-label--${l.slug}`, style: { transform: "translate(-50%,-50%)", color: l.color }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) }),
           l.text
-        )),
+        ] }, l.text)),
         /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(VLogo, { size: 40 }) }),
         dots2.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
           "div",
           {
-            className: "orbit-dot",
-            style: {
-              "--r": `${d.r}px`,
-              width: "10px",
-              height: "10px",
-              marginTop: "-5px",
-              marginLeft: "-5px",
-              background: d.color,
-              color: d.color,
-              animation: `orbit-cw ${d.dur} linear infinite`,
-              animationDelay: d.delay
-            }
+            className: `orbit-orbiter ${d.ring}`,
+            style: { animationDuration: d.dur, animationDelay: d.delay },
+            children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("span", { className: "orbit-dot", style: { background: d.color, color: d.color } })
           },
           i
         ))
@@ -27778,77 +27660,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_react48 = __toESM(require_react(), 1);
   var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
   var labels3 = [
-    {
-      text: "One customer timeline",
-      top: "0%",
-      left: "50%",
-      color: "var(--teal-600)"
-    },
-    {
-      text: "No duplicate contacts",
-      top: "24%",
-      left: "86%",
-      color: "var(--blue-600)"
-    },
-    {
-      text: "No syncing issues",
-      top: "76%",
-      left: "86%",
-      color: "var(--blue-600)"
-    },
-    {
-      text: "AI insights everywhere",
-      top: "100%",
-      left: "50%",
-      color: "var(--gold-600)"
-    },
-    {
-      text: "No manual updates",
-      top: "50%",
-      left: "2%",
-      color: "var(--red-500)"
-    }
+    { text: "One customer timeline", slug: "customer-timeline", color: "var(--teal-600)" },
+    { text: "No duplicate contacts", slug: "duplicate-contacts", color: "var(--blue-600)" },
+    { text: "AI insights everywhere", slug: "ai-insights", color: "var(--gold-600)" },
+    { text: "No manual updates", slug: "manual-updates", color: "var(--red-500)" },
+    { text: "No syncing issues", slug: "syncing-issues", color: "var(--blue-600)" }
   ];
   var dots3 = [
-    // Outer ring
-    {
-      color: "#1FB6A6",
-      r: 320,
-      dur: "14s",
-      delay: "0s"
-    },
-    {
-      color: "#1FB6A6",
-      r: 320,
-      dur: "14s",
-      delay: "-7s"
-    },
-    // Middle ring
-    {
-      color: "#175FA4",
-      r: 236,
-      dur: "10s",
-      delay: "0s"
-    },
-    {
-      color: "#175FA4",
-      r: 236,
-      dur: "10s",
-      delay: "-5s"
-    },
-    // Inner ring
-    {
-      color: "#E8A63D",
-      r: 148,
-      dur: "7s",
-      delay: "0s"
-    },
-    {
-      color: "#E8A63D",
-      r: 148,
-      dur: "7s",
-      delay: "-3.5s"
-    }
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "0s" },
+    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "-7s" },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "0s" },
+    { color: "#175FA4", ring: "r2", dur: "10s", delay: "-5s" },
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "0s" },
+    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "-3.5s" }
   ];
   function LoftUnifiedBrain() {
     return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { className: "container", children: [
@@ -27881,13 +27705,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         labels3.map((l) => /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(
           "span",
           {
-            className: "orbit-label",
-            style: {
-              top: l.top,
-              left: l.left,
-              transform: "translate(-50%, -50%)",
-              color: l.color
-            },
+            className: `orbit-label orbit-label--${l.slug}`,
+            style: { transform: "translate(-50%, -50%)", color: l.color },
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
                 "svg",
@@ -27917,18 +27736,18 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         dots3.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
           "div",
           {
-            className: "orbit-dot",
+            className: `orbit-orbiter ${d.ring}`,
             style: {
-              "--r": `${d.r}px`,
-              width: "10px",
-              height: "10px",
-              marginTop: "-5px",
-              marginLeft: "-5px",
-              background: d.color,
-              color: d.color,
-              animation: `orbit-cw ${d.dur} linear infinite`,
+              animationDuration: d.dur,
               animationDelay: d.delay
-            }
+            },
+            children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+              "span",
+              {
+                className: "orbit-dot",
+                style: { background: d.color, color: d.color }
+              }
+            )
           },
           i
         ))

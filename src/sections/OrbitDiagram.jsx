@@ -4,26 +4,39 @@ import mascotBee from '../assets/mascot-triangle-bee.png';
 import mascotBench from '../assets/mascot-blue-bench.png';
 import squiggle from '../assets/icon-squiggle.png';
 
+// `slug` gives each pill its own CSS class (.orbit-label--support etc).
+// top/left positioning now lives entirely in styles.css under that class
+// (not as inline style here) specifically so a mobile media query can
+// override just "Support" (left: 2%) and "Marketing"/"Sales" (left: 86%) —
+// those run past the edge of the diagram once the ring shrinks small
+// enough on phones that the pill's own width no longer fits in the
+// leftover margin. (Inline style would always beat an external override,
+// even one written for a narrower media query, so it can't live here.)
 const labels = [
-  { text: 'CRM', top: '0%', left: '50%', color: 'var(--teal-600)' },
-  { text: 'Marketing', top: '24%', left: '86%', color: 'var(--blue-600)' },
-  { text: 'Sales', top: '76%', left: '86%', color: 'var(--blue-600)' },
-  { text: 'Finance', top: '100%', left: '50%', color: 'var(--gold-600)' },
-  { text: 'Support', top: '50%', left: '2%', color: 'var(--red-500)' },
+  { text: 'CRM', slug: 'crm', color: 'var(--teal-600)' },
+  { text: 'Marketing', slug: 'marketing', color: 'var(--blue-600)' },
+  { text: 'Sales', slug: 'sales', color: 'var(--blue-600)' },
+  { text: 'Finance', slug: 'finance', color: 'var(--gold-600)' },
+  { text: 'Support', slug: 'support', color: 'var(--red-500)' },
 ];
 
+// `ring` picks which .orbit-ring (r1/r2/r3) each dot travels on. The dot no
+// longer carries its own pixel radius (see the old `r: 320` etc) — it's
+// wrapped in an .orbit-orbiter sized as a percentage of .orbit-wrap that
+// matches the ring exactly, so the orbit radius scales with the diagram at
+// any viewport width instead of being locked to the 640px desktop size.
 const dots = [
   // Outer ring
-  { color: '#1FB6A6', r: 320, dur: '14s', delay: '0s' },
-  { color: '#1FB6A6', r: 320, dur: '14s', delay: '-7s' },
+  { color: '#1FB6A6', ring: 'r1', dur: '14s', delay: '0s' },
+  { color: '#1FB6A6', ring: 'r1', dur: '14s', delay: '-7s' },
 
   // Middle ring
-  { color: '#175FA4', r: 236, dur: '10s', delay: '0s' },
-  { color: '#175FA4', r: 236, dur: '10s', delay: '-5s' },
+  { color: '#175FA4', ring: 'r2', dur: '10s', delay: '0s' },
+  { color: '#175FA4', ring: 'r2', dur: '10s', delay: '-5s' },
 
   // Inner ring
-  { color: '#E8A63D', r: 148, dur: '7s', delay: '0s' },
-  { color: '#E8A63D', r: 148, dur: '7s', delay: '-3.5s' },
+  { color: '#E8A63D', ring: 'r3', dur: '7s', delay: '0s' },
+  { color: '#E8A63D', ring: 'r3', dur: '7s', delay: '-3.5s' },
 ];
 
 export default function OrbitDiagram() {
@@ -74,11 +87,9 @@ export default function OrbitDiagram() {
           {/* Orbit labels */}
           {labels.map((l) => (
             <span
-              className="orbit-label"
+              className={`orbit-label orbit-label--${l.slug}`}
               key={l.text}
               style={{
-                top: l.top,
-                left: l.left,
                 transform: 'translate(-50%, -50%)',
                 color: l.color,
               }}
@@ -107,23 +118,19 @@ export default function OrbitDiagram() {
             <VLogo size={40} />
           </div>
 
-          {/* Moving dots */}
+          {/* Moving dots — each .orbit-orbiter is sized as a % of .orbit-wrap
+              matching its ring (see .orbit-orbiter.r1/.r2/.r3 in styles.css),
+              and rotates as a whole; the dot sits pinned to its right edge,
+              so the sweep radius is always exactly the ring's radius at
+              whatever size the diagram is currently rendered at. */}
           {dots.map((d, i) => (
             <div
-              className="orbit-dot"
+              className={`orbit-orbiter ${d.ring}`}
               key={i}
-              style={{
-                '--r': `${d.r}px`,
-                width: '10px',
-                height: '10px',
-                marginTop: '-5px',
-                marginLeft: '-5px',
-                background: d.color,
-                color: d.color,
-                animation: `orbit-cw ${d.dur} linear infinite`,
-                animationDelay: d.delay,
-              }}
-            />
+              style={{ animationDuration: d.dur, animationDelay: d.delay }}
+            >
+              <span className="orbit-dot" style={{ background: d.color, color: d.color }} />
+            </div>
           ))}
 
         </div>
