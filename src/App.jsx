@@ -1,7 +1,11 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import useReveal from './hooks/useReveal.js';
 
 import Nav from './sections/Nav.jsx';
+
+// Homepage sections
 import Hero from './sections/Hero.jsx';
 import LLMDiagram from './sections/LLMDiagram.jsx';
 import LogoStrip from './sections/LogoStrip.jsx';
@@ -19,11 +23,21 @@ import FAQ from './sections/FAQ.jsx';
 import ClosingCTA from './sections/ClosingCTA.jsx';
 import Footer from './sections/Footer.jsx';
 
-export default function App() {
+// Service pages
+import GovernancePage from './pages/GovernancePage.jsx';
+import LoftMarketingPage from './pages/LoftMarketingPage.jsx';
+import LoftPage from './pages/LoftPage.jsx';
+import QuotebasePage from './pages/QuotebasePage.jsx';
+import StratumPage from './pages/StratumPage.jsx';
+
+
+function HomePage() {
   useReveal();
+
   return (
     <>
       <Nav />
+
       <Hero />
       <LLMDiagram />
       <LogoStrip />
@@ -39,7 +53,51 @@ export default function App() {
       <CTABanner />
       <FAQ />
       <ClosingCTA />
+
       <Footer />
     </>
+  );
+}
+
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        {/* Homepage */}
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
+
+        {/* Services */}
+        <Route
+          path="/loft"
+          element={<LoftPage />}
+        />
+
+        <Route
+          path="/loft-marketing"
+          element={<LoftMarketingPage />}
+        />
+
+        <Route
+          path="/stratum"
+          element={<StratumPage />}
+        />
+
+        <Route
+          path="/quotebase"
+          element={<QuotebasePage />}
+        />
+
+        <Route
+          path="/governance"
+          element={<GovernancePage />}
+        />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
