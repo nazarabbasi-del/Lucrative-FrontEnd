@@ -27,9 +27,7 @@ export default function Nav() {
       <div className="container">
 
         {/* Logo */}
-        <a href="#top" className="logo">
-          <img src={logo} alt="Lucrative AI" style={{ height: 32, width: 'auto', display: 'block' }} />
-        </a>
+        <a href="#top" className="logo">LUCRAT<VLogo size={18} />E&nbsp;AI</a>
 
         {/* Main Navigation */}
         <nav className="nav-links">
