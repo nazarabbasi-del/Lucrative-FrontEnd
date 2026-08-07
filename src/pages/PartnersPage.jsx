@@ -166,7 +166,7 @@ export default function PartnersPage() {
           </div>
 
           {/* RIGHT: Form (HubSpot embed) */}
-          <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#0f2e4d', borderRadius: 22, padding: '36px 34px', display: 'flex', flexDirection: 'column' }}>
+          <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#fff', borderRadius: 22, padding: '36px 34px', display: 'flex', flexDirection: 'column' }}>
             <div style={{ marginBottom: 24 }}>
               <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: '#fff' }}>Get in touch</div>
             </div>
