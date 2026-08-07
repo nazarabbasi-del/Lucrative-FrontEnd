@@ -17,7 +17,7 @@ const options = [
 
 export default function GovernanceProblem() {
   return (
-    <section className="section section--grey section--tight">
+    <section className="section section--grey section--tight gov-problem">
       <div className="container">
         <h2 className="section-title reveal">Your CRM has been decaying quietly.</h2>
         <p className="section-sub reveal">

@@ -66,9 +66,11 @@ export default function GovernanceDashboardGrid() {
           </div>
 
           <div className="gov-dash-card">
-            <span className="gov-card-label">Overall Score</span>
-            <div className="gov-card-big"><CountUp to={87} /><span>/100</span></div>
-            <span className="gov-card-sub">Good health &middot; +13 since V2</span>
+            <div className="gov-card-inner gov-card-inner--bleed">
+              <span className="gov-card-label">Overall Score</span>
+              <div className="gov-card-big"><CountUp to={87} /><span className="gov-card-unit">/100</span></div>
+              <span className="gov-card-sub">Good health &middot; +13 since V2</span>
+            </div>
             <CardFoot />
           </div>
 
@@ -81,24 +83,28 @@ export default function GovernanceDashboardGrid() {
           </div>
 
           <div className="gov-dash-card">
-            <span className="gov-card-label">Issues Found</span>
-            <div className="gov-card-big"><CountUp to={12} /></div>
-            <span className="gov-card-sub">3 critical, 9 minor</span>
-            <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
-              <span className="badge badge-red">Critical</span>
-              <span className="badge badge-gold">Warning</span>
+            <div className="gov-card-inner gov-card-inner--bleed">
+              <span className="gov-card-label">Issues Found</span>
+              <div className="gov-card-big"><CountUp to={12} /></div>
+              <span className="gov-card-sub">3 critical, 9 minor</span>
+              <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
+                <span className="badge badge-red">Critical</span>
+                <span className="badge badge-gold">Warning</span>
+              </div>
             </div>
             <CardFoot />
           </div>
 
           <div className="gov-dash-card">
-            <div className="gov-bar-row">
-              <div className="gov-bar-top"><span>Invalid contacts</span><b><CountUp to={1200} comma /></b></div>
-              <div className="gov-bar"><AnimatedBar to={38} /></div>
-            </div>
-            <div className="gov-bar-row">
-              <div className="gov-bar-top"><span>Bounced Contacts</span><b><CountUp to={900} /></b></div>
-              <div className="gov-bar"><AnimatedBar to={28} className="gov-bar-fill--muted" /></div>
+            <div className="gov-card-inner">
+              <div className="gov-bar-row">
+                <div className="gov-bar-top"><span>Invalid contacts</span><b><CountUp to={1200} comma /></b></div>
+                <div className="gov-bar"><AnimatedBar to={10} /></div>
+              </div>
+              <div className="gov-bar-row gov-bar-row--muted">
+                <div className="gov-bar-top"><span>Bounced Contacts</span><b><CountUp to={900} /></b></div>
+                <div className="gov-bar"><AnimatedBar to={8} className="gov-bar-fill--muted" /></div>
+              </div>
             </div>
             <CardFoot />
           </div>

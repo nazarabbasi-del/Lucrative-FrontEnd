@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconCheck } from '../../icons.jsx';
+import { IconCheck, IconShield } from '../../icons.jsx';
 
 const floatPills = [
   {
@@ -106,7 +106,7 @@ export default function GovernanceHero() {
 
             <div className="gov-trust-row">
               <span>
-                <IconCheck />
+                <IconShield />
                 OAuth-secure
               </span>
 

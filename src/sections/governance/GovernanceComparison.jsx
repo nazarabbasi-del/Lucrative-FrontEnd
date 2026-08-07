@@ -12,16 +12,18 @@ const rows = [
   ['Versioned audit history', 'no', 'partial', 'V1 → V2 → V3'],
 ];
 
+// All three states are the same circular chip, differing only in tint — the
+// .chk-no / .chk-partial variants already exist alongside the base .chk.
 function Cell({ v }) {
   if (v === 'yes') return <span className="chk"><IconCheck /></span>;
-  if (v === 'no') return <span className="val-no"><IconX /></span>;
-  if (v === 'partial') return <span className="val-partial">~</span>;
+  if (v === 'no') return <span className="chk chk-no"><IconX /></span>;
+  if (v === 'partial') return <span className="chk chk-partial">~</span>;
   return <span>{v}</span>;
 }
 
 export default function GovernanceComparison() {
   return (
-    <section className="section section--tight">
+    <section className="section section--tight gov-compare">
       <div className="container">
         <h2 className="section-title reveal">Other tools tell you what&rsquo;s wrong.<br /><span className="text-blue">We tell you what it costs — and fix it.</span></h2>
 

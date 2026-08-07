@@ -86,7 +86,7 @@ export default function FindFixGovern() {
   }
 
   return (
-    <section className="section section--tight">
+    <section className="section section--tight gov-ff">
       <div className="container">
         <div className="gov-ff-layout reveal">
           <div className="gov-ff-nav-col">
@@ -128,7 +128,7 @@ export default function FindFixGovern() {
                   )}
 
                   {p.checklist && (
-                    <div className="gov-ff-panel-card">
+                    <div className="gov-ff-panel-card gov-ff-panel-card--checks">
                       {p.checklist.map(([label, tag]) => (
                         <div className="gov-ff-check-row" key={label}>
                           <span className="gov-ff-check-box"><IconCheck /></span>

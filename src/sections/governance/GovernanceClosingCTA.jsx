@@ -1,21 +1,27 @@
 import React from 'react';
 import mascotFlower from '../../assets/mascot-flower-laptop.png';
 import padlock from '../../assets/icon-padlock.png';
-import sparkles from '../../assets/deco-sparkles.png';
+import foldersWave from '../../assets/deco-folders-wave.png';
+import groundBlob from '../../assets/deco-vector-blob.png';
 
 export default function GovernanceClosingCTA() {
   return (
-    <section className="section--tight">
+    <section className="section--tight gov-closing">
       <div className="container">
         <div className="closing-cta reveal">
-          <div style={{ position: 'relative' }}>
-            <img src={mascotFlower} alt="" className="floaty" />
-            <img src={padlock} alt="" style={{ position: 'absolute', width: 46, top: -6, right: 30 }} />
-            <img src={sparkles} alt="" style={{ position: 'absolute', width: 60, top: -30, left: -10, opacity: .9 }} />
+          {/* deco-folders-wave carries the folder stack, the blue wave AND its
+              own sparkles, so the standalone deco-sparkles is not used here —
+              it would double them up. The mascot is the only in-flow image;
+              the other two are positioned against it. */}
+          <div className="gov-closing-art">
+            <img src={groundBlob} alt="" className="gov-closing-blob" />
+            <img src={foldersWave} alt="" className="gov-closing-folders" />
+            <img src={padlock} alt="" className="gov-closing-lock" />
+            <img src={mascotFlower} alt="" className="gov-closing-mascot floaty" />
           </div>
           <div>
             <h2 className="hero-heading">Run your first audit in the time it takes to read your last one.</h2>
-            <p style={{ marginTop: 14, color: 'var(--text-600)', fontSize: 17 }}>Five minutes. Full report. Every issue priced. Every fix reversible.</p>
+            <p style={{ marginTop: 14, color: 'var(--text-600)', fontSize: 16 }}>Five minutes. Full report. Every issue priced. Every fix reversible.</p>
             <div className="btns">
               <a href="#audit" className="btn btn-primary">Start free audit</a>
               <a href="#demo" className="btn btn-outline">Book a Demo</a>

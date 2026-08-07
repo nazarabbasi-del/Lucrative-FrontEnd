@@ -31,9 +31,9 @@ const personas = [
       sub: 'HubSpot · Marketing Hub Enterprise',
 
       rows: [
-        ['Legacy fields to retire', '#D5453F', '23'],
-        ['Orphaned workflows', '#D6931F', '8'],
-        ['Marketing seats freed', '#175FA4', '$4.2k/mo'],
+        ['Legacy fields to retire', '#E8615A','23'],
+        ['Orphaned workflows', '#E8A63D','8'],
+        ['Marketing seats freed', '#2F72C4','$4.2k/mo'],
       ],
 
       foot: 'One workspace. One score to defend at every QBR.',
@@ -59,9 +59,9 @@ const personas = [
       sub: 'HubSpot + Salesforce · Combined',
 
       rows: [
-        ['Duplicate accounts across CRMs', '#D5453F', '96'],
-        ['Fields unmapped in migration', '#D6931F', '14'],
-        ['Records reconciled', '#175FA4', '2,310'],
+        ['Duplicate accounts across CRMs', '#E8615A','96'],
+        ['Fields unmapped in migration', '#E8A63D','14'],
+        ['Records reconciled', '#2F72C4','2,310'],
       ],
 
       foot: 'One workspace. Every CRM, one governance score.',
@@ -87,9 +87,9 @@ const personas = [
       sub: 'HubSpot · Unowned for 14 months',
 
       rows: [
-        ['Undocumented workflows', '#D5453F', '41'],
-        ['Fields with no owner', '#D6931F', '118'],
-        ['Safe-to-archive flagged', '#175FA4', '63'],
+        ['Undocumented workflows', '#E8615A','41'],
+        ['Fields with no owner', '#E8A63D','118'],
+        ['Safe-to-archive flagged', '#2F72C4','63'],
       ],
 
       foot: 'One audit. Every landmine, mapped before you touch it.',
@@ -115,9 +115,9 @@ const personas = [
       sub: 'Salesforce · Pre-deployment check',
 
       rows: [
-        ['Missing required fields', '#D5453F', '29'],
-        ['Duplicate contact records', '#D6931F', '312'],
-        ['Records ready for training', '#175FA4', '91%'],
+        ['Missing required fields', '#E8615A','29'],
+        ['Duplicate contact records', '#E8A63D','312'],
+        ['Records ready for training', '#2F72C4','91%'],
       ],
 
       foot: 'One score. Every model, trained on clean data.',
@@ -143,9 +143,9 @@ const personas = [
       sub: 'Active governance audits',
 
       rows: [
-        ['Avg. score across clients', '#175FA4', '79'],
-        ['Critical issues this quarter', '#D5453F', '17'],
-        ['Client hours saved', '#D6931F', '214'],
+        ['Avg. score across clients', '#2F72C4','79'],
+        ['Critical issues this quarter', '#E8615A','17'],
+        ['Client hours saved', '#E8A63D','214'],
       ],
 
       foot: 'One dashboard. Every client, audited on schedule.',
@@ -153,13 +153,22 @@ const personas = [
   },
 ];
 
+// Keyed by colour rather than row index: the Agency persona lists its rows in
+// a different order (blue first), so an index-based lookup would pair the
+// alert glyph with the positive-blue chip.
+const GLYPH_BY_TONE = {
+  '#E8615A': '!',
+  '#E8A63D': '–',
+  '#2F72C4': '$',
+};
+
 export default function GovernancePersonas() {
   const [active, setActive] = useState(0);
 
   const p = personas[active];
 
   return (
-    <section className="section">
+    <section className="section--grey section--tight gov-personas">
       <div className="container">
 
         {/* SECTION HEADER */}
@@ -203,7 +212,12 @@ export default function GovernancePersonas() {
         </div>
 
         {/* PERSONA PANEL */}
-        <div className="persona-panel">
+        {/* No `reveal` here: key={active} remounts this node on every tab
+            change, and useReveal only observes the elements that existed when
+            it first ran — so a fresh node would keep .reveal's opacity:0 and
+            vanish the moment its fade-in animation finished. The panel has its
+            own fade-in, which replays on each switch. */}
+        <div className="persona-panel" key={active}>
 
           {/* LEFT SIDE */}
           <div>
@@ -215,18 +229,23 @@ export default function GovernancePersonas() {
                 alt=""
               />
 
-              <span
-                className="tag-pill"
-                style={{
-                  color: p.color,
-                }}
-              >
-                {p.tag}
-              </span>
+              {/* Tag pill stacks above the index rather than sitting beside it. */}
+              <div className="avatar-meta">
 
-              <span className="index">
-                PERSONA 0{active + 1}/05
-              </span>
+                <span
+                  className="tag-pill"
+                  style={{
+                    color: p.color,
+                  }}
+                >
+                  {p.tag}
+                </span>
+
+                <span className="index">
+                  PERSONA 0{active + 1} / 05
+                </span>
+
+              </div>
 
             </div>
 
@@ -284,41 +303,46 @@ export default function GovernancePersonas() {
 
             </div>
 
-            <div className="amount">
-              {p.card.amount}
-            </div>
+            {/* Score, sub-line and rows sit on a white panel inside the card. */}
+            <div className="pipeline-inner">
 
-            <div className="sub">
-              {p.card.sub}
-            </div>
+              <div className="amount">
+                {p.card.amount}
+              </div>
 
-            {p.card.rows.map(
-              ([label, color, val]) => (
-                <div
-                  className="pipeline-row"
-                  key={label}
-                >
+              <div className="sub">
+                {p.card.sub}
+              </div>
 
-                  <span
-                    className="ic"
-                    style={{
-                      background: color,
-                    }}
+              {p.card.rows.map(
+                ([label, color, val]) => (
+                  <div
+                    className="pipeline-row"
+                    key={label}
                   >
-                    ●
-                  </span>
 
-                  <span>
-                    {label}
-                  </span>
+                    <span
+                      className="ic"
+                      style={{
+                        background: color,
+                      }}
+                    >
+                      {GLYPH_BY_TONE[color]}
+                    </span>
 
-                  <span className="right">
-                    {val}
-                  </span>
+                    <span>
+                      {label}
+                    </span>
 
-                </div>
-              )
-            )}
+                    <span className="right">
+                      {val}
+                    </span>
+
+                  </div>
+                )
+              )}
+
+            </div>
 
             <div className="pipeline-foot">
 
