@@ -11,7 +11,7 @@ export default function QuotebaseHero() {
         <div className="reveal">
           <p className="eyebroww">Lucrative Quote</p>
           <h1>
-            Generate sales quotes in seconds with <span className="text-blue">Quotebase</span>
+            Generate sales quotes in seconds with <span className="text-blue">Lucrative Quote</span>
           </h1>
           <p style={{ fontSize: 22, fontWeight: 500, color: 'var(--text-900)', marginTop: 8 }}>
             With numbers your AI cannot invent.

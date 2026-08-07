@@ -32,6 +32,9 @@ const pages = [
   { html: 'loft.html', entry: 'src/main-loft.jsx', out: 'loft' },
   { html: 'loft-marketing.html', entry: 'src/main-loft-marketing.jsx', out: 'loft-marketing' },
   { html: 'quotebase.html', entry: 'src/main-quotebase.jsx', out: 'quotebase' },
+  { html: 'pricing.html', entry: 'src/main-pricing.jsx', out: 'pricing' },
+  { html: 'contact.html', entry: 'src/main-contact.jsx', out: 'contact' },
+  { html: 'partners.html', entry: 'src/main-partners.jsx', out: 'partners' },
 ];
 
 const buildOptions = {
@@ -47,6 +50,7 @@ const buildOptions = {
     '.jpg': 'file',
     '.jpeg': 'file',
     '.svg': 'file',
+    '.webp': 'file',
   },
   assetNames: 'img/[name]-[hash]',
   logLevel: 'info',

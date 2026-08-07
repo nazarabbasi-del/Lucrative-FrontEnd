@@ -34,7 +34,7 @@ export default function StratumHero() {
           <div className="gov-hero-copy">
             <p className="eyebrow" style={{ fontSize: 13 }}>Lucrative Analytics</p>
             <h1 className="gov-hero-h1">
-              <span className="text-blue">Stratum</span> turn all your business data into instant answers.
+              <span className="text-blue">Lucrative Analytics</span> turn all your business data into instant answers.
             </h1>
             <p className="gov-hero-lead">
               Connect your marketing, sales, and business platforms in minutes&mdash;without technical setup. Ask questions in plain English and get accurate answers, reports, and insights from all your data in one place.

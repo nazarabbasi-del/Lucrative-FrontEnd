@@ -7,11 +7,13 @@ export default function Nav() {
   const links = [
     { label: 'How it works', href: '#how-it-works' },
     { label: 'CRMs', href: '#crms' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Pricing', href: '/pricing' },
     { label: 'FAQ', href: '#faq' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Partners', href: '/partners' },
   ];
 
-  const services = [
+  const products = [
     { label: 'Lucrative Sales', href: '/loft' },
     { label: 'Lucrative Marketing', href: '/loft-marketing' },
     { label: 'Lucrative Analytics', href: '/stratum' },
@@ -51,7 +53,7 @@ export default function Nav() {
               className="nav-dropdown-trigger"
               aria-expanded={open}
             >
-              <span>Services</span>
+              <span>Products</span>
 
               <span
                 className={`dropdown-arrow ${open ? 'open' : ''}`}
@@ -65,7 +67,7 @@ export default function Nav() {
                 open ? 'show' : ''
               }`}
             >
-              {services.map((service) => (
+              {products.map((service) => (
                 <a
                   key={service.label}
                   href={service.href}
@@ -91,10 +93,10 @@ export default function Nav() {
           </a>
 
           <a
-            href="#audit"
+            href="/pricing#configurator"
             className="btn btn-primary btn-sm"
           >
-            Start free audit
+            Sign Up
           </a>
 
         </div>
