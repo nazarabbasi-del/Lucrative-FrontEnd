@@ -28,17 +28,17 @@ const EMAIL_TIERS = [
   { n: 2500000, price: 0 },
 ];
 const ACTION_TIERS = [
-  { n: 1000, price: 0 },
+  { n: 500, price: 0 },
+  { n: 1500, price: 0 },
+  { n: 3000, price: 0 },
   { n: 6000, price: 0 },
-  { n: 15000, price: 0 },
-  { n: 35000, price: 0 },
-  { n: 75000, price: 0 },
-  { n: 150000, price: 0 },
+  { n: 8000, price: 0 },
+  { n: 10000, price: 0 },
 ];
 
 const CONTACT_LABELS = ['5k', '15k', '35k', '75k', '250k', '1M'];
 const EMAIL_LABELS = ['50k', '150k', '350k', '750k', '1.5M', '2.5M'];
-const ACTION_LABELS = ['1k', '6k', '15k', '35k', '75k', '150k'];
+const ACTION_LABELS = ['500', '1.5k', '3k', '6k', '8k', '10k'];
 
 const CAPABILITY_CARDS = [
   { badge: 'Included', badgeColor: '#3d8b5c', badgeBg: 'rgba(109,199,143,0.16)', iconBg: 'rgba(109,199,143,0.18)', iconColor: '#3d8b5c', title: 'Default RevOps Consultancy', body: 'Mountainise RevOps architecture guidance at $0 cost.' },
@@ -133,7 +133,7 @@ const MATRIX_ROWS = [
 
 function fmtNum(n) {
   if (n >= 1000000) return (n / 1000000).toFixed(n % 1000000 === 0 ? 0 : 1) + 'M';
-  if (n >= 1000) return (n / 1000).toFixed(0) + 'k';
+  if (n >= 1000) return (n / 1000).toFixed(n % 1000 === 0 ? 0 : 1) + 'k';
   return n.toString();
 }
 
@@ -194,10 +194,25 @@ function MatrixCell({ cell }) {
 /* ------------------------------------------------------------------ */
 
 export default function PricingPage() {
+  // Contacts is the "package" dial — the plan name, base price, and
+  // included-contacts allowance are always tied to it. Moving Contacts up
+  // pulls Emails/Actions up too, but only the ones currently BELOW the new
+  // level (never pulls them down — a bar set higher than Contacts stays
+  // put). Emails and Actions can also be moved independently, any time,
+  // without touching Contacts or each other — if that pushes either of
+  // them above the Contacts tier, the plan name/base stay the same, but an
+  // "Extended Usage" line appears in the breakdown for the difference (see
+  // `extendedUsageCost` below), so the total still reflects it.
   const [contactsIdx, setContactsIdx] = useState(0);
   const [emailsIdx, setEmailsIdx] = useState(0);
   const [actionsIdx, setActionsIdx] = useState(0);
   const [seats, setSeats] = useState(5);
+
+  function handleContactsChange(value) {
+    setContactsIdx(value);
+    setEmailsIdx((prev) => Math.max(prev, value));
+    setActionsIdx((prev) => Math.max(prev, value));
+  }
 
   const rootRef = useRevealRoot();
   const matrixSectionRef = useRef(null);
@@ -228,15 +243,17 @@ export default function PricingPage() {
   const c = CONTACT_TIERS[contactsIdx];
   const e = EMAIL_TIERS[emailsIdx];
   const a = ACTION_TIERS[actionsIdx];
-  // The plan (name, base price, included-contacts allowance) is driven by
-  // whichever of the three sliders sits on the HIGHEST tier — not by the
-  // Contacts slider alone. Pushing Emails or AI Credits past your current
-  // Contacts tier bumps the whole plan up to match.
+  // The plan identity (name, base price, included-contacts allowance) is
+  // always tied to the Contacts tier. If Emails or Actions has been pushed
+  // to a higher tier than Contacts, that costs extra — priced as the
+  // difference between the two tiers' base prices, so no separate overage
+  // rate table is needed.
+  const plan = c;
   const effectiveIdx = Math.max(contactsIdx, emailsIdx, actionsIdx);
-  const plan = CONTACT_TIERS[effectiveIdx];
+  const extendedUsageCost = CONTACT_TIERS[effectiveIdx].base - c.base;
   const extraSeats = Math.max(0, seats - 5);
   const seatPrice = extraSeats * 5;
-  const total = plan.base + seatPrice;
+  const total = c.base + extendedUsageCost + seatPrice;
 
   const pct = (val, min, max) => ((val - min) / (max - min)) * 100;
 
@@ -280,7 +297,7 @@ export default function PricingPage() {
                   {fmtNum(c.n)} Contacts
                 </span>
               </div>
-              <input type="range" min={0} max={5} step={1} value={contactsIdx} onChange={(ev) => setContactsIdx(+ev.target.value)}
+              <input type="range" min={0} max={5} step={1} value={contactsIdx} onChange={(ev) => handleContactsChange(+ev.target.value)}
                 className="lc-slider" style={{ '--pct': pct(contactsIdx, 0, 5) + '%' }} />
               <div className="mono" style={{ display: 'flex', justifyContent: 'space-between', marginTop: 10, fontSize: 11, color: '#a0a0a0', letterSpacing: '0.04em' }}>
                 {CONTACT_LABELS.map((l) => <span key={l}>{l}</span>)}
@@ -371,6 +388,15 @@ export default function PricingPage() {
                   </div>
                   <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: '#fff', whiteSpace: 'nowrap' }}>${a.price}</div>
                 </div>
+                {extendedUsageCost > 0 && (
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
+                    <div>
+                      <div style={{ fontSize: 14.5, color: '#fff', fontWeight: 700 }}>Extended Usage</div>
+                      <div style={{ fontSize: 12, color: '#f4c96a', marginTop: 2 }}>Emails/AI Credits usage exceeds your Contacts tier</div>
+                    </div>
+                    <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: '#fff', whiteSpace: 'nowrap' }}>${extendedUsageCost}</div>
+                  </div>
+                )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
                   <div>
                     <div style={{ fontSize: 14.5, color: '#fff', fontWeight: 700 }}>User Seats ({seats} Users)</div>

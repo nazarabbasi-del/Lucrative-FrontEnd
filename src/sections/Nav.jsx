@@ -91,10 +91,10 @@ export default function Nav() {
           </a>
 
           <a
-            href="#audit"
+            href="/pricing#configurator"
             className="btn btn-primary btn-sm"
           >
-            Start free audit
+            Sign Up
           </a>
 
         </div>
