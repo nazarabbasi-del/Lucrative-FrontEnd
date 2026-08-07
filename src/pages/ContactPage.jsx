@@ -208,7 +208,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT: Form (HubSpot embed) */}
-          <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#0f2e4d', borderRadius: 22, padding: '36px 34px' }}>
+          <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#ffffff', borderRadius: 22, padding: '36px 34px' }}>
             <HubSpotForm portalId="6539536" formId="8dc97cfd-d0af-4beb-8539-f5da30788a99" region="na1" />
           </div>
         </div>

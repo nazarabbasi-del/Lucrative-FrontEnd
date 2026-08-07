@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import logo from '../assets/Lucarative-Logo.png';
 import { VLogo } from '../icons.jsx';
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
-
-  const links = [
-    { label: 'How it works', href: '#how-it-works' },
-    { label: 'CRMs', href: '#crms' },
-    { label: 'Pricing', href: '/pricing' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Partners', href: '/partners' },
-    { label: 'Investors', href: '/investors' },
-  ];
 
   const products = [
     { label: 'Lucrative Sales', href: '/loft' },
@@ -20,6 +11,13 @@ export default function Nav() {
     { label: 'Lucrative Analytics', href: '/stratum' },
     { label: 'Lucrative Quote', href: '/quotebase' },
     { label: 'Lucrative Governance', href: '/governance' },
+  ];
+
+  const links = [
+    { label: 'Pricing', href: '/pricing' },
+    { label: 'Partner', href: '/partners' },
+    { label: 'Investors', href: '/investors' },
+    { label: 'Contact Us', href: '/contact' },
   ];
 
   return (
@@ -34,16 +32,7 @@ export default function Nav() {
         {/* Main Navigation */}
         <nav className="nav-links">
 
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-            >
-              {link.label}
-            </a>
-          ))}
-
-          {/* Services Dropdown */}
+          {/* Products Dropdown */}
           <div
             className="nav-dropdown"
             onMouseEnter={() => setOpen(true)}
@@ -80,6 +69,15 @@ export default function Nav() {
               ))}
             </div>
           </div>
+
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          ))}
 
         </nav>
 
