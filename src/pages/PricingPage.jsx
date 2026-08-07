@@ -228,9 +228,15 @@ export default function PricingPage() {
   const c = CONTACT_TIERS[contactsIdx];
   const e = EMAIL_TIERS[emailsIdx];
   const a = ACTION_TIERS[actionsIdx];
+  // The plan (name, base price, included-contacts allowance) is driven by
+  // whichever of the three sliders sits on the HIGHEST tier — not by the
+  // Contacts slider alone. Pushing Emails or AI Credits past your current
+  // Contacts tier bumps the whole plan up to match.
+  const effectiveIdx = Math.max(contactsIdx, emailsIdx, actionsIdx);
+  const plan = CONTACT_TIERS[effectiveIdx];
   const extraSeats = Math.max(0, seats - 5);
   const seatPrice = extraSeats * 5;
-  const total = c.base + e.price + a.price + seatPrice;
+  const total = plan.base + seatPrice;
 
   const pct = (val, min, max) => ((val - min) / (max - min)) * 100;
 
@@ -342,14 +348,14 @@ export default function PricingPage() {
               <div style={{ padding: '26px 28px 22px', borderBottom: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div>
                   <div style={{ fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#7fa8d4', fontWeight: 700 }}>Workspace Estimate</div>
-                  <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: '#fff', marginTop: 6 }}>{c.name}</div>
+                  <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: '#fff', marginTop: 6 }}>{plan.name}</div>
                 </div>
                 <span className="mono" style={{ padding: '5px 11px', borderRadius: 9999, background: 'rgba(255,255,255,0.08)', color: '#b5d4f4', fontSize: 11, fontWeight: 700 }}>$99/mo Base Minimum</span>
               </div>
               <div style={{ padding: '22px 28px', display: 'grid', gap: 18 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
-                  <div style={{ fontSize: 14.5, color: '#fff', fontWeight: 700 }}>Base Infrastructure (Up to {c.n.toLocaleString()} Contacts)</div>
-                  <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: '#fff', whiteSpace: 'nowrap' }}>${c.base}</div>
+                  <div style={{ fontSize: 14.5, color: '#fff', fontWeight: 700 }}>Base Infrastructure (Up to {plan.n.toLocaleString()} Contacts)</div>
+                  <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: '#fff', whiteSpace: 'nowrap' }}>${plan.base}</div>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
                   <div>

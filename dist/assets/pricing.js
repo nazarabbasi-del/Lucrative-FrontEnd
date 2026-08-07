@@ -22116,9 +22116,11 @@
     const c = CONTACT_TIERS[contactsIdx];
     const e = EMAIL_TIERS[emailsIdx];
     const a = ACTION_TIERS[actionsIdx];
+    const effectiveIdx = Math.max(contactsIdx, emailsIdx, actionsIdx);
+    const plan = CONTACT_TIERS[effectiveIdx];
     const extraSeats = Math.max(0, seats - 5);
     const seatPrice = extraSeats * 5;
-    const total = c.base + e.price + a.price + seatPrice;
+    const total = plan.base + seatPrice;
     const pct = (val, min, max) => (val - min) / (max - min) * 100;
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { ref: rootRef, className: "lc-pricing-page", style: { background: "#f6f8fa", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("style", { children: PRICING_CSS }),
@@ -22268,7 +22270,7 @@
             /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { padding: "26px 28px 22px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, children: [
               /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
                 /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "#7fa8d4", fontWeight: 700 }, children: "Workspace Estimate" }),
-                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff", marginTop: 6 }, children: c.name })
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff", marginTop: 6 }, children: plan.name })
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "mono", style: { padding: "5px 11px", borderRadius: 9999, background: "rgba(255,255,255,0.08)", color: "#b5d4f4", fontSize: 11, fontWeight: 700 }, children: "$99/mo Base Minimum" })
             ] }),
@@ -22276,12 +22278,12 @@
               /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
                 /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
                   "Base Infrastructure (Up to ",
-                  c.n.toLocaleString(),
+                  plan.n.toLocaleString(),
                   " Contacts)"
                 ] }),
                 /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
                   "$",
-                  c.base
+                  plan.base
                 ] })
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
