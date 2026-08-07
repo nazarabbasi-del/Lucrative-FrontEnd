@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/Lucarative-Logo.png';
-
+import { VLogo } from '../icons.jsx';
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
@@ -27,7 +27,9 @@ export default function Nav() {
       <div className="container">
 
         {/* Logo */}
-        <a href="#top" className="logo">LUCRAT<VLogo size={18} />E&nbsp;AI</a>
+        <a href="#top" className="logo">
+          <img src={logo} alt="Lucrative AI" style={{ height: 32, width: 'auto', display: 'block' }} />
+        </a>
 
         {/* Main Navigation */}
         <nav className="nav-links">
