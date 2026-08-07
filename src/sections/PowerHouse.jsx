@@ -21,7 +21,7 @@ function ScoreCard() {
 function GovernanceCard() {
   const rows = ['Archive Lead Nurture Q1 2024', 'Reassign 12 enrolled contacts', 'Log to audit trail'];
   return (
-    <div className="ph-visual ph-visual--gold">
+    <div className="ph-visual ph-visual--gold ma">
       <div className="check-card">
         {rows.map((r) => (
           <div className="check-row checked" key={r}>

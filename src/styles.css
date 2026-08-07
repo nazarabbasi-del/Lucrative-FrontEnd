@@ -801,6 +801,79 @@ ul { margin: 0; padding: 0; list-style: none; }
 .feature-text p { color:var(--text-600); font-size:15px; line-height:1.75; max-width:460px; }
 .feature-text .meta { margin-top:26px; font-size:13px; color:var(--text-400); font-weight:600; }
 .feature-list p { padding:5px 0; }
+/* ===== Feature List ===== */
+
+.feature-list {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.feature-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 0;
+}
+
+/* Vertical line */
+.feature-list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 32px;
+  width: 2px;
+  height: calc(100% + 8px);
+  background: linear-gradient(
+    to bottom,
+    rgba(31,110,214,.35),
+    rgba(31,110,214,.08)
+  );
+}
+
+/* Outer Circle */
+.feature-bullet {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(31,110,214,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+/* Animated Center Dot */
+.feature-bullet-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue-600);
+  animation: pulseBullet 2.5s ease-in-out infinite;
+}
+
+.feature-text-item {
+  line-height: 1.65;
+}
+
+@keyframes pulseBullet {
+  0% {
+    transform: scale(.8);
+    box-shadow: 0 0 0 0 rgba(31,110,214,.45);
+  }
+
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(31,110,214,0);
+  }
+
+  100% {
+    transform: scale(.8);
+    box-shadow: 0 0 0 0 rgba(31,110,214,0);
+  }
+}
 
 /* Stacking/overlapping scroll cards — each .fp-stack-item is a tall scroll
    track; its .fp-stack-card sticks below the nav and stays pinned while the
@@ -1656,6 +1729,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--tagc) !important;
   border-color: var(--tagc);
 }
+
 .ph-card.reveal:hover .ph-visual { transform: scale(1.02); }
 .ph-card h3 { font-size:18px; font-weight:500; margin:6px 0 12px; }
 .ph-pills { display:flex; flex-wrap:wrap; gap:8px; }
@@ -2153,7 +2227,7 @@ table.comparison tbody tr:hover {
   box-shadow: var(--shadow-lg);
 
   /* THIS fixes the spacing issue */
-  padding: 48px 56px;
+  padding: 48px 56px 48px 56px;
 
   overflow: hidden;
 }

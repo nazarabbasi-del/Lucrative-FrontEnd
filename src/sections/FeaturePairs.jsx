@@ -353,19 +353,21 @@ function Row({
               ))}
             </div>
           ))}
+          {list && (
+  <ul className="feature-list">
+    {list.map((item) => (
+      <li key={item}>
+        <span className="feature-bullet">
+          <span className="feature-bullet-dot" />
+        </span>
 
-        {list && (
-          <div className="feature-list">
-            {list.map((item) => (
-              <p
-                key={item}
-                style={{ margin: 0 }}
-              >
-                {item}
-              </p>
-            ))}
-          </div>
-        )}
+        <span className="feature-text-item">
+          {item}
+        </span>
+      </li>
+    ))}
+  </ul>
+)}
 
         {brands && (
           <div className="brand-row">
@@ -438,7 +440,7 @@ const cards = [
       'Deterministic pricing engine',
       'Approval workflows & governance',
       'Policy-compliant contract generation',
-      'Salesforce, HubSpot & Lucrative integration',
+      'Integration with Salesforce and HubSpot',
       'Version control & audit history',
     ],
 
@@ -464,6 +466,9 @@ const cards = [
       [
         'AI driven yet controlled by human before any execution',
       ],
+      [
+        "Maintain duplication & data integration issues natively in Lucrative"
+      ]
     ],
 
     meta:
@@ -494,7 +499,7 @@ const cards = [
         'Natively integrate with Salesforce, HubSpot and any other external source',
       ],
       [
-        "Still don't find your connector – Request for Feature – Guaranteed 7-10 days delivery",
+        "Still don't find functionality – Request for Feature – Guaranteed 7-10 days delivery",
       ],
     ],
 

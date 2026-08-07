@@ -24509,7 +24509,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const links = [
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
-      { label: "Pricing", href: "#pricing" },
+      { label: "Pricing", href: "/pricing" },
       { label: "FAQ", href: "#faq" }
     ];
     const products2 = [
@@ -24927,7 +24927,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
   function GovernanceCard() {
     const rows5 = ["Archive Lead Nurture Q1 2024", "Reassign 12 enrolled contacts", "Log to audit trail"];
-    return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "ph-visual ph-visual--gold", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "ph-visual ph-visual--gold ma", children: [
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "check-card", children: rows5.map((r) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "check-row checked", children: [
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(IconCheck, {}) }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { children: r }),
@@ -25374,14 +25374,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               },
               gi
             )),
-            list && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "feature-list", children: list.map((item) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
-              "p",
-              {
-                style: { margin: 0 },
-                children: item
-              },
-              item
-            )) }),
+            list && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("ul", { className: "feature-list", children: list.map((item) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("li", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "feature-bullet", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "feature-bullet-dot" }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "feature-text-item", children: item })
+            ] }, item)) }),
             brands && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "brand-row", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(LogoRow, { h: 26 }) }),
             /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "meta", children: meta })
           ] }),
@@ -25434,7 +25430,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         "Deterministic pricing engine",
         "Approval workflows & governance",
         "Policy-compliant contract generation",
-        "Salesforce, HubSpot & Lucrative integration",
+        "Integration with Salesforce and HubSpot",
         "Version control & audit history"
       ],
       meta: "Salesforce native \xB7 Deterministic pricing \xB7 Policy guardrails",
@@ -25453,6 +25449,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         ],
         [
           "AI driven yet controlled by human before any execution"
+        ],
+        [
+          "Maintain duplication & data integration issues natively in Lucrative"
         ]
       ],
       meta: "Marketing Automation \xB7 AI Experiments \xB7 Campaign Intelligence",
@@ -25477,7 +25476,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           "Natively integrate with Salesforce, HubSpot and any other external source"
         ],
         [
-          "Still don't find your connector \u2013 Request for Feature \u2013 Guaranteed 7-10 days delivery"
+          "Still don't find functionality \u2013 Request for Feature \u2013 Guaranteed 7-10 days delivery"
         ]
       ],
       meta: "Natural language analytics \xB7 15+ platform integrations",
@@ -25823,7 +25822,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("h2", { className: "section-title reveal", children: [
         "Every customer. Every workflow.",
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("br", {}),
-        "One AI brain."
+        "Driven by RevOps AI Brain."
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("p", { className: "section-sub reveal", children: [
         "Every module shares the same customer record, governance engine, and AI intelligence.",

@@ -47,7 +47,7 @@ export default function OrbitDiagram() {
         <h2 className="section-title reveal">
           Every customer. Every workflow.
           <br />
-          One AI brain.
+          Driven by RevOps AI Brain.
         </h2>
 
         <p className="section-sub reveal">

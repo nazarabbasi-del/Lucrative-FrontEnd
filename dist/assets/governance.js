@@ -21772,7 +21772,7 @@
     const links = [
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
-      { label: "Pricing", href: "#pricing" },
+      { label: "Pricing", href: "/pricing" },
       { label: "FAQ", href: "#faq" }
     ];
     const products = [
