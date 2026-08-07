@@ -79,7 +79,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0 auto;
   padding: 0 32px;
 }
-.section { padding: 50px 0; position: relative; }
+.section { padding: 50px 0; position: relative;}
 .section--tight { padding: 72px 0; }
 .section--grey { background: var(--grey-bg); }
 .section--light-grey {background: #F4F6F6;}

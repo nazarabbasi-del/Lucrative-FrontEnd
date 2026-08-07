@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 // Adjust these two import paths/names to match your actual files if they
 // differ. Same convention as PricingPage.jsx / ContactPage.jsx / PartnersPage.jsx.
@@ -20,8 +20,6 @@ const HERO_BULLETS = [
   "We're actively seeking strategic partners, technology alliances, implementation firms, and investors who want to help shape the future of AI-powered revenue operations.",
   "If you're interested in collaborating, integrating, investing, or scaling with Lucrative AI, we'd love to hear from you.",
 ];
-
-const INTEREST_OPTIONS = ['Investment', 'Partnership', 'Sales', 'Information'];
 
 const TRUST_LOGOS = [
   { src: logoAws, alt: 'AWS' },
@@ -60,19 +58,68 @@ function useRevealRoot() {
   return rootRef;
 }
 
+// Loads the HubSpot forms embed script once (shared across any number of
+// HubSpotForm instances / page navigations) and renders the given form
+// into this component's own container via hbspt.forms.create's `target`
+// option, rather than relying on HubSpot's script-position auto-injection
+// — which doesn't work reliably once React has taken over the DOM.
+let hubspotScriptPromise = null;
+function loadHubSpotScript() {
+  if (typeof window === 'undefined') return Promise.resolve();
+  if (window.hbspt) return Promise.resolve();
+  if (hubspotScriptPromise) return hubspotScriptPromise;
+
+  hubspotScriptPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector('script[src*="js.hsforms.net/forms/embed/v2.js"]');
+    if (existing) {
+      existing.addEventListener('load', () => resolve());
+      existing.addEventListener('error', reject);
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    script.addEventListener('load', () => resolve());
+    script.addEventListener('error', reject);
+    document.body.appendChild(script);
+  });
+  return hubspotScriptPromise;
+}
+
+function HubSpotForm({ portalId, formId, region }) {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    loadHubSpotScript()
+      .then(() => {
+        if (cancelled || !containerRef.current || !window.hbspt) return;
+        // Clear first — guards against a duplicate form appearing if this
+        // effect re-runs (e.g. React StrictMode's double-invoke in dev).
+        containerRef.current.innerHTML = '';
+        window.hbspt.forms.create({
+          portalId,
+          formId,
+          region,
+          target: `#${containerRef.current.id}`,
+        });
+      })
+      .catch((err) => console.error('Failed to load HubSpot form:', err));
+    return () => {
+      cancelled = true;
+    };
+  }, [portalId, formId, region]);
+
+  return <div ref={containerRef} id="hubspot-investors-form" className="lc-hubspot-form" />;
+}
+
 /* ------------------------------------------------------------------ */
 /* Page                                                                */
 /* ------------------------------------------------------------------ */
 
 export default function InvestorsPage() {
   const rootRef = useRevealRoot();
-  const [interest, setInterest] = useState('');
-
-  // Wire this up to your actual submit endpoint — left as a no-op
-  // preventDefault for now, same as ContactPage.jsx / PartnersPage.jsx.
-  function handleSubmit(ev) {
-    ev.preventDefault();
-  }
 
   return (
     <div ref={rootRef} className="lc-investors-page" style={{ background: '#f9fafb', color: '#121212', fontFamily: "'Lato',sans-serif" }}>
@@ -102,48 +149,11 @@ export default function InvestorsPage() {
             </p>
           </div>
 
-          <div id="investor-form" className="lc-reveal" style={{ transitionDelay: '120ms', background: '#0f2e4d', borderRadius: 22, padding: '36px 34px' }}>
+          <div id="investor-form" className="lc-reveal" style={{ transitionDelay: '120ms', background: '#fff', borderRadius: 22, padding: '36px 34px' }}>
             <div style={{ marginBottom: 24 }}>
               <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: '#fff' }}>Get in touch</div>
             </div>
-
-            <form style={{ display: 'flex', flexDirection: 'column', gap: 18 }} onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-                <div>
-                  <label className="lc-field-label">First name</label>
-                  <input type="text" className="lc-field" placeholder="Jane" />
-                </div>
-                <div>
-                  <label className="lc-field-label">Last name</label>
-                  <input type="text" className="lc-field" placeholder="Doe" />
-                </div>
-              </div>
-
-              <div>
-                <label className="lc-field-label">Email address</label>
-                <input type="email" className="lc-field" placeholder="jane@company.com" />
-              </div>
-
-              <div>
-                <label className="lc-field-label">Company name</label>
-                <input type="text" className="lc-field" placeholder="Acme Inc." />
-              </div>
-
-              <div>
-                <label className="lc-field-label">What describes your best interest?</label>
-                <select className="lc-field" value={interest} onChange={(ev) => setInterest(ev.target.value)} defaultValue="">
-                  <option value="" disabled hidden></option>
-                  {INTEREST_OPTIONS.map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </select>
-              </div>
-
-              <button type="submit" className="lc-btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#185fa5', fontSize: 15.5, padding: '15px 26px', marginTop: 4 }}>
-                Submit Inquiry
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </button>
-            </form>
+            <HubSpotForm portalId="6539536" formId="d404e171-176d-42fa-bdf9-650486ac3fc9" region="na1" />
           </div>
         </div>
       </div>
@@ -192,6 +202,31 @@ const INVESTORS_CSS = `
 
 .lc-investors-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
 .lc-investors-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+/* Best-effort restyle of the embedded HubSpot form to match the dark
+   card it sits in. HubSpot injects its own default stylesheet with its
+   own specificity, so these need !important to reliably win. HubSpot's
+   exact class names can vary slightly by form/portal config — inspect
+   the rendered form once live and adjust selectors here if anything
+   still shows through unstyled. */
+.lc-investors-page .lc-hubspot-form .hs-form-field{margin-bottom:0 !important;}
+.lc-investors-page .lc-hubspot-form form{display:flex !important;flex-direction:column;gap:18px;}
+.lc-investors-page .lc-hubspot-form label{font-size:13px !important;font-weight:600 !important;color:#a9c6e6 !important;margin-bottom:8px !important;display:block !important;}
+.lc-investors-page .lc-hubspot-form .hs-form-required{color:#f4c96a !important;}
+.lc-investors-page .lc-hubspot-form input[type="text"],
+.lc-investors-page .lc-hubspot-form input[type="email"],
+.lc-investors-page .lc-hubspot-form input[type="tel"],
+.lc-investors-page .lc-hubspot-form select,
+.lc-investors-page .lc-hubspot-form textarea{-webkit-appearance:none;appearance:none;width:100% !important;padding:13px 16px !important;border:none !important;border-radius:12px !important;background:rgba(255,255,255,0.08) !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16) !important;color:#fff !important;font-family:'Lato',sans-serif !important;font-size:14.5px !important;outline:none !important;transition:box-shadow 150ms ease;}
+.lc-investors-page .lc-hubspot-form input:focus,
+.lc-investors-page .lc-hubspot-form select:focus,
+.lc-investors-page .lc-hubspot-form textarea:focus{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.45) !important;}
+.lc-investors-page .lc-hubspot-form ::placeholder{color:#7fa8d4 !important;}
+.lc-investors-page .lc-hubspot-form .hs-error-msgs{list-style:none;margin:6px 0 0;padding:0;}
+.lc-investors-page .lc-hubspot-form .hs-error-msgs label{color:#f4a68a !important;font-weight:500 !important;}
+.lc-investors-page .lc-hubspot-form .hs-button{width:100% !important;justify-content:center;background:#185fa5 !important;color:#fff !important;border:none !important;border-radius:9999px !important;font-weight:700 !important;font-size:15.5px !important;padding:15px 26px !important;margin-top:4px !important;cursor:pointer;}
+.lc-investors-page .lc-hubspot-form .hs-button:hover{background:#0f4c85 !important;}
+.lc-investors-page .lc-hubspot-form .submitted-message{color:#fff !important;font-size:15px;line-height:1.6;}
 
 @media (max-width: 900px) {
   .lc-investors-page > div:first-of-type > div{grid-template-columns:1fr !important;}

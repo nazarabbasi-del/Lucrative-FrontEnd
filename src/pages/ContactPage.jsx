@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 // Adjust these two import paths/names to match your actual files if they
 // differ. Based on your file tree these live at: src/sections/Nav.jsx and
@@ -26,18 +26,6 @@ import logoClaude from '../assets/contact/logo-claude.png';
 /* ------------------------------------------------------------------ */
 /* Data                                                                */
 /* ------------------------------------------------------------------ */
-
-const CRM_OPTIONS = ['Salesforce', 'HubSpot', 'Microsoft Dynamics', 'Pipedrive', 'Zoho', 'Attio', 'Monday CRM', 'GoHighLevel', 'Other'];
-
-// "Area of interest" search/select pills. Gradient values copied 1:1 from
-// the original bundle's pillStyle()/renderVals() logic.
-const INTEREST_APPS = [
-  { name: 'Loft for Sales', grad: { from: '#eaf2fb', to: '#d3e6f8', text: '#1c3a5c', border: 'rgba(47,111,176,0.3)' } },
-  { name: 'Loft for Marketing', grad: { from: '#fdf3e0', to: '#f9e6bf', text: '#7a5710', border: 'rgba(201,138,30,0.3)' } },
-  { name: 'Revenue Governance', grad: { from: '#e9ebee', to: '#d5d9de', text: '#1c2f42', border: 'rgba(28,47,66,0.3)' } },
-  { name: 'Stratum Analytics', grad: { from: '#fbe9e6', to: '#f6d5cf', text: '#7a2e26', border: 'rgba(194,92,80,0.3)' } },
-  { name: 'Quotebase', grad: { from: '#e2f5ef', to: '#c9ece0', text: '#146a57', border: 'rgba(45,156,136,0.3)' } },
-];
 
 const DEPLOYMENT_CARDS = [
   { tag: 'Migration', tagColor: '#185fa5', title: 'CRM Migrations', body: 'Move your data and workflows without disruption.' },
@@ -116,10 +104,60 @@ function useRevealRoot() {
   return rootRef;
 }
 
-function pillStyle(isSel, grad) {
-  return isSel
-    ? { padding: '10px 16px', borderRadius: 9999, background: `linear-gradient(135deg, ${grad.from}, ${grad.to})`, color: grad.text, fontSize: 13.5, fontWeight: 700, boxShadow: `inset 0 0 0 1px ${grad.border}`, display: 'inline-flex', alignItems: 'center', gap: 6, cursor: 'pointer', transition: 'background 150ms ease' }
-    : { padding: '10px 16px', borderRadius: 9999, background: 'rgba(255,255,255,0.06)', color: '#b5d4f4', fontSize: 13.5, fontWeight: 600, boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.18)', display: 'inline-flex', alignItems: 'center', gap: 6, cursor: 'pointer', transition: 'background 150ms ease' };
+// Loads the HubSpot forms embed script once (shared across any number of
+// HubSpotForm instances / page navigations) and renders the given form
+// into this component's own container via hbspt.forms.create's `target`
+// option, rather than relying on HubSpot's script-position auto-injection
+// — which doesn't work reliably once React has taken over the DOM.
+let hubspotScriptPromise = null;
+function loadHubSpotScript() {
+  if (typeof window === 'undefined') return Promise.resolve();
+  if (window.hbspt) return Promise.resolve();
+  if (hubspotScriptPromise) return hubspotScriptPromise;
+
+  hubspotScriptPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector('script[src*="js.hsforms.net/forms/embed/v2.js"]');
+    if (existing) {
+      existing.addEventListener('load', () => resolve());
+      existing.addEventListener('error', reject);
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    script.addEventListener('load', () => resolve());
+    script.addEventListener('error', reject);
+    document.body.appendChild(script);
+  });
+  return hubspotScriptPromise;
+}
+
+function HubSpotForm({ portalId, formId, region }) {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    loadHubSpotScript()
+      .then(() => {
+        if (cancelled || !containerRef.current || !window.hbspt) return;
+        // Clear first — guards against a duplicate form appearing if this
+        // effect re-runs (e.g. React StrictMode's double-invoke in dev).
+        containerRef.current.innerHTML = '';
+        window.hbspt.forms.create({
+          portalId,
+          formId,
+          region,
+          target: `#${containerRef.current.id}`,
+        });
+      })
+      .catch((err) => console.error('Failed to load HubSpot form:', err));
+    return () => {
+      cancelled = true;
+    };
+  }, [portalId, formId, region]);
+
+  return <div ref={containerRef} id="hubspot-contact-form" className="lc-hubspot-form" />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -128,26 +166,6 @@ function pillStyle(isSel, grad) {
 
 export default function ContactPage() {
   const rootRef = useRevealRoot();
-
-  // "Select your area of interest" search + multi-select pills.
-  const [query, setQuery] = useState('');
-  const [selected, setSelected] = useState({});
-
-  function toggleApp(name) {
-    setSelected((s) => ({ ...s, [name]: !s[name] }));
-  }
-
-  const filteredApps = useMemo(() => {
-    const q = query.toLowerCase();
-    return INTEREST_APPS.filter((a) => a.name.toLowerCase().includes(q));
-  }, [query]);
-
-  // Wire this up to your actual submit endpoint (API route, form service,
-  // etc.) — left as a no-op preventDefault for now, same as the original
-  // bundle's onsubmit="return false;".
-  function handleSubmit(ev) {
-    ev.preventDefault();
-  }
 
   return (
     <div ref={rootRef} className="lc-contact-page" style={{ background: '#f9fafb', color: '#121212', fontFamily: "'Lato',sans-serif" }}>
@@ -189,96 +207,9 @@ export default function ContactPage() {
             <img src={formSideImg} alt="" style={{ maxWidth: 440, width: '100%', marginTop: 'auto', alignSelf: 'center' }} />
           </div>
 
-          {/* RIGHT: Form */}
-          <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#0f2e4d', borderRadius: 22, padding: '36px 34px' }}>
-            <form style={{ display: 'flex', flexDirection: 'column', gap: 18 }} onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-                <div>
-                  <label className="lc-field-label">First name</label>
-                  <input type="text" className="lc-field" placeholder="Jane" />
-                </div>
-                <div>
-                  <label className="lc-field-label">Last name</label>
-                  <input type="text" className="lc-field" placeholder="Doe" />
-                </div>
-              </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-                <div>
-                  <label className="lc-field-label">Business email</label>
-                  <input type="email" className="lc-field" placeholder="jane@company.com" />
-                </div>
-                <div>
-                  <label className="lc-field-label">Company</label>
-                  <input type="text" className="lc-field" placeholder="Acme Inc." />
-                </div>
-              </div>
-
-              <div>
-                <label className="lc-field-label">Job title</label>
-                <input type="text" className="lc-field" placeholder="VP of Revenue Operations" />
-              </div>
-
-              <div>
-                <label className="lc-field-label">CRM currently using</label>
-                <select className="lc-field" defaultValue="">
-                  <option value="" disabled hidden></option>
-                  {CRM_OPTIONS.map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label className="lc-field-label">Select your area of interest</label>
-                <div style={{ position: 'relative', marginBottom: 12 }}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7fa8d4" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ position: 'absolute', left: 15, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-                    <circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                  <input
-                    type="text"
-                    className="lc-field"
-                    style={{ paddingLeft: 40 }}
-                    placeholder="Search apps..."
-                    value={query}
-                    onChange={(ev) => setQuery(ev.target.value)}
-                  />
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                  {filteredApps.map((app) => {
-                    const isSel = !!selected[app.name];
-                    return (
-                      <button
-                        key={app.name}
-                        type="button"
-                        onClick={() => toggleApp(app.name)}
-                        style={pillStyle(isSel, app.grad)}
-                      >
-                        {isSel && (
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12" />
-                          </svg>
-                        )}
-                        {app.name}
-                      </button>
-                    );
-                  })}
-                  {filteredApps.length === 0 && (
-                    <span style={{ fontSize: 13, color: '#7fa8d4' }}>No apps match your search.</span>
-                  )}
-                </div>
-              </div>
-
-              <div>
-                <label className="lc-field-label">Biggest challenge</label>
-                <textarea className="lc-field" rows={3} placeholder="Tell us what you're trying to solve" />
-              </div>
-
-              <button type="submit" className="lc-btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#185fa5', fontSize: 15.5, padding: '15px 26px', marginTop: 4 }}>
-                Submit
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </button>
-            </form>
+          {/* RIGHT: Form (HubSpot embed) */}
+          <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#ffffff', borderRadius: 22, padding: '36px 34px' }}>
+            <HubSpotForm portalId="6539536" formId="8dc97cfd-d0af-4beb-8539-f5da30788a99" region="na1" />
           </div>
         </div>
       </section>
@@ -407,6 +338,31 @@ const CONTACT_CSS = `
 
 .lc-contact-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
 .lc-contact-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+/* Best-effort restyle of the embedded HubSpot form to match the dark
+   card it sits in. HubSpot injects its own default stylesheet with its
+   own specificity, so these need !important to reliably win. HubSpot's
+   exact class names can vary slightly by form/portal config — inspect
+   the rendered form once live and adjust selectors here if anything
+   still shows through unstyled. */
+.lc-contact-page .lc-hubspot-form .hs-form-field{margin-bottom:0 !important;}
+.lc-contact-page .lc-hubspot-form form{display:flex !important;flex-direction:column;gap:18px;}
+.lc-contact-page .lc-hubspot-form label{font-size:13px !important;font-weight:600 !important;color:#a9c6e6 !important;margin-bottom:8px !important;display:block !important;}
+.lc-contact-page .lc-hubspot-form .hs-form-required{color:#f4c96a !important;}
+.lc-contact-page .lc-hubspot-form input[type="text"],
+.lc-contact-page .lc-hubspot-form input[type="email"],
+.lc-contact-page .lc-hubspot-form input[type="tel"],
+.lc-contact-page .lc-hubspot-form select,
+.lc-contact-page .lc-hubspot-form textarea{-webkit-appearance:none;appearance:none;width:100% !important;padding:13px 16px !important;border:none !important;border-radius:12px !important;background:rgba(255,255,255,0.08) !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16) !important;color:#fff !important;font-family:'Lato',sans-serif !important;font-size:14.5px !important;outline:none !important;transition:box-shadow 150ms ease;}
+.lc-contact-page .lc-hubspot-form input:focus,
+.lc-contact-page .lc-hubspot-form select:focus,
+.lc-contact-page .lc-hubspot-form textarea:focus{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.45) !important;}
+.lc-contact-page .lc-hubspot-form ::placeholder{color:#7fa8d4 !important;}
+.lc-contact-page .lc-hubspot-form .hs-error-msgs{list-style:none;margin:6px 0 0;padding:0;}
+.lc-contact-page .lc-hubspot-form .hs-error-msgs label{color:#f4a68a !important;font-weight:500 !important;}
+.lc-contact-page .lc-hubspot-form .hs-button{width:100% !important;justify-content:center;background:#185fa5 !important;color:#fff !important;border:none !important;border-radius:9999px !important;font-weight:700 !important;font-size:15.5px !important;padding:15px 26px !important;margin-top:4px !important;cursor:pointer;}
+.lc-contact-page .lc-hubspot-form .hs-button:hover{background:#0f4c85 !important;}
+.lc-contact-page .lc-hubspot-form .submitted-message{color:#fff !important;font-size:15px;line-height:1.6;}
 
 @media (max-width: 900px) {
   .lc-contact-page .lc-hero > div,
