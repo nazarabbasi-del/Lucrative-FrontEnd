@@ -77,7 +77,10 @@ export default function App() {
           path="/pricing"
           element={<PricingPage />}
         />  
-
+        <Route
+          path="/contact"
+          element={<ContactPage />}
+        />
         {/* Services */}
         <Route
           path="/loft"
