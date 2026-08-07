@@ -35,6 +35,7 @@ import StratumPage from './pages/StratumPage.jsx';
 import PricingPage from './pages/PricingPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import PartnersPage from './pages/PartnersPage.jsx';
+import InvestorsPage from './pages/InvestorsPage.jsx';
 
 function HomePage() {
   useReveal();
@@ -86,6 +87,10 @@ export default function App() {
         <Route
           path="/partners"
           element={<PartnersPage />}
+        />
+        <Route
+          path="/investors"
+          element={<InvestorsPage />}
         />
         {/* Services */}
         <Route

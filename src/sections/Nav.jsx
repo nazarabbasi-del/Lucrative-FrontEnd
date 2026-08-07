@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import logo from '../assets/Lucarative-Logo.png';
 import { VLogo } from '../icons.jsx';
-
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
@@ -11,6 +11,7 @@ export default function Nav() {
     { label: 'FAQ', href: '#faq' },
     { label: 'Contact', href: '/contact' },
     { label: 'Partners', href: '/partners' },
+    { label: 'Investors', href: '/investors' },
   ];
 
   const products = [
@@ -27,7 +28,7 @@ export default function Nav() {
 
         {/* Logo */}
         <a href="#top" className="logo">
-          LUCRAT<VLogo size={20} />E&nbsp;AI
+          <a href="#top" className="logo">LUCRAT<VLogo size={18} />E&nbsp;AI</a>
         </a>
 
         {/* Main Navigation */}
