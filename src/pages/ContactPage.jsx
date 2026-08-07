@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // Adjust these two import paths/names to match your actual files if they
 // differ. Based on your file tree these live at: src/sections/Nav.jsx and
@@ -26,18 +26,6 @@ import logoClaude from '../assets/contact/logo-claude.png';
 /* ------------------------------------------------------------------ */
 /* Data                                                                */
 /* ------------------------------------------------------------------ */
-
-const CRM_OPTIONS = ['Salesforce', 'HubSpot', 'Microsoft Dynamics', 'Pipedrive', 'Zoho', 'Attio', 'Monday CRM', 'GoHighLevel', 'Other'];
-
-// "Area of interest" search/select pills. Gradient values copied 1:1 from
-// the original bundle's pillStyle()/renderVals() logic.
-const INTEREST_APPS = [
-  { name: 'Loft for Sales', grad: { from: '#eaf2fb', to: '#d3e6f8', text: '#1c3a5c', border: 'rgba(47,111,176,0.3)' } },
-  { name: 'Loft for Marketing', grad: { from: '#fdf3e0', to: '#f9e6bf', text: '#7a5710', border: 'rgba(201,138,30,0.3)' } },
-  { name: 'Revenue Governance', grad: { from: '#e9ebee', to: '#d5d9de', text: '#1c2f42', border: 'rgba(28,47,66,0.3)' } },
-  { name: 'Stratum Analytics', grad: { from: '#fbe9e6', to: '#f6d5cf', text: '#7a2e26', border: 'rgba(194,92,80,0.3)' } },
-  { name: 'Quotebase', grad: { from: '#e2f5ef', to: '#c9ece0', text: '#146a57', border: 'rgba(45,156,136,0.3)' } },
-];
 
 const DEPLOYMENT_CARDS = [
   { tag: 'Migration', tagColor: '#185fa5', title: 'CRM Migrations', body: 'Move your data and workflows without disruption.' },
@@ -69,6 +57,23 @@ const FAQ_ITEMS = [
   { q: 'Is Lucrative AI suitable for enterprise organizations?', a: 'Yes. The platform is designed to support businesses of all sizes, from growing companies to large enterprises requiring governance, security, and scalable deployments.' },
   { q: 'What happens after I submit the form?', a: 'A member of our team will review your requirements and contact you to schedule a discovery call or product demonstration based on your needs.' },
 ];
+
+const HUBSPOT_PORTAL_ID = '6539536';
+const HUBSPOT_FORM_ID = '8dc97cfd-d0af-4beb-8539-f5da30788a99';
+
+const CRM_OPTIONS = ['Salesforce', 'HubSpot', 'Microsoft Dynamics', 'Pipedrive', 'Zoho', 'Attio', 'Monday CRM', 'GoHighLevel', 'Other'];
+
+// Matches the fields configured on your live HubSpot form. The internal
+// property names below are HubSpot's own standard defaults for the first
+// five (guaranteed correct on any portal). The last three — crm,
+// interests, message — are custom properties on YOUR HubSpot account, so
+// I can't know their exact internal names for certain (HubSpot didn't
+// let me read the form definition directly — blocked by robots.txt).
+// To verify/fix: open this form in HubSpot (Marketing > Lead Capture >
+// Forms), click each of those three fields, and check the "Internal
+// name" shown in the field editor — update the `name:` values below to
+// match if they differ.
+const INTEREST_OPTIONS = ['Loft for Marketing', 'Loft for Sales', 'Stratum Analytics', 'Revenue Governance', 'Quotebase'];
 
 const LOGO_GRID = [
   { src: logoSalesforce, alt: 'Salesforce' },
@@ -116,10 +121,138 @@ function useRevealRoot() {
   return rootRef;
 }
 
-function pillStyle(isSel, grad) {
-  return isSel
-    ? { padding: '10px 16px', borderRadius: 9999, background: `linear-gradient(135deg, ${grad.from}, ${grad.to})`, color: grad.text, fontSize: 13.5, fontWeight: 700, boxShadow: `inset 0 0 0 1px ${grad.border}`, display: 'inline-flex', alignItems: 'center', gap: 6, cursor: 'pointer', transition: 'background 150ms ease' }
-    : { padding: '10px 16px', borderRadius: 9999, background: 'rgba(255,255,255,0.06)', color: '#b5d4f4', fontSize: 13.5, fontWeight: 600, boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.18)', display: 'inline-flex', alignItems: 'center', gap: 6, cursor: 'pointer', transition: 'background 150ms ease' };
+// Fully custom-styled form — no HubSpot widget, no iframe. On submit it
+// POSTs straight to HubSpot's Forms Submission API, so the lead still
+// lands in your HubSpot account exactly like the embedded widget would,
+// but every pixel of the form itself is ours to style with plain CSS.
+function ContactForm() {
+  const [values, setValues] = useState({ firstname: '', lastname: '', email: '', company: '', jobtitle: '', crm: '', message: '' });
+  const [interests, setInterests] = useState([]);
+  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+
+  function update(field, value) {
+    setValues((v) => ({ ...v, [field]: value }));
+  }
+
+  function toggleInterest(name) {
+    setInterests((prev) => (prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]));
+  }
+
+  async function handleSubmit(ev) {
+    ev.preventDefault();
+    setStatus('submitting');
+    try {
+      const res = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fields: [
+              { name: 'firstname', value: values.firstname },
+              { name: 'lastname', value: values.lastname },
+              { name: 'email', value: values.email },
+              { name: 'company', value: values.company },
+              { name: 'jobtitle', value: values.jobtitle },
+              // See the comment above INTEREST_OPTIONS — verify these 3
+              // internal field names against your actual HubSpot form.
+              { name: 'crm', value: values.crm },
+              { name: 'interests', value: interests.join(';') },
+              { name: 'message', value: values.message },
+            ],
+            context: {
+              pageUri: typeof window !== 'undefined' ? window.location.href : '',
+              pageName: typeof document !== 'undefined' ? document.title : '',
+            },
+          }),
+        }
+      );
+      if (!res.ok) throw new Error(`HubSpot submission failed: ${res.status}`);
+      setStatus('success');
+    } catch (err) {
+      console.error('Contact form submission failed:', err);
+      setStatus('error');
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <div style={{ color: '#fff', fontSize: 15.5, lineHeight: 1.6 }}>
+        Thanks — your message is in. Our team will get back to you shortly.
+      </div>
+    );
+  }
+
+  return (
+    <form style={{ display: 'flex', flexDirection: 'column', gap: 18 }} onSubmit={handleSubmit}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+        <div>
+          <label className="lc-field-label">First name</label>
+          <input type="text" className="lc-field" placeholder="Jane" required value={values.firstname} onChange={(ev) => update('firstname', ev.target.value)} />
+        </div>
+        <div>
+          <label className="lc-field-label">Last name</label>
+          <input type="text" className="lc-field" placeholder="Doe" required value={values.lastname} onChange={(ev) => update('lastname', ev.target.value)} />
+        </div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+        <div>
+          <label className="lc-field-label">Business email</label>
+          <input type="email" className="lc-field" placeholder="jane@company.com" required value={values.email} onChange={(ev) => update('email', ev.target.value)} />
+        </div>
+        <div>
+          <label className="lc-field-label">Company</label>
+          <input type="text" className="lc-field" placeholder="Acme Inc." value={values.company} onChange={(ev) => update('company', ev.target.value)} />
+        </div>
+      </div>
+
+      <div>
+        <label className="lc-field-label">Job title</label>
+        <input type="text" className="lc-field" placeholder="VP of Revenue Operations" value={values.jobtitle} onChange={(ev) => update('jobtitle', ev.target.value)} />
+      </div>
+
+      <div>
+        <label className="lc-field-label">CRM currently using</label>
+        <select className="lc-field" value={values.crm} onChange={(ev) => update('crm', ev.target.value)}>
+          <option value="" disabled hidden></option>
+          {CRM_OPTIONS.map((opt) => (
+            <option key={opt} value={opt}>{opt}</option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label className="lc-field-label">Select your area of interest</label>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {INTEREST_OPTIONS.map((opt) => (
+            <label key={opt} className="lc-checkbox">
+              <input
+                type="checkbox"
+                checked={interests.includes(opt)}
+                onChange={() => toggleInterest(opt)}
+              />
+              {opt}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <label className="lc-field-label">Biggest challenge</label>
+        <textarea className="lc-field" rows={3} placeholder="Tell us what you're trying to solve" value={values.message} onChange={(ev) => update('message', ev.target.value)} />
+      </div>
+
+      {status === 'error' && (
+        <div style={{ color: '#f4a68a', fontSize: 13 }}>Something went wrong sending that — please try again.</div>
+      )}
+
+      <button type="submit" className="lc-btn-primary" disabled={status === 'submitting'} style={{ width: '100%', justifyContent: 'center', background: '#185fa5', fontSize: 15.5, padding: '15px 26px', marginTop: 4, opacity: status === 'submitting' ? 0.7 : 1 }}>
+        {status === 'submitting' ? 'Submitting…' : 'Submit'}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+      </button>
+    </form>
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -128,26 +261,6 @@ function pillStyle(isSel, grad) {
 
 export default function ContactPage() {
   const rootRef = useRevealRoot();
-
-  // "Select your area of interest" search + multi-select pills.
-  const [query, setQuery] = useState('');
-  const [selected, setSelected] = useState({});
-
-  function toggleApp(name) {
-    setSelected((s) => ({ ...s, [name]: !s[name] }));
-  }
-
-  const filteredApps = useMemo(() => {
-    const q = query.toLowerCase();
-    return INTEREST_APPS.filter((a) => a.name.toLowerCase().includes(q));
-  }, [query]);
-
-  // Wire this up to your actual submit endpoint (API route, form service,
-  // etc.) — left as a no-op preventDefault for now, same as the original
-  // bundle's onsubmit="return false;".
-  function handleSubmit(ev) {
-    ev.preventDefault();
-  }
 
   return (
     <div ref={rootRef} className="lc-contact-page" style={{ background: '#f9fafb', color: '#121212', fontFamily: "'Lato',sans-serif" }}>
@@ -189,96 +302,9 @@ export default function ContactPage() {
             <img src={formSideImg} alt="" style={{ maxWidth: 440, width: '100%', marginTop: 'auto', alignSelf: 'center' }} />
           </div>
 
-          {/* RIGHT: Form */}
+          {/* RIGHT: Form (custom-styled, submits to HubSpot via fetch) */}
           <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#0f2e4d', borderRadius: 22, padding: '36px 34px' }}>
-            <form style={{ display: 'flex', flexDirection: 'column', gap: 18 }} onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-                <div>
-                  <label className="lc-field-label">First name</label>
-                  <input type="text" className="lc-field" placeholder="Jane" />
-                </div>
-                <div>
-                  <label className="lc-field-label">Last name</label>
-                  <input type="text" className="lc-field" placeholder="Doe" />
-                </div>
-              </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-                <div>
-                  <label className="lc-field-label">Business email</label>
-                  <input type="email" className="lc-field" placeholder="jane@company.com" />
-                </div>
-                <div>
-                  <label className="lc-field-label">Company</label>
-                  <input type="text" className="lc-field" placeholder="Acme Inc." />
-                </div>
-              </div>
-
-              <div>
-                <label className="lc-field-label">Job title</label>
-                <input type="text" className="lc-field" placeholder="VP of Revenue Operations" />
-              </div>
-
-              <div>
-                <label className="lc-field-label">CRM currently using</label>
-                <select className="lc-field" defaultValue="">
-                  <option value="" disabled hidden></option>
-                  {CRM_OPTIONS.map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label className="lc-field-label">Select your area of interest</label>
-                <div style={{ position: 'relative', marginBottom: 12 }}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7fa8d4" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ position: 'absolute', left: 15, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-                    <circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                  <input
-                    type="text"
-                    className="lc-field"
-                    style={{ paddingLeft: 40 }}
-                    placeholder="Search apps..."
-                    value={query}
-                    onChange={(ev) => setQuery(ev.target.value)}
-                  />
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                  {filteredApps.map((app) => {
-                    const isSel = !!selected[app.name];
-                    return (
-                      <button
-                        key={app.name}
-                        type="button"
-                        onClick={() => toggleApp(app.name)}
-                        style={pillStyle(isSel, app.grad)}
-                      >
-                        {isSel && (
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12" />
-                          </svg>
-                        )}
-                        {app.name}
-                      </button>
-                    );
-                  })}
-                  {filteredApps.length === 0 && (
-                    <span style={{ fontSize: 13, color: '#7fa8d4' }}>No apps match your search.</span>
-                  )}
-                </div>
-              </div>
-
-              <div>
-                <label className="lc-field-label">Biggest challenge</label>
-                <textarea className="lc-field" rows={3} placeholder="Tell us what you're trying to solve" />
-              </div>
-
-              <button type="submit" className="lc-btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#185fa5', fontSize: 15.5, padding: '15px 26px', marginTop: 4 }}>
-                Submit
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
@@ -407,6 +433,9 @@ const CONTACT_CSS = `
 
 .lc-contact-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
 .lc-contact-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+.lc-contact-page .lc-checkbox{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,0.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);cursor:pointer;font-size:13.5px;color:#fff;}
+.lc-contact-page .lc-checkbox input{accent-color:#185fa5;width:16px;height:16px;flex-shrink:0;}
 
 @media (max-width: 900px) {
   .lc-contact-page .lc-hero > div,

@@ -24475,15 +24475,37 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/Nav.jsx
-  var import_react2 = __toESM(require_react(), 1);
+  var import_react3 = __toESM(require_react(), 1);
 
-  // src/assets/Lucarative-Logo.png
-  var Lucarative_Logo_default = "assets/img/Lucarative-Logo-XMM76I3J.png";
+  // src/icons.jsx
+  var import_react2 = __toESM(require_react(), 1);
+  var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
+  var VLogo = ({ size = 24 }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: "0 0 40 40", fill: "none", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "20", cy: "26", r: "5", stroke: "#E8A63D", strokeWidth: "3", fill: "none" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "32", cy: "10", r: "3.4", stroke: "#16181D", strokeWidth: "2.6", fill: "none" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M8 8 L20 22 L32 10", stroke: "#E8A63D", strokeWidth: "3", strokeLinecap: "round", fill: "none" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "8", cy: "8", r: "3", fill: "#E8A63D" })
+  ] });
+  var IconSparkle = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z", fill: "currentColor" }) });
+  var IconEnvelope = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", ...p, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "3", y: "5", width: "18", height: "14", rx: "2", stroke: "currentColor", strokeWidth: "1.7" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M4 7l8 6 8-6", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" })
+  ] });
+  var IconCheck = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) });
+  var IconX = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "11", height: "11", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 5l14 14M19 5L5 19", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round" }) });
+  var IconAlert = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 3l10 18H2L12 3z", stroke: "currentColor", strokeWidth: "2", strokeLinejoin: "round" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 10v4M12 17.5h.01", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round" })
+  ] });
+  var IconChevronDown = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 9l7 7 7-7", stroke: "currentColor", strokeWidth: "2.4", strokeLinecap: "round", strokeLinejoin: "round" }) });
+  var IconArrowLeft = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M19 12H5M11 6l-6 6 6 6", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) });
+  var IconArrowRight = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 12h14M13 6l6 6-6 6", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) });
+  var IconSend = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M4 12L20 4l-6 16-3-7-7-1z", stroke: "currentColor", strokeWidth: "1.6", strokeLinejoin: "round" }) });
 
   // src/sections/Nav.jsx
-  var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
   function Nav() {
-    const [open, setOpen] = (0, import_react2.useState)(false);
+    const [open, setOpen] = (0, import_react3.useState)(false);
     const links = [
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
@@ -24500,10 +24522,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       { label: "Lucrative Quote", href: "/quotebase" },
       { label: "Lucrative Governance", href: "/governance" }
     ];
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", { className: "nav", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: Lucarative_Logo_default, alt: "Lucrative AI", style: { height: 32, width: "auto", display: "block" } }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { className: "nav-links", children: [
-        links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("header", { className: "nav", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("a", { href: "#top", className: "logo", children: [
+        "LUCRAT",
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(VLogo, { size: 18 }),
+        "E\xA0AI"
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("nav", { className: "nav-links", children: [
+        links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
           "a",
           {
             href: link.href,
@@ -24511,22 +24537,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           },
           link.label
         )),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
           "div",
           {
             className: "nav-dropdown",
             onMouseEnter: () => setOpen(true),
             onMouseLeave: () => setOpen(false),
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
                 "button",
                 {
                   type: "button",
                   className: "nav-dropdown-trigger",
                   "aria-expanded": open,
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Products" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Products" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                       "span",
                       {
                         className: `dropdown-arrow ${open ? "open" : ""}`,
@@ -24536,11 +24562,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                 "div",
                 {
                   className: `nav-dropdown-menu ${open ? "show" : ""}`,
-                  children: products2.map((service) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                  children: products2.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                     "a",
                     {
                       href: service.href,
@@ -24556,8 +24582,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "nav-right", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "nav-right", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
           "a",
           {
             href: "#signin",
@@ -24565,7 +24591,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             children: "Sign in"
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
           "a",
           {
             href: "/pricing#configurator",
@@ -24578,51 +24604,24 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/Hero.jsx
-  var import_react3 = __toESM(require_react(), 1);
-  var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
+  var import_react4 = __toESM(require_react(), 1);
+  var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
   function Hero() {
-    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "container hero-grid hero-grid--solo", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "eyebrow", children: "Start your business growth with world's 1st uniquely" }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("h1", { children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "container hero-grid hero-grid--solo", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", children: "Start your business growth with world's 1st uniquely" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h1", { children: [
         "AI Native Built ",
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "text-blue", children: "CRM & Marketing Automation System" })
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "text-blue", children: "CRM & Marketing Automation System" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "hero-ctas", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Signup Now" }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch Demo" })
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "hero-ctas", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Signup Now" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch Demo" })
       ] })
     ] }) }) });
   }
 
   // src/sections/LLMDiagram.jsx
   var import_react5 = __toESM(require_react(), 1);
-
-  // src/icons.jsx
-  var import_react4 = __toESM(require_react(), 1);
-  var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
-  var VLogo = ({ size = 24 }) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("svg", { width: size, height: size, viewBox: "0 0 40 40", fill: "none", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("circle", { cx: "20", cy: "26", r: "5", stroke: "#E8A63D", strokeWidth: "3", fill: "none" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("circle", { cx: "32", cy: "10", r: "3.4", stroke: "#16181D", strokeWidth: "2.6", fill: "none" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M8 8 L20 22 L32 10", stroke: "#E8A63D", strokeWidth: "3", strokeLinecap: "round", fill: "none" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("circle", { cx: "8", cy: "8", r: "3", fill: "#E8A63D" })
-  ] });
-  var IconSparkle = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z", fill: "currentColor" }) });
-  var IconEnvelope = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", ...p, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("rect", { x: "3", y: "5", width: "18", height: "14", rx: "2", stroke: "currentColor", strokeWidth: "1.7" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M4 7l8 6 8-6", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" })
-  ] });
-  var IconCheck = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) });
-  var IconX = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("svg", { width: "11", height: "11", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M5 5l14 14M19 5L5 19", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round" }) });
-  var IconAlert = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M12 3l10 18H2L12 3z", stroke: "currentColor", strokeWidth: "2", strokeLinejoin: "round" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M12 10v4M12 17.5h.01", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round" })
-  ] });
-  var IconChevronDown = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M5 9l7 7 7-7", stroke: "currentColor", strokeWidth: "2.4", strokeLinecap: "round", strokeLinejoin: "round" }) });
-  var IconArrowLeft = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M19 12H5M11 6l-6 6 6 6", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) });
-  var IconArrowRight = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M5 12h14M13 6l6 6-6 6", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) });
-  var IconSend = (p) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("path", { d: "M4 12L20 4l-6 16-3-7-7-1z", stroke: "currentColor", strokeWidth: "1.6", strokeLinejoin: "round" }) });
-
-  // src/sections/LLMDiagram.jsx
   var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
   var ClaudeIcon = () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("g", { fill: "#D97757", children: Array.from({ length: 8 }).map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
     "path",
@@ -30568,14 +30567,6 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
 
   // src/pages/ContactPage.jsx
   var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
-  var CRM_OPTIONS = ["Salesforce", "HubSpot", "Microsoft Dynamics", "Pipedrive", "Zoho", "Attio", "Monday CRM", "GoHighLevel", "Other"];
-  var INTEREST_APPS = [
-    { name: "Loft for Sales", grad: { from: "#eaf2fb", to: "#d3e6f8", text: "#1c3a5c", border: "rgba(47,111,176,0.3)" } },
-    { name: "Loft for Marketing", grad: { from: "#fdf3e0", to: "#f9e6bf", text: "#7a5710", border: "rgba(201,138,30,0.3)" } },
-    { name: "Revenue Governance", grad: { from: "#e9ebee", to: "#d5d9de", text: "#1c2f42", border: "rgba(28,47,66,0.3)" } },
-    { name: "Stratum Analytics", grad: { from: "#fbe9e6", to: "#f6d5cf", text: "#7a2e26", border: "rgba(194,92,80,0.3)" } },
-    { name: "Quotebase", grad: { from: "#e2f5ef", to: "#c9ece0", text: "#146a57", border: "rgba(45,156,136,0.3)" } }
-  ];
   var DEPLOYMENT_CARDS = [
     { tag: "Migration", tagColor: "#185fa5", title: "CRM Migrations", body: "Move your data and workflows without disruption." },
     { tag: "Marketing", tagColor: "#3d8b5c", title: "Marketing Automation", body: "Automate campaigns, journeys, and lead nurturing." },
@@ -30635,6 +30626,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { q: "Is Lucrative AI suitable for enterprise organizations?", a: "Yes. The platform is designed to support businesses of all sizes, from growing companies to large enterprises requiring governance, security, and scalable deployments." },
     { q: "What happens after I submit the form?", a: "A member of our team will review your requirements and contact you to schedule a discovery call or product demonstration based on your needs." }
   ];
+  var HUBSPOT_PORTAL_ID = "6539536";
+  var HUBSPOT_FORM_ID = "8dc97cfd-d0af-4beb-8539-f5da30788a99";
+  var CRM_OPTIONS = ["Salesforce", "HubSpot", "Microsoft Dynamics", "Pipedrive", "Zoho", "Attio", "Monday CRM", "GoHighLevel", "Other"];
+  var INTEREST_OPTIONS = ["Loft for Marketing", "Loft for Sales", "Stratum Analytics", "Revenue Governance", "Quotebase"];
   var LOGO_GRID = [
     { src: logo_salesforce_default2, alt: "Salesforce" },
     { src: logo_hubspot_default2, alt: "HubSpot" },
@@ -30675,23 +30670,117 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }, []);
     return rootRef;
   }
-  function pillStyle(isSel, grad) {
-    return isSel ? { padding: "10px 16px", borderRadius: 9999, background: `linear-gradient(135deg, ${grad.from}, ${grad.to})`, color: grad.text, fontSize: 13.5, fontWeight: 700, boxShadow: `inset 0 0 0 1px ${grad.border}`, display: "inline-flex", alignItems: "center", gap: 6, cursor: "pointer", transition: "background 150ms ease" } : { padding: "10px 16px", borderRadius: 9999, background: "rgba(255,255,255,0.06)", color: "#b5d4f4", fontSize: 13.5, fontWeight: 600, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.18)", display: "inline-flex", alignItems: "center", gap: 6, cursor: "pointer", transition: "background 150ms ease" };
+  function ContactForm() {
+    const [values, setValues] = (0, import_react74.useState)({ firstname: "", lastname: "", email: "", company: "", jobtitle: "", crm: "", message: "" });
+    const [interests, setInterests] = (0, import_react74.useState)([]);
+    const [status, setStatus] = (0, import_react74.useState)("idle");
+    function update(field, value) {
+      setValues((v) => ({ ...v, [field]: value }));
+    }
+    function toggleInterest(name) {
+      setInterests((prev) => prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]);
+    }
+    async function handleSubmit(ev) {
+      ev.preventDefault();
+      setStatus("submitting");
+      try {
+        const res = await fetch(
+          `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              fields: [
+                { name: "firstname", value: values.firstname },
+                { name: "lastname", value: values.lastname },
+                { name: "email", value: values.email },
+                { name: "company", value: values.company },
+                { name: "jobtitle", value: values.jobtitle },
+                // See the comment above INTEREST_OPTIONS — verify these 3
+                // internal field names against your actual HubSpot form.
+                { name: "crm", value: values.crm },
+                { name: "interests", value: interests.join(";") },
+                { name: "message", value: values.message }
+              ],
+              context: {
+                pageUri: typeof window !== "undefined" ? window.location.href : "",
+                pageName: typeof document !== "undefined" ? document.title : ""
+              }
+            })
+          }
+        );
+        if (!res.ok) throw new Error(`HubSpot submission failed: ${res.status}`);
+        setStatus("success");
+      } catch (err) {
+        console.error("Contact form submission failed:", err);
+        setStatus("error");
+      }
+    }
+    if (status === "success") {
+      return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { color: "#fff", fontSize: 15.5, lineHeight: 1.6 }, children: "Thanks \u2014 your message is in. Our team will get back to you shortly." });
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("form", { style: { display: "flex", flexDirection: "column", gap: 18 }, onSubmit: handleSubmit, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "First name" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Jane", required: true, value: values.firstname, onChange: (ev) => update("firstname", ev.target.value) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Last name" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Doe", required: true, value: values.lastname, onChange: (ev) => update("lastname", ev.target.value) })
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Business email" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "email", className: "lc-field", placeholder: "jane@company.com", required: true, value: values.email, onChange: (ev) => update("email", ev.target.value) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Company" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Acme Inc.", value: values.company, onChange: (ev) => update("company", ev.target.value) })
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Job title" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "VP of Revenue Operations", value: values.jobtitle, onChange: (ev) => update("jobtitle", ev.target.value) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "CRM currently using" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("select", { className: "lc-field", value: values.crm, onChange: (ev) => update("crm", ev.target.value), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("option", { value: "", disabled: true, hidden: true }),
+          CRM_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("option", { value: opt, children: opt }, opt))
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Select your area of interest" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { display: "flex", flexDirection: "column", gap: 8 }, children: INTEREST_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("label", { className: "lc-checkbox", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+            "input",
+            {
+              type: "checkbox",
+              checked: interests.includes(opt),
+              onChange: () => toggleInterest(opt)
+            }
+          ),
+          opt
+        ] }, opt)) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Biggest challenge" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("textarea", { className: "lc-field", rows: 3, placeholder: "Tell us what you're trying to solve", value: values.message, onChange: (ev) => update("message", ev.target.value) })
+      ] }),
+      status === "error" && /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { color: "#f4a68a", fontSize: 13 }, children: "Something went wrong sending that \u2014 please try again." }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("button", { type: "submit", className: "lc-btn-primary", disabled: status === "submitting", style: { width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px", marginTop: 4, opacity: status === "submitting" ? 0.7 : 1 }, children: [
+        status === "submitting" ? "Submitting\u2026" : "Submit",
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", stroke: "#fff", strokeWidth: "2.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("line", { x1: "5", y1: "12", x2: "19", y2: "12" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("polyline", { points: "12 5 19 12 12 19" })
+        ] })
+      ] })
+    ] });
   }
   function ContactPage() {
     const rootRef = useRevealRoot2();
-    const [query, setQuery] = (0, import_react74.useState)("");
-    const [selected, setSelected] = (0, import_react74.useState)({});
-    function toggleApp(name) {
-      setSelected((s) => ({ ...s, [name]: !s[name] }));
-    }
-    const filteredApps = (0, import_react74.useMemo)(() => {
-      const q = query.toLowerCase();
-      return INTEREST_APPS.filter((a) => a.name.toLowerCase().includes(q));
-    }, [query]);
-    function handleSubmit(ev) {
-      ev.preventDefault();
-    }
     return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { ref: rootRef, className: "lc-contact-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("style", { children: CONTACT_CSS }),
       /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Nav, {}),
@@ -30717,89 +30806,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: form_side_default, alt: "", style: { maxWidth: 440, width: "100%", marginTop: "auto", alignSelf: "center" } })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("form", { style: { display: "flex", flexDirection: "column", gap: 18 }, onSubmit: handleSubmit, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "First name" }),
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Jane" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Last name" }),
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Doe" })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Business email" }),
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "email", className: "lc-field", placeholder: "jane@company.com" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Company" }),
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Acme Inc." })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Job title" }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "VP of Revenue Operations" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "CRM currently using" }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("select", { className: "lc-field", defaultValue: "", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("option", { value: "", disabled: true, hidden: true }),
-              CRM_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("option", { value: opt, children: opt }, opt))
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Select your area of interest" }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { position: "relative", marginBottom: 12 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", stroke: "#7fa8d4", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", style: { position: "absolute", left: 15, top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("circle", { cx: "11", cy: "11", r: "7" }),
-                /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("line", { x1: "21", y1: "21", x2: "16.65", y2: "16.65" })
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
-                "input",
-                {
-                  type: "text",
-                  className: "lc-field",
-                  style: { paddingLeft: 40 },
-                  placeholder: "Search apps...",
-                  value: query,
-                  onChange: (ev) => setQuery(ev.target.value)
-                }
-              )
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "flex", flexWrap: "wrap", gap: 10 }, children: [
-              filteredApps.map((app) => {
-                const isSel = !!selected[app.name];
-                return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(
-                  "button",
-                  {
-                    type: "button",
-                    onClick: () => toggleApp(app.name),
-                    style: pillStyle(isSel, app.grad),
-                    children: [
-                      isSel && /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("polyline", { points: "20 6 9 17 4 12" }) }),
-                      app.name
-                    ]
-                  },
-                  app.name
-                );
-              }),
-              filteredApps.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { fontSize: 13, color: "#7fa8d4" }, children: "No apps match your search." })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Biggest challenge" }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("textarea", { className: "lc-field", rows: 3, placeholder: "Tell us what you're trying to solve" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("button", { type: "submit", className: "lc-btn-primary", style: { width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px", marginTop: 4 }, children: [
-            "Submit",
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", stroke: "#fff", strokeWidth: "2.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("line", { x1: "5", y1: "12", x2: "19", y2: "12" }),
-              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("polyline", { points: "12 5 19 12 12 19" })
-            ] })
-          ] })
-        ] }) })
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ContactForm, {}) })
       ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "80px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }, children: [
@@ -30876,6 +30883,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
 .lc-contact-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
 .lc-contact-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
 
+.lc-contact-page .lc-checkbox{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,0.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);cursor:pointer;font-size:13.5px;color:#fff;}
+.lc-contact-page .lc-checkbox input{accent-color:#185fa5;width:16px;height:16px;flex-shrink:0;}
+
 @media (max-width: 900px) {
   .lc-contact-page .lc-hero > div,
   .lc-contact-page section#demo-form > div{grid-template-columns:1fr !important;}
@@ -30907,7 +30917,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { tag: "Enterprise", tagColor: "#3d8b5c", title: "Systems Integrators", body: "Architect and deploy Lucrative AI across enterprise environments." },
     { tag: "Referral", tagColor: "#a67518", title: "Referral Partners", body: "Introduce your network and earn recurring commission." }
   ];
-  var INTEREST_OPTIONS = ["Investment", "Partnership", "Sales", "Information"];
+  var INTEREST_OPTIONS2 = ["Investment", "Partnership", "Sales", "Information"];
   var TRUST_LOGOS = [
     { src: logo_aws_default, alt: "AWS" },
     { src: logo_vultr_default, alt: "Vultr" },
@@ -30992,7 +31002,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("label", { className: "lc-field-label", children: "What describes your best interest?" }),
               /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("select", { className: "lc-field", value: interest, onChange: (ev) => setInterest(ev.target.value), defaultValue: "", children: [
                 /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("option", { value: "", disabled: true, hidden: true }),
-                INTEREST_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("option", { value: opt, children: opt }, opt))
+                INTEREST_OPTIONS2.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("option", { value: opt, children: opt }, opt))
               ] })
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { flexGrow: 1 } }),
@@ -31049,7 +31059,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     "We're actively seeking strategic partners, technology alliances, implementation firms, and investors who want to help shape the future of AI-powered revenue operations.",
     "If you're interested in collaborating, integrating, investing, or scaling with Lucrative AI, we'd love to hear from you."
   ];
-  var INTEREST_OPTIONS2 = ["Investment", "Partnership", "Sales", "Information"];
+  var INTEREST_OPTIONS3 = ["Investment", "Partnership", "Sales", "Information"];
   var TRUST_LOGOS2 = [
     { src: logo_aws_default, alt: "AWS" },
     { src: logo_vultr_default, alt: "Vultr" },
@@ -31128,7 +31138,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("label", { className: "lc-field-label", children: "What describes your best interest?" }),
               /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("select", { className: "lc-field", value: interest, onChange: (ev) => setInterest(ev.target.value), defaultValue: "", children: [
                 /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("option", { value: "", disabled: true, hidden: true }),
-                INTEREST_OPTIONS2.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("option", { value: opt, children: opt }, opt))
+                INTEREST_OPTIONS3.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("option", { value: opt, children: opt }, opt))
               ] })
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("button", { type: "submit", className: "lc-btn-primary", style: { width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px", marginTop: 4 }, children: [

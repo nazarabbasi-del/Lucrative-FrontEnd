@@ -21747,15 +21747,25 @@
   }
 
   // src/sections/Nav.jsx
-  var import_react2 = __toESM(require_react(), 1);
+  var import_react3 = __toESM(require_react(), 1);
 
-  // src/assets/Lucarative-Logo.png
-  var Lucarative_Logo_default = "assets/img/Lucarative-Logo-XMM76I3J.png";
+  // src/icons.jsx
+  var import_react2 = __toESM(require_react(), 1);
+  var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
+  var VLogo = ({ size = 24 }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: "0 0 40 40", fill: "none", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "20", cy: "26", r: "5", stroke: "#E8A63D", strokeWidth: "3", fill: "none" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "32", cy: "10", r: "3.4", stroke: "#16181D", strokeWidth: "2.6", fill: "none" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M8 8 L20 22 L32 10", stroke: "#E8A63D", strokeWidth: "3", strokeLinecap: "round", fill: "none" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "8", cy: "8", r: "3", fill: "#E8A63D" })
+  ] });
+  var IconSparkle = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z", fill: "currentColor" }) });
+  var IconCheck = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) });
+  var IconSend = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M4 12L20 4l-6 16-3-7-7-1z", stroke: "currentColor", strokeWidth: "1.6", strokeLinejoin: "round" }) });
 
   // src/sections/Nav.jsx
-  var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
   function Nav() {
-    const [open, setOpen] = (0, import_react2.useState)(false);
+    const [open, setOpen] = (0, import_react3.useState)(false);
     const links = [
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
@@ -21772,10 +21782,14 @@
       { label: "Lucrative Quote", href: "/quotebase" },
       { label: "Lucrative Governance", href: "/governance" }
     ];
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", { className: "nav", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: Lucarative_Logo_default, alt: "Lucrative AI", style: { height: 32, width: "auto", display: "block" } }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { className: "nav-links", children: [
-        links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("header", { className: "nav", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("a", { href: "#top", className: "logo", children: [
+        "LUCRAT",
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(VLogo, { size: 18 }),
+        "E\xA0AI"
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("nav", { className: "nav-links", children: [
+        links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
           "a",
           {
             href: link.href,
@@ -21783,22 +21797,22 @@
           },
           link.label
         )),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
           "div",
           {
             className: "nav-dropdown",
             onMouseEnter: () => setOpen(true),
             onMouseLeave: () => setOpen(false),
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
                 "button",
                 {
                   type: "button",
                   className: "nav-dropdown-trigger",
                   "aria-expanded": open,
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Products" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Products" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                       "span",
                       {
                         className: `dropdown-arrow ${open ? "open" : ""}`,
@@ -21808,11 +21822,11 @@
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                 "div",
                 {
                   className: `nav-dropdown-menu ${open ? "show" : ""}`,
-                  children: products.map((service) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                  children: products.map((service) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
                     "a",
                     {
                       href: service.href,
@@ -21828,8 +21842,8 @@
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "nav-right", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "nav-right", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
           "a",
           {
             href: "#signin",
@@ -21837,7 +21851,7 @@
             children: "Sign in"
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
           "a",
           {
             href: "/pricing#configurator",
@@ -21851,21 +21865,6 @@
 
   // src/sections/stratum/StratumHero.jsx
   var import_react4 = __toESM(require_react(), 1);
-
-  // src/icons.jsx
-  var import_react3 = __toESM(require_react(), 1);
-  var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
-  var VLogo = ({ size = 24 }) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("svg", { width: size, height: size, viewBox: "0 0 40 40", fill: "none", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("circle", { cx: "20", cy: "26", r: "5", stroke: "#E8A63D", strokeWidth: "3", fill: "none" }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("circle", { cx: "32", cy: "10", r: "3.4", stroke: "#16181D", strokeWidth: "2.6", fill: "none" }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("path", { d: "M8 8 L20 22 L32 10", stroke: "#E8A63D", strokeWidth: "3", strokeLinecap: "round", fill: "none" }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("circle", { cx: "8", cy: "8", r: "3", fill: "#E8A63D" })
-  ] });
-  var IconSparkle = (p) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("path", { d: "M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z", fill: "currentColor" }) });
-  var IconCheck = (p) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) });
-  var IconSend = (p) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("path", { d: "M4 12L20 4l-6 16-3-7-7-1z", stroke: "currentColor", strokeWidth: "1.6", strokeLinejoin: "round" }) });
-
-  // src/sections/stratum/StratumHero.jsx
   var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
   var floatPills = [
     { text: "Ask" },
