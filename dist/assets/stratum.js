@@ -21770,7 +21770,9 @@
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
       { label: "Pricing", href: "/pricing" },
-      { label: "FAQ", href: "#faq" }
+      { label: "FAQ", href: "#faq" },
+      { label: "Contact", href: "/contact" },
+      { label: "Partners", href: "/partners" }
     ];
     const products = [
       { label: "Lucrative Sales", href: "/loft" },
@@ -21893,7 +21895,7 @@
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "gov-hero-copy", children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", style: { fontSize: 13 }, children: "Lucrative Analytics" }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h1", { className: "gov-hero-h1", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "text-blue", children: "Stratum" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "text-blue", children: "Lucrative Analytics" }),
           " turn all your business data into instant answers."
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "gov-hero-lead", children: "Connect your marketing, sales, and business platforms in minutes\u2014without technical setup. Ask questions in plain English and get accurate answers, reports, and insights from all your data in one place." }),

@@ -21773,7 +21773,9 @@
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
       { label: "Pricing", href: "/pricing" },
-      { label: "FAQ", href: "#faq" }
+      { label: "FAQ", href: "#faq" },
+      { label: "Contact", href: "/contact" },
+      { label: "Partners", href: "/partners" }
     ];
     const products = [
       { label: "Lucrative Sales", href: "/loft" },

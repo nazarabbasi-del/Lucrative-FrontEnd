@@ -24510,7 +24510,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
       { label: "Pricing", href: "/pricing" },
-      { label: "FAQ", href: "#faq" }
+      { label: "FAQ", href: "#faq" },
+      { label: "Contact", href: "/contact" },
+      { label: "Partners", href: "/partners" }
     ];
     const products2 = [
       { label: "Lucrative Sales", href: "/loft" },
@@ -28470,7 +28472,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("p", { className: "eyebroww", children: "Lucrative Quote" }),
         /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("h1", { children: [
           "Generate sales quotes in seconds with ",
-          /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("span", { className: "text-blue", children: "Quotebase" })
+          /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("span", { className: "text-blue", children: "Lucrative Quote" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("p", { style: { fontSize: 22, fontWeight: 500, color: "var(--text-900)", marginTop: 8 }, children: "With numbers your AI cannot invent." }),
         /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("p", { className: "lead", children: "Turn every Salesforce opportunity into a complete, priced, policy-checked quotation automatically. Quotebase combines an AI agent with deterministic pricing, policy enforcement, and Salesforce integration to produce quotes that are fast to create and safe to send." }),
@@ -28958,7 +28960,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("div", { className: "gov-hero-copy", children: [
         /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { className: "eyebrow", style: { fontSize: 13 }, children: "Lucrative Analytics" }),
         /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("h1", { className: "gov-hero-h1", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("span", { className: "text-blue", children: "Stratum" }),
+          /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("span", { className: "text-blue", children: "Lucrative Analytics" }),
           " turn all your business data into instant answers."
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { className: "gov-hero-lead", children: "Connect your marketing, sales, and business platforms in minutes\u2014without technical setup. Ask questions in plain English and get accurate answers, reports, and insights from all your data in one place." }),

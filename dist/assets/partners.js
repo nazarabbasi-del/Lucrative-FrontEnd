@@ -1329,7 +1329,7 @@
           return dispatcher;
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var React18 = require_react(), Internals = {
+        var React6 = require_react(), Internals = {
           d: {
             f: noop,
             r: function() {
@@ -1347,7 +1347,7 @@
           },
           p: 0,
           findDOMNode: null
-        }, REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), ReactSharedInternals = React18.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+        }, REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), ReactSharedInternals = React6.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
         "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
           "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
         );
@@ -2882,7 +2882,7 @@
           "number" === type && getActiveElement(node.ownerDocument) === node || node.defaultValue === "" + value || (node.defaultValue = "" + value);
         }
         function validateOptionProps(element, props) {
-          null == props.value && ("object" === typeof props.children && null !== props.children ? React18.Children.forEach(props.children, function(child) {
+          null == props.value && ("object" === typeof props.children && null !== props.children ? React6.Children.forEach(props.children, function(child) {
             null == child || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || didWarnInvalidChild || (didWarnInvalidChild = true, console.error(
               "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
             ));
@@ -18514,14 +18514,14 @@
           ));
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var Scheduler = require_scheduler(), React18 = require_react(), ReactDOM = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element"), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var Scheduler = require_scheduler(), React6 = require_react(), ReactDOM2 = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element"), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
         /* @__PURE__ */ Symbol.for("react.scope");
         var REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity");
         /* @__PURE__ */ Symbol.for("react.legacy_hidden");
         /* @__PURE__ */ Symbol.for("react.tracing_marker");
         var REACT_MEMO_CACHE_SENTINEL = /* @__PURE__ */ Symbol.for("react.memo_cache_sentinel");
         /* @__PURE__ */ Symbol.for("react.view_transition");
-        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React18.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React6.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
           pending: false,
           data: null,
           method: null,
@@ -21309,7 +21309,7 @@
           }
         };
         (function() {
-          var isomorphicReactPackageVersion = React18.version;
+          var isomorphicReactPackageVersion = React6.version;
           if ("19.2.8" !== isomorphicReactPackageVersion)
             throw Error(
               'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.8\nLearn more: https://react.dev/warnings/version-mismatch")
@@ -21663,18 +21663,18 @@
         function isValidElement(object) {
           return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
         }
-        var React18 = require_react(), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), ReactSharedInternals = React18.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+        var React6 = require_react(), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), ReactSharedInternals = React6.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
           return null;
         };
-        React18 = {
+        React6 = {
           react_stack_bottom_frame: function(callStackForError) {
             return callStackForError();
           }
         };
         var specialPropKeyWarningShown;
         var didWarnAboutElementRef = {};
-        var unknownOwnerDebugStack = React18.react_stack_bottom_frame.bind(
-          React18,
+        var unknownOwnerDebugStack = React6.react_stack_bottom_frame.bind(
+          React6,
           UnknownOwner
         )();
         var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
@@ -21718,39 +21718,18 @@
     }
   });
 
-  // src/main-loft.jsx
-  var import_react19 = __toESM(require_react(), 1);
+  // src/main-partners.jsx
+  var import_react5 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
-  // src/pages/LoftPage.jsx
-  var import_react18 = __toESM(require_react(), 1);
-
-  // src/hooks/useReveal.js
-  var import_react = __toESM(require_react(), 1);
-  function useReveal() {
-    (0, import_react.useEffect)(() => {
-      const els = document.querySelectorAll(".reveal");
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("in");
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
-      );
-      els.forEach((el) => io.observe(el));
-      return () => io.disconnect();
-    }, []);
-  }
+  // src/pages/PartnersPage.jsx
+  var import_react4 = __toESM(require_react(), 1);
 
   // src/sections/Nav.jsx
-  var import_react3 = __toESM(require_react(), 1);
+  var import_react2 = __toESM(require_react(), 1);
 
   // src/icons.jsx
-  var import_react2 = __toESM(require_react(), 1);
+  var import_react = __toESM(require_react(), 1);
   var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
   var VLogo = ({ size = 24 }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: "0 0 40 40", fill: "none", children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "20", cy: "26", r: "5", stroke: "#E8A63D", strokeWidth: "3", fill: "none" }),
@@ -21758,17 +21737,11 @@
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M8 8 L20 22 L32 10", stroke: "#E8A63D", strokeWidth: "3", strokeLinecap: "round", fill: "none" }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "8", cy: "8", r: "3", fill: "#E8A63D" })
   ] });
-  var IconCheck = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) });
-  var IconX = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: "11", height: "11", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 5l14 14M19 5L5 19", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round" }) });
-  var IconAlert = (p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", ...p, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 3l10 18H2L12 3z", stroke: "currentColor", strokeWidth: "2", strokeLinejoin: "round" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 10v4M12 17.5h.01", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round" })
-  ] });
 
   // src/sections/Nav.jsx
   var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
   function Nav() {
-    const [open, setOpen] = (0, import_react3.useState)(false);
+    const [open, setOpen] = (0, import_react2.useState)(false);
     const links = [
       { label: "How it works", href: "#how-it-works" },
       { label: "CRMs", href: "#crms" },
@@ -21865,973 +21838,195 @@
     ] }) });
   }
 
-  // src/sections/loft/LoftHero.jsx
-  var import_react4 = __toESM(require_react(), 1);
-
-  // src/assets/dashboard-loft.png
-  var dashboard_loft_default = "assets/img/dashboard-loft-73NT7WBG.png";
-
-  // src/sections/loft/LoftHero.jsx
-  var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
-  var checklist = ["No manual data entry", "AI-native from day one", "Enterprise ready"];
-  function LoftHero() {
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "container hero-grid", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "eyebrow", children: "Lucrative Sales" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h1", { children: [
-          "The CRM that grows with your business,",
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "text-blue", children: "not against it." })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "lead", children: "Loft unifies Marketing, Sales, Customer Success, Automation, AI, and Operations in one platform designed for scale \u2014 built to run your revenue, not just record it." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "hero-ctas", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "gov-trust-row", style: { marginTop: 24 }, children: checklist.map((c) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(IconCheck, {}),
-          c
-        ] }, c)) })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "hero-visual reveal", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("img", { src: dashboard_loft_default, alt: "Loft CRM dashboard", style: { width: "100%", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-lg)" }, className: "floaty" }) })
-    ] }) });
-  }
-
-  // src/sections/loft/LoftProblem.jsx
-  var import_react5 = __toESM(require_react(), 1);
-  var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
-  var problems = [
-    { tag: "costs compound", color: "var(--red-500)", title: "Increasing cost", desc: "Every seat, every feature, every report tier costs more. Growth becomes a billing event." },
-    { tag: "hours lost weekly", color: "var(--gold-500)", title: "Manual work", desc: "Reps spend hours updating fields and logging activity instead of selling." },
-    { tag: "no single truth", color: "var(--blue-500)", title: "Disconnected data", desc: "The customer story scatters across tools, tabs, and inboxes &mdash; no one sees all of it." },
-    { tag: "just another tab", color: "var(--teal-500)", title: "AI that doesn&rsquo;t help", desc: "A chatbot bolted onto the sidebar isn&rsquo;t intelligence. It&rsquo;s another tab to ignore." },
-    { tag: "what, never why", color: "var(--text-600)", title: "Reports without answers", desc: "Numbers on dashboards, but never the why &mdash; or what to do about it." },
-    { tag: "insights unused", color: "var(--blue-500)", title: "AI indecision", desc: "Insights pile up in reports that never become action anywhere it matters." }
-  ];
-  function LoftProblem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "loft-problem-head reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h2", { className: "section-title", style: { textAlign: "left" }, children: [
-            "Why Businesses Outgrow",
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("br", {}),
-            "Traditional CRMs"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 0" }, children: [
-            "Growing companies eventually face the same challenges.",
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("br", {}),
-            "The more successful they become; the more expensive their CRM becomes."
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "loft-problem-note", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { children: "Instead of enabling growth, many CRMs begin charging a premium for it. Loft was built to change that." }),
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("a", { href: "#how-it-works", className: "btn btn-primary", children: "Learn More" })
-        ] })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "loft-problem-grid reveal", children: problems.map((p) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "loft-problem-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h4", { dangerouslySetInnerHTML: { __html: p.title } }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } })
-      ] }, p.title)) })
-    ] }) });
-  }
-
-  // src/sections/loft/LoftUnifiedBrain.jsx
-  var import_react6 = __toESM(require_react(), 1);
-
-  // src/assets/mascot-triangle-sparkle.png
-  var mascot_triangle_sparkle_default = "assets/img/mascot-triangle-sparkle-5ZKAQJCF.png";
-
-  // src/assets/mascot-flower-bench.png
-  var mascot_flower_bench_default = "assets/img/mascot-flower-bench-J3C5E26C.png";
-
-  // src/sections/loft/LoftUnifiedBrain.jsx
-  var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
-  var labels = [
-    { text: "One customer timeline", slug: "customer-timeline", color: "var(--teal-600)" },
-    { text: "No duplicate contacts", slug: "duplicate-contacts", color: "var(--blue-600)" },
-    { text: "AI insights everywhere", slug: "ai-insights", color: "var(--gold-600)" },
-    { text: "No manual updates", slug: "manual-updates", color: "var(--red-500)" },
-    { text: "No syncing issues", slug: "syncing-issues", color: "var(--blue-600)" }
-  ];
-  var dots = [
-    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "0s" },
-    { color: "#1FB6A6", ring: "r1", dur: "14s", delay: "-7s" },
-    { color: "#175FA4", ring: "r2", dur: "10s", delay: "0s" },
-    { color: "#175FA4", ring: "r2", dur: "10s", delay: "-5s" },
-    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "0s" },
-    { color: "#E8A63D", ring: "r3", dur: "7s", delay: "-3.5s" }
-  ];
-  function LoftUnifiedBrain() {
-    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h2", { className: "section-title reveal", children: [
-        "Every customer. Every conversation.",
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("br", {}),
-        "One AI brain."
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "section-sub reveal", children: "Loft unifies your whole revenue stack into one intelligent platform that automatically updates and gives you visibility" }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "orbit-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-          "img",
-          {
-            src: mascot_triangle_sparkle_default,
-            alt: "",
-            className: "orbit-mascot left"
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-          "img",
-          {
-            src: mascot_flower_bench_default,
-            alt: "",
-            className: "orbit-mascot right"
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-ring r1" }),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-ring r2" }),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-ring r3" }),
-        labels.map((l) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
-          "span",
-          {
-            className: `orbit-label orbit-label--${l.slug}`,
-            style: { transform: "translate(-50%, -50%)", color: l.color },
-            children: [
-              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-                "svg",
-                {
-                  width: "12",
-                  height: "12",
-                  viewBox: "0 0 24 24",
-                  fill: "none",
-                  children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-                    "path",
-                    {
-                      d: "M5 13l4 4L19 7",
-                      stroke: "currentColor",
-                      strokeWidth: "3",
-                      strokeLinecap: "round",
-                      strokeLinejoin: "round"
-                    }
-                  )
-                }
-              ),
-              l.text
-            ]
-          },
-          l.text
-        )),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(VLogo, { size: 40 }) }),
-        dots.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-          "div",
-          {
-            className: `orbit-orbiter ${d.ring}`,
-            style: {
-              animationDuration: d.dur,
-              animationDelay: d.delay
-            },
-            children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-              "span",
-              {
-                className: "orbit-dot",
-                style: { background: d.color, color: d.color }
-              }
-            )
-          },
-          i
-        ))
-      ] })
-    ] }) });
-  }
-
-  // src/sections/loft/LoftWhyChoose.jsx
-  var import_react10 = __toESM(require_react(), 1);
-
-  // src/sections/governance/anim/CountUp.jsx
-  var import_react8 = __toESM(require_react(), 1);
-
-  // src/hooks/useCountUp.js
-  var import_react7 = __toESM(require_react(), 1);
-  function useCountUp(target, { duration = 1200, decimals = 0, delay = 0 } = {}) {
-    const [value, setValue] = (0, import_react7.useState)(0);
-    const ref = (0, import_react7.useRef)(null);
-    const started = (0, import_react7.useRef)(false);
-    const targetRef = (0, import_react7.useRef)(target);
-    targetRef.current = target;
-    (0, import_react7.useEffect)(() => {
-      const el = ref.current;
-      if (!el) return void 0;
-      if (typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
-        setValue(targetRef.current);
-        return void 0;
-      }
-      let rafId = null;
-      let timeoutId = null;
-      const io = new IntersectionObserver(
-        (entries) => {
-          const entry = entries[0];
-          if (entry.isIntersecting && !started.current) {
-            started.current = true;
-            io.disconnect();
-            const run = () => {
-              const start = performance.now();
-              const from = 0;
-              const to = targetRef.current;
-              const tick = (now) => {
-                const p = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - p, 3);
-                setValue(from + (to - from) * eased);
-                if (p < 1) {
-                  rafId = requestAnimationFrame(tick);
-                } else {
-                  setValue(to);
-                }
-              };
-              rafId = requestAnimationFrame(tick);
-            };
-            if (delay > 0) timeoutId = setTimeout(run, delay);
-            else run();
-          }
-        },
-        { threshold: 0.3, rootMargin: "0px 0px -40px 0px" }
-      );
-      io.observe(el);
-      return () => {
-        io.disconnect();
-        if (rafId) cancelAnimationFrame(rafId);
-        if (timeoutId) clearTimeout(timeoutId);
-      };
-    }, [duration, delay]);
-    const rounded = decimals > 0 ? Number(value.toFixed(decimals)) : Math.round(value);
-    return [ref, rounded];
-  }
-
-  // src/sections/governance/anim/CountUp.jsx
-  var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
-  function formatNumber(n, { decimals = 0, comma = false } = {}) {
-    const fixed = decimals > 0 ? n.toFixed(decimals) : String(Math.round(n));
-    if (!comma) return fixed;
-    const [int, frac] = fixed.split(".");
-    const withCommas = int.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return frac ? `${withCommas}.${frac}` : withCommas;
-  }
-  function CountUp({ to, duration = 1200, decimals = 0, comma = false, prefix = "", suffix = "", delay = 0, as: Tag = "span", className, style }) {
-    const [ref, value] = useCountUp(to, { duration, decimals, delay });
-    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Tag, { ref, className, style, children: [
-      prefix,
-      formatNumber(value, { decimals, comma }),
-      suffix
-    ] });
-  }
-
-  // src/sections/governance/anim/Animatedbar.jsx
-  var import_react9 = __toESM(require_react(), 1);
-  var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
-
-  // src/assets/mascot-blue-workflow.png
-  var mascot_blue_workflow_default = "assets/img/mascot-blue-workflow-7XCLVHJZ.png";
-
-  // src/sections/loft/LoftWhyChoose.jsx
-  var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
-  var tabs = [
-    {
-      label: "Autonomous CRM",
-      title: "Autonomous CRM",
-      desc: "Keeps itself updated &mdash; logs calls, files emails, enriches contacts, and dedupes records without being asked.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "check-card loft-check-card", children: [
-        ["Call logged & summarized \xB7 22 min"],
-        ["Pricing email filed to Northwind record"],
-        ["Duplicate merged \xB7 &ldquo;D. Reyes&rdquo; = &ldquo;Dana R.&rdquo;"]
-      ].map(([a]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "check-row checked", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(IconCheck, {}) }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { dangerouslySetInnerHTML: { __html: a } }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "right", children: "AUTO" })
-      ] }, a)) })
-    },
-    {
-      label: "AI relationship intelligence",
-      title: "AI relationship intelligence",
-      desc: "Knows which relationships are warming, which are at risk, and who should reach out next.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "check-card", children: [
-        ["Call logged & summarized \xB7 22 min", "warming \u2191", "teal"],
-        ["Pricing email filed to Northwind record", "at risk", "red"],
-        ["Duplicate merged \xB7 &ldquo;D. Reyes&rdquo; = &ldquo;Dana R.&rdquo;", "cooling \xB7 21 days quiet", "gold"]
-      ].map(([a, s, c]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "loft-status-row", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { dangerouslySetInnerHTML: { __html: a } }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: `loft-status-pill loft-status-pill--${c}`, children: s })
-      ] }, a)) })
-    },
-    {
-      label: "AI sales assistant",
-      title: "AI sales assistant",
-      desc: "Drafts follow-ups, preps your calls, and flags stalling deals before they slip a quarter.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "check-card loft-check-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "check-row checked", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(IconCheck, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: "Follow-up drafted \xB7 Dana Reyes" }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "right", children: "DRAFT" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "check-row checked", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(IconCheck, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: "Call prep ready \xB7 9:30 demo" }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "right", children: "PREP" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "check-row alert", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(IconAlert, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: "Stall flagged \xB7 Initech \xB7 14 days quiet" }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "right", style: { color: "var(--red-600)" }, children: "ALERT" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("a", { href: "#audit", className: "btn btn-primary", style: { width: "100%", justifyContent: "center", marginTop: 14 }, children: "Review and send" })
-      ] })
-    },
-    {
-      label: "Revenue intelligence",
-      title: "Revenue intelligence",
-      desc: "Forecasts grounded in every deal&rsquo;s real signals &mdash; activity, engagement, and history, not gut feel.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "stat-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: "Commit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(CountUp, { to: 1.8, decimals: 1, prefix: "$", suffix: "M" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "badge badge-green", children: "94%" })
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: "Best case" }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(CountUp, { to: 2.4, decimals: 1, prefix: "$", suffix: "M" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "badge badge-gold", children: "68%" })
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: "AI forecast" }),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(CountUp, { to: 2.1, decimals: 1, prefix: "$", suffix: "M" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "badge badge-blue", children: "\xB14%" })
-          ] })
-        ] })
-      ] })
-    },
-    {
-      label: "Workflow automation",
-      title: "Workflow automation",
-      desc: "No-code flows across every department &mdash; handoffs, renewals, escalations, and nurture on rails.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "check-card", children: [
-        ["1", "Trigger \xB7 deal enters Proposal", "DRAFT"],
-        ["2", "Action \xB7 legal review scheduled", "PREP"],
-        ["3", "Handoff \xB7 CS notified at Closed-Won", "ALERT"]
-      ].map(([n, a, s]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "loft-step-row", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "loft-step-num", children: n }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: a }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "right", children: s })
-      ] }, a)) })
-    },
-    {
-      label: "Enterprise ready",
-      title: "Enterprise ready",
-      desc: "SSO, granular permissions, audit logs, and an architecture that doesn&rsquo;t flinch at scale.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "stat-card", children: [["SSO / SAML", "enabled"], ["Granular permissions", "enforced"], ["Audit log", "full history"]].map(([a, s]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "stat-line", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { children: a }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)", margin: 0 }, children: s })
-      ] }, a)) })
-    }
-  ];
-  var STICKY_OFFSET = 100;
-  function LoftWhyChoose() {
-    const [active, setActive] = (0, import_react10.useState)(0);
-    const cardRefs = (0, import_react10.useRef)([]);
-    const itemRefs = (0, import_react10.useRef)([]);
-    (0, import_react10.useEffect)(() => {
-      let raf = null;
-      function computeActive() {
-        raf = null;
-        let idx = 0;
-        for (let i = 0; i < cardRefs.current.length; i++) {
-          const el = cardRefs.current[i];
-          if (!el) continue;
-          const top = el.getBoundingClientRect().top;
-          if (top <= STICKY_OFFSET + 2) idx = i;
-        }
-        setActive((prev) => prev === idx ? prev : idx);
-      }
-      function onScroll() {
-        if (raf == null) raf = requestAnimationFrame(computeActive);
-      }
-      computeActive();
-      window.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", onScroll);
-      return () => {
-        window.removeEventListener("scroll", onScroll);
-        window.removeEventListener("resize", onScroll);
-        if (raf) cancelAnimationFrame(raf);
-      };
-    }, []);
-    function scrollToCard(i) {
-      const el = itemRefs.current[i];
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
-      const targetY = window.scrollY + rect.top - STICKY_OFFSET - 8;
-      window.scrollTo({ top: targetY, behavior: "smooth" });
-    }
-    return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("h2", { className: "section-title reveal", style: { textAlign: "left" }, children: [
-        "Why growing",
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("br", {}),
-        "businesses choose Loft."
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "section-sub reveal", style: { textAlign: "left", margin: "14px 0 0" }, children: "Six things a CRM should have done all along." }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "tabs-layout reveal", style: { marginTop: 40 }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "tabs-nav-col", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "tabs-list", children: [
-          tabs.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("button", { className: i === active ? "active" : "", onClick: () => scrollToCard(i), children: [
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "tabs-list-dot", "aria-hidden": "true" }),
-            t.label
-          ] }, t.label)),
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("img", { src: mascot_blue_workflow_default, alt: "", className: "floaty", style: { width: 170, marginTop: 28, alignSelf: "flex-start" } })
-        ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "tabs-stack", children: tabs.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "tabs-stack-item", ref: (el) => itemRefs.current[i] = el, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "tabs-stack-card tabs-stack-card--plain", style: { zIndex: i + 1 }, ref: (el) => cardRefs.current[i] = el, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "tab-panel tab-panel--stacked", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "copy", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { children: t.title }),
-              /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { dangerouslySetInnerHTML: { __html: t.desc } })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "tab-visual", children: t.visual })
-          ] }) }),
-          i !== tabs.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "tabs-stack-spacer", "aria-hidden": "true" })
-        ] }, t.label)) })
-      ] })
-    ] }) });
-  }
-
-  // src/sections/loft/LoftTeams.jsx
-  var import_react11 = __toESM(require_react(), 1);
-  var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
-  var teams = [
-    { name: "Sales", desc: "Sell more, type less. Deals keep themselves current.", tag: "4 hrs/wk back" },
-    { name: "Marketing", desc: "Campaigns tied to revenue, not just clicks.", tag: "revenue attribution" },
-    { name: "Customer Success", desc: "Risk surfaces before renewal, not after churn.", tag: "early risk flags" },
-    { name: "Operations", desc: "One clean system instead of five stitched ones.", tag: "zero sync debt" },
-    { name: "Executive Leadership", desc: "A forecast you can defend to the board.", tag: "board-ready numbers" }
-  ];
-  function LoftTeams() {
-    return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Built for every revenue team." }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Because tools are only valuable if your whole revenue team can use them \u2014 not just the one who set it up." }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "loft-team-list reveal", children: teams.map((t) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "loft-team-row", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "loft-team-name", children: t.name }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "loft-team-desc", children: t.desc }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-500)", margin: 0 }, children: t.tag })
-      ] }, t.name)) })
-    ] }) });
-  }
-
-  // src/sections/loft/LoftComparison.jsx
-  var import_react12 = __toESM(require_react(), 1);
-  var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
-  var rows = [
-    ["Automatic Data Updates", "no", "no", "no", "yes"],
-    ["AI Relationship Intelligence", "no", "no", "partial", "yes"],
-    ["Predict Deal Risk", "no", "partial", "no", "yes"],
-    ["AI Recommendations", "partial", "partial", "no", "yes"],
-    ["Built-in Automations", "partial", "partial", "partial", "yes"],
-    ["Unified customer timeline", "no", "partial", "partial", "yes"],
-    ["Easy Setup", "no", "partial", "partial", "yes"],
-    ["Revenue Intelligence", "partial", "partial", "no", "yes"]
-  ];
-  function Cell({ v }) {
-    if (v === "yes") return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "chk", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(IconCheck, {}) });
-    if (v === "no") return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "chk chk-no", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(IconX, {}) });
-    if (v === "partial") return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "chk chk-partial", children: "\u2013" });
-    return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { children: v });
-  }
-  function LoftComparison() {
-    return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("h2", { className: "section-title reveal", children: [
-        "Other tools tell you what\u2019s wrong.",
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("br", {}),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "text-blue", children: "We tell you what it costs \u2014 and fix it." })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "comparison-wrap reveal", style: { marginTop: 40 }, children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { className: "comparison", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "\xA0" }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Agency Audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "HubSpot" }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Pipedrive" }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { className: "lucrative", children: "Loft" })
-        ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("tbody", { children: rows.map(([label, a, b, c, d]) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: label }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Cell, { v: a }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Cell, { v: b }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Cell, { v: c }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Cell, { v: d }) })
-        ] }, label)) })
-      ] }) })
-    ] }) });
-  }
-
-  // src/sections/loft/LoftPersonas.jsx
-  var import_react13 = __toESM(require_react(), 1);
-
-  // src/assets/avatar-blue.png
-  var avatar_blue_default = "assets/img/avatar-blue-2PQGN6LM.png";
-
-  // src/assets/avatar-cloud.png
-  var avatar_cloud_default = "assets/img/avatar-cloud-KZVAGBFV.png";
-
-  // src/assets/avatar-triangle.png
-  var avatar_triangle_default = "assets/img/avatar-triangle-PFOQXURG.png";
-
-  // src/assets/persona-cloud.png
-  var persona_cloud_default = "assets/img/persona-cloud-KZVAGBFV.png";
-
-  // src/assets/persona-ghost.png
-  var persona_ghost_default = "assets/img/persona-ghost-SYYAQKNF.png";
-
-  // src/assets/persona-flower.png
-  var persona_flower_default = "assets/img/persona-flower-46IBCBZU.png";
-
-  // src/sections/loft/LoftPersonas.jsx
-  var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
-  var personas = [
-    {
-      key: "Unified Platform",
-      avatar: avatar_blue_default,
-      img: avatar_blue_default,
-      tag: "UNIFIED PLATFORM",
-      color: "#175FA4",
-      title: "One unified platform",
-      desc: "Stop asking for headcount you won\u2019t get. Lucrative gives one RevOps person the leverage of a governance team \u2014 a scored audit every quarter, quantified findings, and drafted fixes you approve.",
-      quote: "\u201CGovernance without hiring another admin.\u201D",
-      card: {
-        label: "YOUR FIRST AUDIT",
-        amount: {
-          to: 87,
-          suffix: "/100"
-        },
-        sub: "HubSpot \xB7 Marketing Hub Enterprise",
-        rows: [
-          ["Legacy fields to retire", "#D5453F", { to: 23 }],
-          ["Orphaned workflows", "#D6931F", { to: 8 }],
-          [
-            "Marketing seats freed",
-            "#175FA4",
-            { to: 2.4, decimals: 1, prefix: "$", suffix: "k/month" }
-          ]
-        ],
-        foot: "One workspace. One score to defend at every QBR."
-      }
-    },
-    {
-      key: "Cost",
-      avatar: avatar_cloud_default,
-      img: persona_cloud_default,
-      tag: "COST",
-      color: "#2F72C4",
-      title: "Predictable software costs",
-      desc: "Salesforce for the enterprise motion. HubSpot for marketing. GoHighLevel for the acquisitions. Audit each independently in a single workspace and see a unified score you can defend to the board.",
-      quote: "\u201COne tool that speaks all three.\u201D",
-      card: {
-        label: "UNIFIED WORKSPACE",
-        amount: {
-          to: 3,
-          suffix: " CRMs \xB7 1 score"
-        },
-        sub: "Weighted across portals",
-        rows: [
-          ["Salesforce \xB7 Enterprise", "#175FA4", { to: 91 }],
-          ["HubSpot \xB7 Marketing", "#D6931F", { to: 84 }],
-          ["GoHighLevel \xB7 12 subs", "#12807F", { to: 78 }]
-        ],
-        foot: "Composite score: 84 \xB7 trending up +6 QoQ."
-      }
-    },
-    {
-      key: "Customer Engagement",
-      avatar: persona_ghost_default,
-      img: persona_ghost_default,
-      tag: "CUSTOMER ENGAGEMENT",
-      color: "#12807F",
-      title: "Faster customer engagement",
-      desc: "New job, unfamiliar portal, zero documentation, no idea what to touch first. Lucrative gives you a ranked list of every issue on day one \u2014 and a defensible remediation plan by day three.",
-      quote: "\u201CA defensible plan by day three.\u201D",
-      card: {
-        label: "DAY 1 \xB7 RANKED FINDINGS",
-        amount: {
-          to: 142,
-          suffix: " issues"
-        },
-        sub: "Ordered by dollar impact",
-        rows: [
-          ["Duplicate contact merge", "#D5453F", { to: 8.1, decimals: 1, prefix: "$", suffix: "k" }],
-          ["Broken lifecycle mapping", "#D6931F", { to: 5.4, decimals: 1, prefix: "$", suffix: "k" }],
-          ["12 orphaned automations", "#175FA4", { to: 2.7, decimals: 1, prefix: "$", suffix: "k" }]
-        ],
-        foot: "First fix takes 4 minutes. You\u2019ll look competent by noon."
-      }
-    },
-    {
-      key: "Automation",
-      avatar: persona_flower_default,
-      img: persona_flower_default,
-      tag: "AUTOMATION",
-      color: "#D5453F",
-      title: "Built-in automation",
-      desc: "AI models trained on dirty CRM data produce bad output at scale. 63% of organizations lack AI-ready data. Get to AI-ready before your competitors do \u2014 with an audit that measures it explicitly.",
-      quote: "\u201CGet to AI-ready before your competitors do.\u201D",
-      card: {
-        label: "DAY 1 \xB7 RANKED FINDINGS",
-        amount: {
-          to: 62,
-          suffix: "/100"
-        },
-        sub: "12 blockers detected",
-        rows: [
-          ["Fields with >40% nulls", "#D5453F", { to: 17 }],
-          ["Contact records unlabeled", "#D6931F", { to: 31, suffix: "%" }],
-          ["ICP Coverage", "#12807F", { to: 94, suffix: "%" }]
-        ],
-        foot: "One fix cycle gets you to 84 \u2014 most models\u2019 floor."
-      }
-    },
-    {
-      key: "AI",
-      avatar: avatar_triangle_default,
-      img: avatar_triangle_default,
-      tag: "AI",
-      color: "#D6931F",
-      title: "AI throughout the platform",
-      desc: "HubSpot Solution Partners, Salesforce consultants, GoHighLevel operators. Run five-minute diagnostics across every client portal in one workspace. Bill the interpretation, skip the twenty-hour data pulls.",
-      quote: "\u201CBill the strategy, not the data-pulling.\u201D",
-      card: {
-        label: "CLIENT PORTFOLIO",
-        amount: {
-          to: 12,
-          suffix: " client portals"
-        },
-        sub: "12 audits \xB7 60 min \xB7 One admin, one afternoon",
-        rows: [
-          ["Acme Manufacturing", "#175FA4", { to: 82 }],
-          ["Brightline Labs", "#D6931F", { to: 74 }],
-          ["+ 10 more portals", "#12807F", { to: 78, suffix: " avg" }]
-        ],
-        foot: "Same 100 credits. Whether it\u2019s one portal or twenty."
-      }
-    }
-  ];
-  function LoftPersonas() {
-    const [active, setActive] = (0, import_react13.useState)(0);
-    const p = personas[active];
-    return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-        "p",
-        {
-          className: "eyebrow",
-          style: {
-            textAlign: "center",
-            width: "100%",
-            fontSize: 13
-          },
-          children: "Use Cases"
-        }
-      ),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h2", { className: "section-title reveal", children: "Why Companies Switch" }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "persona-tabs reveal", children: personas.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(
-        "button",
-        {
-          type: "button",
-          className: `persona-tab ${i === active ? "active" : ""}`,
-          onClick: () => setActive(i),
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("img", { src: per.avatar, alt: "" }),
-            per.tag
-          ]
-        },
-        per.key
-      )) }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "persona-panel reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "avatar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-              "span",
-              {
-                className: "tag-pill",
-                style: { color: p.color },
-                children: p.tag
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("span", { className: "index", children: [
-              "PERSONA 0",
-              active + 1,
-              "/0",
-              personas.length
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h3", { children: p.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { children: p.desc }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "persona-quote", children: p.quote })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "pipeline-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-              "span",
-              {
-                style: {
-                  fontSize: 11,
-                  fontWeight: 800,
-                  letterSpacing: ".08em",
-                  color: "var(--text-400)"
-                },
-                children: p.card.label
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("span", { className: "dots", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { style: { background: "#E8615A" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { style: { background: "#E8A63D" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { style: { background: "#37A55F" } })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-            CountUp,
-            {
-              to: p.card.amount.to,
-              decimals: p.card.amount.decimals,
-              prefix: p.card.amount.prefix,
-              suffix: p.card.amount.suffix
-            }
-          ) }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "sub", children: p.card.sub }),
-          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(
-            "div",
-            {
-              className: "pipeline-row",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-                  "span",
-                  {
-                    className: "ic",
-                    style: { background: color },
-                    children: "\u2022"
-                  }
-                ),
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { children: label }),
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-                  CountUp,
-                  {
-                    to: val.to,
-                    suffix: val.suffix,
-                    prefix: val.prefix,
-                    decimals: val.decimals,
-                    comma: val.comma
-                  }
-                ) : "next" })
-              ]
-            },
-            label
-          )),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "pipeline-foot", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("b", { children: [
-              p.card.foot.split(".")[0],
-              "."
-            ] }),
-            " ",
-            p.card.foot.split(".").slice(1).join(".").trim()
-          ] })
-        ] })
-      ] })
-    ] }) });
-  }
-
-  // src/sections/governance/GovernancePricing.jsx
-  var import_react14 = __toESM(require_react(), 1);
-
-  // src/assets/deco-pricing-mascot.png
-  var deco_pricing_mascot_default = "assets/img/deco-pricing-mascot-YSVFUGHJ.png";
-
-  // src/sections/governance/GovernancePricing.jsx
-  var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
-  var points = [
-    "Same price for HubSpot, Salesforce, or GoHighLevel",
-    "Credits don\u2019t expire",
-    "No subscription, no seat fees",
-    "Run one this quarter, one a week during a migration, or one before your next AI deployment"
-  ];
-  function GovernancePricing() {
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("section", { className: "section section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "gov-pricing-card reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h2", { className: "closing-cta-h2", children: "Pay for the audits you run. Nothing else." }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15, marginTop: 12, lineHeight: 1.7 }, children: "Credits don\u2019t expire. No subscription. No seat fees. No \u201Ccall for pricing\u201D tier that means you can\u2019t afford it." }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "gov-pricing-number", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CountUp, { to: 100, className: "gov-pricing-number-value" }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: "credits per full audit" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("ul", { className: "gov-pricing-list", children: points.map((pt) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("li", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(IconCheck, {}),
-          pt
-        ] }, pt)) }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "hero-ctas", style: { marginTop: 26 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
-        ] })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("img", { src: deco_pricing_mascot_default, alt: "", className: "gov-pricing-mascot floaty" })
-    ] }) }) });
-  }
-
-  // src/sections/loft/LoftFAQ.jsx
-  var import_react15 = __toESM(require_react(), 1);
-  var import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
-  var faqs = [
-    {
-      q: "What does a Revenue Governance Audit include?",
-      a: "Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate."
-    },
-    {
-      q: "Which CRMs do you support?",
-      a: "HubSpot, Salesforce, and GoHighLevel today, with the same audit depth on every platform &mdash; more connectors are added regularly based on customer demand."
-    },
-    {
-      q: "How long does the audit take?",
-      a: "About five minutes for a full scan of your CRM and connected apps. You get a scored report the moment it finishes, not a queued ticket you wait days on."
-    },
-    {
-      q: "How are credits used?",
-      a: "Each full audit costs 100 credits, regardless of which CRM you connect. Credits don&rsquo;t expire, and there&rsquo;s no subscription or per-seat fee sitting on top of them."
-    },
-    {
-      q: "Can Lucrative actually fix things, or just report them?",
-      a: "Both. Every issue comes with a drafted fix you review and approve &mdash; Lucrative backs up your data first, then executes the change. Nothing runs without your sign-off."
-    },
-    {
-      q: "Can I audit multiple CRMs in one workspace?",
-      a: "Yes. Connect HubSpot, Salesforce, and GoHighLevel side by side in the same workspace and run audits independently or together."
-    },
-    {
-      q: "How often should I run an audit?",
-      a: "Most teams run one per quarter, weekly during a migration, or right before a major AI or automation rollout &mdash; whenever you want a clean, priced baseline of your data."
-    }
-  ];
-  function FAQ() {
-    const [open, setOpen] = (0, import_react15.useState)(0);
-    return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "container faq-layout", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h2", { children: "FAQ's" }),
-        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { className: "sub", children: "Questions? Answered" })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "reveal", children: faqs.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
-        "div",
-        {
-          className: `faq-item ${open === i ? "open" : ""}`,
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
-              "button",
-              {
-                className: "faq-q",
-                onClick: () => setOpen(open === i ? -1 : i),
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "faq-title", children: f.q })
-                ]
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "faq-a", children: f.a })
-          ]
-        },
-        f.q
-      )) })
-    ] }) });
-  }
-
-  // src/sections/loft/LoftClosingCTA.jsx
-  var import_react16 = __toESM(require_react(), 1);
-
-  // src/assets/mascot-flower-laptop.png
-  var mascot_flower_laptop_default = "assets/img/mascot-flower-laptop-CIME3PHS.png";
-
-  // src/assets/deco-sparkles.png
-  var deco_sparkles_default = "assets/img/deco-sparkles-XILIRI4K.png";
-
-  // src/sections/loft/LoftClosingCTA.jsx
-  var import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
-  function IconPadlock() {
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("svg", { width: "34", height: "34", viewBox: "0 0 24 24", fill: "none", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("rect", { x: "5", y: "11", width: "14", height: "10", rx: "2.5", fill: "var(--gold-500)" }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("path", { d: "M8 11V7.5a4 4 0 0 1 8 0V11", stroke: "var(--gold-500)", strokeWidth: "2.4", strokeLinecap: "round" }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("circle", { cx: "12", cy: "15.5", r: "1.6", fill: "#fff" })
-    ] });
-  }
-  function LoftClosingCTA() {
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "closing-cta reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { style: { position: "relative" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { style: { position: "absolute", top: -6, right: 30, background: "#fff", borderRadius: "50%", width: 46, height: 46, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "var(--shadow-md)" }, children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(IconPadlock, {}) }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("h2", { className: "closing-cta-h2", children: "Run your first audit in the time it takes to read your last one." }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Five minutes. Full report. Every issue priced. Every fix reversible." }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "btns", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
-        ] })
-      ] })
-    ] }) }) });
-  }
-
   // src/sections/Footer.jsx
-  var import_react17 = __toESM(require_react(), 1);
-  var import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
+  var import_react3 = __toESM(require_react(), 1);
+  var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
   var cols = [
     { title: "Product", links: ["How it works", "CRMs", "Pricing", "Security", "Changelog"] },
     { title: "Solutions", links: ["RevOps leaders", "CRM admins", "AI readiness", "Agencies"] },
     { title: "Company", links: ["Docs", "Contact", "Privacy", "Terms"] }
   ];
   function Footer() {
-    return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("footer", { className: "footer", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "footer-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "footer-brand", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("a", { href: "#top", className: "logo", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("footer", { className: "footer", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-grid", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-brand", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("a", { href: "#top", className: "logo", children: [
             "LUCRAT",
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(VLogo, { size: 18 }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(VLogo, { size: 18 }),
             "E\xA0AI"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
         ] }),
-        cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "footer-col", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h6", { children: c.title }),
-          c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("a", { href: "#", children: l }, l))
+        cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-col", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h6", { children: c.title }),
+          c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#", children: l }, l))
         ] }, c.title))
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "footer-bottom", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: "\xA9 2026 Lucrative, Inc." }),
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: "help@lucrative.ai \xB7 +1-601-340-4666" })
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-bottom", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: "\xA9 2026 Lucrative, Inc." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: "help@lucrative.ai \xB7 +1-601-340-4666" })
       ] })
     ] }) });
   }
 
-  // src/pages/LoftPage.jsx
-  var import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
-  function LoftPage() {
-    useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(import_jsx_runtime16.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftHero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftProblem, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftUnifiedBrain, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftWhyChoose, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftTeams, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftComparison, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftPersonas, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(GovernancePricing, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(FAQ, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(LoftClosingCTA, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Footer, {})
+  // src/assets/partners/logo-aws.png
+  var logo_aws_default = "assets/img/logo-aws-RY7KTP2M.png";
+
+  // src/assets/partners/logo-vultr.png
+  var logo_vultr_default = "assets/img/logo-vultr-S35734UU.png";
+
+  // src/assets/partners/logo-elevenlabs.png
+  var logo_elevenlabs_default = "assets/img/logo-elevenlabs-2GLLOPCO.png";
+
+  // src/pages/PartnersPage.jsx
+  var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
+  var PARTNER_CARDS = [
+    { tag: "Integration", tagColor: "#185fa5", title: "Technology Companies", body: "Integrate your platform natively into the Lucrative AI ecosystem." },
+    { tag: "Consulting", tagColor: "#3d8b5c", title: "CRM & RevOps Consultants", body: "Deliver Lucrative AI implementations to your client base." },
+    { tag: "Agency", tagColor: "#a67518", title: "Marketing Agencies", body: "Package Lucrative AI into your managed marketing services." },
+    { tag: "Solutions", tagColor: "#185fa5", title: "Solution Providers", body: "Extend your product suite with AI-native revenue tooling." },
+    { tag: "Enterprise", tagColor: "#3d8b5c", title: "Systems Integrators", body: "Architect and deploy Lucrative AI across enterprise environments." },
+    { tag: "Referral", tagColor: "#a67518", title: "Referral Partners", body: "Introduce your network and earn recurring commission." }
+  ];
+  var INTEREST_OPTIONS = ["Investment", "Partnership", "Sales", "Information"];
+  var TRUST_LOGOS = [
+    { src: logo_aws_default, alt: "AWS" },
+    { src: logo_vultr_default, alt: "Vultr" },
+    { src: logo_elevenlabs_default, alt: "ElevenLabs" }
+  ];
+  function useRevealRoot() {
+    const rootRef = (0, import_react4.useRef)(null);
+    (0, import_react4.useEffect)(() => {
+      const root = rootRef.current;
+      if (!root) return;
+      const els = root.querySelectorAll(".lc-reveal");
+      if (!("IntersectionObserver" in window)) {
+        els.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((el) => io.observe(el));
+      return () => io.disconnect();
+    }, []);
+    return rootRef;
+  }
+  function PartnersPage() {
+    const rootRef = useRevealRoot();
+    const [interest, setInterest] = (0, import_react4.useState)("");
+    function handleSubmit(ev) {
+      ev.preventDefault();
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { ref: rootRef, className: "lc-partners-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("style", { children: PARTNERS_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "lc-reveal", style: { padding: "88px 0 40px", position: "relative", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { maxWidth: 840, margin: "0 auto", padding: "0 32px", textAlign: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(34px,4.4vw,52px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
+          "Build the Future of ",
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "#185fa5" }, children: "AI-Powered Revenue Operations" }),
+          " Together"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "24px auto 0" }, children: "Lucrative AI partners with organizations that share our vision of helping businesses modernize customer engagement, marketing automation, revenue operations, and AI-driven growth. From technology integrations to implementation services and strategic alliances, we're committed to building partnerships that deliver measurable value." }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "16px auto 0" }, children: "If you're interested in partnering with Lucrative AI, complete the form and our partnerships team will contact you to discuss the next steps." })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("section", { id: "partner-form", style: { background: "#eef2f6", padding: "64px 0 96px" }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.15fr 1fr", gap: 28, alignItems: "stretch" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "lc-reveal", style: { display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h3", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, letterSpacing: "-0.02em", color: "#121212", marginBottom: 26 }, children: "We Partner With" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, flexGrow: 1 }, children: PARTNER_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "lc-reveal lc-partner-card", style: { transitionDelay: `${i * 40}ms`, borderRadius: 16, padding: 22, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 12 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { display: "inline-block", alignSelf: "flex-start", padding: "4px 12px", borderRadius: 9999, fontSize: 11, fontWeight: 700, letterSpacing: "0.02em", color: card.tagColor, boxShadow: `inset 0 0 0 1px ${card.tagColor}59` }, children: card.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15.5, color: "#121212" }, children: card.title }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", lineHeight: 1.5 }, children: card.body })
+          ] }, card.title)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 19, color: "#121212", marginTop: 30, letterSpacing: "-0.01em" }, children: "Let's build smarter solutions\u2014together." })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px", display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("form", { style: { display: "flex", flexDirection: "column", gap: 18, flexGrow: 1 }, onSubmit: handleSubmit, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "lc-field-label", children: "First name" }),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { type: "text", className: "lc-field", placeholder: "Jane" })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "lc-field-label", children: "Last name" }),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { type: "text", className: "lc-field", placeholder: "Doe" })
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "lc-field-label", children: "Email address" }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { type: "email", className: "lc-field", placeholder: "jane@company.com" })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "lc-field-label", children: "Company name" }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { type: "text", className: "lc-field", placeholder: "Acme Inc." })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "lc-field-label", children: "What describes your best interest?" }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("select", { className: "lc-field", value: interest, onChange: (ev) => setInterest(ev.target.value), defaultValue: "", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("option", { value: "", disabled: true, hidden: true }),
+                INTEREST_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("option", { value: opt, children: opt }, opt))
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { flexGrow: 1 } }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("button", { type: "submit", className: "lc-btn-primary", style: { width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px", marginTop: 4 }, children: [
+              "Submit Inquiry",
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", stroke: "#fff", strokeWidth: "2.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("line", { x1: "5", y1: "12", x2: "19", y2: "12" }),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("polyline", { points: "12 5 19 12 12 19" })
+              ] })
+            ] })
+          ] })
+        ] })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("section", { style: { padding: "72px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 36 }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(24px,2.8vw,32px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Partners Who Trust Us" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 800, margin: "0 auto" }, children: TRUST_LOGOS.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Footer, {})
     ] });
   }
+  var PARTNERS_CSS = `
+.lc-partners-page{-webkit-font-smoothing:antialiased;}
+.lc-partners-page .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+.lc-partners-page .lc-btn-primary{background:#0f2e4d;color:#fff;border-radius:9999px;font-weight:700;font-size:15px;padding:13px 26px;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease,transform 150ms ease;}
+.lc-partners-page .lc-btn-primary:hover{background:#0a2038;color:#fff;}
+.lc-partners-page .lc-btn-primary:active{transform:scale(0.96);}
+.lc-partners-page .lc-field{-webkit-appearance:none;appearance:none;width:100%;padding:13px 16px;border:none;border-radius:12px;background:rgba(255,255,255,0.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);color:#fff;font-family:'Lato',sans-serif;font-size:14.5px;outline:none;transition:box-shadow 150ms ease;}
+.lc-partners-page .lc-field::placeholder{color:#7fa8d4;}
+.lc-partners-page .lc-field:focus{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.45);}
+.lc-partners-page .lc-field-label{font-size:13px;font-weight:600;color:#a9c6e6;margin-bottom:8px;display:block;}
+.lc-partners-page select.lc-field{-moz-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237fa8d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:10px 10px;padding-right:40px;}
+.lc-partners-page select.lc-field option{background:#0f2e4d;color:#fff;}
+.lc-partners-page .lc-partner-card{transition:background 150ms ease;}
+.lc-partners-page .lc-partner-card:hover{background:#f2f6fb;}
+.lc-partners-page .lc-logo-chip{display:flex;align-items:center;justify-content:center;height:110px;padding:16px 20px;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(18,18,18,0.06);}
+.lc-partners-page .lc-logo-chip img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
 
-  // src/main-loft.jsx
-  var import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
-  (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime17.jsx)(LoftPage, {}));
+.lc-partners-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
+.lc-partners-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+@media (max-width: 900px) {
+  .lc-partners-page section#partner-form > div{grid-template-columns:1fr !important;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-partners-page .lc-reveal{transition:none !important;animation:none !important;opacity:1 !important;transform:none !important;}
+}
+`;
+
+  // src/main-partners.jsx
+  var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
+  import_client.default.createRoot(document.getElementById("root")).render(
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.default.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(PartnersPage, {}) })
+  );
 })();
 /*! Bundled license information:
 
@@ -22890,4 +22085,4 @@ react/cjs/react-jsx-runtime.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 */
-//# sourceMappingURL=assets/loft.js.map
+//# sourceMappingURL=assets/partners.js.map

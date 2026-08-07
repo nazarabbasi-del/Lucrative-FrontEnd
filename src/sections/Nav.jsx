@@ -9,6 +9,8 @@ export default function Nav() {
     { label: 'CRMs', href: '#crms' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'FAQ', href: '#faq' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Partners', href: '/partners' },
   ];
 
   const products = [
