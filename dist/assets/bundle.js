@@ -1329,7 +1329,7 @@
           return dispatcher;
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var React85 = require_react(), Internals = {
+        var React88 = require_react(), Internals = {
           d: {
             f: noop,
             r: function() {
@@ -1347,7 +1347,7 @@
           },
           p: 0,
           findDOMNode: null
-        }, REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), ReactSharedInternals = React85.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+        }, REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), ReactSharedInternals = React88.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
         "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
           "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
         );
@@ -2882,7 +2882,7 @@
           "number" === type && getActiveElement(node.ownerDocument) === node || node.defaultValue === "" + value || (node.defaultValue = "" + value);
         }
         function validateOptionProps(element, props) {
-          null == props.value && ("object" === typeof props.children && null !== props.children ? React85.Children.forEach(props.children, function(child) {
+          null == props.value && ("object" === typeof props.children && null !== props.children ? React88.Children.forEach(props.children, function(child) {
             null == child || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || didWarnInvalidChild || (didWarnInvalidChild = true, console.error(
               "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
             ));
@@ -18514,14 +18514,14 @@
           ));
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var Scheduler = require_scheduler(), React85 = require_react(), ReactDOM = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element"), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var Scheduler = require_scheduler(), React88 = require_react(), ReactDOM = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element"), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
         /* @__PURE__ */ Symbol.for("react.scope");
         var REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity");
         /* @__PURE__ */ Symbol.for("react.legacy_hidden");
         /* @__PURE__ */ Symbol.for("react.tracing_marker");
         var REACT_MEMO_CACHE_SENTINEL = /* @__PURE__ */ Symbol.for("react.memo_cache_sentinel");
         /* @__PURE__ */ Symbol.for("react.view_transition");
-        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React85.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React88.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
           pending: false,
           data: null,
           method: null,
@@ -21309,7 +21309,7 @@
           }
         };
         (function() {
-          var isomorphicReactPackageVersion = React85.version;
+          var isomorphicReactPackageVersion = React88.version;
           if ("19.2.8" !== isomorphicReactPackageVersion)
             throw Error(
               'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.8\nLearn more: https://react.dev/warnings/version-mismatch")
@@ -21663,18 +21663,18 @@
         function isValidElement2(object) {
           return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
         }
-        var React85 = require_react(), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), ReactSharedInternals = React85.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+        var React88 = require_react(), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), ReactSharedInternals = React88.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
           return null;
         };
-        React85 = {
+        React88 = {
           react_stack_bottom_frame: function(callStackForError) {
             return callStackForError();
           }
         };
         var specialPropKeyWarningShown;
         var didWarnAboutElementRef = {};
-        var unknownOwnerDebugStack = React85.react_stack_bottom_frame.bind(
-          React85,
+        var unknownOwnerDebugStack = React88.react_stack_bottom_frame.bind(
+          React88,
           UnknownOwner
         )();
         var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
@@ -21719,11 +21719,11 @@
   });
 
   // src/main.jsx
-  var import_react75 = __toESM(require_react(), 1);
+  var import_react78 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
   // src/App.jsx
-  var import_react74 = __toESM(require_react(), 1);
+  var import_react77 = __toESM(require_react(), 1);
 
   // node_modules/react-router/dist/development/chunk-62JRHF6Z.mjs
   var React = __toESM(require_react(), 1);
@@ -30519,87 +30519,761 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
 }
 `;
 
-  // src/App.jsx
+  // src/pages/ContactPage.jsx
+  var import_react74 = __toESM(require_react(), 1);
+
+  // src/assets/contact/hero.webp
+  var hero_default = "assets/img/hero-WNL63YHY.webp";
+
+  // src/assets/contact/form-side.png
+  var form_side_default = "assets/img/form-side-7MQ4HHEM.png";
+
+  // src/assets/contact/logo-salesforce.png
+  var logo_salesforce_default2 = "assets/img/logo-salesforce-KE2BNPIP.png";
+
+  // src/assets/contact/logo-hubspot.png
+  var logo_hubspot_default2 = "assets/img/logo-hubspot-GORARDAI.png";
+
+  // src/assets/contact/logo-marketo.png
+  var logo_marketo_default = "assets/img/logo-marketo-DSGAQ6DK.png";
+
+  // src/assets/contact/logo-6sense.png
+  var logo_6sense_default = "assets/img/logo-6sense-EOHABCBO.png";
+
+  // src/assets/contact/logo-demandbase.png
+  var logo_demandbase_default = "assets/img/logo-demandbase-U6DV4LGA.png";
+
+  // src/assets/contact/logo-pipedrive.png
+  var logo_pipedrive_default = "assets/img/logo-pipedrive-XTZNMZZK.png";
+
+  // src/assets/contact/logo-mondaycom.png
+  var logo_mondaycom_default = "assets/img/logo-mondaycom-PAWNMDTR.png";
+
+  // src/assets/contact/logo-attio.png
+  var logo_attio_default = "assets/img/logo-attio-OZUPWUZ7.png";
+
+  // src/assets/contact/logo-activecampaign.png
+  var logo_activecampaign_default = "assets/img/logo-activecampaign-M32WRW24.png";
+
+  // src/assets/contact/logo-servicetitan.png
+  var logo_servicetitan_default = "assets/img/logo-servicetitan-FH66XHKZ.png";
+
+  // src/assets/contact/logo-openai.png
+  var logo_openai_default = "assets/img/logo-openai-A6DDUQA7.png";
+
+  // src/assets/contact/logo-claude.png
+  var logo_claude_default = "assets/img/logo-claude-EOUXGLOP.png";
+
+  // src/pages/ContactPage.jsx
   var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
-  function HomePage() {
-    useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, { children: [
+  var CRM_OPTIONS = ["Salesforce", "HubSpot", "Microsoft Dynamics", "Pipedrive", "Zoho", "Attio", "Monday CRM", "GoHighLevel", "Other"];
+  var INTEREST_APPS = [
+    { name: "Loft for Sales", grad: { from: "#eaf2fb", to: "#d3e6f8", text: "#1c3a5c", border: "rgba(47,111,176,0.3)" } },
+    { name: "Loft for Marketing", grad: { from: "#fdf3e0", to: "#f9e6bf", text: "#7a5710", border: "rgba(201,138,30,0.3)" } },
+    { name: "Revenue Governance", grad: { from: "#e9ebee", to: "#d5d9de", text: "#1c2f42", border: "rgba(28,47,66,0.3)" } },
+    { name: "Stratum Analytics", grad: { from: "#fbe9e6", to: "#f6d5cf", text: "#7a2e26", border: "rgba(194,92,80,0.3)" } },
+    { name: "Quotebase", grad: { from: "#e2f5ef", to: "#c9ece0", text: "#146a57", border: "rgba(45,156,136,0.3)" } }
+  ];
+  var DEPLOYMENT_CARDS = [
+    { tag: "Migration", tagColor: "#185fa5", title: "CRM Migrations", body: "Move your data and workflows without disruption." },
+    { tag: "Marketing", tagColor: "#3d8b5c", title: "Marketing Automation", body: "Automate campaigns, journeys, and lead nurturing." },
+    { tag: "Strategy", tagColor: "#a67518", title: "AI Strategy", body: "Define where AI creates the most revenue impact." },
+    { tag: "RevOps", tagColor: "#185fa5", title: "Revenue Operations", body: "Align sales, marketing, and success on one system." },
+    { tag: "Integration", tagColor: "#3d8b5c", title: "Enterprise Integrations", body: "Connect Lucrative AI to your existing tech stack." },
+    { tag: "Compliance", tagColor: "#a67518", title: "Governance & Compliance", body: "Enforce data policy and security standards." },
+    { tag: "Workflows", tagColor: "#185fa5", title: "Custom Workflows", body: "Build automation tailored to your process." },
+    { tag: "Reporting", tagColor: "#3d8b5c", title: "Executive Reporting", body: "Give leadership visibility into revenue performance." }
+  ];
+  var WHY_CARDS = [
+    {
+      iconBg: "rgba(24,95,165,0.1)",
+      iconColor: "#185fa5",
+      title: "AI-Native Platform",
+      body: "Built from the ground up around AI\u2014not retrofitted onto legacy software.",
+      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("path", { d: "M12 2l2 6h6l-5 4 2 7-7-4-7 4 2-7-5-4h6z" })
+    },
+    {
+      iconBg: "rgba(109,199,143,0.16)",
+      iconColor: "#3d8b5c",
+      title: "One Unified Workspace",
+      body: "CRM, marketing, analytics, governance, and contracting in one platform.",
+      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "3", y: "3", width: "7", height: "7" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "14", y: "3", width: "7", height: "7" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "3", y: "14", width: "7", height: "7" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "14", y: "14", width: "7", height: "7" })
+      ] })
+    },
+    {
+      iconBg: "rgba(237,178,62,0.16)",
+      iconColor: "#a67518",
+      title: "Enterprise Ready",
+      body: "Secure architecture, governance controls, and scalable deployments.",
+      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
+      ] })
+    },
+    {
+      iconBg: "rgba(24,95,165,0.1)",
+      iconColor: "#185fa5",
+      title: "Human Support",
+      body: "Work directly with product specialists, solution engineers, and customer success managers.",
+      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("circle", { cx: "12", cy: "8", r: "4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("path", { d: "M4 21c0-4 3.5-7 8-7s8 3 8 7" })
+      ] })
+    }
+  ];
+  var FAQ_ITEMS = [
+    { q: "How quickly can I get a demo?", a: "Most demonstrations are scheduled within one business day and are tailored to your business objectives." },
+    { q: "Do you support migrations from Salesforce or HubSpot?", a: "Yes. Our team assists with migrations, integrations, data mapping, and onboarding to ensure a smooth transition." },
+    { q: "Can I purchase individual products?", a: "Yes. You can deploy Loft for Sales, Loft for Marketing, Revenue Governance, Stratum, or Nexum individually, or implement the complete Lucrative AI platform." },
+    { q: "Does Lucrative AI integrate with our existing systems?", a: "Yes. Lucrative AI integrates with leading CRM, marketing automation, analytics, and business platforms, with APIs available for custom integrations." },
+    { q: "Is Lucrative AI suitable for enterprise organizations?", a: "Yes. The platform is designed to support businesses of all sizes, from growing companies to large enterprises requiring governance, security, and scalable deployments." },
+    { q: "What happens after I submit the form?", a: "A member of our team will review your requirements and contact you to schedule a discovery call or product demonstration based on your needs." }
+  ];
+  var LOGO_GRID = [
+    { src: logo_salesforce_default2, alt: "Salesforce" },
+    { src: logo_hubspot_default2, alt: "HubSpot" },
+    { src: logo_marketo_default, alt: "Marketo" },
+    { src: logo_6sense_default, alt: "6sense" },
+    { src: logo_demandbase_default, alt: "Demandbase" },
+    { src: logo_pipedrive_default, alt: "Pipedrive" },
+    { src: logo_mondaycom_default, alt: "Monday.com" },
+    { src: logo_attio_default, alt: "Attio" },
+    { src: logo_activecampaign_default, alt: "ActiveCampaign" },
+    { src: logo_servicetitan_default, alt: "ServiceTitan" },
+    { src: logo_openai_default, alt: "OpenAI" },
+    { src: logo_claude_default, alt: "Claude" }
+  ];
+  function useRevealRoot2() {
+    const rootRef = (0, import_react74.useRef)(null);
+    (0, import_react74.useEffect)(() => {
+      const root = rootRef.current;
+      if (!root) return;
+      const els = root.querySelectorAll(".lc-reveal");
+      if (!("IntersectionObserver" in window)) {
+        els.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((el) => io.observe(el));
+      return () => io.disconnect();
+    }, []);
+    return rootRef;
+  }
+  function pillStyle(isSel, grad) {
+    return isSel ? { padding: "10px 16px", borderRadius: 9999, background: `linear-gradient(135deg, ${grad.from}, ${grad.to})`, color: grad.text, fontSize: 13.5, fontWeight: 700, boxShadow: `inset 0 0 0 1px ${grad.border}`, display: "inline-flex", alignItems: "center", gap: 6, cursor: "pointer", transition: "background 150ms ease" } : { padding: "10px 16px", borderRadius: 9999, background: "rgba(255,255,255,0.06)", color: "#b5d4f4", fontSize: 13.5, fontWeight: 600, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.18)", display: "inline-flex", alignItems: "center", gap: 6, cursor: "pointer", transition: "background 150ms ease" };
+  }
+  function ContactPage() {
+    const rootRef = useRevealRoot2();
+    const [query, setQuery] = (0, import_react74.useState)("");
+    const [selected, setSelected] = (0, import_react74.useState)({});
+    function toggleApp(name) {
+      setSelected((s) => ({ ...s, [name]: !s[name] }));
+    }
+    const filteredApps = (0, import_react74.useMemo)(() => {
+      const q = query.toLowerCase();
+      return INTEREST_APPS.filter((a) => a.name.toLowerCase().includes(q));
+    }, [query]);
+    function handleSubmit(ev) {
+      ev.preventDefault();
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { ref: rootRef, className: "lc-contact-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("style", { children: CONTACT_CSS }),
       /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Hero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(LLMDiagram, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(LogoStrip, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ProductOverview, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(PowerHouse, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ComparisonTable, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(FeaturePairs, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ProblemTabs, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(OrbitDiagram, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(PersonaSwitcher, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(CapabilitiesGrid, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Testimonial, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(CTABanner, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(FAQ, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("header", { className: "lc-hero", style: { padding: "88px 0 48px", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(34px,4.4vw,52px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
+            "Let's Build the Future of ",
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { color: "#185fa5" }, children: "Your Revenue Operations" })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 520, margin: "24px 0 0" }, children: "Whether you're evaluating Lucrative AI, planning a migration, exploring enterprise deployment, or looking to automate your sales and marketing operations, our team is here to help." }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "flex", gap: 14, marginTop: 32 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-primary", children: "Book a Demo" }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-secondary", children: "Talk to Sales" })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: hero_default, alt: "", style: { width: "100%", height: 420, borderRadius: 20, objectFit: "cover", display: "block" } }) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { id: "demo-form", style: { background: "#eef2f6", padding: "64px 0 96px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1.15fr", gap: 40, alignItems: "stretch" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { paddingTop: 12, display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212", lineHeight: 1.2 }, children: "See Lucrative AI in Action" }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 16, maxWidth: 420 }, children: "Tell us about your business and we'll tailor the demonstration to your sales process, marketing strategy, and revenue operations." })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: form_side_default, alt: "", style: { maxWidth: 440, width: "100%", marginTop: "auto", alignSelf: "center" } })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("form", { style: { display: "flex", flexDirection: "column", gap: 18 }, onSubmit: handleSubmit, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "First name" }),
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Jane" })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Last name" }),
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Doe" })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Business email" }),
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "email", className: "lc-field", placeholder: "jane@company.com" })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Company" }),
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "Acme Inc." })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Job title" }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("input", { type: "text", className: "lc-field", placeholder: "VP of Revenue Operations" })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "CRM currently using" }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("select", { className: "lc-field", defaultValue: "", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("option", { value: "", disabled: true, hidden: true }),
+              CRM_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("option", { value: opt, children: opt }, opt))
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Select your area of interest" }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { position: "relative", marginBottom: 12 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("svg", { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", stroke: "#7fa8d4", strokeWidth: "2.2", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", style: { position: "absolute", left: 15, top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("circle", { cx: "11", cy: "11", r: "7" }),
+                /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("line", { x1: "21", y1: "21", x2: "16.65", y2: "16.65" })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+                "input",
+                {
+                  type: "text",
+                  className: "lc-field",
+                  style: { paddingLeft: 40 },
+                  placeholder: "Search apps...",
+                  value: query,
+                  onChange: (ev) => setQuery(ev.target.value)
+                }
+              )
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "flex", flexWrap: "wrap", gap: 10 }, children: [
+              filteredApps.map((app) => {
+                const isSel = !!selected[app.name];
+                return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(
+                  "button",
+                  {
+                    type: "button",
+                    onClick: () => toggleApp(app.name),
+                    style: pillStyle(isSel, app.grad),
+                    children: [
+                      isSel && /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("polyline", { points: "20 6 9 17 4 12" }) }),
+                      app.name
+                    ]
+                  },
+                  app.name
+                );
+              }),
+              filteredApps.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { fontSize: 13, color: "#7fa8d4" }, children: "No apps match your search." })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("label", { className: "lc-field-label", children: "Biggest challenge" }),
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("textarea", { className: "lc-field", rows: 3, placeholder: "Tell us what you're trying to solve" })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("button", { type: "submit", className: "lc-btn-primary", style: { width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px", marginTop: 4 }, children: [
+            "Submit",
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", stroke: "#fff", strokeWidth: "2.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("line", { x1: "5", y1: "12", x2: "19", y2: "12" }),
+              /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("polyline", { points: "12 5 19 12 12 19" })
+            ] })
+          ] })
+        ] }) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "80px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212", lineHeight: 1.2 }, children: "Planning an Enterprise Rollout?" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 16 }, children: "Our solution architects work alongside your team to design secure, scalable deployments tailored to your business. We assist with:" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: DEPLOYMENT_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: `${i * 40}ms`, borderRadius: 16, padding: 22, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 12 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { display: "inline-block", alignSelf: "flex-start", padding: "4px 12px", borderRadius: 9999, fontSize: 11, fontWeight: 700, letterSpacing: "0.02em", color: card.tagColor, boxShadow: `inset 0 0 0 1px ${card.tagColor}59` }, children: card.tag }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212" }, children: card.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", lineHeight: 1.5 }, children: card.body })
+        ] }, card.title)) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "80px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 680, margin: "0 auto 44px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Global Integrations" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 14 }, children: "Lucrative AI integrates with the platforms your business already uses." })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(6,1fr)", gap: 14 }, children: LOGO_GRID.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 640, margin: "0 auto 48px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Why Teams Choose Lucrative AI" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: WHY_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: `${i * 60}ms`, borderRadius: 16, padding: 26, background: "#fbfaf9", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.05)", display: "flex", flexDirection: "column", gap: 14 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 38, height: 38, borderRadius: 10, background: card.iconBg, color: card.iconColor }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", "aria-hidden": "true", children: card.icon }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15.5, color: "#121212" }, children: card.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontSize: 13.5, color: "#5c5c5c", lineHeight: 1.55 }, children: card.body })
+        ] }, card.title)) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { background: "#eef2f6", padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 820, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 44 }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Frequently Asked Questions" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", children: FAQ_ITEMS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("details", { className: "lc-faq", open: i === 0, style: { borderBottom: "1px solid rgba(18,18,18,0.08)" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("summary", { children: [
+            item.q,
+            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("svg", { className: "lc-faq-chevron", width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "#5c5c5c", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("polyline", { points: "6 9 12 15 18 9" }) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { children: item.a })
+        ] }, item.q)) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { maxWidth: 1e3, margin: "0 auto", padding: "0 32px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { background: "#0f2e4d", borderRadius: 28, padding: "64px 56px", textAlign: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(28px,3.4vw,40px)", letterSpacing: "-0.02em", color: "#fff", lineHeight: 1.2 }, children: "Ready to Modernize Your Revenue Operations?" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 16, color: "#b5d4f4", lineHeight: 1.7, maxWidth: 600, margin: "18px auto 0" }, children: "See how Lucrative AI helps organizations unify CRM, marketing, analytics, governance, and intelligent contracting in one AI-native platform." }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "flex", gap: 14, justifyContent: "center", marginTop: 32 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-primary", style: { background: "#185fa5" }, children: "Book a Demo" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-secondary", style: { background: "transparent", color: "#fff", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.3)" }, children: "Talk to Sales" })
+        ] })
+      ] }) }) }),
       /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Footer, {})
     ] });
   }
+  var CONTACT_CSS = `
+.lc-contact-page{-webkit-font-smoothing:antialiased;}
+.lc-contact-page .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+.lc-contact-page .lc-btn-primary{background:#0f2e4d;color:#fff;border-radius:9999px;font-weight:700;font-size:15px;padding:13px 26px;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease,transform 150ms ease;}
+.lc-contact-page .lc-btn-primary:hover{background:#0a2038;color:#fff;}
+.lc-contact-page .lc-btn-primary:active{transform:scale(0.96);}
+.lc-contact-page .lc-btn-secondary{background:#fff;color:#121212;border-radius:9999px;font-weight:700;font-size:15px;padding:13px 26px;box-shadow:inset 0 0 0 1px rgba(18,18,18,0.12);display:inline-flex;align-items:center;gap:8px;transition:background 150ms ease,transform 150ms ease;}
+.lc-contact-page .lc-btn-secondary:hover{background:#fbfaf9;color:#121212;}
+.lc-contact-page .lc-btn-secondary:active{transform:scale(0.96);}
+.lc-contact-page .lc-field{-webkit-appearance:none;appearance:none;width:100%;padding:13px 16px;border:none;border-radius:12px;background:rgba(255,255,255,0.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);color:#fff;font-family:'Lato',sans-serif;font-size:14.5px;outline:none;transition:box-shadow 150ms ease;}
+.lc-contact-page .lc-field::placeholder{color:#7fa8d4;}
+.lc-contact-page .lc-field:focus{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.45);}
+.lc-contact-page .lc-field-label{font-size:13px;font-weight:600;color:#a9c6e6;margin-bottom:8px;display:block;}
+.lc-contact-page select.lc-field{-moz-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237fa8d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:10px 10px;padding-right:40px;}
+.lc-contact-page select.lc-field option{background:#0f2e4d;color:#fff;}
+.lc-contact-page textarea.lc-field{resize:vertical;min-height:88px;font-family:'Lato',sans-serif;}
+.lc-contact-page .lc-logo-chip{display:flex;align-items:center;justify-content:center;height:76px;padding:18px 22px;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(18,18,18,0.06);transition:box-shadow 150ms ease;}
+.lc-contact-page .lc-logo-chip:hover{box-shadow:inset 0 0 0 1px rgba(24,95,165,0.3);}
+.lc-contact-page .lc-logo-chip img{max-width:100%;max-height:100%;object-fit:contain;}
+.lc-contact-page .lc-faq summary{cursor:pointer;list-style:none;font-family:'Montserrat',sans-serif;font-weight:600;font-size:16px;color:#121212;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.lc-contact-page .lc-faq summary::-webkit-details-marker{display:none;}
+.lc-contact-page .lc-faq .lc-faq-chevron{transition:transform 200ms ease;flex-shrink:0;}
+.lc-contact-page .lc-faq[open] .lc-faq-chevron{transform:rotate(180deg);}
+.lc-contact-page .lc-faq p{padding:0 0 22px;color:#5c5c5c;font-size:14.5px;line-height:1.6;max-width:760px;}
+
+.lc-contact-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
+.lc-contact-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+@media (max-width: 900px) {
+  .lc-contact-page .lc-hero > div,
+  .lc-contact-page section#demo-form > div{grid-template-columns:1fr !important;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-contact-page .lc-reveal,.lc-contact-page .lc-faq-chevron{transition:none !important;animation:none !important;opacity:1 !important;transform:none !important;}
+}
+`;
+
+  // src/pages/PartnersPage.jsx
+  var import_react75 = __toESM(require_react(), 1);
+
+  // src/assets/partners/logo-aws.png
+  var logo_aws_default = "assets/img/logo-aws-RY7KTP2M.png";
+
+  // src/assets/partners/logo-vultr.png
+  var logo_vultr_default = "assets/img/logo-vultr-S35734UU.png";
+
+  // src/assets/partners/logo-elevenlabs.png
+  var logo_elevenlabs_default = "assets/img/logo-elevenlabs-2GLLOPCO.png";
+
+  // src/pages/PartnersPage.jsx
+  var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
+  var PARTNER_CARDS = [
+    { tag: "Integration", tagColor: "#185fa5", title: "Technology Companies", body: "Integrate your platform natively into the Lucrative AI ecosystem." },
+    { tag: "Consulting", tagColor: "#3d8b5c", title: "CRM & RevOps Consultants", body: "Deliver Lucrative AI implementations to your client base." },
+    { tag: "Agency", tagColor: "#a67518", title: "Marketing Agencies", body: "Package Lucrative AI into your managed marketing services." },
+    { tag: "Solutions", tagColor: "#185fa5", title: "Solution Providers", body: "Extend your product suite with AI-native revenue tooling." },
+    { tag: "Enterprise", tagColor: "#3d8b5c", title: "Systems Integrators", body: "Architect and deploy Lucrative AI across enterprise environments." },
+    { tag: "Referral", tagColor: "#a67518", title: "Referral Partners", body: "Introduce your network and earn recurring commission." }
+  ];
+  var INTEREST_OPTIONS = ["Investment", "Partnership", "Sales", "Information"];
+  var TRUST_LOGOS = [
+    { src: logo_aws_default, alt: "AWS" },
+    { src: logo_vultr_default, alt: "Vultr" },
+    { src: logo_elevenlabs_default, alt: "ElevenLabs" }
+  ];
+  function useRevealRoot3() {
+    const rootRef = (0, import_react75.useRef)(null);
+    (0, import_react75.useEffect)(() => {
+      const root = rootRef.current;
+      if (!root) return;
+      const els = root.querySelectorAll(".lc-reveal");
+      if (!("IntersectionObserver" in window)) {
+        els.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((el) => io.observe(el));
+      return () => io.disconnect();
+    }, []);
+    return rootRef;
+  }
+  function PartnersPage() {
+    const rootRef = useRevealRoot3();
+    const [interest, setInterest] = (0, import_react75.useState)("");
+    function handleSubmit(ev) {
+      ev.preventDefault();
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { ref: rootRef, className: "lc-partners-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("style", { children: PARTNERS_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-reveal", style: { padding: "88px 0 40px", position: "relative", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { style: { maxWidth: 840, margin: "0 auto", padding: "0 32px", textAlign: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(34px,4.4vw,52px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
+          "Build the Future of ",
+          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("span", { style: { color: "#185fa5" }, children: "AI-Powered Revenue Operations" }),
+          " Together"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "24px auto 0" }, children: "Lucrative AI partners with organizations that share our vision of helping businesses modernize customer engagement, marketing automation, revenue operations, and AI-driven growth. From technology integrations to implementation services and strategic alliances, we're committed to building partnerships that deliver measurable value." }),
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "16px auto 0" }, children: "If you're interested in partnering with Lucrative AI, complete the form and our partnerships team will contact you to discuss the next steps." })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("section", { id: "partner-form", style: { background: "#eef2f6", padding: "64px 0 96px" }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.15fr 1fr", gap: 28, alignItems: "stretch" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { className: "lc-reveal", style: { display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("h3", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, letterSpacing: "-0.02em", color: "#121212", marginBottom: 26 }, children: "We Partner With" }),
+          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, flexGrow: 1 }, children: PARTNER_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { className: "lc-reveal lc-partner-card", style: { transitionDelay: `${i * 40}ms`, borderRadius: 16, padding: 22, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 12 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("span", { style: { display: "inline-block", alignSelf: "flex-start", padding: "4px 12px", borderRadius: 9999, fontSize: 11, fontWeight: 700, letterSpacing: "0.02em", color: card.tagColor, boxShadow: `inset 0 0 0 1px ${card.tagColor}59` }, children: card.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15.5, color: "#121212" }, children: card.title }),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", lineHeight: 1.5 }, children: card.body })
+          ] }, card.title)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("p", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 19, color: "#121212", marginTop: 30, letterSpacing: "-0.01em" }, children: "Let's build smarter solutions\u2014together." })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px", display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("form", { style: { display: "flex", flexDirection: "column", gap: 18, flexGrow: 1 }, onSubmit: handleSubmit, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("label", { className: "lc-field-label", children: "First name" }),
+                /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("input", { type: "text", className: "lc-field", placeholder: "Jane" })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("label", { className: "lc-field-label", children: "Last name" }),
+                /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("input", { type: "text", className: "lc-field", placeholder: "Doe" })
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("label", { className: "lc-field-label", children: "Email address" }),
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("input", { type: "email", className: "lc-field", placeholder: "jane@company.com" })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("label", { className: "lc-field-label", children: "Company name" }),
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("input", { type: "text", className: "lc-field", placeholder: "Acme Inc." })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("label", { className: "lc-field-label", children: "What describes your best interest?" }),
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("select", { className: "lc-field", value: interest, onChange: (ev) => setInterest(ev.target.value), defaultValue: "", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("option", { value: "", disabled: true, hidden: true }),
+                INTEREST_OPTIONS.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("option", { value: opt, children: opt }, opt))
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { flexGrow: 1 } }),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("button", { type: "submit", className: "lc-btn-primary", style: { width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px", marginTop: 4 }, children: [
+              "Submit Inquiry",
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", stroke: "#fff", strokeWidth: "2.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("line", { x1: "5", y1: "12", x2: "19", y2: "12" }),
+                /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("polyline", { points: "12 5 19 12 12 19" })
+              ] })
+            ] })
+          ] })
+        ] })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("section", { style: { padding: "72px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 36 }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(24px,2.8vw,32px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Partners Who Trust Us" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 800, margin: "0 auto" }, children: TRUST_LOGOS.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Footer, {})
+    ] });
+  }
+  var PARTNERS_CSS = `
+.lc-partners-page{-webkit-font-smoothing:antialiased;}
+.lc-partners-page .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+.lc-partners-page .lc-btn-primary{background:#0f2e4d;color:#fff;border-radius:9999px;font-weight:700;font-size:15px;padding:13px 26px;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease,transform 150ms ease;}
+.lc-partners-page .lc-btn-primary:hover{background:#0a2038;color:#fff;}
+.lc-partners-page .lc-btn-primary:active{transform:scale(0.96);}
+.lc-partners-page .lc-field{-webkit-appearance:none;appearance:none;width:100%;padding:13px 16px;border:none;border-radius:12px;background:rgba(255,255,255,0.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);color:#fff;font-family:'Lato',sans-serif;font-size:14.5px;outline:none;transition:box-shadow 150ms ease;}
+.lc-partners-page .lc-field::placeholder{color:#7fa8d4;}
+.lc-partners-page .lc-field:focus{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.45);}
+.lc-partners-page .lc-field-label{font-size:13px;font-weight:600;color:#a9c6e6;margin-bottom:8px;display:block;}
+.lc-partners-page select.lc-field{-moz-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237fa8d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:10px 10px;padding-right:40px;}
+.lc-partners-page select.lc-field option{background:#0f2e4d;color:#fff;}
+.lc-partners-page .lc-partner-card{transition:background 150ms ease;}
+.lc-partners-page .lc-partner-card:hover{background:#f2f6fb;}
+.lc-partners-page .lc-logo-chip{display:flex;align-items:center;justify-content:center;height:110px;padding:16px 20px;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(18,18,18,0.06);}
+.lc-partners-page .lc-logo-chip img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+
+.lc-partners-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
+.lc-partners-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+@media (max-width: 900px) {
+  .lc-partners-page section#partner-form > div{grid-template-columns:1fr !important;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-partners-page .lc-reveal{transition:none !important;animation:none !important;opacity:1 !important;transform:none !important;}
+}
+`;
+
+  // src/pages/InvestorsPage.jsx
+  var import_react76 = __toESM(require_react(), 1);
+  var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
+  var HERO_BULLETS = [
+    "Lucrative AI is building an AI-native platform that unifies CRM, marketing automation, analytics, revenue governance, and contracting into one intelligent ecosystem.",
+    "We're actively seeking strategic partners, technology alliances, implementation firms, and investors who want to help shape the future of AI-powered revenue operations.",
+    "If you're interested in collaborating, integrating, investing, or scaling with Lucrative AI, we'd love to hear from you."
+  ];
+  var INTEREST_OPTIONS2 = ["Investment", "Partnership", "Sales", "Information"];
+  var TRUST_LOGOS2 = [
+    { src: logo_aws_default, alt: "AWS" },
+    { src: logo_vultr_default, alt: "Vultr" },
+    { src: logo_elevenlabs_default, alt: "ElevenLabs" }
+  ];
+  function useRevealRoot4() {
+    const rootRef = (0, import_react76.useRef)(null);
+    (0, import_react76.useEffect)(() => {
+      const root = rootRef.current;
+      if (!root) return;
+      const els = root.querySelectorAll(".lc-reveal");
+      if (!("IntersectionObserver" in window)) {
+        els.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((el) => io.observe(el));
+      return () => io.disconnect();
+    }, []);
+    return rootRef;
+  }
+  function InvestorsPage() {
+    const rootRef = useRevealRoot4();
+    const [interest, setInterest] = (0, import_react76.useState)("");
+    function handleSubmit(ev) {
+      ev.preventDefault();
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { ref: rootRef, className: "lc-investors-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("style", { children: INVESTORS_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { padding: "88px 0 96px", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 56, alignItems: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-reveal", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { display: "inline-block", padding: "6px 16px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 22, border: "1px solid rgba(24,95,165,0.2)" }, children: "Partner & Investors" }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(32px,3.6vw,46px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
+            "Partner with the Next Generation of ",
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { color: "#185fa5" }, children: "Revenue Technology" })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("ul", { style: { margin: "26px 0 0", display: "flex", flexDirection: "column", gap: 14 }, children: HERO_BULLETS.map((text) => /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("li", { style: { display: "flex", gap: 12, fontSize: 15.5, lineHeight: 1.65, color: "#5c5c5c" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5", flexShrink: 0, marginTop: 10 } }),
+            text
+          ] }, text)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("p", { style: { fontSize: 16, lineHeight: 1.6, color: "#121212", fontWeight: 600, margin: "24px 0 0" }, children: "Submit the form and our team will get back to you shortly." })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { id: "investor-form", className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("form", { style: { display: "flex", flexDirection: "column", gap: 18 }, onSubmit: handleSubmit, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("label", { className: "lc-field-label", children: "First name" }),
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("input", { type: "text", className: "lc-field", placeholder: "Jane" })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("label", { className: "lc-field-label", children: "Last name" }),
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("input", { type: "text", className: "lc-field", placeholder: "Doe" })
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("label", { className: "lc-field-label", children: "Email address" }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("input", { type: "email", className: "lc-field", placeholder: "jane@company.com" })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("label", { className: "lc-field-label", children: "Company name" }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("input", { type: "text", className: "lc-field", placeholder: "Acme Inc." })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("label", { className: "lc-field-label", children: "What describes your best interest?" }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("select", { className: "lc-field", value: interest, onChange: (ev) => setInterest(ev.target.value), defaultValue: "", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("option", { value: "", disabled: true, hidden: true }),
+                INTEREST_OPTIONS2.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("option", { value: opt, children: opt }, opt))
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("button", { type: "submit", className: "lc-btn-primary", style: { width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px", marginTop: 4 }, children: [
+              "Submit Inquiry",
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", stroke: "#fff", strokeWidth: "2.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("line", { x1: "5", y1: "12", x2: "19", y2: "12" }),
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("polyline", { points: "12 5 19 12 12 19" })
+              ] })
+            ] })
+          ] })
+        ] })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("section", { style: { background: "#eef2f6", padding: "72px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 36 }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(24px,2.8vw,32px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Partners Who Trust Us" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 800, margin: "0 auto" }, children: TRUST_LOGOS2.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Footer, {})
+    ] });
+  }
+  var INVESTORS_CSS = `
+.lc-investors-page{-webkit-font-smoothing:antialiased;}
+.lc-investors-page .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+.lc-investors-page .lc-btn-primary{background:#0f2e4d;color:#fff;border-radius:9999px;font-weight:700;font-size:15px;padding:13px 26px;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease,transform 150ms ease;}
+.lc-investors-page .lc-btn-primary:hover{background:#0a2038;color:#fff;}
+.lc-investors-page .lc-btn-primary:active{transform:scale(0.96);}
+.lc-investors-page .lc-field{-webkit-appearance:none;appearance:none;width:100%;padding:13px 16px;border:none;border-radius:12px;background:rgba(255,255,255,0.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);color:#fff;font-family:'Lato',sans-serif;font-size:14.5px;outline:none;transition:box-shadow 150ms ease;}
+.lc-investors-page .lc-field::placeholder{color:#7fa8d4;}
+.lc-investors-page .lc-field:focus{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.45);}
+.lc-investors-page .lc-field-label{font-size:13px;font-weight:600;color:#a9c6e6;margin-bottom:8px;display:block;}
+.lc-investors-page select.lc-field{-moz-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237fa8d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:10px 10px;padding-right:40px;}
+.lc-investors-page select.lc-field option{background:#0f2e4d;color:#fff;}
+.lc-investors-page .lc-logo-chip{display:flex;align-items:center;justify-content:center;height:110px;padding:16px 20px;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(18,18,18,0.06);}
+.lc-investors-page .lc-logo-chip img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+
+.lc-investors-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
+.lc-investors-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+@media (max-width: 900px) {
+  .lc-investors-page > div:first-of-type > div{grid-template-columns:1fr !important;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-investors-page .lc-reveal{transition:none !important;animation:none !important;opacity:1 !important;transform:none !important;}
+}
+`;
+
+  // src/App.jsx
+  var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
+  function HomePage() {
+    useReveal();
+    return /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)(import_jsx_runtime75.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Hero, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LLMDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LogoStrip, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ProductOverview, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PowerHouse, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ComparisonTable, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(FeaturePairs, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ProblemTabs, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(OrbitDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PersonaSwitcher, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(CapabilitiesGrid, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Testimonial, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(CTABanner, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(FAQ, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Footer, {})
+    ] });
+  }
   function App() {
-    return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(BrowserRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(Routes, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(BrowserRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)(Routes, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
         Route,
         {
           path: "/",
-          element: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(HomePage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(HomePage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
         Route,
         {
           path: "/pricing",
-          element: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(PricingPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PricingPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+        Route,
+        {
+          path: "/contact",
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ContactPage, {})
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+        Route,
+        {
+          path: "/partners",
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PartnersPage, {})
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+        Route,
+        {
+          path: "/investors",
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(InvestorsPage, {})
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
         Route,
         {
           path: "/loft",
-          element: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(LoftPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LoftPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
         Route,
         {
           path: "/loft-marketing",
-          element: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(LoftMarketingPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LoftMarketingPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
         Route,
         {
           path: "/stratum",
-          element: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(StratumPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(StratumPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
         Route,
         {
           path: "/quotebase",
-          element: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(QuotebasePage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(QuotebasePage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
         Route,
         {
           path: "/governance",
-          element: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(GovernancePage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(GovernancePage, {})
         }
       )
     ] }) });
   }
 
   // src/main.jsx
-  var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
-  (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime73.jsx)(App, {}));
+  var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
+  (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime76.jsx)(App, {}));
 })();
 /*! Bundled license information:
 
