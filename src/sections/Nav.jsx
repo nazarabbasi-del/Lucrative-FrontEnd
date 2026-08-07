@@ -28,7 +28,7 @@ export default function Nav() {
 
         {/* Logo */}
         <a href="#top" className="logo">
-          <img src={logo} alt="Lucrative AI" style={{ height: 32, width: 'auto', display: 'block' }} />
+          <a href="#top" className="logo">LUCRAT<VLogo size={18} />E&nbsp;AI</a>
         </a>
 
         {/* Main Navigation */}
