@@ -2,32 +2,44 @@ import React, { useState } from 'react';
 
 const faqs = [
   {
-    q: 'What does a Revenue Governance Audit include?',
-    a: 'Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate.',
+    q: 'What is Lucrative AI?',
+    a: "Lucrative AI is the world's first AI-native CRM and marketing automation platform designed to unify sales, marketing, analytics, quoting, and revenue governance in a single AI-powered workspace. Unlike traditional CRM systems, Lucrative AI helps teams automate work, make decisions faster, and maintain healthy CRM data through built-in AI.",
   },
   {
-    q: 'Which CRMs do you support?',
-    a: 'Lucrative natively supports HubSpot, Salesforce, and GoHighLevel today, with the same governance engine and AI layer running underneath each — more integrations are on the roadmap.',
+    q: 'What makes Lucrative AI different from traditional CRM software?',
+    a: 'Traditional CRM platforms primarily store customer data. Lucrative AI turns customer data into intelligent actions by combining CRM, marketing automation, AI analytics, CPQ, and governance into one platform powered by an AI-native architecture.',
   },
   {
-    q: 'How long does the audit take?',
-    a: "Most audits complete in under 10 minutes once your CRM is connected. Larger workspaces with 100k+ contacts may take a little longer, but you'll get a live progress view the whole time.",
+    q: 'What does AI-native CRM mean?',
+    a: 'An AI-native CRM is built around artificial intelligence from the ground up rather than adding AI as an afterthought. Every workflow — from lead scoring and forecasting to reporting, quoting, and CRM governance — is powered by AI that understands your business context.',
   },
   {
-    q: 'How are credits used?',
-    a: 'Each connected app or automation you run — like a HubSpot audit or an email deliverability check — draws from your credit balance. Pricing per action is shown before you run it, so there are no surprises.',
+    q: 'Can I use Lucrative AI with Claude or ChatGPT?',
+    a: 'Yes. Lucrative AI is completely headless and allows you to connect your preferred AI models, including Claude and OpenAI GPT models. You can interact with your CRM, analytics, marketing, and revenue operations using natural language.',
   },
   {
-    q: 'Can Lucrative actually fix things, or just report them?',
-    a: 'Both. Every issue we surface comes with a review-and-fix workflow — you approve the change and Lucrative applies it directly in your connected CRM, with a full audit log of what changed.',
+    q: 'What products are included in Lucrative AI?',
+    a: 'The Lucrative Suite includes Lucrative Sales, Lucrative Marketing, Lucrative Analytics, Lucrative Quote, and Lucrative Governance. Each product can be deployed independently or together as a unified platform.',
   },
   {
-    q: 'Can I audit multiple CRMs in one workspace?',
-    a: 'Yes. Governance runs across every connected app in your workspace at once, so you get one unified score instead of juggling separate reports per platform.',
+    q: 'Does Lucrative AI include CRM and marketing automation?',
+    a: 'Yes. Lucrative AI includes a built-in AI-powered CRM together with advanced marketing automation, customer journey management, email campaigns, landing pages, webinar management, attribution reporting, and revenue intelligence.',
   },
   {
-    q: 'How often should I run an audit?',
-    a: 'Most teams run a full audit quarterly and let continuous monitoring flag new issues in between — so nothing quietly drifts out of policy between audits.',
+    q: 'How does Lucrative AI improve CRM data quality?',
+    a: 'Lucrative Governance continuously monitors CRM health by identifying duplicate records, unused fields, broken workflows, missing data, integration issues, and policy violations. It recommends AI-driven fixes before data problems affect revenue.',
+  },
+  {
+    q: 'Can Lucrative AI generate sales quotes automatically?',
+    a: 'Yes. Lucrative Quote generates policy-compliant quotes, proposals, and contracts in seconds using deterministic pricing, approval workflows, and built-in governance. It helps sales teams close deals faster while reducing manual work.',
+  },
+  {
+    q: 'Which CRM platforms can I migrate from?',
+    a: 'Lucrative AI supports assisted migration from platforms including Salesforce, HubSpot, HighLevel, and other popular CRM systems. The migration process is designed to minimize downtime while preserving your customer data.',
+  },
+  {
+    q: 'Does Lucrative AI integrate with other business platforms?',
+    a: 'Yes. Lucrative AI connects with Salesforce, HubSpot, Mailchimp, Snowflake, Google Ads, and more than 15 business platforms. Additional integrations can be developed based on your business requirements.',
   },
 ];
 

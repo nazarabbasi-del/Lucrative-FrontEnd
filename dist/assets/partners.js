@@ -21840,26 +21840,49 @@
   var import_react3 = __toESM(require_react(), 1);
   var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
   var cols = [
-    { title: "Product", links: ["How it works", "CRMs", "Pricing", "Security", "Changelog"] },
-    { title: "Solutions", links: ["RevOps leaders", "CRM admins", "AI readiness", "Agencies"] },
-    { title: "Company", links: ["Docs", "Contact", "Privacy", "Terms"] }
+    {
+      title: "Product",
+      links: [
+        { label: "Lucrative Sales", href: "/loft" },
+        { label: "Lucrative Marketing", href: "/loft-marketing" },
+        { label: "Lucrative Analytics", href: "/stratum" },
+        { label: "Lucrative Quote", href: "/quotebase" },
+        { label: "Lucrative Governance", href: "/governance" }
+      ]
+    },
+    {
+      title: "Solutions",
+      links: [
+        { label: "Pricing", href: "/pricing" },
+        { label: "Partners", href: "/partners" },
+        { label: "Investor", href: "/investors" },
+        { label: "Contact Us", href: "/contact" }
+      ]
+    }
   ];
   function Footer() {
     return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("footer", { className: "footer", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-brand", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("a", { href: "#top", className: "logo", children: [
-            "LUCRAT",
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(VLogo, { size: 18 }),
-            "E\xA0AI"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
-        ] }),
-        cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-col", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h6", { children: c.title }),
-          c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#", children: l }, l))
-        ] }, c.title))
-      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
+        "div",
+        {
+          className: "footer-grid",
+          style: { display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr", columnGap: 64, rowGap: 32 },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-brand", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("a", { href: "#top", className: "logo", children: [
+                "LUCRAT",
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(VLogo, { size: 18 }),
+                "E\xA0AI"
+              ] }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
+            ] }),
+            cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-col", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h6", { children: c.title }),
+              c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: l.href, children: l.label }, l.label))
+            ] }, c.title))
+          ]
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "footer-bottom", children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: "\xA9 2026 Lucrative, Inc." }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: "help@lucrative.ai \xB7 +1-601-340-4666" })
@@ -21983,7 +22006,7 @@
           ] }, card.title)) }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 19, color: "#121212", marginTop: 30, letterSpacing: "-0.01em" }, children: "Let's build smarter solutions\u2014together." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px", display: "flex", flexDirection: "column" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#fff", borderRadius: 22, padding: "36px 34px", display: "flex", flexDirection: "column" }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(HubSpotForm, { portalId: "6539536", formId: "d404e171-176d-42fa-bdf9-650486ac3fc9", region: "na1" })
         ] })

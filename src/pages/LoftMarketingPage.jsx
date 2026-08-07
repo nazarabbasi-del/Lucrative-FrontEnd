@@ -10,7 +10,7 @@ import LoftTeams from '../sections/loft/LoftTeams.jsx';
 import LoftMarketingComparison from '../sections/loftmarketing/LoftMarketingComparison.jsx';
 import LoftPersonas from '../sections/loft/LoftPersonas.jsx';
 import GovernancePricing from '../sections/governance/GovernancePricing.jsx';
-import LoftFAQ from '../sections/loft/LoftFAQ.jsx';
+import LoftMarketingFAQ from '../sections/loftmarketing/LoftMarketingFAQ.jsx';
 import LoftClosingCTA from '../sections/loft/LoftClosingCTA.jsx';
 import Footer from '../sections/Footer.jsx';
 
@@ -27,7 +27,7 @@ export default function LoftMarketingPage() {
       <LoftMarketingComparison />
       <LoftPersonas />
       <GovernancePricing />
-      <LoftFAQ />
+      <LoftMarketingFAQ />
       <LoftClosingCTA />
       <Footer />
     </>

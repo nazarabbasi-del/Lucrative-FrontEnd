@@ -22643,37 +22643,49 @@
     ] }) }) });
   }
 
-  // src/sections/loft/LoftFAQ.jsx
+  // src/sections/loftmarketing/LoftMarketingFAQ.jsx
   var import_react14 = __toESM(require_react(), 1);
   var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
   var faqs = [
     {
-      q: "What does a Revenue Governance Audit include?",
-      a: "Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate."
+      q: "What is Lucrative Marketing?",
+      a: "Lucrative Marketing is an AI-native marketing automation platform that combines CRM data, customer intelligence, campaign management, email automation, landing pages, webinar marketing, and revenue attribution in one workspace. It helps marketers build campaigns that drive measurable business growth instead of just engagement."
     },
     {
-      q: "Which CRMs do you support?",
-      a: "HubSpot, Salesforce, and GoHighLevel today, with the same audit depth on every platform &mdash; more connectors are added regularly based on customer demand."
+      q: "How is Lucrative Marketing different from traditional marketing automation platforms?",
+      a: "Traditional marketing platforms automate workflows and emails. Lucrative Marketing goes further by using AI to understand customer behavior, buying intent, CRM data, and campaign performance, allowing it to build, optimize, and improve marketing campaigns automatically."
     },
     {
-      q: "How long does the audit take?",
-      a: "About five minutes for a full scan of your CRM and connected apps. You get a scored report the moment it finishes, not a queued ticket you wait days on."
+      q: "How does AI create marketing campaigns?",
+      a: "Simply describe your marketing objective in natural language \u2014 for example, targeting prospects who haven't booked a demo in 30 days. Lucrative Marketing automatically generates the audience, email sequence, landing page, forms, CTAs, follow-up journeys, and performance reports."
     },
     {
-      q: "How are credits used?",
-      a: "Each full audit costs 100 credits, regardless of which CRM you connect. Credits don&rsquo;t expire, and there&rsquo;s no subscription or per-seat fee sitting on top of them."
+      q: "What is AI Audience Intelligence?",
+      a: "AI Audience Intelligence continuously analyzes CRM data, customer behavior, engagement history, buying intent, lifecycle stage, industry, product interest, revenue potential, and churn risk to automatically build dynamic audience segments that stay up to date as customer behavior changes."
     },
     {
-      q: "Can Lucrative actually fix things, or just report them?",
-      a: "Both. Every issue comes with a drafted fix you review and approve &mdash; Lucrative backs up your data first, then executes the change. Nothing runs without your sign-off."
+      q: "Does Lucrative Marketing include email marketing automation?",
+      a: "Yes. Lucrative Marketing includes AI-powered email automation with personalized email sequences, drip campaigns, behavioral triggers, dynamic content, AI-generated subject lines, send-time optimization, nurture journeys, and re-engagement campaigns."
     },
     {
-      q: "Can I audit multiple CRMs in one workspace?",
-      a: "Yes. Connect HubSpot, Salesforce, and GoHighLevel side by side in the same workspace and run audits independently or together."
+      q: "Can Lucrative Marketing build landing pages and webinar campaigns?",
+      a: "Yes. Lucrative Marketing uses AI to generate landing pages, forms, registration pages, webinar workflows, reminder emails, follow-up automation, surveys, and event campaigns from a single campaign objective, keeping everything connected to your CRM."
     },
     {
-      q: "How often should I run an audit?",
-      a: "Most teams run one per quarter, weekly during a migration, or right before a major AI or automation rollout &mdash; whenever you want a clean, priced baseline of your data."
+      q: "How does Lucrative Marketing measure campaign success?",
+      a: "Lucrative Marketing goes beyond opens and clicks by providing first-touch, last-touch, and multi-touch attribution, campaign ROI, pipeline influence, revenue attribution, and customer lifetime value, helping marketers understand which campaigns actually generate revenue."
+    },
+    {
+      q: "Can Lucrative Marketing optimize campaigns automatically?",
+      a: "Yes. Lucrative Marketing continuously monitors campaign performance and uses AI to recommend improvements such as adjusting budgets, pausing low-performing campaigns, improving subject lines, refining audience segments, launching retargeting campaigns, and optimizing calls-to-action."
+    },
+    {
+      q: "Which teams benefit from Lucrative Marketing?",
+      a: "Lucrative Marketing is designed for Marketing, Sales, Customer Success, Revenue Operations, and Executive Leadership. Because every campaign shares the same customer data and AI intelligence, teams work together with complete visibility into customer journeys and revenue impact."
+    },
+    {
+      q: "Why are businesses switching from HubSpot, Marketo, or ActiveCampaign to Lucrative Marketing?",
+      a: "Businesses choose Lucrative Marketing because it combines AI-powered audience intelligence, CRM-native marketing automation, dynamic segmentation, landing pages, webinar management, revenue attribution, and natural language campaign creation in one platform. Instead of managing disconnected tools, marketing teams can launch smarter campaigns, improve conversion rates, and directly measure their contribution to revenue."
     }
   ];
   function FAQ() {
@@ -22747,26 +22759,49 @@
   var import_react16 = __toESM(require_react(), 1);
   var import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
   var cols = [
-    { title: "Product", links: ["How it works", "CRMs", "Pricing", "Security", "Changelog"] },
-    { title: "Solutions", links: ["RevOps leaders", "CRM admins", "AI readiness", "Agencies"] },
-    { title: "Company", links: ["Docs", "Contact", "Privacy", "Terms"] }
+    {
+      title: "Product",
+      links: [
+        { label: "Lucrative Sales", href: "/loft" },
+        { label: "Lucrative Marketing", href: "/loft-marketing" },
+        { label: "Lucrative Analytics", href: "/stratum" },
+        { label: "Lucrative Quote", href: "/quotebase" },
+        { label: "Lucrative Governance", href: "/governance" }
+      ]
+    },
+    {
+      title: "Solutions",
+      links: [
+        { label: "Pricing", href: "/pricing" },
+        { label: "Partners", href: "/partners" },
+        { label: "Investor", href: "/investors" },
+        { label: "Contact Us", href: "/contact" }
+      ]
+    }
   ];
   function Footer() {
     return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("footer", { className: "footer", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "footer-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "footer-brand", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("a", { href: "#top", className: "logo", children: [
-            "LUCRAT",
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(VLogo, { size: 18 }),
-            "E\xA0AI"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
-        ] }),
-        cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "footer-col", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("h6", { children: c.title }),
-          c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("a", { href: "#", children: l }, l))
-        ] }, c.title))
-      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
+        "div",
+        {
+          className: "footer-grid",
+          style: { display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr", columnGap: 64, rowGap: 32 },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "footer-brand", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("a", { href: "#top", className: "logo", children: [
+                "LUCRAT",
+                /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(VLogo, { size: 18 }),
+                "E\xA0AI"
+              ] }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
+            ] }),
+            cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "footer-col", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("h6", { children: c.title }),
+              c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("a", { href: l.href, children: l.label }, l.label))
+            ] }, c.title))
+          ]
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "footer-bottom", children: [
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { children: "\xA9 2026 Lucrative, Inc." }),
         /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { children: "help@lucrative.ai \xB7 +1-601-340-4666" })

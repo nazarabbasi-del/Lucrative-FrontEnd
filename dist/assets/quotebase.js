@@ -22370,37 +22370,49 @@
     ] }) });
   }
 
-  // src/sections/loft/LoftFAQ.jsx
+  // src/sections/quotebase/QuoteFAQ.jsx
   var import_react13 = __toESM(require_react(), 1);
   var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
   var faqs = [
     {
-      q: "What does a Revenue Governance Audit include?",
-      a: "Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate."
+      q: "What is Lucrative Quote?",
+      a: "Lucrative Quote is an AI-powered quote and proposal generation platform that automatically converts Salesforce opportunities into accurate, policy-compliant sales quotes. It combines AI-generated content with deterministic pricing, approval workflows, and audit trails to help sales teams generate quotes in seconds."
     },
     {
-      q: "Which CRMs do you support?",
-      a: "HubSpot, Salesforce, and GoHighLevel today, with the same audit depth on every platform &mdash; more connectors are added regularly based on customer demand."
+      q: "How is Lucrative Quote different from traditional CPQ software?",
+      a: "Traditional CPQ solutions often require complex configuration and manual processes. Lucrative Quote combines AI-powered document generation, deterministic pricing, policy validation, approval automation, and CRM integration into one streamlined solution that reduces quoting time and improves accuracy."
     },
     {
-      q: "How long does the audit take?",
-      a: "About five minutes for a full scan of your CRM and connected apps. You get a scored report the moment it finishes, not a queued ticket you wait days on."
+      q: "What is deterministic pricing?",
+      a: "Deterministic pricing means every price, discount, tax, and total is calculated using predefined business rules instead of AI-generated estimates. This ensures every quote is mathematically accurate, policy compliant, and consistent across your organization."
     },
     {
-      q: "How are credits used?",
-      a: "Each full audit costs 100 credits, regardless of which CRM you connect. Credits don&rsquo;t expire, and there&rsquo;s no subscription or per-seat fee sitting on top of them."
+      q: "Can Lucrative Quote generate quotes directly from Salesforce?",
+      a: "Yes. Lucrative Quote integrates directly with Salesforce, allowing sales representatives to generate complete quotes from existing opportunities without manually copying customer information, products, or pricing into separate systems."
     },
     {
-      q: "Can Lucrative actually fix things, or just report them?",
-      a: "Both. Every issue comes with a drafted fix you review and approve &mdash; Lucrative backs up your data first, then executes the change. Nothing runs without your sign-off."
+      q: "How does Lucrative Quote ensure pricing compliance?",
+      a: "Lucrative Quote automatically validates pricing, discounts, taxes, approval thresholds, and business policies before a quote is sent to a customer. Quotes that exceed company rules are automatically flagged for review or approval."
     },
     {
-      q: "Can I audit multiple CRMs in one workspace?",
-      a: "Yes. Connect HubSpot, Salesforce, and GoHighLevel side by side in the same workspace and run audits independently or together."
+      q: "Does Lucrative Quote support approval workflows?",
+      a: "Yes. Lucrative Quote includes configurable approval workflows with role-based permissions for sales representatives, managers, and administrators. Approval requests are automatically routed according to your organization's pricing and discount policies."
     },
     {
-      q: "How often should I run an audit?",
-      a: "Most teams run one per quarter, weekly during a migration, or right before a major AI or automation rollout &mdash; whenever you want a clean, priced baseline of your data."
+      q: "Does Lucrative Quote maintain an audit trail?",
+      a: "Yes. Every quote, pricing calculation, approval, revision, and customer communication is securely recorded in a tamper-evident audit trail, providing complete visibility and compliance for every transaction."
+    },
+    {
+      q: "Can Lucrative Quote support multiple brands or business units?",
+      a: "Absolutely. Lucrative Quote supports multiple quote templates, branding standards, languages, regions, and business units, allowing organizations to generate professional, consistent proposals across different markets and product lines."
+    },
+    {
+      q: "Who should use Lucrative Quote?",
+      a: "Lucrative Quote is designed for sales teams, revenue operations, finance, and commercial organizations that need to generate accurate quotes faster while maintaining pricing consistency, governance, and compliance across the entire sales process."
+    },
+    {
+      q: "Why do businesses choose Lucrative Quote?",
+      a: "Businesses choose Lucrative Quote because it combines AI-powered quote generation, deterministic pricing, Salesforce integration, policy enforcement, automated approvals, and complete auditability in one platform. This reduces manual work, accelerates sales cycles, improves pricing accuracy, and helps teams close deals with confidence."
     }
   ];
   function FAQ() {
@@ -22478,26 +22490,49 @@
   var import_react15 = __toESM(require_react(), 1);
   var import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
   var cols = [
-    { title: "Product", links: ["How it works", "CRMs", "Pricing", "Security", "Changelog"] },
-    { title: "Solutions", links: ["RevOps leaders", "CRM admins", "AI readiness", "Agencies"] },
-    { title: "Company", links: ["Docs", "Contact", "Privacy", "Terms"] }
+    {
+      title: "Product",
+      links: [
+        { label: "Lucrative Sales", href: "/loft" },
+        { label: "Lucrative Marketing", href: "/loft-marketing" },
+        { label: "Lucrative Analytics", href: "/stratum" },
+        { label: "Lucrative Quote", href: "/quotebase" },
+        { label: "Lucrative Governance", href: "/governance" }
+      ]
+    },
+    {
+      title: "Solutions",
+      links: [
+        { label: "Pricing", href: "/pricing" },
+        { label: "Partners", href: "/partners" },
+        { label: "Investor", href: "/investors" },
+        { label: "Contact Us", href: "/contact" }
+      ]
+    }
   ];
   function Footer() {
     return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("footer", { className: "footer", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "footer-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "footer-brand", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("a", { href: "#top", className: "logo", children: [
-            "LUCRAT",
-            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(VLogo, { size: 18 }),
-            "E\xA0AI"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
-        ] }),
-        cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "footer-col", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h6", { children: c.title }),
-          c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("a", { href: "#", children: l }, l))
-        ] }, c.title))
-      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
+        "div",
+        {
+          className: "footer-grid",
+          style: { display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr", columnGap: 64, rowGap: 32 },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "footer-brand", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("a", { href: "#top", className: "logo", children: [
+                "LUCRAT",
+                /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(VLogo, { size: 18 }),
+                "E\xA0AI"
+              ] }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
+            ] }),
+            cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "footer-col", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h6", { children: c.title }),
+              c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("a", { href: l.href, children: l.label }, l.label))
+            ] }, c.title))
+          ]
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "footer-bottom", children: [
         /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { children: "\xA9 2026 Lucrative, Inc." }),
         /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { children: "help@lucrative.ai \xB7 +1-601-340-4666" })

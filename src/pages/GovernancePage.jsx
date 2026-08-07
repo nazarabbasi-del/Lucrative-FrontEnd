@@ -10,7 +10,7 @@ import MultiCRMDiagram from '../sections/governance/MultiCRMDiagram.jsx';
 import GovernanceComparison from '../sections/governance/GovernanceComparison.jsx';
 import GovernancePersonas from '../sections/governance/GovernancePersonas.jsx';
 import GovernancePricing from '../sections/governance/GovernancePricing.jsx';
-import FAQ from '../sections/FAQ.jsx';
+import GovernanceFAQ from '../sections/governance/GovernanceFAQ.jsx';
 import GovernanceClosingCTA from '../sections/governance/GovernanceClosingCTA.jsx';
 import Footer from '../sections/Footer.jsx';
 
@@ -27,7 +27,7 @@ export default function GovernancePage() {
       <GovernanceComparison />
       <GovernancePersonas />
       <GovernancePricing />
-      <FAQ />
+      <GovernanceFAQ />
       <GovernanceClosingCTA />
       <Footer />
     </>

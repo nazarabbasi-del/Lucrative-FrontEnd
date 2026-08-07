@@ -10,8 +10,8 @@ export default function Hero() {
             AI Native Built <span className="text-blue">CRM &amp; Marketing Automation System</span>
           </h1>
           <div className="hero-ctas">
-            <a href="#audit" className="btn btn-primary">Signup Now</a>
-            <a href="#video" className="btn btn-outline">Watch Demo</a>
+            <a href="/pricing#configurator" className="btn btn-primary">Signup Now</a>
+            <a href="/contact" className="btn btn-outline">Watch Demo</a>
           </div>
         </div>
       </div>

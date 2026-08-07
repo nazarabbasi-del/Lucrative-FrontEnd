@@ -35,8 +35,8 @@ export default function ComparisonTable() {
         </div>
         <div className="mini-cta">
           <div className="mini-cta-btns">
-            <button className="btn btn-primary">Signup Now</button>
-            <button className="btn btn-outline">Watch Demo</button>
+            <button href="/pricing#configurator" className="btn btn-primary">Signup Now</button>
+            <button href="/contact" className="btn btn-outline">Watch Demo</button>
           </div>
         </div>
         <div className="comparison--wrap reveal">

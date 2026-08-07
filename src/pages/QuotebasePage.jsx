@@ -9,7 +9,7 @@ import QuotebaseFeatures from '../sections/quotebase/QuotebaseFeatures.jsx';
 import QuotebaseMondayTimeline from '../sections/quotebase/QuotebaseMondayTimeline.jsx';
 import QuotebaseAgentDiagram from '../sections/quotebase/QuotebaseAgentDiagram.jsx';
 import QuotebaseOutcomes from '../sections/quotebase/QuotebaseOutcomes.jsx';
-import LoftFAQ from '../sections/loft/LoftFAQ.jsx';
+import QuoteFAQ from '../sections/quotebase/QuoteFAQ.jsx';
 import QuotebaseClosingCTA from '../sections/quotebase/QuotebaseClosingCTA.jsx';
 import Footer from '../sections/Footer.jsx';
 
@@ -25,7 +25,7 @@ export default function QuotebasePage() {
       <QuotebaseMondayTimeline />
       <QuotebaseAgentDiagram />
       <QuotebaseOutcomes />
-      <LoftFAQ />
+      <QuoteFAQ/>
       <QuotebaseClosingCTA />
       <Footer />
     </>

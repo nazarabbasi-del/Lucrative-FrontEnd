@@ -2,32 +2,44 @@ import React, { useState } from 'react';
 
 const faqs = [
   {
-    q: 'What does a Revenue Governance Audit include?',
-    a: 'Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate.',
+    q: 'What is Lucrative Sales?',
+    a: 'Lucrative Sales is an AI-native CRM designed to help sales, marketing, customer success, operations, and leadership work from one intelligent platform. It automates manual CRM tasks, provides AI-powered sales insights, and helps teams close more deals while maintaining accurate customer data.',
   },
   {
-    q: 'Which CRMs do you support?',
-    a: 'HubSpot, Salesforce, and GoHighLevel today, with the same audit depth on every platform &mdash; more connectors are added regularly based on customer demand.',
+    q: 'How is Lucrative Sales different from traditional CRM software?',
+    a: 'Unlike traditional CRM systems that primarily store customer information, Lucrative Sales automatically updates records, identifies relationship opportunities, predicts deal risks, recommends next actions, and provides AI-powered revenue intelligence &mdash; all without requiring constant manual updates.',
   },
   {
-    q: 'How long does the audit take?',
-    a: 'About five minutes for a full scan of your CRM and connected apps. You get a scored report the moment it finishes, not a queued ticket you wait days on.',
+    q: 'What is an Autonomous CRM?',
+    a: 'An Autonomous CRM is a CRM that manages itself. Lucrative Sales automatically logs calls, captures emails, enriches customer records, detects duplicates, updates pipelines, and keeps your CRM accurate with minimal manual effort from your team.',
   },
   {
-    q: 'How are credits used?',
-    a: 'Each full audit costs 100 credits, regardless of which CRM you connect. Credits don&rsquo;t expire, and there&rsquo;s no subscription or per-seat fee sitting on top of them.',
+    q: 'How does the AI Sales Assistant help sales teams?',
+    a: 'The AI Sales Assistant prepares meeting briefs, drafts follow-up emails, summarizes customer conversations, identifies stalled opportunities, recommends next steps, and helps sales representatives spend more time selling instead of updating CRM records.',
   },
   {
-    q: 'Can Lucrative actually fix things, or just report them?',
-    a: 'Both. Every issue comes with a drafted fix you review and approve &mdash; Lucrative backs up your data first, then executes the change. Nothing runs without your sign-off.',
+    q: 'What is AI Relationship Intelligence?',
+    a: 'AI Relationship Intelligence continuously analyzes customer interactions, engagement history, communication patterns, and buying signals to identify which relationships are growing stronger, which accounts are at risk, and where your team should focus next.',
   },
   {
-    q: 'Can I audit multiple CRMs in one workspace?',
-    a: 'Yes. Connect HubSpot, Salesforce, and GoHighLevel side by side in the same workspace and run audits independently or together.',
+    q: 'Can Lucrative Sales forecast revenue more accurately?',
+    a: 'Yes. Lucrative Sales uses AI-powered revenue intelligence to forecast sales based on customer engagement, deal activity, historical performance, and pipeline health rather than relying solely on manual estimates or sales rep intuition.',
   },
   {
-    q: 'How often should I run an audit?',
-    a: 'Most teams run one per quarter, weekly during a migration, or right before a major AI or automation rollout &mdash; whenever you want a clean, priced baseline of your data.',
+    q: 'Does Lucrative Sales support workflow automation?',
+    a: 'Yes. Lucrative Sales includes no-code workflow automation that allows organizations to automate approvals, lead routing, customer handoffs, renewals, follow-ups, notifications, and cross-functional business processes without complex development.',
+  },
+  {
+    q: 'Is Lucrative Sales suitable for enterprise organizations?',
+    a: 'Absolutely. Lucrative Sales includes enterprise-grade capabilities such as Single Sign-On (SSO), SAML authentication, granular user permissions, audit logs, scalable architecture, and governance controls to support growing organizations.',
+  },
+  {
+    q: 'Which teams can use Lucrative Sales?',
+    a: 'Lucrative Sales is designed for the entire revenue organization, including Sales, Marketing, Customer Success, Revenue Operations, Executive Leadership, and Operations teams. Every department works from the same customer record and shared AI intelligence.',
+  },
+  {
+    q: 'Why are companies switching from HubSpot, Salesforce, or Pipedrive to Lucrative Sales?',
+    a: 'Companies switch to Lucrative Sales because it combines AI-native CRM, autonomous data management, relationship intelligence, workflow automation, revenue forecasting, and a unified customer timeline into one platform. This reduces manual work, improves forecasting accuracy, and helps teams scale without increasing CRM complexity or costs.',
   },
 ];
 

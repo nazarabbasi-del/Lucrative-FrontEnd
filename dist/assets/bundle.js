@@ -1329,7 +1329,7 @@
           return dispatcher;
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var React88 = require_react(), Internals = {
+        var React91 = require_react(), Internals = {
           d: {
             f: noop,
             r: function() {
@@ -1347,7 +1347,7 @@
           },
           p: 0,
           findDOMNode: null
-        }, REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), ReactSharedInternals = React88.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+        }, REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), ReactSharedInternals = React91.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
         "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
           "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
         );
@@ -2882,7 +2882,7 @@
           "number" === type && getActiveElement(node.ownerDocument) === node || node.defaultValue === "" + value || (node.defaultValue = "" + value);
         }
         function validateOptionProps(element, props) {
-          null == props.value && ("object" === typeof props.children && null !== props.children ? React88.Children.forEach(props.children, function(child) {
+          null == props.value && ("object" === typeof props.children && null !== props.children ? React91.Children.forEach(props.children, function(child) {
             null == child || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || didWarnInvalidChild || (didWarnInvalidChild = true, console.error(
               "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
             ));
@@ -18514,14 +18514,14 @@
           ));
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var Scheduler = require_scheduler(), React88 = require_react(), ReactDOM = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element"), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var Scheduler = require_scheduler(), React91 = require_react(), ReactDOM = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element"), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
         /* @__PURE__ */ Symbol.for("react.scope");
         var REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity");
         /* @__PURE__ */ Symbol.for("react.legacy_hidden");
         /* @__PURE__ */ Symbol.for("react.tracing_marker");
         var REACT_MEMO_CACHE_SENTINEL = /* @__PURE__ */ Symbol.for("react.memo_cache_sentinel");
         /* @__PURE__ */ Symbol.for("react.view_transition");
-        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React88.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React91.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
           pending: false,
           data: null,
           method: null,
@@ -21309,7 +21309,7 @@
           }
         };
         (function() {
-          var isomorphicReactPackageVersion = React88.version;
+          var isomorphicReactPackageVersion = React91.version;
           if ("19.2.8" !== isomorphicReactPackageVersion)
             throw Error(
               'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.8\nLearn more: https://react.dev/warnings/version-mismatch")
@@ -21663,18 +21663,18 @@
         function isValidElement2(object) {
           return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
         }
-        var React88 = require_react(), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), ReactSharedInternals = React88.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+        var React91 = require_react(), REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo"), REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = /* @__PURE__ */ Symbol.for("react.client.reference"), ReactSharedInternals = React91.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
           return null;
         };
-        React88 = {
+        React91 = {
           react_stack_bottom_frame: function(callStackForError) {
             return callStackForError();
           }
         };
         var specialPropKeyWarningShown;
         var didWarnAboutElementRef = {};
-        var unknownOwnerDebugStack = React88.react_stack_bottom_frame.bind(
-          React88,
+        var unknownOwnerDebugStack = React91.react_stack_bottom_frame.bind(
+          React91,
           UnknownOwner
         )();
         var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
@@ -21719,11 +21719,11 @@
   });
 
   // src/main.jsx
-  var import_react78 = __toESM(require_react(), 1);
+  var import_react81 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
   // src/App.jsx
-  var import_react77 = __toESM(require_react(), 1);
+  var import_react80 = __toESM(require_react(), 1);
 
   // node_modules/react-router/dist/development/chunk-62JRHF6Z.mjs
   var React = __toESM(require_react(), 1);
@@ -24611,8 +24611,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "text-blue", children: "CRM & Marketing Automation System" })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "hero-ctas", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Signup Now" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch Demo" })
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "/pricing#configurator", className: "btn btn-primary", children: "Signup Now" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "/contact", className: "btn btn-outline", children: "Watch Demo" })
       ] })
     ] }) }) });
   }
@@ -25081,8 +25081,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         c
       ] }, c)) }),
       /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "mini-cta", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "mini-cta-btns", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("button", { className: "btn btn-primary", children: "Signup Now" }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("button", { className: "btn btn-outline", children: "Watch Demo" })
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("button", { href: "/pricing#configurator", className: "btn btn-primary", children: "Signup Now" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("button", { href: "/contact", className: "btn btn-outline", children: "Watch Demo" })
       ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "comparison--wrap reveal", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("table", { className: "comparison", children: [
         /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
@@ -26346,32 +26346,44 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
   var faqs = [
     {
-      q: "What does a Revenue Governance Audit include?",
-      a: "Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate."
+      q: "What is Lucrative AI?",
+      a: "Lucrative AI is the world's first AI-native CRM and marketing automation platform designed to unify sales, marketing, analytics, quoting, and revenue governance in a single AI-powered workspace. Unlike traditional CRM systems, Lucrative AI helps teams automate work, make decisions faster, and maintain healthy CRM data through built-in AI."
     },
     {
-      q: "Which CRMs do you support?",
-      a: "Lucrative natively supports HubSpot, Salesforce, and GoHighLevel today, with the same governance engine and AI layer running underneath each \u2014 more integrations are on the roadmap."
+      q: "What makes Lucrative AI different from traditional CRM software?",
+      a: "Traditional CRM platforms primarily store customer data. Lucrative AI turns customer data into intelligent actions by combining CRM, marketing automation, AI analytics, CPQ, and governance into one platform powered by an AI-native architecture."
     },
     {
-      q: "How long does the audit take?",
-      a: "Most audits complete in under 10 minutes once your CRM is connected. Larger workspaces with 100k+ contacts may take a little longer, but you'll get a live progress view the whole time."
+      q: "What does AI-native CRM mean?",
+      a: "An AI-native CRM is built around artificial intelligence from the ground up rather than adding AI as an afterthought. Every workflow \u2014 from lead scoring and forecasting to reporting, quoting, and CRM governance \u2014 is powered by AI that understands your business context."
     },
     {
-      q: "How are credits used?",
-      a: "Each connected app or automation you run \u2014 like a HubSpot audit or an email deliverability check \u2014 draws from your credit balance. Pricing per action is shown before you run it, so there are no surprises."
+      q: "Can I use Lucrative AI with Claude or ChatGPT?",
+      a: "Yes. Lucrative AI is completely headless and allows you to connect your preferred AI models, including Claude and OpenAI GPT models. You can interact with your CRM, analytics, marketing, and revenue operations using natural language."
     },
     {
-      q: "Can Lucrative actually fix things, or just report them?",
-      a: "Both. Every issue we surface comes with a review-and-fix workflow \u2014 you approve the change and Lucrative applies it directly in your connected CRM, with a full audit log of what changed."
+      q: "What products are included in Lucrative AI?",
+      a: "The Lucrative Suite includes Lucrative Sales, Lucrative Marketing, Lucrative Analytics, Lucrative Quote, and Lucrative Governance. Each product can be deployed independently or together as a unified platform."
     },
     {
-      q: "Can I audit multiple CRMs in one workspace?",
-      a: "Yes. Governance runs across every connected app in your workspace at once, so you get one unified score instead of juggling separate reports per platform."
+      q: "Does Lucrative AI include CRM and marketing automation?",
+      a: "Yes. Lucrative AI includes a built-in AI-powered CRM together with advanced marketing automation, customer journey management, email campaigns, landing pages, webinar management, attribution reporting, and revenue intelligence."
     },
     {
-      q: "How often should I run an audit?",
-      a: "Most teams run a full audit quarterly and let continuous monitoring flag new issues in between \u2014 so nothing quietly drifts out of policy between audits."
+      q: "How does Lucrative AI improve CRM data quality?",
+      a: "Lucrative Governance continuously monitors CRM health by identifying duplicate records, unused fields, broken workflows, missing data, integration issues, and policy violations. It recommends AI-driven fixes before data problems affect revenue."
+    },
+    {
+      q: "Can Lucrative AI generate sales quotes automatically?",
+      a: "Yes. Lucrative Quote generates policy-compliant quotes, proposals, and contracts in seconds using deterministic pricing, approval workflows, and built-in governance. It helps sales teams close deals faster while reducing manual work."
+    },
+    {
+      q: "Which CRM platforms can I migrate from?",
+      a: "Lucrative AI supports assisted migration from platforms including Salesforce, HubSpot, HighLevel, and other popular CRM systems. The migration process is designed to minimize downtime while preserving your customer data."
+    },
+    {
+      q: "Does Lucrative AI integrate with other business platforms?",
+      a: "Yes. Lucrative AI connects with Salesforce, HubSpot, Mailchimp, Snowflake, Google Ads, and more than 15 business platforms. Additional integrations can be developed based on your business requirements."
     }
   ];
   function FAQ() {
@@ -26437,26 +26449,49 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_react23 = __toESM(require_react(), 1);
   var import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
   var cols = [
-    { title: "Product", links: ["How it works", "CRMs", "Pricing", "Security", "Changelog"] },
-    { title: "Solutions", links: ["RevOps leaders", "CRM admins", "AI readiness", "Agencies"] },
-    { title: "Company", links: ["Docs", "Contact", "Privacy", "Terms"] }
+    {
+      title: "Product",
+      links: [
+        { label: "Lucrative Sales", href: "/loft" },
+        { label: "Lucrative Marketing", href: "/loft-marketing" },
+        { label: "Lucrative Analytics", href: "/stratum" },
+        { label: "Lucrative Quote", href: "/quotebase" },
+        { label: "Lucrative Governance", href: "/governance" }
+      ]
+    },
+    {
+      title: "Solutions",
+      links: [
+        { label: "Pricing", href: "/pricing" },
+        { label: "Partners", href: "/partners" },
+        { label: "Investor", href: "/investors" },
+        { label: "Contact Us", href: "/contact" }
+      ]
+    }
   ];
   function Footer() {
     return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("footer", { className: "footer", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "footer-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "footer-brand", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("a", { href: "#top", className: "logo", children: [
-            "LUCRAT",
-            /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(VLogo, { size: 18 }),
-            "E\xA0AI"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
-        ] }),
-        cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "footer-col", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("h6", { children: c.title }),
-          c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("a", { href: "#", children: l }, l))
-        ] }, c.title))
-      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(
+        "div",
+        {
+          className: "footer-grid",
+          style: { display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr", columnGap: 64, rowGap: 32 },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "footer-brand", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("a", { href: "#top", className: "logo", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("a", { href: "#top", className: "logo", children: [
+                "LUCRAT",
+                /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(VLogo, { size: 18 }),
+                "E\xA0AI"
+              ] }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("p", { children: "Revenue governance for HubSpot, Salesforce, and GoHighLevel." })
+            ] }),
+            cols.map((c) => /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "footer-col", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("h6", { children: c.title }),
+              c.links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("a", { href: l.href, children: l.label }, l.label))
+            ] }, c.title))
+          ]
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "footer-bottom", children: [
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { children: "\xA9 2026 Lucrative, Inc." }),
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { children: "help@lucrative.ai \xB7 +1-601-340-4666" })
@@ -26465,7 +26500,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/pages/GovernancePage.jsx
-  var import_react35 = __toESM(require_react(), 1);
+  var import_react36 = __toESM(require_react(), 1);
 
   // src/sections/governance/GovernanceHero.jsx
   var import_react24 = __toESM(require_react(), 1);
@@ -27241,91 +27276,155 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] }) }) });
   }
 
-  // src/sections/governance/GovernanceClosingCTA.jsx
+  // src/sections/governance/GovernanceFAQ.jsx
   var import_react34 = __toESM(require_react(), 1);
+  var import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
+  var faqs2 = [
+    {
+      q: "What does a Revenue Governance Audit include?",
+      a: "Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate."
+    },
+    {
+      q: "Which CRMs do you support?",
+      a: "Lucrative natively supports HubSpot, Salesforce, and GoHighLevel today, with the same governance engine and AI layer running underneath each \u2014 more integrations are on the roadmap."
+    },
+    {
+      q: "How long does the audit take?",
+      a: "Most audits complete in under 10 minutes once your CRM is connected. Larger workspaces with 100k+ contacts may take a little longer, but you'll get a live progress view the whole time."
+    },
+    {
+      q: "How are credits used?",
+      a: "Each connected app or automation you run \u2014 like a HubSpot audit or an email deliverability check \u2014 draws from your credit balance. Pricing per action is shown before you run it, so there are no surprises."
+    },
+    {
+      q: "Can Lucrative actually fix things, or just report them?",
+      a: "Both. Every issue we surface comes with a review-and-fix workflow \u2014 you approve the change and Lucrative applies it directly in your connected CRM, with a full audit log of what changed."
+    },
+    {
+      q: "Can I audit multiple CRMs in one workspace?",
+      a: "Yes. Governance runs across every connected app in your workspace at once, so you get one unified score instead of juggling separate reports per platform."
+    },
+    {
+      q: "How often should I run an audit?",
+      a: "Most teams run a full audit quarterly and let continuous monitoring flag new issues in between \u2014 so nothing quietly drifts out of policy between audits."
+    }
+  ];
+  function FAQ2() {
+    const [open, setOpen] = (0, import_react34.useState)(0);
+    return /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)("div", { className: "container faq-layout", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("h2", { children: "FAQ's" }),
+        /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("p", { className: "sub", children: "Questions? Answered" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("div", { className: "reveal", children: faqs2.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)(
+        "div",
+        {
+          className: `faq-item ${open === i ? "open" : ""}`,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)(
+              "button",
+              {
+                className: "faq-q",
+                onClick: () => setOpen(open === i ? -1 : i),
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("span", { className: "faq-title", children: f.q })
+                ]
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("div", { className: "faq-a", children: f.a })
+          ]
+        },
+        f.q
+      )) })
+    ] }) });
+  }
+
+  // src/sections/governance/GovernanceClosingCTA.jsx
+  var import_react35 = __toESM(require_react(), 1);
 
   // src/assets/deco-sparkles.png
   var deco_sparkles_default = "assets/img/deco-sparkles-XILIRI4K.png";
 
   // src/sections/governance/GovernanceClosingCTA.jsx
-  var import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
   function GovernanceClosingCTA() {
-    return /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)("div", { className: "closing-cta reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)("div", { style: { position: "relative" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
-        /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("img", { src: icon_padlock_default, alt: "", style: { position: "absolute", width: 46, top: -6, right: 30 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
+    return /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime33.jsxs)("div", { className: "closing-cta reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime33.jsxs)("div", { style: { position: "relative" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
+        /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("img", { src: icon_padlock_default, alt: "", style: { position: "absolute", width: 46, top: -6, right: 30 } }),
+        /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("h2", { className: "hero-heading", children: "Run your first audit in the time it takes to read your last one." }),
-        /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Five minutes. Full report. Every issue priced. Every fix reversible." }),
-        /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)("div", { className: "btns", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime32.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
+      /* @__PURE__ */ (0, import_jsx_runtime33.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("h2", { className: "hero-heading", children: "Run your first audit in the time it takes to read your last one." }),
+        /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Five minutes. Full report. Every issue priced. Every fix reversible." }),
+        /* @__PURE__ */ (0, import_jsx_runtime33.jsxs)("div", { className: "btns", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime33.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
         ] })
       ] })
     ] }) }) });
   }
 
   // src/pages/GovernancePage.jsx
-  var import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
   function GovernancePage() {
     useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime33.jsxs)(import_jsx_runtime33.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(GovernanceHero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(GovernanceDashboardGrid, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(GovernanceProblem, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(FindFixGovern, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(MultiCRMDiagram, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(GovernanceComparison, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(GovernancePersonas, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(GovernancePricing, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(FAQ, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(GovernanceClosingCTA, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(Footer, {})
+    return /* @__PURE__ */ (0, import_jsx_runtime34.jsxs)(import_jsx_runtime34.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(GovernanceHero, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(GovernanceDashboardGrid, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(GovernanceProblem, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(FindFixGovern, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(MultiCRMDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(GovernanceComparison, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(GovernancePersonas, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(GovernancePricing, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(FAQ2, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(GovernanceClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(Footer, {})
     ] });
   }
 
   // src/pages/LoftMarketingPage.jsx
-  var import_react45 = __toESM(require_react(), 1);
+  var import_react46 = __toESM(require_react(), 1);
 
   // src/sections/loftmarketing/LoftMarketingHero.jsx
-  var import_react36 = __toESM(require_react(), 1);
+  var import_react37 = __toESM(require_react(), 1);
 
   // src/assets/dashboard-loft.png
   var dashboard_loft_default = "assets/img/dashboard-loft-73NT7WBG.png";
 
   // src/sections/loftmarketing/LoftMarketingHero.jsx
-  var import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
   var checklist = ["No manual data entry", "AI-native from day one", "Enterprise ready"];
   function LoftMarketingHero() {
-    return /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime34.jsxs)("div", { className: "container hero-grid", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime34.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("p", { className: "eyebrow", children: "Lucrative Marketing" }),
-        /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("h1", { children: /* @__PURE__ */ (0, import_jsx_runtime34.jsxs)("span", { className: "text-blue", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { className: "container hero-grid", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("p", { className: "eyebrow", children: "Lucrative Marketing" }),
+        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("h1", { children: /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("span", { className: "text-blue", children: [
           "AI Marketing",
-          /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("br", {}),
           "Workspace"
         ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("p", { style: { fontSize: 22, fontWeight: 500, color: "var(--text-900)", marginTop: 8 }, children: "Turn CRM data into revenue-generating campaigns." }),
-        /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("p", { className: "lead", children: "Loft unifies CRM, customer behavior, campaign execution, and AI into one marketing workspace\u2014so every campaign starts with customer intelligence instead of guesswork." }),
-        /* @__PURE__ */ (0, import_jsx_runtime34.jsxs)("div", { className: "hero-ctas", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
+        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("p", { style: { fontSize: 22, fontWeight: 500, color: "var(--text-900)", marginTop: 8 }, children: "Turn CRM data into revenue-generating campaigns." }),
+        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("p", { className: "lead", children: "Loft unifies CRM, customer behavior, campaign execution, and AI into one marketing workspace\u2014so every campaign starts with customer intelligence instead of guesswork." }),
+        /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { className: "hero-ctas", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("div", { className: "gov-trust-row", style: { marginTop: 24 }, children: checklist.map((c) => /* @__PURE__ */ (0, import_jsx_runtime34.jsxs)("span", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(IconCheck, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("div", { className: "gov-trust-row", style: { marginTop: 24 }, children: checklist.map((c) => /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("span", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(IconCheck, {}),
           c
         ] }, c)) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("div", { className: "hero-visual reveal", children: /* @__PURE__ */ (0, import_jsx_runtime34.jsx)("img", { src: dashboard_loft_default, alt: "Loft Marketing dashboard", className: "floaty", style: { width: "100%", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-lg)" } }) })
+      /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("div", { className: "hero-visual reveal", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("img", { src: dashboard_loft_default, alt: "Loft Marketing dashboard", className: "floaty", style: { width: "100%", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-lg)" } }) })
     ] }) });
   }
 
   // src/sections/loftmarketing/LoftMarketingProblem.jsx
-  var import_react37 = __toESM(require_react(), 1);
-  var import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
+  var import_react38 = __toESM(require_react(), 1);
+  var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
   var problems = [
     { tag: "Lists", color: "var(--red-500)", title: "Static Lists", desc: "Campaigns start with lists&mdash;not customer intelligence. Static segments quickly become outdated as customers change." },
     { tag: "Silos", color: "var(--gold-500)", title: "Disconnected", desc: "Sales and marketing operate in different systems. Lead context disappears after handoff." },
@@ -27335,37 +27434,37 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { tag: "Reporting", color: "var(--blue-500)", title: "Revenue Visibility", desc: "Marketing reports don&rsquo;t answer executive questions. Leadership needs revenue attribution&mdash;not email metrics." }
   ];
   function LoftMarketingProblem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { className: "loft-problem-head reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("h2", { className: "section-title", style: { textAlign: "left" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "loft-problem-head reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("h2", { className: "section-title", style: { textAlign: "left" }, children: [
             "Why Businesses Outgrow",
-            /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("br", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("br", {}),
             "Traditional Marketing",
-            /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("br", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("br", {}),
             "Platforms"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 0" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 0" }, children: [
             "Traditional marketing tools automate campaigns.",
-            /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("br", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("br", {}),
             "Loft automates revenue growth."
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { className: "loft-problem-note", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("p", { children: "Instead of enabling growth, many CRMs begin charging a premium for it. Loft was built to change that." }),
-          /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("a", { href: "#how-it-works", className: "btn btn-primary", children: "Learn More" })
+        /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "loft-problem-note", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("p", { children: "Instead of enabling growth, many CRMs begin charging a premium for it. Loft was built to change that." }),
+          /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("a", { href: "#how-it-works", className: "btn btn-primary", children: "Learn More" })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("div", { className: "loft-problem-grid", children: problems.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime35.jsxs)("div", { className: "loft-problem-card reveal", style: { transitionDelay: `${i % 3 * 90}ms` }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
-        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("h4", { dangerouslySetInnerHTML: { __html: p.title } }),
-        /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } })
+      /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "loft-problem-grid", children: problems.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "loft-problem-card reveal", style: { transitionDelay: `${i % 3 * 90}ms` }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
+        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("h4", { dangerouslySetInnerHTML: { __html: p.title } }),
+        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } })
       ] }, p.title)) })
     ] }) });
   }
 
   // src/sections/loftmarketing/LoftMarketingBrain.jsx
-  var import_react38 = __toESM(require_react(), 1);
+  var import_react39 = __toESM(require_react(), 1);
 
   // src/assets/mascot-triangle-sparkle.png
   var mascot_triangle_sparkle_default = "assets/img/mascot-triangle-sparkle-5ZKAQJCF.png";
@@ -27374,7 +27473,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var mascot_flower_bench_default = "assets/img/mascot-flower-bench-J3C5E26C.png";
 
   // src/sections/loftmarketing/LoftMarketingBrain.jsx
-  var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime37 = __toESM(require_jsx_runtime(), 1);
   var labels2 = [
     { text: "Sales & Marketing Aligned", slug: "sales-marketing", color: "var(--teal-600)" },
     { text: "No Manual Execution", slug: "no-manual", color: "var(--blue-600)" },
@@ -27394,34 +27493,34 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { color: "#E8A63D", ring: "r3", dur: "7s", delay: "-3.5s" }
   ];
   function LoftMarketingBrain() {
-    return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("h2", { className: "section-title reveal", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("h2", { className: "section-title reveal", children: [
         "Every customer. Every Campaign.",
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("br", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("br", {}),
         "One AI brain."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("p", { className: "section-sub reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("p", { className: "section-sub reveal", children: [
         "Every marketing interaction connects back to the same customer record.",
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("br", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("br", {}),
         "No duplicate audiences. \xB7 No disconnected campaigns. \xB7 No guessing attribution."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "orbit-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("img", { src: mascot_triangle_sparkle_default, alt: "", className: "orbit-mascot left" }),
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("img", { src: mascot_flower_bench_default, alt: "", className: "orbit-mascot right" }),
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-ring r1" }),
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-ring r2" }),
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-ring r3" }),
-        labels2.map((l) => /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("span", { className: `orbit-label orbit-label--${l.slug}`, style: { transform: "translate(-50%,-50%)", color: l.color }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "orbit-wrap reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("img", { src: mascot_triangle_sparkle_default, alt: "", className: "orbit-mascot left" }),
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("img", { src: mascot_flower_bench_default, alt: "", className: "orbit-mascot right" }),
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "orbit-ring r1" }),
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "orbit-ring r2" }),
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "orbit-ring r3" }),
+        labels2.map((l) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("span", { className: `orbit-label orbit-label--${l.slug}`, style: { transform: "translate(-50%,-50%)", color: l.color }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("path", { d: "M5 13l4 4L19 7", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }) }),
           l.text
         ] }, l.text)),
-        /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(VLogo, { size: 40 }) }),
-        dots2.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(VLogo, { size: 40 }) }),
+        dots2.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
           "div",
           {
             className: `orbit-orbiter ${d.ring}`,
             style: { animationDuration: d.dur, animationDelay: d.delay },
-            children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("span", { className: "orbit-dot", style: { background: d.color, color: d.color } })
+            children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "orbit-dot", style: { background: d.color, color: d.color } })
           },
           i
         ))
@@ -27430,76 +27529,76 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/loftmarketing/LoftMarketingWorkspace.jsx
-  var import_react39 = __toESM(require_react(), 1);
-  var import_jsx_runtime37 = __toESM(require_jsx_runtime(), 1);
+  var import_react40 = __toESM(require_react(), 1);
+  var import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
   function CheckCol({ items: items2 }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "check-card loft-check-card", children: items2.map(([label, status]) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "check-row checked", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(IconCheck, {}) }),
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { dangerouslySetInnerHTML: { __html: label } }),
-      status && /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "right", children: status })
+    return /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "check-card loft-check-card", children: items2.map(([label, status]) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "check-row checked", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(IconCheck, {}) }),
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { dangerouslySetInnerHTML: { __html: label } }),
+      status && /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "right", children: status })
     ] }, label)) });
   }
   function BulletCol({ items: items2 }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "check-card loft-check-card", children: items2.map((label) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "check-row", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { style: { color: "var(--text-400)" }, children: "\u2022" }),
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { dangerouslySetInnerHTML: { __html: label } })
+    return /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "check-card loft-check-card", children: items2.map((label) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "check-row", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { style: { color: "var(--text-400)" }, children: "\u2022" }),
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { dangerouslySetInnerHTML: { __html: label } })
     ] }, label)) });
   }
   function StepCol({ items: items2, startAt }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "check-card loft-check-card", children: items2.map((label, i) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-step-row", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "loft-step-num", children: startAt + i }),
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { dangerouslySetInnerHTML: { __html: label } })
+    return /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "check-card loft-check-card", children: items2.map((label, i) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-step-row", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "loft-step-num", children: startAt + i }),
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { dangerouslySetInnerHTML: { __html: label } })
     ] }, label)) });
   }
   function PillCol({ items: items2 }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "stat-card", children: items2.map(([label, pill]) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "stat-line", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { children: label }),
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)", margin: 0 }, children: pill })
+    return /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "stat-card", children: items2.map(([label, pill]) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "stat-line", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { children: label }),
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)", margin: 0 }, children: pill })
     ] }, label)) });
   }
   var tabs2 = [
     {
       label: "AI Generates",
       title: "AI Generates",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-mkt-twocol", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(CheckCol, { items: [["Audience", "AUTO"], ["Customer Segment", "AUTO"], ["Email Sequence", "AUTO"], ["Landing Page", "AUTO"], ["Forms", "AUTO"]] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(CheckCol, { items: [["CTAs", "AUTO"], ["Follow Up Journey", "AUTO"], ["AI Copy", "AUTO"], ["Reports", "AUTO"]] })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-mkt-twocol", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(CheckCol, { items: [["Audience", "AUTO"], ["Customer Segment", "AUTO"], ["Email Sequence", "AUTO"], ["Landing Page", "AUTO"], ["Forms", "AUTO"]] }),
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(CheckCol, { items: [["CTAs", "AUTO"], ["Follow Up Journey", "AUTO"], ["AI Copy", "AUTO"], ["Reports", "AUTO"]] })
       ] })
     },
     {
       label: "AI Audience intelligence",
       title: "AI Audience Intelligence",
       desc: "Marketing that understands buying intent. Loft continuously analyzes customer behavior to automatically identify:",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-mkt-twocol", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(BulletCol, { items: ["Buying intent", "Engagement level", "Customer interests", "Industry"] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(BulletCol, { items: ["Lifecycle Stage", "Product Interest", "Revenue Potential", "Churn Risk"] })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-mkt-twocol", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(BulletCol, { items: ["Buying intent", "Engagement level", "Customer interests", "Industry"] }),
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(BulletCol, { items: ["Lifecycle Stage", "Product Interest", "Revenue Potential", "Churn Risk"] })
       ] })
     },
     {
       label: "Email Automation",
       title: "Email Automation",
       desc: "Intelligent email journeys that adapt automatically. Design sophisticated nurture programs without complicated workflows.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-mkt-twocol", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(CheckCol, { items: [["Email Sequences", "DRAFT"], ["Drip Campaigns", "PREP"], ["Behavioral Triggers", "ALERT"], ["Dynamic Personalization", "ALERT"]] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(CheckCol, { items: [["AI Subject Lines", "DRAFT"], ["Send Time Optimization", "PREP"], ["Journey Automation", "ALERT"], ["Re-engagement Campaigns", "ALERT"]] })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-mkt-twocol", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(CheckCol, { items: [["Email Sequences", "DRAFT"], ["Drip Campaigns", "PREP"], ["Behavioral Triggers", "ALERT"], ["Dynamic Personalization", "ALERT"]] }),
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(CheckCol, { items: [["AI Subject Lines", "DRAFT"], ["Send Time Optimization", "PREP"], ["Journey Automation", "ALERT"], ["Re-engagement Campaigns", "ALERT"]] })
       ] })
     },
     {
       label: "Landing Pages",
       title: "Landing Pages",
       desc: "Build landing pages in minutes. AI generates complete landing pages from your campaign objective.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "stat-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { children: "Landing Page Builder" }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "badge badge-green", children: "94%" })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "stat-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "stat-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { children: "Landing Page Builder" }),
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "badge badge-green", children: "94%" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { children: "Forms" }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "badge badge-gold", children: "68%" })
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "stat-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { children: "Forms" }),
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "badge badge-gold", children: "68%" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { children: "Conversion Tracking" }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "badge badge-blue", children: "\xB14%" })
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "stat-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { children: "Conversion Tracking" }),
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "badge badge-blue", children: "\xB14%" })
         ] })
       ] })
     },
@@ -27511,36 +27610,36 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       // (the crop started at "3 Reminder Emails" / "7 Follow-up Automation") —
       // filled in with reasonable placeholders below, swap the label text for
       // your real copy.
-      visual: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-mkt-twocol", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(StepCol, { startAt: 1, items: ["Registration Page", "Confirmation Email", "Reminder Emails", "Calendar Invites"] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(StepCol, { startAt: 5, items: ["Live Attendance Tracking", "Post-Event Survey", "Follow-up Automation", "Revenue Attribution"] })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-mkt-twocol", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(StepCol, { startAt: 1, items: ["Registration Page", "Confirmation Email", "Reminder Emails", "Calendar Invites"] }),
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(StepCol, { startAt: 5, items: ["Live Attendance Tracking", "Post-Event Survey", "Follow-up Automation", "Revenue Attribution"] })
       ] })
     },
     {
       label: "Campaign Attribution",
       title: "Campaign Attribution",
       desc: "Know which marketing actually generates revenue. Move beyond opens and clicks.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-mkt-twocol", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(PillCol, { items: [["First Touch", "enabled"], ["Last Touch", "enforced"], ["Multi-touch", "full history"], ["Campaign ROI", "full history"]] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(PillCol, { items: [["Pipeline Influence", "enabled"], ["Revenue Generates", "enforced"], ["Customer Lifetime Value", "full history"]] })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-mkt-twocol", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(PillCol, { items: [["First Touch", "enabled"], ["Last Touch", "enforced"], ["Multi-touch", "full history"], ["Campaign ROI", "full history"]] }),
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(PillCol, { items: [["Pipeline Influence", "enabled"], ["Revenue Generates", "enforced"], ["Customer Lifetime Value", "full history"]] })
       ] })
     },
     {
       label: "AI Campaign Optimization",
       title: "AI Campaign Optimization",
       desc: "Every campaign gets smarter over time. Loft continuously monitors campaign performance and recommends improvements.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-mkt-twocol", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(PillCol, { items: [["AI Suggestions", "enabled"], ["Increase budget", "enforced"], ["Pause low-performing ads", "full history"], ["Split audience", "full history"]] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(PillCol, { items: [["Improve subject line", "enabled"], ["Send follow-up", "enforced"], ["Launch retargeting", "full history"], ["Improve CTA", "full history"]] })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-mkt-twocol", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(PillCol, { items: [["AI Suggestions", "enabled"], ["Increase budget", "enforced"], ["Pause low-performing ads", "full history"], ["Split audience", "full history"]] }),
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(PillCol, { items: [["Improve subject line", "enabled"], ["Send follow-up", "enforced"], ["Launch retargeting", "full history"], ["Improve CTA", "full history"]] })
       ] })
     }
   ];
   var STICKY_OFFSET3 = 100;
   function LoftMarketingWorkspace() {
-    const [active, setActive] = (0, import_react39.useState)(0);
-    const cardRefs = (0, import_react39.useRef)([]);
-    const itemRefs = (0, import_react39.useRef)([]);
-    (0, import_react39.useEffect)(() => {
+    const [active, setActive] = (0, import_react40.useState)(0);
+    const cardRefs = (0, import_react40.useRef)([]);
+    const itemRefs = (0, import_react40.useRef)([]);
+    (0, import_react40.useEffect)(() => {
       let raf = null;
       function computeActive() {
         raf = null;
@@ -27572,25 +27671,25 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       const targetY = window.scrollY + rect.top - STICKY_OFFSET3 - 8;
       window.scrollTo({ top: targetY, behavior: "smooth" });
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "tabs-layout tabs-layout--wide reveal", style: { marginTop: 0 }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "tabs-nav-col", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "loft-mkt-intro", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("h2", { style: { fontSize: 44, fontWeight: 500, marginBottom: 14 }, children: "Marketing Workspace" }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("p", { children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "tabs-layout tabs-layout--wide reveal", style: { marginTop: 0 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "tabs-nav-col", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-mkt-intro", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("h2", { style: { fontSize: 44, fontWeight: 500, marginBottom: 14 }, children: "Marketing Workspace" }),
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("p", { children: [
             "Build campaigns by describing your objective.",
-            /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("br", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("br", {}),
             "Instead of configuring dozens of workflows manually\u2026"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("p", { children: "Simply tell Loft:" }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("p", { className: "example", children: "Launch a nurture campaign for manufacturing companies evaluating ERP systems that haven\u2019t booked a demo in 30 days." }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("p", { children: "Loft builds everything automatically." })
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("p", { children: "Simply tell Loft:" }),
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("p", { className: "example", children: "Launch a nurture campaign for manufacturing companies evaluating ERP systems that haven\u2019t booked a demo in 30 days." }),
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("p", { children: "Loft builds everything automatically." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "tabs-list", children: [
-          tabs2.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("button", { className: i === active ? "active" : "", onClick: () => scrollToCard(i), children: [
-            /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "tabs-list-dot", "aria-hidden": "true" }),
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "tabs-list", children: [
+          tabs2.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("button", { className: i === active ? "active" : "", onClick: () => scrollToCard(i), children: [
+            /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "tabs-list-dot", "aria-hidden": "true" }),
             t.label
           ] }, t.label)),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(
             "img",
             {
               src: active % 2 === 0 ? mascot_blue_workflow_default : mascot_triangle_sparkle_default,
@@ -27600,22 +27699,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           )
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "tabs-stack", children: tabs2.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "tabs-stack-item", ref: (el) => itemRefs.current[i] = el, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "tabs-stack-card tabs-stack-card--plain", style: { zIndex: i + 1 }, ref: (el) => cardRefs.current[i] = el, children: /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "tab-panel tab-panel--stacked", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "copy", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("h3", { children: t.title }),
-            t.desc && /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("p", { dangerouslySetInnerHTML: { __html: t.desc } })
+      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "tabs-stack", children: tabs2.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "tabs-stack-item", ref: (el) => itemRefs.current[i] = el, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "tabs-stack-card tabs-stack-card--plain", style: { zIndex: i + 1 }, ref: (el) => cardRefs.current[i] = el, children: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "tab-panel tab-panel--stacked", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "copy", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("h3", { children: t.title }),
+            t.desc && /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("p", { dangerouslySetInnerHTML: { __html: t.desc } })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "tab-visual", children: t.visual })
+          /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "tab-visual", children: t.visual })
         ] }) }),
-        i !== tabs2.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "tabs-stack-spacer", "aria-hidden": "true" })
+        i !== tabs2.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "tabs-stack-spacer", "aria-hidden": "true" })
       ] }, t.label)) })
     ] }) }) });
   }
 
   // src/sections/loft/LoftTeams.jsx
-  var import_react40 = __toESM(require_react(), 1);
-  var import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
+  var import_react41 = __toESM(require_react(), 1);
+  var import_jsx_runtime39 = __toESM(require_jsx_runtime(), 1);
   var teams = [
     { name: "Sales", desc: "Sell more, type less. Deals keep themselves current.", tag: "4 hrs/wk back" },
     { name: "Marketing", desc: "Campaigns tied to revenue, not just clicks.", tag: "revenue attribution" },
@@ -27624,20 +27723,20 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { name: "Executive Leadership", desc: "A forecast you can defend to the board.", tag: "board-ready numbers" }
   ];
   function LoftTeams() {
-    return /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Built for every revenue team." }),
-      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Because tools are only valuable if your whole revenue team can use them \u2014 not just the one who set it up." }),
-      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("div", { className: "loft-team-list reveal", children: teams.map((t) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)("div", { className: "loft-team-row", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "loft-team-name", children: t.name }),
-        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "loft-team-desc", children: t.desc }),
-        /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-500)", margin: 0 }, children: t.tag })
+    return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime39.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Built for every revenue team." }),
+      /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Because tools are only valuable if your whole revenue team can use them \u2014 not just the one who set it up." }),
+      /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("div", { className: "loft-team-list reveal", children: teams.map((t) => /* @__PURE__ */ (0, import_jsx_runtime39.jsxs)("div", { className: "loft-team-row", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { className: "loft-team-name", children: t.name }),
+        /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { className: "loft-team-desc", children: t.desc }),
+        /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-500)", margin: 0 }, children: t.tag })
       ] }, t.name)) })
     ] }) });
   }
 
   // src/sections/loftmarketing/LoftMarketingComparison.jsx
-  var import_react41 = __toESM(require_react(), 1);
-  var import_jsx_runtime39 = __toESM(require_jsx_runtime(), 1);
+  var import_react42 = __toESM(require_react(), 1);
+  var import_jsx_runtime40 = __toESM(require_jsx_runtime(), 1);
   var rows3 = [
     ["AI Audience Segmentation", "partial", "partial", "no", "yes"],
     ["CRM Native", "no", "no", "partial", "yes"],
@@ -27651,40 +27750,40 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["Natural Language Marketing", "partial", "partial", "no", "yes"]
   ];
   function Cell3({ v }) {
-    if (v === "yes") return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { className: "chk", children: /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(IconCheck, {}) });
-    if (v === "no") return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { className: "chk chk-no", children: /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(IconX, {}) });
-    if (v === "partial") return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { className: "chk chk-partial", children: "\u2013" });
-    return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { children: v });
+    if (v === "yes") return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "chk", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(IconCheck, {}) });
+    if (v === "no") return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "chk chk-no", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(IconX, {}) });
+    if (v === "partial") return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "chk chk-partial", children: "\u2013" });
+    return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { children: v });
   }
   function LoftMarketingComparison() {
-    return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime39.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime39.jsxs)("h2", { className: "section-title reveal", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("h2", { className: "section-title reveal", children: [
         "Other tools tell you what\u2019s wrong.",
-        /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("br", {}),
-        /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("span", { className: "text-blue", children: "We tell you what it costs \u2014 and fix it." })
+        /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("br", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "text-blue", children: "We tell you what it costs \u2014 and fix it." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("div", { className: "comparison-wrap reveal", style: { marginTop: 40 }, children: /* @__PURE__ */ (0, import_jsx_runtime39.jsxs)("table", { className: "comparison", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime39.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("th", { children: "\xA0" }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("th", { children: "HubSpot" }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("th", { children: "Marketo" }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("th", { children: "ActiveCampaign" }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("th", { className: "lucrative", children: "Loft" })
+      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "comparison-wrap reveal", style: { marginTop: 40 }, children: /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("table", { className: "comparison", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("th", { children: "\xA0" }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("th", { children: "HubSpot" }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("th", { children: "Marketo" }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("th", { children: "ActiveCampaign" }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("th", { className: "lucrative", children: "Loft" })
         ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("tbody", { children: rows3.map(([label, a, b, c, d]) => /* @__PURE__ */ (0, import_jsx_runtime39.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("td", { children: label }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Cell3, { v: a }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Cell3, { v: b }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Cell3, { v: c }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Cell3, { v: d }) })
+        /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("tbody", { children: rows3.map(([label, a, b, c, d]) => /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("td", { children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Cell3, { v: a }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Cell3, { v: b }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Cell3, { v: c }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Cell3, { v: d }) })
         ] }, label)) })
       ] }) })
     ] }) });
   }
 
   // src/sections/loft/LoftPersonas.jsx
-  var import_react42 = __toESM(require_react(), 1);
-  var import_jsx_runtime40 = __toESM(require_jsx_runtime(), 1);
+  var import_react43 = __toESM(require_react(), 1);
+  var import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
   var personas3 = [
     {
       key: "Unified Platform",
@@ -27812,10 +27911,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
   ];
   function LoftPersonas() {
-    const [active, setActive] = (0, import_react42.useState)(0);
+    const [active, setActive] = (0, import_react43.useState)(0);
     const p = personas3[active];
-    return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
         "p",
         {
           className: "eyebrow",
@@ -27827,26 +27926,26 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           children: "Use Cases"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("h2", { className: "section-title reveal", children: "Why Companies Switch" }),
-      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "persona-tabs reveal", children: personas3.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("h2", { className: "section-title reveal", children: "Why Companies Switch" }),
+      /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("p", { className: "section-sub reveal", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
+      /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("div", { className: "persona-tabs reveal", children: personas3.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(
         "button",
         {
           type: "button",
           className: `persona-tab ${i === active ? "active" : ""}`,
           onClick: () => setActive(i),
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("img", { src: per.avatar, alt: "" }),
+            /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("img", { src: per.avatar, alt: "" }),
             per.tag
           ]
         },
         per.key
       )) }),
-      /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "persona-panel reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "avatar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("img", { src: p.img, alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "persona-panel reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "avatar-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("img", { src: p.img, alt: "" }),
+            /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
               "span",
               {
                 className: "tag-pill",
@@ -27854,20 +27953,20 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                 children: p.tag
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("span", { className: "index", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("span", { className: "index", children: [
               "PERSONA 0",
               active + 1,
               "/0",
               personas3.length
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("h3", { children: p.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("p", { children: p.desc }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "persona-quote", children: p.quote })
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("h3", { children: p.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("p", { children: p.desc }),
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("div", { className: "persona-quote", children: p.quote })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "pipeline-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "top", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "pipeline-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "top", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
               "span",
               {
                 style: {
@@ -27879,13 +27978,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                 children: p.card.label
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("span", { className: "dots", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { style: { background: "#E8615A" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { style: { background: "#E8A63D" } }),
-              /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { style: { background: "#37A55F" } })
+            /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("span", { className: "dots", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("span", { style: { background: "#E8615A" } }),
+              /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("span", { style: { background: "#E8A63D" } }),
+              /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("span", { style: { background: "#37A55F" } })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
             CountUp,
             {
               to: p.card.amount.to,
@@ -27894,13 +27993,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               suffix: p.card.amount.suffix
             }
           ) }),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", { className: "sub", children: p.card.sub }),
-          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)(
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("div", { className: "sub", children: p.card.sub }),
+          p.card.rows.map(([label, color, val]) => /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(
             "div",
             {
               className: "pipeline-row",
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+                /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
                   "span",
                   {
                     className: "ic",
@@ -27908,8 +28007,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                     children: "\u2022"
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { children: label }),
-                /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+                /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("span", { children: label }),
+                /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
                   CountUp,
                   {
                     to: val.to,
@@ -27923,8 +28022,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             },
             label
           )),
-          /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("div", { className: "pipeline-foot", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)("b", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "pipeline-foot", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("b", { children: [
               p.card.foot.split(".")[0],
               "."
             ] }),
@@ -27936,63 +28035,75 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] }) });
   }
 
-  // src/sections/loft/LoftFAQ.jsx
-  var import_react43 = __toESM(require_react(), 1);
-  var import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
-  var faqs2 = [
+  // src/sections/loftmarketing/LoftMarketingFAQ.jsx
+  var import_react44 = __toESM(require_react(), 1);
+  var import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
+  var faqs3 = [
     {
-      q: "What does a Revenue Governance Audit include?",
-      a: "Eight governance dimensions: field proliferation, orphaned automations, contact stagnation, workflow health, object integrity, integration integrity across connected apps, ICP alignment, and revenue hygiene. You get an overall score, a categorized list of every issue, dollar impact on each, and a review-and-fix workflow for the ones you want to remediate."
+      q: "What is Lucrative Marketing?",
+      a: "Lucrative Marketing is an AI-native marketing automation platform that combines CRM data, customer intelligence, campaign management, email automation, landing pages, webinar marketing, and revenue attribution in one workspace. It helps marketers build campaigns that drive measurable business growth instead of just engagement."
     },
     {
-      q: "Which CRMs do you support?",
-      a: "HubSpot, Salesforce, and GoHighLevel today, with the same audit depth on every platform &mdash; more connectors are added regularly based on customer demand."
+      q: "How is Lucrative Marketing different from traditional marketing automation platforms?",
+      a: "Traditional marketing platforms automate workflows and emails. Lucrative Marketing goes further by using AI to understand customer behavior, buying intent, CRM data, and campaign performance, allowing it to build, optimize, and improve marketing campaigns automatically."
     },
     {
-      q: "How long does the audit take?",
-      a: "About five minutes for a full scan of your CRM and connected apps. You get a scored report the moment it finishes, not a queued ticket you wait days on."
+      q: "How does AI create marketing campaigns?",
+      a: "Simply describe your marketing objective in natural language \u2014 for example, targeting prospects who haven't booked a demo in 30 days. Lucrative Marketing automatically generates the audience, email sequence, landing page, forms, CTAs, follow-up journeys, and performance reports."
     },
     {
-      q: "How are credits used?",
-      a: "Each full audit costs 100 credits, regardless of which CRM you connect. Credits don&rsquo;t expire, and there&rsquo;s no subscription or per-seat fee sitting on top of them."
+      q: "What is AI Audience Intelligence?",
+      a: "AI Audience Intelligence continuously analyzes CRM data, customer behavior, engagement history, buying intent, lifecycle stage, industry, product interest, revenue potential, and churn risk to automatically build dynamic audience segments that stay up to date as customer behavior changes."
     },
     {
-      q: "Can Lucrative actually fix things, or just report them?",
-      a: "Both. Every issue comes with a drafted fix you review and approve &mdash; Lucrative backs up your data first, then executes the change. Nothing runs without your sign-off."
+      q: "Does Lucrative Marketing include email marketing automation?",
+      a: "Yes. Lucrative Marketing includes AI-powered email automation with personalized email sequences, drip campaigns, behavioral triggers, dynamic content, AI-generated subject lines, send-time optimization, nurture journeys, and re-engagement campaigns."
     },
     {
-      q: "Can I audit multiple CRMs in one workspace?",
-      a: "Yes. Connect HubSpot, Salesforce, and GoHighLevel side by side in the same workspace and run audits independently or together."
+      q: "Can Lucrative Marketing build landing pages and webinar campaigns?",
+      a: "Yes. Lucrative Marketing uses AI to generate landing pages, forms, registration pages, webinar workflows, reminder emails, follow-up automation, surveys, and event campaigns from a single campaign objective, keeping everything connected to your CRM."
     },
     {
-      q: "How often should I run an audit?",
-      a: "Most teams run one per quarter, weekly during a migration, or right before a major AI or automation rollout &mdash; whenever you want a clean, priced baseline of your data."
+      q: "How does Lucrative Marketing measure campaign success?",
+      a: "Lucrative Marketing goes beyond opens and clicks by providing first-touch, last-touch, and multi-touch attribution, campaign ROI, pipeline influence, revenue attribution, and customer lifetime value, helping marketers understand which campaigns actually generate revenue."
+    },
+    {
+      q: "Can Lucrative Marketing optimize campaigns automatically?",
+      a: "Yes. Lucrative Marketing continuously monitors campaign performance and uses AI to recommend improvements such as adjusting budgets, pausing low-performing campaigns, improving subject lines, refining audience segments, launching retargeting campaigns, and optimizing calls-to-action."
+    },
+    {
+      q: "Which teams benefit from Lucrative Marketing?",
+      a: "Lucrative Marketing is designed for Marketing, Sales, Customer Success, Revenue Operations, and Executive Leadership. Because every campaign shares the same customer data and AI intelligence, teams work together with complete visibility into customer journeys and revenue impact."
+    },
+    {
+      q: "Why are businesses switching from HubSpot, Marketo, or ActiveCampaign to Lucrative Marketing?",
+      a: "Businesses choose Lucrative Marketing because it combines AI-powered audience intelligence, CRM-native marketing automation, dynamic segmentation, landing pages, webinar management, revenue attribution, and natural language campaign creation in one platform. Instead of managing disconnected tools, marketing teams can launch smarter campaigns, improve conversion rates, and directly measure their contribution to revenue."
     }
   ];
-  function FAQ2() {
-    const [open, setOpen] = (0, import_react43.useState)(0);
-    return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "container faq-layout", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("h2", { children: "FAQ's" }),
-        /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("p", { className: "sub", children: "Questions? Answered" })
+  function FAQ3() {
+    const [open, setOpen] = (0, import_react44.useState)(0);
+    return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "container faq-layout", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("h2", { children: "FAQ's" }),
+        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("p", { className: "sub", children: "Questions? Answered" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("div", { className: "reveal", children: faqs2.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "reveal", children: faqs3.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(
         "div",
         {
           className: `faq-item ${open === i ? "open" : ""}`,
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(
+            /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(
               "button",
               {
                 className: "faq-q",
                 onClick: () => setOpen(open === i ? -1 : i),
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("span", { className: "faq-title", children: f.q })
+                  /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "faq-title", children: f.q })
                 ]
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("div", { className: "faq-a", children: f.a })
+            /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "faq-a", children: f.a })
           ]
         },
         f.q
@@ -28001,86 +28112,86 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/loft/LoftClosingCTA.jsx
-  var import_react44 = __toESM(require_react(), 1);
-  var import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
+  var import_react45 = __toESM(require_react(), 1);
+  var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
   function IconPadlock() {
-    return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("svg", { width: "34", height: "34", viewBox: "0 0 24 24", fill: "none", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("rect", { x: "5", y: "11", width: "14", height: "10", rx: "2.5", fill: "var(--gold-500)" }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("path", { d: "M8 11V7.5a4 4 0 0 1 8 0V11", stroke: "var(--gold-500)", strokeWidth: "2.4", strokeLinecap: "round" }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("circle", { cx: "12", cy: "15.5", r: "1.6", fill: "#fff" })
+    return /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("svg", { width: "34", height: "34", viewBox: "0 0 24 24", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("rect", { x: "5", y: "11", width: "14", height: "10", rx: "2.5", fill: "var(--gold-500)" }),
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("path", { d: "M8 11V7.5a4 4 0 0 1 8 0V11", stroke: "var(--gold-500)", strokeWidth: "2.4", strokeLinecap: "round" }),
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("circle", { cx: "12", cy: "15.5", r: "1.6", fill: "#fff" })
     ] });
   }
   function LoftClosingCTA() {
-    return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "closing-cta reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { style: { position: "relative" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { style: { position: "absolute", top: -6, right: 30, background: "#fff", borderRadius: "50%", width: 46, height: 46, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "var(--shadow-md)" }, children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(IconPadlock, {}) }),
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
+    return /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "closing-cta reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { style: { position: "relative" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("span", { style: { position: "absolute", top: -6, right: 30, background: "#fff", borderRadius: "50%", width: 46, height: 46, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "var(--shadow-md)" }, children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(IconPadlock, {}) }),
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("h2", { className: "closing-cta-h2", children: "Run your first audit in the time it takes to read your last one." }),
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Five minutes. Full report. Every issue priced. Every fix reversible." }),
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "btns", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("h2", { className: "closing-cta-h2", children: "Run your first audit in the time it takes to read your last one." }),
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Five minutes. Full report. Every issue priced. Every fix reversible." }),
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "btns", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
         ] })
       ] })
     ] }) }) });
   }
 
   // src/pages/LoftMarketingPage.jsx
-  var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
   function LoftMarketingPage() {
     useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(import_jsx_runtime43.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftMarketingHero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftMarketingProblem, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftMarketingBrain, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftMarketingWorkspace, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftTeams, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftMarketingComparison, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftPersonas, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(GovernancePricing, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(FAQ2, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(LoftClosingCTA, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Footer, {})
+    return /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(import_jsx_runtime44.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftMarketingHero, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftMarketingProblem, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftMarketingBrain, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftMarketingWorkspace, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftTeams, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftMarketingComparison, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftPersonas, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(GovernancePricing, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(FAQ3, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(LoftClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Footer, {})
     ] });
   }
 
   // src/pages/LoftPage.jsx
-  var import_react51 = __toESM(require_react(), 1);
+  var import_react53 = __toESM(require_react(), 1);
 
   // src/sections/loft/LoftHero.jsx
-  var import_react46 = __toESM(require_react(), 1);
-  var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
+  var import_react47 = __toESM(require_react(), 1);
+  var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
   var checklist2 = ["No manual data entry", "AI-native from day one", "Enterprise ready"];
   function LoftHero() {
-    return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "container hero-grid", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("p", { className: "eyebrow", children: "Lucrative Sales" }),
-        /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("h1", { children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { className: "container hero-grid", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("p", { className: "eyebrow", children: "Lucrative Sales" }),
+        /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("h1", { children: [
           "The CRM that grows with your business,",
-          /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("br", {}),
-          /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "text-blue", children: "not against it." })
+          /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("span", { className: "text-blue", children: "not against it." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("p", { className: "lead", children: "Loft unifies Marketing, Sales, Customer Success, Automation, AI, and Operations in one platform designed for scale \u2014 built to run your revenue, not just record it." }),
-        /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "hero-ctas", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
+        /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("p", { className: "lead", children: "Loft unifies Marketing, Sales, Customer Success, Automation, AI, and Operations in one platform designed for scale \u2014 built to run your revenue, not just record it." }),
+        /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { className: "hero-ctas", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "gov-trust-row", style: { marginTop: 24 }, children: checklist2.map((c) => /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("span", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(IconCheck, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("div", { className: "gov-trust-row", style: { marginTop: 24 }, children: checklist2.map((c) => /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("span", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(IconCheck, {}),
           c
         ] }, c)) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "hero-visual reveal", children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("img", { src: dashboard_loft_default, alt: "Loft CRM dashboard", style: { width: "100%", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-lg)" }, className: "floaty" }) })
+      /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("div", { className: "hero-visual reveal", children: /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("img", { src: dashboard_loft_default, alt: "Loft CRM dashboard", style: { width: "100%", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-lg)" }, className: "floaty" }) })
     ] }) });
   }
 
   // src/sections/loft/LoftProblem.jsx
-  var import_react47 = __toESM(require_react(), 1);
-  var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
+  var import_react48 = __toESM(require_react(), 1);
+  var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
   var problems2 = [
     { tag: "costs compound", color: "var(--red-500)", title: "Increasing cost", desc: "Every seat, every feature, every report tier costs more. Growth becomes a billing event." },
     { tag: "hours lost weekly", color: "var(--gold-500)", title: "Manual work", desc: "Reps spend hours updating fields and logging activity instead of selling." },
@@ -28090,36 +28201,36 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { tag: "insights unused", color: "var(--blue-500)", title: "AI indecision", desc: "Insights pile up in reports that never become action anywhere it matters." }
   ];
   function LoftProblem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { className: "loft-problem-head reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("h2", { className: "section-title", style: { textAlign: "left" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { className: "loft-problem-head reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("h2", { className: "section-title", style: { textAlign: "left" }, children: [
             "Why Businesses Outgrow",
-            /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("br", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("br", {}),
             "Traditional CRMs"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 0" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 0" }, children: [
             "Growing companies eventually face the same challenges.",
-            /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("br", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("br", {}),
             "The more successful they become; the more expensive their CRM becomes."
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { className: "loft-problem-note", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("p", { children: "Instead of enabling growth, many CRMs begin charging a premium for it. Loft was built to change that." }),
-          /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("a", { href: "#how-it-works", className: "btn btn-primary", children: "Learn More" })
+        /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { className: "loft-problem-note", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("p", { children: "Instead of enabling growth, many CRMs begin charging a premium for it. Loft was built to change that." }),
+          /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("a", { href: "#how-it-works", className: "btn btn-primary", children: "Learn More" })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("div", { className: "loft-problem-grid reveal", children: problems2.map((p) => /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("div", { className: "loft-problem-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
-        /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("h4", { dangerouslySetInnerHTML: { __html: p.title } }),
-        /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } })
+      /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("div", { className: "loft-problem-grid reveal", children: problems2.map((p) => /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { className: "loft-problem-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("span", { className: "tag-pill", style: { color: p.color }, children: p.tag }),
+        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("h4", { dangerouslySetInnerHTML: { __html: p.title } }),
+        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("p", { dangerouslySetInnerHTML: { __html: p.desc } })
       ] }, p.title)) })
     ] }) });
   }
 
   // src/sections/loft/LoftUnifiedBrain.jsx
-  var import_react48 = __toESM(require_react(), 1);
-  var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
+  var import_react49 = __toESM(require_react(), 1);
+  var import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
   var labels3 = [
     { text: "One customer timeline", slug: "customer-timeline", color: "var(--teal-600)" },
     { text: "No duplicate contacts", slug: "duplicate-contacts", color: "var(--blue-600)" },
@@ -28136,15 +28247,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { color: "#E8A63D", ring: "r3", dur: "7s", delay: "-3.5s" }
   ];
   function LoftUnifiedBrain() {
-    return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("h2", { className: "section-title reveal", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("section", { className: "section orbit-section", children: /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("h2", { className: "section-title reveal", children: [
         "Every customer. Every conversation.",
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("br", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("br", {}),
         "One AI brain."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("p", { className: "section-sub reveal", children: "Loft unifies your whole revenue stack into one intelligent platform that automatically updates and gives you visibility" }),
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", { className: "orbit-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("p", { className: "section-sub reveal", children: "Loft unifies your whole revenue stack into one intelligent platform that automatically updates and gives you visibility" }),
+      /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "orbit-wrap reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
           "img",
           {
             src: mascot_triangle_sparkle_default,
@@ -28152,7 +28263,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             className: "orbit-mascot left"
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
           "img",
           {
             src: mascot_flower_bench_default,
@@ -28160,23 +28271,23 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             className: "orbit-mascot right"
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("div", { className: "orbit-ring r1" }),
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("div", { className: "orbit-ring r2" }),
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("div", { className: "orbit-ring r3" }),
-        labels3.map((l) => /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "orbit-ring r1" }),
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "orbit-ring r2" }),
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "orbit-ring r3" }),
+        labels3.map((l) => /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(
           "span",
           {
             className: `orbit-label orbit-label--${l.slug}`,
             style: { transform: "translate(-50%, -50%)", color: l.color },
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
                 "svg",
                 {
                   width: "12",
                   height: "12",
                   viewBox: "0 0 24 24",
                   fill: "none",
-                  children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+                  children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
                     "path",
                     {
                       d: "M5 13l4 4L19 7",
@@ -28193,8 +28304,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           },
           l.text
         )),
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(VLogo, { size: 40 }) }),
-        dots3.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "orbit-center", children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(VLogo, { size: 40 }) }),
+        dots3.map((d, i) => /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
           "div",
           {
             className: `orbit-orbiter ${d.ring}`,
@@ -28202,7 +28313,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               animationDuration: d.dur,
               animationDelay: d.delay
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+            children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
               "span",
               {
                 className: "orbit-dot",
@@ -28217,83 +28328,83 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/loft/LoftWhyChoose.jsx
-  var import_react49 = __toESM(require_react(), 1);
-  var import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
+  var import_react50 = __toESM(require_react(), 1);
+  var import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
   var tabs3 = [
     {
       label: "Autonomous CRM",
       title: "Autonomous CRM",
       desc: "Keeps itself updated &mdash; logs calls, files emails, enriches contacts, and dedupes records without being asked.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "check-card loft-check-card", children: [
+      visual: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "check-card loft-check-card", children: [
         ["Call logged & summarized \xB7 22 min"],
         ["Pricing email filed to Northwind record"],
         ["Duplicate merged \xB7 &ldquo;D. Reyes&rdquo; = &ldquo;Dana R.&rdquo;"]
-      ].map(([a]) => /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "check-row checked", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(IconCheck, {}) }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { dangerouslySetInnerHTML: { __html: a } }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "right", children: "AUTO" })
+      ].map(([a]) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "check-row checked", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(IconCheck, {}) }),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { dangerouslySetInnerHTML: { __html: a } }),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "right", children: "AUTO" })
       ] }, a)) })
     },
     {
       label: "AI relationship intelligence",
       title: "AI relationship intelligence",
       desc: "Knows which relationships are warming, which are at risk, and who should reach out next.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "check-card", children: [
+      visual: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "check-card", children: [
         ["Call logged & summarized \xB7 22 min", "warming \u2191", "teal"],
         ["Pricing email filed to Northwind record", "at risk", "red"],
         ["Duplicate merged \xB7 &ldquo;D. Reyes&rdquo; = &ldquo;Dana R.&rdquo;", "cooling \xB7 21 days quiet", "gold"]
-      ].map(([a, s, c]) => /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "loft-status-row", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { dangerouslySetInnerHTML: { __html: a } }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: `loft-status-pill loft-status-pill--${c}`, children: s })
+      ].map(([a, s, c]) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "loft-status-row", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { dangerouslySetInnerHTML: { __html: a } }),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: `loft-status-pill loft-status-pill--${c}`, children: s })
       ] }, a)) })
     },
     {
       label: "AI sales assistant",
       title: "AI sales assistant",
       desc: "Drafts follow-ups, preps your calls, and flags stalling deals before they slip a quarter.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "check-card loft-check-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "check-row checked", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(IconCheck, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: "Follow-up drafted \xB7 Dana Reyes" }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "right", children: "DRAFT" })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "check-card loft-check-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "check-row checked", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(IconCheck, {}) }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: "Follow-up drafted \xB7 Dana Reyes" }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "right", children: "DRAFT" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "check-row checked", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(IconCheck, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: "Call prep ready \xB7 9:30 demo" }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "right", children: "PREP" })
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "check-row checked", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(IconCheck, {}) }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: "Call prep ready \xB7 9:30 demo" }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "right", children: "PREP" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "check-row alert", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(IconAlert, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: "Stall flagged \xB7 Initech \xB7 14 days quiet" }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "right", style: { color: "var(--red-600)" }, children: "ALERT" })
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "check-row alert", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "box", style: { display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(IconAlert, {}) }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: "Stall flagged \xB7 Initech \xB7 14 days quiet" }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "right", style: { color: "var(--red-600)" }, children: "ALERT" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("a", { href: "#audit", className: "btn btn-primary", style: { width: "100%", justifyContent: "center", marginTop: 14 }, children: "Review and send" })
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("a", { href: "#audit", className: "btn btn-primary", style: { width: "100%", justifyContent: "center", marginTop: 14 }, children: "Review and send" })
       ] })
     },
     {
       label: "Revenue intelligence",
       title: "Revenue intelligence",
       desc: "Forecasts grounded in every deal&rsquo;s real signals &mdash; activity, engagement, and history, not gut feel.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "stat-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: "Commit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(CountUp, { to: 1.8, decimals: 1, prefix: "$", suffix: "M" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "badge badge-green", children: "94%" })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "stat-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "stat-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: "Commit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(CountUp, { to: 1.8, decimals: 1, prefix: "$", suffix: "M" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "badge badge-green", children: "94%" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: "Best case" }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(CountUp, { to: 2.4, decimals: 1, prefix: "$", suffix: "M" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "badge badge-gold", children: "68%" })
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "stat-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: "Best case" }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(CountUp, { to: 2.4, decimals: 1, prefix: "$", suffix: "M" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "badge badge-gold", children: "68%" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "stat-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: "AI forecast" }),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(CountUp, { to: 2.1, decimals: 1, prefix: "$", suffix: "M" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "badge badge-blue", children: "\xB14%" })
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "stat-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: "AI forecast" }),
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(CountUp, { to: 2.1, decimals: 1, prefix: "$", suffix: "M" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "badge badge-blue", children: "\xB14%" })
           ] })
         ] })
       ] })
@@ -28302,32 +28413,32 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       label: "Workflow automation",
       title: "Workflow automation",
       desc: "No-code flows across every department &mdash; handoffs, renewals, escalations, and nurture on rails.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "check-card", children: [
+      visual: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "check-card", children: [
         ["1", "Trigger \xB7 deal enters Proposal", "DRAFT"],
         ["2", "Action \xB7 legal review scheduled", "PREP"],
         ["3", "Handoff \xB7 CS notified at Closed-Won", "ALERT"]
-      ].map(([n, a, s]) => /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "loft-step-row", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "loft-step-num", children: n }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: a }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "right", children: s })
+      ].map(([n, a, s]) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "loft-step-row", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "loft-step-num", children: n }),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: a }),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "right", children: s })
       ] }, a)) })
     },
     {
       label: "Enterprise ready",
       title: "Enterprise ready",
       desc: "SSO, granular permissions, audit logs, and an architecture that doesn&rsquo;t flinch at scale.",
-      visual: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "stat-card", children: [["SSO / SAML", "enabled"], ["Granular permissions", "enforced"], ["Audit log", "full history"]].map(([a, s]) => /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "stat-line", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { children: a }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)", margin: 0 }, children: s })
+      visual: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "stat-card", children: [["SSO / SAML", "enabled"], ["Granular permissions", "enforced"], ["Audit log", "full history"]].map(([a, s]) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "stat-line", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: a }),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)", margin: 0 }, children: s })
       ] }, a)) })
     }
   ];
   var STICKY_OFFSET4 = 100;
   function LoftWhyChoose() {
-    const [active, setActive] = (0, import_react49.useState)(0);
-    const cardRefs = (0, import_react49.useRef)([]);
-    const itemRefs = (0, import_react49.useRef)([]);
-    (0, import_react49.useEffect)(() => {
+    const [active, setActive] = (0, import_react50.useState)(0);
+    const cardRefs = (0, import_react50.useRef)([]);
+    const itemRefs = (0, import_react50.useRef)([]);
+    (0, import_react50.useEffect)(() => {
       let raf = null;
       function computeActive() {
         raf = null;
@@ -28359,38 +28470,38 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       const targetY = window.scrollY + rect.top - STICKY_OFFSET4 - 8;
       window.scrollTo({ top: targetY, behavior: "smooth" });
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("h2", { className: "section-title reveal", style: { textAlign: "left" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("h2", { className: "section-title reveal", style: { textAlign: "left" }, children: [
         "Why growing",
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("br", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("br", {}),
         "businesses choose Loft."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("p", { className: "section-sub reveal", style: { textAlign: "left", margin: "14px 0 0" }, children: "Six things a CRM should have done all along." }),
-      /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "tabs-layout reveal", style: { marginTop: 40 }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "tabs-nav-col", children: /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "tabs-list", children: [
-          tabs3.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("button", { className: i === active ? "active" : "", onClick: () => scrollToCard(i), children: [
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "tabs-list-dot", "aria-hidden": "true" }),
+      /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("p", { className: "section-sub reveal", style: { textAlign: "left", margin: "14px 0 0" }, children: "Six things a CRM should have done all along." }),
+      /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "tabs-layout reveal", style: { marginTop: 40 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "tabs-nav-col", children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "tabs-list", children: [
+          tabs3.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("button", { className: i === active ? "active" : "", onClick: () => scrollToCard(i), children: [
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "tabs-list-dot", "aria-hidden": "true" }),
             t.label
           ] }, t.label)),
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("img", { src: mascot_blue_workflow_default, alt: "", className: "floaty", style: { width: 170, marginTop: 28, alignSelf: "flex-start" } })
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("img", { src: mascot_blue_workflow_default, alt: "", className: "floaty", style: { width: 170, marginTop: 28, alignSelf: "flex-start" } })
         ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "tabs-stack", children: tabs3.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "tabs-stack-item", ref: (el) => itemRefs.current[i] = el, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "tabs-stack-card tabs-stack-card--plain", style: { zIndex: i + 1 }, ref: (el) => cardRefs.current[i] = el, children: /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "tab-panel tab-panel--stacked", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { className: "copy", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("h3", { children: t.title }),
-              /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("p", { dangerouslySetInnerHTML: { __html: t.desc } })
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "tabs-stack", children: tabs3.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "tabs-stack-item", ref: (el) => itemRefs.current[i] = el, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "tabs-stack-card tabs-stack-card--plain", style: { zIndex: i + 1 }, ref: (el) => cardRefs.current[i] = el, children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "tab-panel tab-panel--stacked", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "copy", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("h3", { children: t.title }),
+              /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("p", { dangerouslySetInnerHTML: { __html: t.desc } })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "tab-visual", children: t.visual })
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "tab-visual", children: t.visual })
           ] }) }),
-          i !== tabs3.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "tabs-stack-spacer", "aria-hidden": "true" })
+          i !== tabs3.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "tabs-stack-spacer", "aria-hidden": "true" })
         ] }, t.label)) })
       ] })
     ] }) });
   }
 
   // src/sections/loft/LoftComparison.jsx
-  var import_react50 = __toESM(require_react(), 1);
-  var import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
+  var import_react51 = __toESM(require_react(), 1);
+  var import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
   var rows4 = [
     ["Automatic Data Updates", "no", "no", "no", "yes"],
     ["AI Relationship Intelligence", "no", "no", "partial", "yes"],
@@ -28402,90 +28513,166 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["Revenue Intelligence", "partial", "partial", "no", "yes"]
   ];
   function Cell4({ v }) {
-    if (v === "yes") return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "chk", children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(IconCheck, {}) });
-    if (v === "no") return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "chk chk-no", children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(IconX, {}) });
-    if (v === "partial") return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "chk chk-partial", children: "\u2013" });
-    return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { children: v });
+    if (v === "yes") return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("span", { className: "chk", children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(IconCheck, {}) });
+    if (v === "no") return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("span", { className: "chk chk-no", children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(IconX, {}) });
+    if (v === "partial") return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("span", { className: "chk chk-partial", children: "\u2013" });
+    return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("span", { children: v });
   }
   function LoftComparison() {
-    return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("h2", { className: "section-title reveal", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)("h2", { className: "section-title reveal", children: [
         "Other tools tell you what\u2019s wrong.",
-        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("br", {}),
-        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "text-blue", children: "We tell you what it costs \u2014 and fix it." })
+        /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("br", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("span", { className: "text-blue", children: "We tell you what it costs \u2014 and fix it." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", { className: "comparison-wrap reveal", style: { marginTop: 40 }, children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("table", { className: "comparison", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("th", { children: "\xA0" }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("th", { children: "Agency Audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("th", { children: "HubSpot" }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("th", { children: "Pipedrive" }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("th", { className: "lucrative", children: "Loft" })
+      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", { className: "comparison-wrap reveal", style: { marginTop: 40 }, children: /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)("table", { className: "comparison", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("th", { children: "\xA0" }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("th", { children: "Agency Audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("th", { children: "HubSpot" }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("th", { children: "Pipedrive" }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("th", { className: "lucrative", children: "Loft" })
         ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("tbody", { children: rows4.map(([label, a, b, c, d]) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("td", { children: label }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Cell4, { v: a }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Cell4, { v: b }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Cell4, { v: c }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Cell4, { v: d }) })
+        /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("tbody", { children: rows4.map(([label, a, b, c, d]) => /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("td", { children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Cell4, { v: a }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Cell4, { v: b }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Cell4, { v: c }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Cell4, { v: d }) })
         ] }, label)) })
       ] }) })
     ] }) });
   }
 
+  // src/sections/loft/LoftFAQ.jsx
+  var import_react52 = __toESM(require_react(), 1);
+  var import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
+  var faqs4 = [
+    {
+      q: "What is Lucrative Sales?",
+      a: "Lucrative Sales is an AI-native CRM designed to help sales, marketing, customer success, operations, and leadership work from one intelligent platform. It automates manual CRM tasks, provides AI-powered sales insights, and helps teams close more deals while maintaining accurate customer data."
+    },
+    {
+      q: "How is Lucrative Sales different from traditional CRM software?",
+      a: "Unlike traditional CRM systems that primarily store customer information, Lucrative Sales automatically updates records, identifies relationship opportunities, predicts deal risks, recommends next actions, and provides AI-powered revenue intelligence &mdash; all without requiring constant manual updates."
+    },
+    {
+      q: "What is an Autonomous CRM?",
+      a: "An Autonomous CRM is a CRM that manages itself. Lucrative Sales automatically logs calls, captures emails, enriches customer records, detects duplicates, updates pipelines, and keeps your CRM accurate with minimal manual effort from your team."
+    },
+    {
+      q: "How does the AI Sales Assistant help sales teams?",
+      a: "The AI Sales Assistant prepares meeting briefs, drafts follow-up emails, summarizes customer conversations, identifies stalled opportunities, recommends next steps, and helps sales representatives spend more time selling instead of updating CRM records."
+    },
+    {
+      q: "What is AI Relationship Intelligence?",
+      a: "AI Relationship Intelligence continuously analyzes customer interactions, engagement history, communication patterns, and buying signals to identify which relationships are growing stronger, which accounts are at risk, and where your team should focus next."
+    },
+    {
+      q: "Can Lucrative Sales forecast revenue more accurately?",
+      a: "Yes. Lucrative Sales uses AI-powered revenue intelligence to forecast sales based on customer engagement, deal activity, historical performance, and pipeline health rather than relying solely on manual estimates or sales rep intuition."
+    },
+    {
+      q: "Does Lucrative Sales support workflow automation?",
+      a: "Yes. Lucrative Sales includes no-code workflow automation that allows organizations to automate approvals, lead routing, customer handoffs, renewals, follow-ups, notifications, and cross-functional business processes without complex development."
+    },
+    {
+      q: "Is Lucrative Sales suitable for enterprise organizations?",
+      a: "Absolutely. Lucrative Sales includes enterprise-grade capabilities such as Single Sign-On (SSO), SAML authentication, granular user permissions, audit logs, scalable architecture, and governance controls to support growing organizations."
+    },
+    {
+      q: "Which teams can use Lucrative Sales?",
+      a: "Lucrative Sales is designed for the entire revenue organization, including Sales, Marketing, Customer Success, Revenue Operations, Executive Leadership, and Operations teams. Every department works from the same customer record and shared AI intelligence."
+    },
+    {
+      q: "Why are companies switching from HubSpot, Salesforce, or Pipedrive to Lucrative Sales?",
+      a: "Companies switch to Lucrative Sales because it combines AI-native CRM, autonomous data management, relationship intelligence, workflow automation, revenue forecasting, and a unified customer timeline into one platform. This reduces manual work, improves forecasting accuracy, and helps teams scale without increasing CRM complexity or costs."
+    }
+  ];
+  function FAQ4() {
+    const [open, setOpen] = (0, import_react52.useState)(0);
+    return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("div", { className: "container faq-layout", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("h2", { children: "FAQ's" }),
+        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("p", { className: "sub", children: "Questions? Answered" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", { className: "reveal", children: faqs4.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(
+        "div",
+        {
+          className: `faq-item ${open === i ? "open" : ""}`,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(
+              "button",
+              {
+                className: "faq-q",
+                onClick: () => setOpen(open === i ? -1 : i),
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("span", { className: "faq-title", children: f.q })
+                ]
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", { className: "faq-a", children: f.a })
+          ]
+        },
+        f.q
+      )) })
+    ] }) });
+  }
+
   // src/pages/LoftPage.jsx
-  var import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
   function LoftPage() {
     useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_jsx_runtime49.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftHero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftProblem, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftUnifiedBrain, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftWhyChoose, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftTeams, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftComparison, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftPersonas, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(GovernancePricing, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(FAQ2, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(LoftClosingCTA, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Footer, {})
+    return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_jsx_runtime51.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftHero, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftProblem, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftUnifiedBrain, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftWhyChoose, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftTeams, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftComparison, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftPersonas, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(GovernancePricing, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(FAQ4, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(LoftClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Footer, {})
     ] });
   }
 
   // src/pages/QuotebasePage.jsx
-  var import_react60 = __toESM(require_react(), 1);
+  var import_react63 = __toESM(require_react(), 1);
 
   // src/sections/quotebase/QuotebaseHero.jsx
-  var import_react52 = __toESM(require_react(), 1);
+  var import_react54 = __toESM(require_react(), 1);
 
   // src/assets/dashboard-loft-marketing.png
   var dashboard_loft_marketing_default = "assets/img/dashboard-loft-marketing-CXQJCPFZ.png";
 
   // src/sections/quotebase/QuotebaseHero.jsx
-  var import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
   function QuotebaseHero() {
-    return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("div", { className: "container hero-grid", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("p", { className: "eyebroww", children: "Lucrative Quote" }),
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("h1", { children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("section", { className: "hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "container hero-grid", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("p", { className: "eyebroww", children: "Lucrative Quote" }),
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("h1", { children: [
           "Generate sales quotes in seconds with ",
-          /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("span", { className: "text-blue", children: "Lucrative Quote" })
+          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "text-blue", children: "Lucrative Quote" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("p", { style: { fontSize: 22, fontWeight: 500, color: "var(--text-900)", marginTop: 8 }, children: "With numbers your AI cannot invent." }),
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("p", { className: "lead", children: "Turn every Salesforce opportunity into a complete, priced, policy-checked quotation automatically. Quotebase combines an AI agent with deterministic pricing, policy enforcement, and Salesforce integration to produce quotes that are fast to create and safe to send." }),
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("div", { className: "hero-ctas", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("a", { href: "#demo", className: "btn btn-primary", children: "Request Demo" }),
-          /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("a", { href: "#walkthrough", className: "btn btn-outline", children: "Watch Product Walkthrough" })
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("p", { style: { fontSize: 22, fontWeight: 500, color: "var(--text-900)", marginTop: 8 }, children: "With numbers your AI cannot invent." }),
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("p", { className: "lead", children: "Turn every Salesforce opportunity into a complete, priced, policy-checked quotation automatically. Quotebase combines an AI agent with deterministic pricing, policy enforcement, and Salesforce integration to produce quotes that are fast to create and safe to send." }),
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "hero-ctas", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("a", { href: "#demo", className: "btn btn-primary", children: "Request Demo" }),
+          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("a", { href: "#walkthrough", className: "btn btn-outline", children: "Watch Product Walkthrough" })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", { className: "hero-visual reveal", children: /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("img", { src: dashboard_loft_marketing_default, alt: "Quotebase dashboard", className: "floaty", style: { width: "100%", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-lg)" } }) })
+      /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { className: "hero-visual reveal", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("img", { src: dashboard_loft_marketing_default, alt: "Quotebase dashboard", className: "floaty", style: { width: "100%", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-lg)" } }) })
     ] }) });
   }
 
   // src/sections/quotebase/QuotebaseVerified.jsx
-  var import_react53 = __toESM(require_react(), 1);
-  var import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
+  var import_react55 = __toESM(require_react(), 1);
+  var import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
   var checklist3 = [
     "40+ minutes spent per quote",
     "Calculates pricing using deterministic business rules",
@@ -28501,58 +28688,58 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["Quote generated", "READY"]
   ];
   function QuotebaseVerified() {
-    return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "container qb-verified-grid", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("h2", { className: "section-title", style: { textAlign: "left" }, children: "Every quote. Fully verified." }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("p", { style: { marginTop: 16, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "Instead of asking sales teams to assemble quotes manually, Quotebase coordinates every step automatically." }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "The AI agent handles the language, the pricing engine handles the math, and the policy layer decides what ships." }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "You get a finished, defensible quote \u2014 with the receipts to prove it." }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("ul", { className: "qb-check-list", children: checklist3.map((c) => /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("li", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { className: "qb-check-circle", children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(IconCheck, {}) }),
+    return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "container qb-verified-grid", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h2", { className: "section-title", style: { textAlign: "left" }, children: "Every quote. Fully verified." }),
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { style: { marginTop: 16, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "Instead of asking sales teams to assemble quotes manually, Quotebase coordinates every step automatically." }),
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "The AI agent handles the language, the pricing engine handles the math, and the policy layer decides what ships." }),
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "You get a finished, defensible quote \u2014 with the receipts to prove it." }),
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("ul", { className: "qb-check-list", children: checklist3.map((c) => /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("li", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "qb-check-circle", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(IconCheck, {}) }),
           c
         ] }, c)) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("div", { className: "reveal", children: /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "qb-quote-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "qb-quote-card-head", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("h4", { children: "ACME Manufacturing" }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("span", { className: "tag-pill", style: { color: "var(--teal-600)", margin: 0 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(IconCheck, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "reveal", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-card-head", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h4", { children: "ACME Manufacturing" }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("span", { className: "tag-pill", style: { color: "var(--teal-600)", margin: 0 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(IconCheck, {}),
             " Pass"
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("p", { className: "qb-quote-card-sub", children: "QF-2026-04182 \xB7 OPP #A038" }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "qb-quote-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { children: "Line 1 \xB7 Pro License \xD7 40" }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(CountUp, { to: 32e3, decimals: 2, comma: true, prefix: "$" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { className: "qb-quote-card-sub", children: "QF-2026-04182 \xB7 OPP #A038" }),
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Line 1 \xB7 Pro License \xD7 40" }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 32e3, decimals: 2, comma: true, prefix: "$" }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "qb-quote-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { children: "Line 2 \xB7 Onboarding" }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(CountUp, { to: 8500, decimals: 2, comma: true, prefix: "$" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Line 2 \xB7 Onboarding" }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 8500, decimals: 2, comma: true, prefix: "$" }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "qb-quote-line discount", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { children: "Volume discount \xB7 12%" }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(CountUp, { to: 4860, decimals: 2, comma: true, prefix: "\u2212$" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-line discount", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Volume discount \xB7 12%" }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 4860, decimals: 2, comma: true, prefix: "\u2212$" }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "qb-quote-line", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { children: "Tax \xB7 CA 8.75%" }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(CountUp, { to: 3114.75, decimals: 2, comma: true, prefix: "$" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-line", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Tax \xB7 CA 8.75%" }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 3114.75, decimals: 2, comma: true, prefix: "$" }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "qb-quote-total", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("b", { children: "Total \xB7 net 30" }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(CountUp, { to: 38754.75, decimals: 2, comma: true, prefix: "$" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-total", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: "Total \xB7 net 30" }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 38754.75, decimals: 2, comma: true, prefix: "$" }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("div", { className: "qb-quote-steps", children: steps.map(([label, tag], i) => /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("div", { className: "loft-step-row", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { className: "loft-step-num", children: String(i + 1).padStart(2, "0") }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { children: label }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { className: "right", children: tag })
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "qb-quote-steps", children: steps.map(([label, tag], i) => /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "loft-step-row", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "loft-step-num", children: String(i + 1).padStart(2, "0") }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "right", children: tag })
         ] }, label)) })
       ] }) })
     ] }) });
   }
 
   // src/sections/quotebase/QuotebaseChatProblem.jsx
-  var import_react54 = __toESM(require_react(), 1);
-  var import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
+  var import_react56 = __toESM(require_react(), 1);
+  var import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
   var chatChecklist = [
     { text: "Opportunity loaded" },
     { text: "Pricing calculated", subValue: 38754.75 },
@@ -28569,46 +28756,46 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     "Compliance checks happen too late"
   ];
   function QuotebaseChatProblem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "container qb-chat-grid", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { className: "reveal", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "qb-chat-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "qb-chat-head", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "qb-chat-avatar", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(IconSparkle, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("b", { children: "Quotebase" }),
-            /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { children: "Live Session" })
+    return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "container qb-chat-grid", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "reveal", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "qb-chat-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "qb-chat-head", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "qb-chat-avatar", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(IconSparkle, {}) }),
+          /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("b", { children: "Quotebase" }),
+            /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { children: "Live Session" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { className: "qb-chat-bubble", children: "Generate quote for ACME Manufacturing." }),
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "qb-chat-checklist", children: [
-          chatChecklist.map((c) => /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "check-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "qb-check-circle qb-check-circle--sm", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(IconCheck, {}) }),
-            /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { dangerouslySetInnerHTML: { __html: c.text } }),
-            c.subValue != null && /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("span", { style: { color: "var(--text-400)", fontSize: 12 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "qb-chat-bubble", children: "Generate quote for ACME Manufacturing." }),
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "qb-chat-checklist", children: [
+          chatChecklist.map((c) => /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "check-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "qb-check-circle qb-check-circle--sm", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(IconCheck, {}) }),
+            /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { dangerouslySetInnerHTML: { __html: c.text } }),
+            c.subValue != null && /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("span", { style: { color: "var(--text-400)", fontSize: 12 }, children: [
               "\xA0\xB7 ",
-              /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(CountUp, { to: c.subValue, decimals: 2, comma: true, prefix: "$" })
+              /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(CountUp, { to: c.subValue, decimals: 2, comma: true, prefix: "$" })
             ] }),
-            c.sub && /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("span", { style: { color: "var(--text-400)", fontSize: 12 }, children: [
+            c.sub && /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("span", { style: { color: "var(--text-400)", fontSize: 12 }, children: [
               "\xA0\xB7 ",
-              /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { dangerouslySetInnerHTML: { __html: c.sub } })
+              /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { dangerouslySetInnerHTML: { __html: c.sub } })
             ] }),
-            c.pill && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-600)", margin: 0, marginLeft: "auto" }, children: c.pill })
+            c.pill && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-600)", margin: 0, marginLeft: "auto" }, children: c.pill })
           ] }, c.text)),
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("a", { href: "#send", className: "btn btn-primary qb-chat-ready-btn", children: "Ready to send" })
+          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("a", { href: "#send", className: "btn btn-primary qb-chat-ready-btn", children: "Ready to send" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "qb-chat-foot", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("img", { src: persona_triangle_default, alt: "" }),
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "qb-chat-input", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "qb-chat-foot", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("img", { src: persona_triangle_default, alt: "" }),
+          /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "qb-chat-input", children: [
             "Ask me anything",
-            /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "send", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(IconSend, {}) })
+            /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "send", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(IconSend, {}) })
           ] })
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("h2", { className: "section-title", style: { textAlign: "left" }, children: "Every sales team eventually runs into the same quoting problems." }),
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("h3", { style: { fontSize: 20, fontWeight: 600, marginTop: 24 }, children: "Manual quoting slows revenue." }),
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("p", { style: { marginTop: 12, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "Reps stitch quotes together across spreadsheets, price sheets, and inboxes. Every hand-off is a chance for a wrong number to reach a customer." }),
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("ul", { className: "qb-check-list", children: problems3.map((p) => /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("li", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "qb-x-circle", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(IconX, {}) }),
+      /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("h2", { className: "section-title", style: { textAlign: "left" }, children: "Every sales team eventually runs into the same quoting problems." }),
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("h3", { style: { fontSize: 20, fontWeight: 600, marginTop: 24 }, children: "Manual quoting slows revenue." }),
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("p", { style: { marginTop: 12, color: "var(--text-600)", fontSize: 15, lineHeight: 1.7 }, children: "Reps stitch quotes together across spreadsheets, price sheets, and inboxes. Every hand-off is a chance for a wrong number to reach a customer." }),
+        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("ul", { className: "qb-check-list", children: problems3.map((p) => /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("li", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "qb-x-circle", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(IconX, {}) }),
           p
         ] }, p)) })
       ] })
@@ -28616,13 +28803,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/quotebase/QuotebaseFeatures.jsx
-  var import_react55 = __toESM(require_react(), 1);
+  var import_react57 = __toESM(require_react(), 1);
 
   // src/assets/deco-salesforce-hub.png
   var deco_salesforce_hub_default = "assets/img/deco-salesforce-hub-W36KRSN4.png";
 
   // src/sections/quotebase/QuotebaseFeatures.jsx
-  var import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
   var auditRows = [
     ["09:14 &middot; quote generated", "QF-04182", "var(--teal-500)"],
     ["09:15 &middot; manager approved", "j.chen", "var(--gold-500)"],
@@ -28639,85 +28826,85 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { label: "APAC &middot; JP", color: "var(--teal-500)" }
   ];
   function QuotebaseFeatures() {
-    return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("h2", { className: "section-title reveal", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("h2", { className: "section-title reveal", children: [
         "Everything you need to",
-        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("br", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("br", {}),
         "generate accurate quotations."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-features-row qb-features-row--top reveal", style: { marginTop: 44 }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-feature-card qb-feature-card--dark", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-500)", margin: 0 }, children: "The core guarantee" }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h4", { children: "Deterministic pricing" }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { children: "Business rules calculate every price, tax, discount, and total. No language model can override the ledger." })
+      /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-features-row qb-features-row--top reveal", style: { marginTop: 44 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-feature-card qb-feature-card--dark", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-500)", margin: 0 }, children: "The core guarantee" }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h4", { children: "Deterministic pricing" }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { children: "Business rules calculate every price, tax, discount, and total. No language model can override the ledger." })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-mini-receipt", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-line", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Pro License \xD7 40" }),
-              /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 32e3, decimals: 2, comma: true, prefix: "$" }) })
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-mini-receipt", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-quote-line", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { children: "Pro License \xD7 40" }),
+              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(CountUp, { to: 32e3, decimals: 2, comma: true, prefix: "$" }) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-line discount", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Discount \xB7 12%" }),
-              /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 4860, decimals: 2, comma: true, prefix: "\u2212$" }) })
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-quote-line discount", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { children: "Discount \xB7 12%" }),
+              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(CountUp, { to: 4860, decimals: 2, comma: true, prefix: "\u2212$" }) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-quote-total", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { style: { fontSize: 10.5, color: "rgba(255,255,255,.5)", textTransform: "uppercase", letterSpacing: ".04em", fontWeight: 700, whiteSpace: "nowrap" }, children: "calculated by code" }),
-              /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(CountUp, { to: 38754.75, decimals: 2, comma: true, prefix: "$" }) })
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-quote-total", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { style: { fontSize: 10.5, color: "rgba(255,255,255,.5)", textTransform: "uppercase", letterSpacing: ".04em", fontWeight: 700, whiteSpace: "nowrap" }, children: "calculated by code" }),
+              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(CountUp, { to: 38754.75, decimals: 2, comma: true, prefix: "$" }) })
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-feature-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h4", { children: "Policy guardrails" }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { children: "Automatically classify every quote before it reaches the customer." }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-status-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Within limits" }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)", margin: 0 }, children: "Pass" })
+        /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-feature-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h4", { children: "Policy guardrails" }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { children: "Automatically classify every quote before it reaches the customer." }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-status-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { children: "Within limits" }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)", margin: 0 }, children: "Pass" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-status-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { children: "Needs approval" }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-500)", margin: 0 }, children: "Review" })
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-status-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { children: "Needs approval" }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-500)", margin: 0 }, children: "Review" })
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-features-row qb-features-row--half reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-feature-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h4", { children: "Salesforce integration" }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { children: "Quotes straight from opportunities \u2014 OAuth 2.0, no stored credentials, no copying." }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("img", { src: deco_salesforce_hub_default, alt: "Salesforce integration", className: "qb-feature-img" })
+      /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-features-row qb-features-row--half reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-feature-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h4", { children: "Salesforce integration" }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { children: "Quotes straight from opportunities \u2014 OAuth 2.0, no stored credentials, no copying." }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("img", { src: deco_salesforce_hub_default, alt: "Salesforce integration", className: "qb-feature-img" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-feature-card qb-audit-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h4", { children: "Audit trail" }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { children: "Every quote, approval, and email permanently recorded \u2014 append-only, tamper-evident." }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "qb-audit-log", children: auditRows.map(([label, val, color]) => /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-audit-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "qb-audit-dot", style: { background: color } }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { dangerouslySetInnerHTML: { __html: label } }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "right", children: val })
+        /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-feature-card qb-audit-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h4", { children: "Audit trail" }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { children: "Every quote, approval, and email permanently recorded \u2014 append-only, tamper-evident." }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "qb-audit-log", children: auditRows.map(([label, val, color]) => /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-audit-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "qb-audit-dot", style: { background: color } }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { dangerouslySetInnerHTML: { __html: label } }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "right", children: val })
           ] }, label)) })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-features-row qb-features-row--half reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-feature-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h4", { children: "Role-based access" }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { children: "Separate permissions for Admins, Managers, and Sales. Least-privilege by default." }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "qb-role-list", children: roleRows.map(([role, perms]) => /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-role-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("b", { children: role }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { dangerouslySetInnerHTML: { __html: perms } }),
-            /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(IconChevronDown, {})
+      /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-features-row qb-features-row--half reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-feature-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h4", { children: "Role-based access" }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { children: "Separate permissions for Admins, Managers, and Sales. Least-privilege by default." }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "qb-role-list", children: roleRows.map(([role, perms]) => /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-role-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("b", { children: role }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { dangerouslySetInnerHTML: { __html: perms } }),
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconChevronDown, {})
           ] }, role)) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("div", { className: "qb-feature-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("h4", { children: "Multi-template support" }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { children: "Different quote layouts across products, regions, and business units \u2014 brand-consistent, locale-aware, unlimited." }),
-          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "qb-template-stack", children: templates.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "qb-template-card", style: { "--tc": t.color, zIndex: i + 1 }, dangerouslySetInnerHTML: { __html: t.label } }, t.label)) })
+        /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-feature-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h4", { children: "Multi-template support" }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { children: "Different quote layouts across products, regions, and business units \u2014 brand-consistent, locale-aware, unlimited." }),
+          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "qb-template-stack", children: templates.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "qb-template-card", style: { "--tc": t.color, zIndex: i + 1 }, dangerouslySetInnerHTML: { __html: t.label } }, t.label)) })
         ] })
       ] })
     ] }) });
   }
 
   // src/sections/quotebase/QuotebaseMondayTimeline.jsx
-  var import_react56 = __toESM(require_react(), 1);
-  var import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
+  var import_react58 = __toESM(require_react(), 1);
+  var import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
   var labels4 = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
   var oldWay = [
     "Opens the CRM, copies products into a spreadsheet. Two tabs, one typo.",
@@ -28734,112 +28921,112 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     "Email delivered, tracked, and logged to the audit trail. Seconds, total."
   ];
   function QuotebaseMondayTimeline() {
-    return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("section", { className: "section section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Two ways to run a Monday." }),
-      /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "strat-timeline-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "strat-timeline-header left", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("p", { className: "strat-timeline-eyebrow", children: "The old way" }),
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("h3", { className: "strat-timeline-heading", children: "Manual process" })
+    return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("section", { className: "section section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Two ways to run a Monday." }),
+      /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "strat-timeline-wrap reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "strat-timeline-header left", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("p", { className: "strat-timeline-eyebrow", children: "The old way" }),
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("h3", { className: "strat-timeline-heading", children: "Manual process" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "strat-timeline-header-center" }),
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "strat-timeline-header right", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("p", { className: "strat-timeline-eyebrow", children: "The Quotebase way" }),
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("h3", { className: "strat-timeline-heading", children: "Click Generate" })
+        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "strat-timeline-header-center" }),
+        /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "strat-timeline-header right", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("p", { className: "strat-timeline-eyebrow", children: "The Quotebase way" }),
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("h3", { className: "strat-timeline-heading", children: "Click Generate" })
         ] }),
-        oldWay.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(import_react56.default.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "strat-timeline-card", style: { textAlign: "right" }, dangerouslySetInnerHTML: { __html: t } }),
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "strat-timeline-time", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "strat-timeline-dot", children: labels4[i] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "strat-timeline-card dark", dangerouslySetInnerHTML: { __html: quotebaseWay[i] } })
+        oldWay.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(import_react58.default.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "strat-timeline-card", style: { textAlign: "right" }, dangerouslySetInnerHTML: { __html: t } }),
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "strat-timeline-time", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", { className: "strat-timeline-dot", children: labels4[i] }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "strat-timeline-card dark", dangerouslySetInnerHTML: { __html: quotebaseWay[i] } })
         ] }, i))
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("div", { className: "strat-timeline-foot", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "strat-footer-pending", children: "40+ minutes \xB7 human errors" }),
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("img", { src: persona_flower_default, alt: "", className: "strat-footer-flower" }),
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)("span", { className: "strat-footer-win", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "strat-timeline-foot", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", { className: "strat-footer-pending", children: "40+ minutes \xB7 human errors" }),
+        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("img", { src: persona_flower_default, alt: "", className: "strat-footer-flower" }),
+        /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("span", { className: "strat-footer-win", children: [
           "Priced, checked, sent \u2014 ",
-          /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "text-blue", children: "fully auditable" })
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", { className: "text-blue", children: "fully auditable" })
         ] })
       ] })
     ] }) });
   }
 
   // src/sections/quotebase/QuotebaseAgentDiagram.jsx
-  var import_react57 = __toESM(require_react(), 1);
-  var import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
+  var import_react59 = __toESM(require_react(), 1);
+  var import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
   function IconCloud(p) {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("path", { d: "M7 18a4.5 4.5 0 01-.5-8.97A5.5 5.5 0 0117.2 8.06 4 4 0 0117 16H7z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M7 18a4.5 4.5 0 01-.5-8.97A5.5 5.5 0 0117.2 8.06 4 4 0 0117 16H7z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }) });
   }
   function IconDoc(p) {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("path", { d: "M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }),
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("path", { d: "M9 12h6M9 16h6", stroke: "currentColor", strokeWidth: "1.7", strokeLinecap: "round" })
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }),
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M9 12h6M9 16h6", stroke: "currentColor", strokeWidth: "1.7", strokeLinecap: "round" })
     ] });
   }
   function IconClock(p) {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("circle", { cx: "12", cy: "12", r: "9", stroke: "currentColor", strokeWidth: "1.7" }),
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("path", { d: "M12 7v5l3.5 2", stroke: "currentColor", strokeWidth: "1.7", strokeLinecap: "round" })
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("circle", { cx: "12", cy: "12", r: "9", stroke: "currentColor", strokeWidth: "1.7" }),
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M12 7v5l3.5 2", stroke: "currentColor", strokeWidth: "1.7", strokeLinecap: "round" })
     ] });
   }
   function IconBox(p) {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("path", { d: "M4 8l8-4 8 4-8 4-8-4z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }),
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("path", { d: "M4 8v9l8 4 8-4V8M12 12v9", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" })
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M4 8l8-4 8 4-8 4-8-4z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }),
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M4 8v9l8 4 8-4V8M12 12v9", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" })
     ] });
   }
   function IconShield(p) {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("path", { d: "M12 3l7 3v6c0 4.5-2.8 7.9-7 9-4.2-1.1-7-4.5-7-9V6l7-3z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", ...p, children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M12 3l7 3v6c0 4.5-2.8 7.9-7 9-4.2-1.1-7-4.5-7-9V6l7-3z", stroke: "currentColor", strokeWidth: "1.7", strokeLinejoin: "round" }) });
   }
   var left = [
-    { icon: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconCloud, {}), title: "Salesforce", sub: "OPPORTUNITY &middot; OAUTH 2.0" },
-    { icon: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconDoc, {}), title: "Templates", sub: "MULTI-BRAND" },
-    { icon: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconClock, {}), title: "Audit Log", sub: "APPEND-ONLY" }
+    { icon: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconCloud, {}), title: "Salesforce", sub: "OPPORTUNITY &middot; OAUTH 2.0" },
+    { icon: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconDoc, {}), title: "Templates", sub: "MULTI-BRAND" },
+    { icon: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconClock, {}), title: "Audit Log", sub: "APPEND-ONLY" }
   ];
   var right = [
-    { icon: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconShield, {}), title: "Policy Rules", sub: "PASS &middot; REVIEW &middot; BLOCK" },
-    { icon: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconEnvelope, {}), title: "Email", sub: "DELIVERY &middot; TRACKED" },
-    { icon: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconCheck, {}), title: "Approvals", sub: "ROLE-BASED" }
+    { icon: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconShield, {}), title: "Policy Rules", sub: "PASS &middot; REVIEW &middot; BLOCK" },
+    { icon: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconEnvelope, {}), title: "Email", sub: "DELIVERY &middot; TRACKED" },
+    { icon: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconCheck, {}), title: "Approvals", sub: "ROLE-BASED" }
   ];
   function Node({ n }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-agent-node", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "ic", children: n.icon }),
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("span", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("b", { children: n.title }),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "sub", dangerouslySetInnerHTML: { __html: n.sub } })
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "qb-agent-node", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { className: "ic", children: n.icon }),
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("span", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("b", { children: n.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { className: "sub", dangerouslySetInnerHTML: { __html: n.sub } })
       ] })
     ] });
   }
   function QuotebaseAgentDiagram() {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("section", { className: "section section--navy section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "One AI Agent. Every Business System" }),
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center", color: "rgba(255,255,255,.7)" }, children: "Your sales team keeps working where they already sell. Quotebase handles the coordination behind the scenes." }),
-      /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-agent-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "qb-agent-col qb-agent-col--left", children: left.map((n) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Node, { n }, n.title)) }),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-agent-center", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-agent-node qb-agent-node--vert", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "ic", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconBox, {}) }),
-            /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("span", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("b", { children: "Pricing Engine" }),
-              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "sub", children: "DETERMINISTIC" })
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("section", { className: "section section--navy section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "One AI Agent. Every Business System" }),
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center", color: "rgba(255,255,255,.7)" }, children: "Your sales team keeps working where they already sell. Quotebase handles the coordination behind the scenes." }),
+      /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "qb-agent-wrap reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", { className: "qb-agent-col qb-agent-col--left", children: left.map((n) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(Node, { n }, n.title)) }),
+        /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "qb-agent-center", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "qb-agent-node qb-agent-node--vert", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { className: "ic", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconBox, {}) }),
+            /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("span", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("b", { children: "Pricing Engine" }),
+              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { className: "sub", children: "DETERMINISTIC" })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "qb-agent-logo", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(VLogo, { size: 30 }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("div", { className: "qb-agent-node qb-agent-node--vert", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "ic", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(IconDoc, {}) }),
-            /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("span", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("b", { children: "Document Gen" }),
-              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "sub", children: "PDF \xB7 BRANDED" })
+          /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", { className: "qb-agent-logo", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(VLogo, { size: 30 }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "qb-agent-node qb-agent-node--vert", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { className: "ic", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconDoc, {}) }),
+            /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("span", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("b", { children: "Document Gen" }),
+              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { className: "sub", children: "PDF \xB7 BRANDED" })
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "qb-agent-col qb-agent-col--right", children: right.map((n) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Node, { n }, n.title)) })
+        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", { className: "qb-agent-col qb-agent-col--right", children: right.map((n) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(Node, { n }, n.title)) })
       ] })
     ] }) });
   }
 
   // src/sections/quotebase/QuotebaseOutcomes.jsx
-  var import_react58 = __toESM(require_react(), 1);
-  var import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
+  var import_react60 = __toESM(require_react(), 1);
+  var import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
   var outcomes = [
     { tag: "seconds, not minutes", color: "var(--red-500)", title: "Complete quote in seconds", desc: "Turn Salesforce opportunities into finished quotations instantly." },
     { tag: "zero hallucinations", color: "var(--gold-500)", title: "Never invent a price", desc: "Every financial figure comes from deterministic pricing logic." },
@@ -28849,85 +29036,161 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { tag: "first to reply", color: "var(--blue-500)", title: "Faster customer response", desc: "Deliver accurate quotations while competitors are still preparing theirs." }
   ];
   function QuotebaseOutcomes() {
-    return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "loft-problem-head reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("h2", { className: "section-title", style: { textAlign: "left" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)("div", { className: "loft-problem-head reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)("h2", { className: "section-title", style: { textAlign: "left" }, children: [
           "What happens when",
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("br", {}),
           "Quotebase generates",
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("br", {}),
           "your quotes."
         ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "loft-problem-note", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("p", { children: "Manual quoting taxes every deal with minutes and risk. Quotebase was built to remove both." }),
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("a", { href: "#demo", className: "btn btn-primary", children: "Book a Demo" })
+        /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)("div", { className: "loft-problem-note", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("p", { children: "Manual quoting taxes every deal with minutes and risk. Quotebase was built to remove both." }),
+          /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("a", { href: "#demo", className: "btn btn-primary", children: "Book a Demo" })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "loft-problem-grid", children: outcomes.map((o, i) => /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { className: "loft-problem-card reveal", style: { transitionDelay: `${i % 3 * 90}ms` }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", { className: "tag-pill", style: { color: o.color }, dangerouslySetInnerHTML: { __html: o.tag } }),
-        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("h4", { children: o.title }),
-        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("p", { children: o.desc })
+      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { className: "loft-problem-grid", children: outcomes.map((o, i) => /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)("div", { className: "loft-problem-card reveal", style: { transitionDelay: `${i % 3 * 90}ms` }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("span", { className: "tag-pill", style: { color: o.color }, dangerouslySetInnerHTML: { __html: o.tag } }),
+        /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("h4", { children: o.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("p", { children: o.desc })
       ] }, o.title)) })
     ] }) });
   }
 
+  // src/sections/quotebase/QuoteFAQ.jsx
+  var import_react61 = __toESM(require_react(), 1);
+  var import_jsx_runtime59 = __toESM(require_jsx_runtime(), 1);
+  var faqs5 = [
+    {
+      q: "What is Lucrative Quote?",
+      a: "Lucrative Quote is an AI-powered quote and proposal generation platform that automatically converts Salesforce opportunities into accurate, policy-compliant sales quotes. It combines AI-generated content with deterministic pricing, approval workflows, and audit trails to help sales teams generate quotes in seconds."
+    },
+    {
+      q: "How is Lucrative Quote different from traditional CPQ software?",
+      a: "Traditional CPQ solutions often require complex configuration and manual processes. Lucrative Quote combines AI-powered document generation, deterministic pricing, policy validation, approval automation, and CRM integration into one streamlined solution that reduces quoting time and improves accuracy."
+    },
+    {
+      q: "What is deterministic pricing?",
+      a: "Deterministic pricing means every price, discount, tax, and total is calculated using predefined business rules instead of AI-generated estimates. This ensures every quote is mathematically accurate, policy compliant, and consistent across your organization."
+    },
+    {
+      q: "Can Lucrative Quote generate quotes directly from Salesforce?",
+      a: "Yes. Lucrative Quote integrates directly with Salesforce, allowing sales representatives to generate complete quotes from existing opportunities without manually copying customer information, products, or pricing into separate systems."
+    },
+    {
+      q: "How does Lucrative Quote ensure pricing compliance?",
+      a: "Lucrative Quote automatically validates pricing, discounts, taxes, approval thresholds, and business policies before a quote is sent to a customer. Quotes that exceed company rules are automatically flagged for review or approval."
+    },
+    {
+      q: "Does Lucrative Quote support approval workflows?",
+      a: "Yes. Lucrative Quote includes configurable approval workflows with role-based permissions for sales representatives, managers, and administrators. Approval requests are automatically routed according to your organization's pricing and discount policies."
+    },
+    {
+      q: "Does Lucrative Quote maintain an audit trail?",
+      a: "Yes. Every quote, pricing calculation, approval, revision, and customer communication is securely recorded in a tamper-evident audit trail, providing complete visibility and compliance for every transaction."
+    },
+    {
+      q: "Can Lucrative Quote support multiple brands or business units?",
+      a: "Absolutely. Lucrative Quote supports multiple quote templates, branding standards, languages, regions, and business units, allowing organizations to generate professional, consistent proposals across different markets and product lines."
+    },
+    {
+      q: "Who should use Lucrative Quote?",
+      a: "Lucrative Quote is designed for sales teams, revenue operations, finance, and commercial organizations that need to generate accurate quotes faster while maintaining pricing consistency, governance, and compliance across the entire sales process."
+    },
+    {
+      q: "Why do businesses choose Lucrative Quote?",
+      a: "Businesses choose Lucrative Quote because it combines AI-powered quote generation, deterministic pricing, Salesforce integration, policy enforcement, automated approvals, and complete auditability in one platform. This reduces manual work, accelerates sales cycles, improves pricing accuracy, and helps teams close deals with confidence."
+    }
+  ];
+  function FAQ5() {
+    const [open, setOpen] = (0, import_react61.useState)(0);
+    return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("div", { className: "container faq-layout", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("h2", { children: "FAQ's" }),
+        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { className: "sub", children: "Questions? Answered" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "reveal", children: faqs5.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+        "div",
+        {
+          className: `faq-item ${open === i ? "open" : ""}`,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+              "button",
+              {
+                className: "faq-q",
+                onClick: () => setOpen(open === i ? -1 : i),
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("span", { className: "faq-title", children: f.q })
+                ]
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "faq-a", children: f.a })
+          ]
+        },
+        f.q
+      )) })
+    ] }) });
+  }
+
   // src/sections/quotebase/QuotebaseClosingCTA.jsx
-  var import_react59 = __toESM(require_react(), 1);
-  var import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
+  var import_react62 = __toESM(require_react(), 1);
+  var import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
   function IconPadlock2() {
-    return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("svg", { width: "34", height: "34", viewBox: "0 0 24 24", fill: "none", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("rect", { x: "5", y: "11", width: "14", height: "10", rx: "2.5", fill: "var(--gold-500)" }),
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("path", { d: "M8 11V7.5a4 4 0 0 1 8 0V11", stroke: "var(--gold-500)", strokeWidth: "2.4", strokeLinecap: "round" }),
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("circle", { cx: "12", cy: "15.5", r: "1.6", fill: "#fff" })
+    return /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("svg", { width: "34", height: "34", viewBox: "0 0 24 24", fill: "none", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("rect", { x: "5", y: "11", width: "14", height: "10", rx: "2.5", fill: "var(--gold-500)" }),
+      /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("path", { d: "M8 11V7.5a4 4 0 0 1 8 0V11", stroke: "var(--gold-500)", strokeWidth: "2.4", strokeLinecap: "round" }),
+      /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("circle", { cx: "12", cy: "15.5", r: "1.6", fill: "#fff" })
     ] });
   }
   function QuotebaseClosingCTA() {
-    return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "closing-cta reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { style: { position: "relative" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { style: { position: "absolute", top: -6, right: 30, background: "#fff", borderRadius: "50%", width: 46, height: 46, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "var(--shadow-md)" }, children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(IconPadlock2, {}) }),
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
+    return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "closing-cta reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { style: { position: "relative" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("span", { style: { position: "absolute", top: -6, right: 30, background: "#fff", borderRadius: "50%", width: 46, height: 46, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "var(--shadow-md)" }, children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(IconPadlock2, {}) }),
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("h2", { className: "closing-cta-h2", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("h2", { className: "closing-cta-h2", children: [
           "Stop building quotes manually.",
-          /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("br", {}),
           "Start sending trusted quotations in seconds."
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Generate complete, policy-compliant quotes from Salesforce with AI coordination and deterministic pricing your finance team can trust." }),
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", { className: "btns", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("a", { href: "#demo", className: "btn btn-primary", children: "Book a Live Demo" }),
-          /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("a", { href: "#sales", className: "btn btn-outline", children: "Talk to Sales" })
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Generate complete, policy-compliant quotes from Salesforce with AI coordination and deterministic pricing your finance team can trust." }),
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "btns", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("a", { href: "#demo", className: "btn btn-primary", children: "Book a Live Demo" }),
+          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("a", { href: "#sales", className: "btn btn-outline", children: "Talk to Sales" })
         ] })
       ] })
     ] }) }) });
   }
 
   // src/pages/QuotebasePage.jsx
-  var import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime61 = __toESM(require_jsx_runtime(), 1);
   function QuotebasePage() {
     useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(import_jsx_runtime58.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseHero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseVerified, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseChatProblem, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseFeatures, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseMondayTimeline, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseAgentDiagram, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseOutcomes, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(FAQ2, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(QuotebaseClosingCTA, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(Footer, {})
+    return /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(import_jsx_runtime61.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseHero, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseVerified, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseChatProblem, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseFeatures, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseMondayTimeline, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseAgentDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseOutcomes, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(FAQ5, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(QuotebaseClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(Footer, {})
     ] });
   }
 
   // src/pages/StratumPage.jsx
-  var import_react72 = __toESM(require_react(), 1);
+  var import_react75 = __toESM(require_react(), 1);
 
   // src/sections/stratum/StratumHero.jsx
-  var import_react61 = __toESM(require_react(), 1);
-  var import_jsx_runtime59 = __toESM(require_jsx_runtime(), 1);
+  var import_react64 = __toESM(require_react(), 1);
+  var import_jsx_runtime62 = __toESM(require_jsx_runtime(), 1);
   var floatPills2 = [
     { text: "Ask" },
     { text: "Approve", dark: true },
@@ -28940,81 +29203,81 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     "More platforms added regularly"
   ];
   function StratumHero() {
-    return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("section", { className: "hero gov-hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("div", { className: "gov-hero-frame reveal", children: [
-      floatPills2.map((p, index) => /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+    return /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("section", { className: "hero gov-hero", id: "top", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "gov-hero-frame reveal", children: [
+      floatPills2.map((p, index) => /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)(
         "span",
         {
           className: `gov-float-pill pill-${index + 1}${p.dark ? " dark" : ""}`,
           children: [
             p.text,
-            /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("span", { className: "pill-icon", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("span", { className: "spinner" }),
-              /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(IconCheck, { className: "tick" })
+            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("span", { className: "pill-icon", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "spinner" }),
+              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(IconCheck, { className: "tick" })
             ] })
           ]
         },
         p.text
       )),
-      /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("div", { className: "gov-hero-copy", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { className: "eyebrow", style: { fontSize: 13 }, children: "Lucrative Analytics" }),
-        /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("h1", { className: "gov-hero-h1", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("span", { className: "text-blue", children: "Lucrative Analytics" }),
+      /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "gov-hero-copy", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { className: "eyebrow", style: { fontSize: 13 }, children: "Lucrative Analytics" }),
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("h1", { className: "gov-hero-h1", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "text-blue", children: "Lucrative Analytics" }),
           " turn all your business data into instant answers."
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { className: "gov-hero-lead", children: "Connect your marketing, sales, and business platforms in minutes\u2014without technical setup. Ask questions in plain English and get accurate answers, reports, and insights from all your data in one place." }),
-        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "strat-check-grid", children: checklist4.map((c) => /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("span", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(IconCheck, { style: { color: "var(--blue-600)" } }),
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { className: "gov-hero-lead", children: "Connect your marketing, sales, and business platforms in minutes\u2014without technical setup. Ask questions in plain English and get accurate answers, reports, and insights from all your data in one place." }),
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "strat-check-grid", children: checklist4.map((c) => /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("span", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(IconCheck, { style: { color: "var(--blue-600)" } }),
           c
         ] }, c)) }),
-        /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("div", { className: "hero-ctas", style: { justifyContent: "center" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "hero-ctas", style: { justifyContent: "center" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { style: { marginTop: 22, fontSize: 18, color: "var(--text-400)", fontWeight: 400 }, children: "Trusted by 200+ growth teams, from seed to Series C." })
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { marginTop: 22, fontSize: 18, color: "var(--text-400)", fontWeight: 400 }, children: "Trusted by 200+ growth teams, from seed to Series C." })
       ] })
     ] }) }) });
   }
 
   // src/sections/stratum/StratumDashboardShowcase.jsx
-  var import_react62 = __toESM(require_react(), 1);
+  var import_react65 = __toESM(require_react(), 1);
 
   // src/assets/Dashboard-Indigo.png
   var Dashboard_Indigo_default = "assets/img/Dashboard-Indigo-PO3EV5A2.png";
 
   // src/sections/stratum/StratumDashboardShowcase.jsx
-  var import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
   function StratumDashboardShowcase() {
-    return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Every question, annotated." }),
-      /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Stratum doesn\u2019t just answer \u2014 it shows its work. Sources, models, confidence." }),
-      /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "strat-dash-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("img", { src: Dashboard_Indigo_default, alt: "Stratum dashboard", className: "strat-dash-img" }),
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "strat-float-chat", style: { top: "4%", right: "-2%" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Every question, annotated." }),
+      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Stratum doesn\u2019t just answer \u2014 it shows its work. Sources, models, confidence." }),
+      /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-dash-wrap reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("img", { src: Dashboard_Indigo_default, alt: "Stratum dashboard", className: "strat-dash-img" }),
+        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-float-chat", style: { top: "4%", right: "-2%" }, children: [
           "Which campaigns generated enterprise pipeline last month?",
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("time", { children: "10:12 AM \xB7 Monday" })
+          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("time", { children: "10:12 AM \xB7 Monday" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "strat-float-card", style: { bottom: "8%", left: "-4%" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "bar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "top", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("span", { children: "Founder Story" }),
-              /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(CountUp, { to: 412, prefix: "$", suffix: "K" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-float-card", style: { bottom: "8%", left: "-4%" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "bar-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "top", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("span", { children: "Founder Story" }),
+              /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(CountUp, { to: 412, prefix: "$", suffix: "K" }) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { className: "bar-track", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(AnimatedBar, { to: 92 }) })
+            /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "bar-track", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(AnimatedBar, { to: 92 }) })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "bar-row", style: { marginBottom: 0 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "top", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("span", { children: "Field \xB7 NYC" }),
-              /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(CountUp, { to: 286, prefix: "$", suffix: "K" }) })
+          /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "bar-row", style: { marginBottom: 0 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "top", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("span", { children: "Field \xB7 NYC" }),
+              /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(CountUp, { to: 286, prefix: "$", suffix: "K" }) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { className: "bar-track", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(AnimatedBar, { to: 64, delay: 150 }) })
+            /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "bar-track", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(AnimatedBar, { to: 64, delay: 150 }) })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("p", { style: { fontSize: 11, color: "var(--text-400)", marginTop: 10 }, children: "Stratum \xB7 1.8s \xB7 4 sources" })
+          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("p", { style: { fontSize: 11, color: "var(--text-400)", marginTop: 10 }, children: "Stratum \xB7 1.8s \xB7 4 sources" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { className: "strat-float-note", style: { bottom: "-2%", right: "-2%" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("span", { className: "ic", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(IconSparkle, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("b", { children: "Stratum note" }),
-            /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("p", { children: "Founder Story converts 3.1\xD7 at enterprise. Consider doubling spend before Q1 pipeline lock." })
+        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-float-note", style: { bottom: "-2%", right: "-2%" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("span", { className: "ic", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(IconSparkle, {}) }),
+          /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("b", { children: "Stratum note" }),
+            /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("p", { children: "Founder Story converts 3.1\xD7 at enterprise. Consider doubling spend before Q1 pipeline lock." })
           ] })
         ] })
       ] })
@@ -29022,13 +29285,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/stratum/StratumProblem.jsx
-  var import_react63 = __toESM(require_react(), 1);
+  var import_react66 = __toESM(require_react(), 1);
 
   // src/assets/mascot-cloud-bench.png
   var mascot_cloud_bench_default = "assets/img/mascot-cloud-bench-OKV4DZWD.png";
 
   // src/sections/stratum/StratumProblem.jsx
-  var import_jsx_runtime61 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
   var problems4 = [
     "Every report requires someone technical.",
     "Our dashboards show numbers\u2014but not why.",
@@ -29037,55 +29300,55 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     "Hiring a data team isn&rsquo;t realistic."
   ];
   function StratumProblem() {
-    return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "strat-problem-layout", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("h2", { className: "section-title", style: { textAlign: "left", fontSize: "clamp(44px,3vw,38px)", fontWeight: 500 }, children: "Every marketing team eventually runs into the same problems" }),
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 0" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "strat-problem-layout", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("h2", { className: "section-title", style: { textAlign: "left", fontSize: "clamp(44px,3vw,38px)", fontWeight: 500 }, children: "Every marketing team eventually runs into the same problems" }),
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 0" }, children: [
           "Your company has more data than ever before.",
-          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("br", {}),
           "Getting useful answers has never been harder."
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "strat-problem-list", style: { marginTop: 28 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("p", { className: "lead", children: "Our data is everywhere." }),
-          problems4.map((p) => /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("p", { dangerouslySetInnerHTML: { __html: p } }, p))
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "strat-problem-list", style: { marginTop: 28 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { className: "lead", children: "Our data is everywhere." }),
+          problems4.map((p) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { dangerouslySetInnerHTML: { __html: p } }, p))
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "strat-mascot-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("img", { src: mascot_cloud_bench_default, alt: "", className: "floaty", style: { maxWidth: 240 } }) })
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "strat-mascot-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("img", { src: mascot_cloud_bench_default, alt: "", className: "floaty", style: { maxWidth: 240 } }) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "chat-window reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "chat-head", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "ic", children: "S" }),
-          /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("b", { children: "Stratum" }),
-            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("span", { children: "Edit this execution plan with natural language" })
+      /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "chat-window reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "chat-head", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "ic", children: "S" }),
+          /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("b", { children: "Stratum" }),
+            /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("span", { children: "Edit this execution plan with natural language" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "chat-body", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "chat-bubble-user", children: "Compare my Google Ads spend last month against the actual closed-won revenue in HubSpot for those same campaigns. Which campaign had the highest actual ROI?" }),
-          /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "chat-reply", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("span", { className: "tagline", children: "Stratum Connected: HubSpot + Google Ads" }),
-            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { children: "Cross-Platform Performance Analysis (Last Month):" }),
-            /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { style: { marginTop: 6 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "chat-body", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "chat-bubble-user", children: "Compare my Google Ads spend last month against the actual closed-won revenue in HubSpot for those same campaigns. Which campaign had the highest actual ROI?" }),
+          /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "chat-reply", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("span", { className: "tagline", children: "Stratum Connected: HubSpot + Google Ads" }),
+            /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { children: "Cross-Platform Performance Analysis (Last Month):" }),
+            /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { style: { marginTop: 6 }, children: [
               "\u2022 Total Google Ads Spend: $42,500",
-              /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("br", {}),
+              /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("br", {}),
               "\u2022 HubSpot Closed-Won Revenue: $188,000",
-              /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("br", {}),
+              /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("br", {}),
               "\u2022 Overall Blended ROI: 4.42x"
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { style: { marginTop: 8, fontWeight: 700 }, children: "Top Performing Campaign:" }),
-            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { children: "\u201CQ2 Enterprise Search - Competitor Alt\u201D \xB7 Google Ads Spend: $8,200 (24,100 Clicks) \xB7 HubSpot Deals Created: 18 SQLs \xB7 HubSpot Closed-Won: $56,000 (3 Deals) \xB7 Campaign ROI: 6.83x" })
+            /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { style: { marginTop: 8, fontWeight: 700 }, children: "Top Performing Campaign:" }),
+            /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { children: "\u201CQ2 Enterprise Search - Competitor Alt\u201D \xB7 Google Ads Spend: $8,200 (24,100 Clicks) \xB7 HubSpot Deals Created: 18 SQLs \xB7 HubSpot Closed-Won: $56,000 (3 Deals) \xB7 Campaign ROI: 6.83x" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { className: "chat-input", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "chat-input", children: [
           "Ask me anything ",
-          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(IconSend, { style: { marginLeft: "auto", color: "var(--teal-600)" } })
+          /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(IconSend, { style: { marginLeft: "auto", color: "var(--teal-600)" } })
         ] })
       ] })
     ] }) }) });
   }
 
   // src/sections/stratum/StratumFeatureGrid.jsx
-  var import_react64 = __toESM(require_react(), 1);
-  var import_jsx_runtime62 = __toESM(require_jsx_runtime(), 1);
+  var import_react67 = __toESM(require_react(), 1);
+  var import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
   var integrations = ["HubSpot", "Salesforce", "Snowflake", "Amazon Redshift", "Marketo", "Google Ads", "Google Analytics 4", "Meta Ads", "LinkedIn Ads", "Mailchimp", "Klaviyo", "Pardot", "Marketing Cloud", "GoHighLevel"];
   var questions = ["Which campaign generated the highest close rate?", "Show deals stuck over 30 days.", "What changed this week?"];
   var attribution = [
@@ -29094,93 +29357,93 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { label: "Email nurture", to: 18 }
   ];
   function StratumFeatureGrid() {
-    return /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Everything you need to understand your revenue" }),
-      /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Stratum doesn\u2019t just answer \u2014 it shows its work. Sources, models, confidence." }),
-      /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-grid reveal", style: { marginTop: 48 }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-card section--light-grey", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { children: "Connect everything" }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Your GTM data automatically becomes readable\u2014with owners, pipelines, stage history, and relationships already resolved. No cryptic IDs. No manual modeling." }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "cap-pills", children: integrations.map((i) => /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "cap-pill", children: i }, i)) })
+    return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Everything you need to understand your revenue" }),
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Stratum doesn\u2019t just answer \u2014 it shows its work. Sources, models, confidence." }),
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-grid reveal", style: { marginTop: 48 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-card section--light-grey", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: "Connect everything" }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Your GTM data automatically becomes readable\u2014with owners, pipelines, stage history, and relationships already resolved. No cryptic IDs. No manual modeling." }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "cap-pills", children: integrations.map((i) => /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "cap-pill", children: i }, i)) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-card section--light-grey", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { children: "Ask your data anything" }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Type questions naturally. HDQ (Humanized Data Querying) returns answers instantly." }),
-          questions.map((q) => /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-input-mock", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("span", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-card section--light-grey", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: "Ask your data anything" }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Type questions naturally. HDQ (Humanized Data Querying) returns answers instantly." }),
+          questions.map((q) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-input-mock", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("span", { children: [
               "\u201C",
               q,
               "\u201D"
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(IconSend, {})
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(IconSend, {})
           ] }, q))
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-card section--light-grey", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { children: "Build dashboards from a sentence" }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65 }, children: "Describe what you want. Stratum builds the dashboard automatically. No widgets. No drag-and-drop. No configuration." }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-input-mock", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { children: "Pipeline by owner" }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(IconSend, {})
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-card section--light-grey", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: "Build dashboards from a sentence" }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65 }, children: "Describe what you want. Stratum builds the dashboard automatically. No widgets. No drag-and-drop. No configuration." }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-input-mock", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: "Pipeline by owner" }),
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(IconSend, {})
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-stat-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-stat-box", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "lbl", children: "Pipeline" }),
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(CountUp, { to: 2.4, decimals: 1, prefix: "$", suffix: "M" }) })
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-stat-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-stat-box", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "lbl", children: "Pipeline" }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(CountUp, { to: 2.4, decimals: 1, prefix: "$", suffix: "M" }) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-stat-box", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "lbl", children: "Contacts Analyzed" }),
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(CountUp, { to: 15.2, decimals: 1, suffix: "k" }) })
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-stat-box", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "lbl", children: "Contacts Analyzed" }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(CountUp, { to: 15.2, decimals: 1, suffix: "k" }) })
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-card section--light-grey", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { children: "Attribution that learns" }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Traditional attribution guesses. Stratum learns. Markov and Shapley models\u2014alongside every major-touch model\u2014discover what truly influences revenue across your customer journeys." }),
-          attribution.map((a) => /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "gov-bar-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "gov-bar-top", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { children: a.label }),
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(CountUp, { to: a.to, suffix: "%" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-card section--light-grey", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: "Attribution that learns" }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Traditional attribution guesses. Stratum learns. Markov and Shapley models\u2014alongside every major-touch model\u2014discover what truly influences revenue across your customer journeys." }),
+          attribution.map((a) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "gov-bar-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "gov-bar-top", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: a.label }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("b", { children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(CountUp, { to: a.to, suffix: "%" }) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "gov-bar", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(AnimatedBar, { to: a.to }) })
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "gov-bar", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(AnimatedBar, { to: a.to }) })
           ] }, a.label))
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-card section--light-grey", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { children: "AI GTM Analyst" }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Every dashboard answers \u201Cwhat happened?\u201D The AI Analyst answers \u201CWhat should we do next?\u201D Ranked recommendations, confidence scores, and actionable opportunities\u2014automatically." }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-input-mock", style: { alignItems: "flex-start" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { children: "Shift 15% of paid budget towards webinar promotion \u2014 projected + $120k pipeline" }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-600)", margin: 0, flexShrink: 0 }, children: "High confidence" })
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-card section--light-grey", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: "AI GTM Analyst" }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Every dashboard answers \u201Cwhat happened?\u201D The AI Analyst answers \u201CWhat should we do next?\u201D Ranked recommendations, confidence scores, and actionable opportunities\u2014automatically." }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-input-mock", style: { alignItems: "flex-start" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: "Shift 15% of paid budget towards webinar promotion \u2014 projected + $120k pipeline" }),
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-600)", margin: 0, flexShrink: 0 }, children: "High confidence" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-input-mock", style: { alignItems: "flex-start" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { children: "Enterprise deals stall at legal review \u2014 add a mid-stage touchpoint." }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-600)", margin: 0, flexShrink: 0 }, children: "Review" })
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-input-mock", style: { alignItems: "flex-start" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: "Enterprise deals stall at legal review \u2014 add a mid-stage touchpoint." }),
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-600)", margin: 0, flexShrink: 0 }, children: "Review" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-card section--light-grey", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { children: "Prove your strategy" }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Run holdout experiments without SQL. Compare two groups. Measure lift. Validate marketing investments with statistical confidence." }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-stat-row", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-stat-box", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "lbl", children: "Holdout" }),
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(CountUp, { to: 4.1, decimals: 1, suffix: "%" }) }),
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "lbl", style: { marginTop: 4 }, children: "Conversions" })
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-card section--light-grey", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: "Prove your strategy" }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400, lineHeight: 1.65, marginBottom: 16 }, children: "Run holdout experiments without SQL. Compare two groups. Measure lift. Validate marketing investments with statistical confidence." }),
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-stat-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-stat-box", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "lbl", children: "Holdout" }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(CountUp, { to: 4.1, decimals: 1, suffix: "%" }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "lbl", style: { marginTop: 4 }, children: "Conversions" })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "strat-stat-box", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "lbl", children: "Exposed" }),
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(CountUp, { to: 4.9, decimals: 1, suffix: "%" }) }),
-              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { className: "lbl", style: { marginTop: 4 }, children: "Conversions" })
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "strat-stat-box", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "lbl", children: "Exposed" }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "val", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(CountUp, { to: 4.9, decimals: 1, suffix: "%" }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "lbl", style: { marginTop: 4 }, children: "Conversions" })
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-card section--light-grey", style: { gridColumn: "1 / -1", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { style: { marginBottom: 6 }, children: "Built for marketers \u2014 not analysts" }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400 }, children: "Just connect, ask, understand, and improve" })
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-card section--light-grey", style: { gridColumn: "1 / -1", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { style: { marginBottom: 6 }, children: "Built for marketers \u2014 not analysts" }),
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { style: { color: "var(--text-600)", fontSize: 15.5, fontWeight: 400 }, children: "Just connect, ask, understand, and improve" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", { className: "cap-pills", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "cap-pill strat-pill-strike", children: "SQL" }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "cap-pill strat-pill-strike", children: "Data warehouse" }),
-            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("span", { className: "cap-pill strat-pill-strike", children: "ETL project" })
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "cap-pills", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "cap-pill strat-pill-strike", children: "SQL" }),
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "cap-pill strat-pill-strike", children: "Data warehouse" }),
+            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "cap-pill strat-pill-strike", children: "ETL project" })
           ] })
         ] })
       ] })
@@ -29188,8 +29451,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/stratum/StratumMondayTimeline.jsx
-  var import_react65 = __toESM(require_react(), 1);
-  var import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
+  var import_react68 = __toESM(require_react(), 1);
+  var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
   var times = ["9:00", "9:30", "11:00", "2:00", "5:00"];
   var oldWay2 = [
     "&ldquo;Why did pipeline dip?&rdquo; &mdash; files a ticket with RevOps. Position in queue: 7.",
@@ -29206,8 +29469,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     "Budget already shifted. Retest scheduled. Logs off."
   ];
   function StratumMondayTimeline() {
-    return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("section", { className: "section section--grey section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
         "h2",
         {
           className: "section-title reveal",
@@ -29215,7 +29478,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           children: "Two ways to run a Monday."
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
         "p",
         {
           className: "section-sub reveal",
@@ -29223,18 +29486,18 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           children: "You\u2019re already doing one of them. The other is Stratum."
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-timeline-wrap reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-timeline-header left", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("p", { className: "strat-timeline-eyebrow", children: "The old way" }),
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("h3", { className: "strat-timeline-heading", children: "Dashboards & tickets" })
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-timeline-wrap reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-timeline-header left", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { className: "strat-timeline-eyebrow", children: "The old way" }),
+          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h3", { className: "strat-timeline-heading", children: "Dashboards & tickets" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "strat-timeline-header-center" }),
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-timeline-header right", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("p", { className: "strat-timeline-eyebrow", children: "The Stratum way" }),
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("h3", { className: "strat-timeline-heading", children: "Ask, understand, prove" })
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "strat-timeline-header-center" }),
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-timeline-header right", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { className: "strat-timeline-eyebrow", children: "The Stratum way" }),
+          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h3", { className: "strat-timeline-heading", children: "Ask, understand, prove" })
         ] }),
-        oldWay2.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(import_react65.default.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+        oldWay2.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(import_react68.default.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
             "div",
             {
               className: "strat-timeline-card",
@@ -29242,8 +29505,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               dangerouslySetInnerHTML: { __html: t }
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "strat-timeline-time", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("span", { className: "strat-timeline-dot", children: times[i] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "strat-timeline-time", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "strat-timeline-dot", children: times[i] }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
             "div",
             {
               className: "strat-timeline-card dark",
@@ -29254,9 +29517,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           )
         ] }, i))
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", { className: "strat-timeline-foot", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("span", { className: "strat-footer-pending", children: "Answer: pending" }),
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-timeline-foot", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "strat-footer-pending", children: "Answer: pending" }),
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
           "img",
           {
             src: persona_flower_default,
@@ -29264,30 +29527,30 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             className: "strat-footer-flower"
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("span", { className: "strat-footer-win", children: "Answered, proven, shipped \u2014 same Monday" })
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "strat-footer-win", children: "Answered, proven, shipped \u2014 same Monday" })
       ] })
     ] }) });
   }
 
   // src/sections/stratum/StratumIntegrationsHub.jsx
-  var import_react66 = __toESM(require_react(), 1);
+  var import_react69 = __toESM(require_react(), 1);
 
   // src/assets/deco-integrations-hub.png
   var deco_integrations_hub_default = "assets/img/deco-integrations-hub-NFX3BCYK.png";
 
   // src/sections/stratum/StratumIntegrationsHub.jsx
-  var import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
   function StratumIntegrationsHub() {
-    return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("section", { className: "section section--navy section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Two ways to run a Monday." }),
-      /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center", color: "rgba(255,255,255,.7)" }, children: "You\u2019re already doing one of them. The other is Stratum." }),
-      /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "strat-hub-wrap reveal", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("img", { src: deco_integrations_hub_default, alt: "Stratum connects HubSpot, Meta, Salesforce, Google Analytics, LinkedIn, and Google Ads" }) })
+    return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("section", { className: "section section--navy section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "Two ways to run a Monday." }),
+      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center", color: "rgba(255,255,255,.7)" }, children: "You\u2019re already doing one of them. The other is Stratum." }),
+      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("div", { className: "strat-hub-wrap reveal", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("img", { src: deco_integrations_hub_default, alt: "Stratum connects HubSpot, Meta, Salesforce, Google Analytics, LinkedIn, and Google Ads" }) })
     ] }) });
   }
 
   // src/sections/stratum/StratumPersonas.jsx
-  var import_react67 = __toESM(require_react(), 1);
-  var import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
+  var import_react70 = __toESM(require_react(), 1);
+  var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
   var personas4 = [
     {
       key: "Marketing",
@@ -29470,10 +29733,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
   ];
   function StratumPersonas() {
-    const [active, setActive] = (0, import_react67.useState)(0);
+    const [active, setActive] = (0, import_react70.useState)(0);
     const p = personas4[active];
-    return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
         "p",
         {
           className: "eyebrow",
@@ -29485,16 +29748,16 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           children: "Whose Monday gets better?"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h2", { className: "section-title", children: "Four seats. Same table." }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { className: "section-sub", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "persona-tabs", children: personas4.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("h2", { className: "section-title", children: "Four seats. Same table." }),
+      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("p", { className: "section-sub", children: "Pick who sounds like your Monday \u2014 see the first thing they\u2019d see." }),
+      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "persona-tabs", children: personas4.map((per, i) => /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(
         "button",
         {
           type: "button",
           className: `persona-tab ${i === active ? "active" : ""}`,
           onClick: () => setActive(i),
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
               "img",
               {
                 src: per.avatar,
@@ -29506,21 +29769,21 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         },
         per.key
       )) }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(
         "div",
         {
           className: "persona-panel",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "avatar-row", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "avatar-row", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                   "img",
                   {
                     src: p.img,
                     alt: ""
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                   "span",
                   {
                     className: "tag-pill",
@@ -29530,19 +29793,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                     children: p.tag
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("span", { className: "index", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("span", { className: "index", children: [
                   "PERSONA 0",
                   active + 1,
                   "/04"
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("h3", { children: p.title }),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { children: p.desc }),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "persona-quote", children: p.quote })
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("h3", { children: p.title }),
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("p", { children: p.desc }),
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "persona-quote", children: p.quote })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "pipeline-card", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "top", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "pipeline-card", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "top", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                   "span",
                   {
                     style: {
@@ -29554,8 +29817,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                     children: p.card.label
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("span", { className: "dots", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("span", { className: "dots", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                     "span",
                     {
                       style: {
@@ -29563,7 +29826,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       }
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                     "span",
                     {
                       style: {
@@ -29571,7 +29834,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       }
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                     "span",
                     {
                       style: {
@@ -29581,7 +29844,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   )
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "amount", children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                 CountUp,
                 {
                   to: p.card.amount.to,
@@ -29591,14 +29854,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   comma: p.card.amount.comma
                 }
               ) }),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "sub", children: p.card.sub }),
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "sub", children: p.card.sub }),
               p.card.rows.map(
-                ([label, color, val, fallback]) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
+                ([label, color, val, fallback]) => /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(
                   "div",
                   {
                     className: "pipeline-row",
                     children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                         "span",
                         {
                           className: "ic",
@@ -29608,8 +29871,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                           children: "\u2022"
                         }
                       ),
-                      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: label }),
-                      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("span", { children: label }),
+                      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("span", { className: "right", children: val ? /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                         CountUp,
                         {
                           to: val.to,
@@ -29624,8 +29887,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   label
                 )
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "pipeline-foot", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("b", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "pipeline-foot", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("b", { children: [
                   p.card.foot.split(".")[0],
                   "."
                 ] }),
@@ -29641,8 +29904,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/stratum/StratumWhatChanges.jsx
-  var import_react68 = __toESM(require_react(), 1);
-  var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
+  var import_react71 = __toESM(require_react(), 1);
+  var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
   var attribution2 = [
     { label: "Markov", color: "var(--navy-900)", to: 92, value: "$412K" },
     { label: "Shapley", color: "var(--blue-600)", to: 83, value: "$374K" },
@@ -29651,103 +29914,103 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var bars = [40, 45, 68, 45, 100];
   var barColor = (i) => i === bars.length - 1 ? "var(--navy-900)" : i % 2 === 0 ? "#A3C8FA" : "#4E8AD7";
   function StratumWhatChanges() {
-    return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "What changes when your data can talk." }),
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Five things you stop waiting for \u2014 starting the day you connect." }),
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-changes-top reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-preview tint-blue", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "chat-bubble-user", style: { fontSize: 11.5, marginBottom: 8 }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("section", { className: "section section--grey", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "container", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("h2", { className: "section-title reveal", style: { textAlign: "center" }, children: "What changes when your data can talk." }),
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { className: "section-sub reveal", style: { textAlign: "center" }, children: "Five things you stop waiting for \u2014 starting the day you connect." }),
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-changes-top reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-preview tint-blue", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "chat-bubble-user", style: { fontSize: 11.5, marginBottom: 8 }, children: [
               "Why did MQLs dip last month?",
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { style: { opacity: 0.6, fontSize: 9.5, marginTop: 3 }, children: "10:00 EST" })
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { style: { opacity: 0.6, fontSize: 9.5, marginTop: 3 }, children: "10:00 EST" })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "chat-reply", style: { fontSize: 11.5 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "chat-reply", style: { fontSize: 11.5 }, children: [
               "Two paused campaigns and a form change on Jul 2. Breakdown below \u2014",
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { style: { opacity: 0.55, fontSize: 9.5, marginTop: 4 }, children: "Answered in 1.8s \xB7 4 sources \xB7 10:00 EST" })
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { style: { opacity: 0.55, fontSize: 9.5, marginTop: 4 }, children: "Answered in 1.8s \xB7 4 sources \xB7 10:00 EST" })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-500)" }, children: "Self-service analytics" }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h4", { children: "Stop waiting for reports. Start asking questions." }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "cap-pills", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "No SQL" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "Answers in seconds" })
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-500)" }, children: "Self-service analytics" }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("h4", { children: "Stop waiting for reports. Start asking questions." }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "cap-pills", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "No SQL" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "Answers in seconds" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-preview tint-gold", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { style: { fontSize: 10.5, fontWeight: 800, letterSpacing: ".06em", color: "var(--text-400)", marginBottom: 8 }, children: "WHAT STRATUM ALREADY KNOWS" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "chat-checklist", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "row", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "check", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(IconCheck, {}) }),
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { children: "Your funnel: MQL \u2192 SQL \u2192 Proposal \u2192 Won" })
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-preview tint-gold", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { style: { fontSize: 10.5, fontWeight: 800, letterSpacing: ".06em", color: "var(--text-400)", marginBottom: 8 }, children: "WHAT STRATUM ALREADY KNOWS" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "chat-checklist", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "row", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "check", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(IconCheck, {}) }),
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { children: "Your funnel: MQL \u2192 SQL \u2192 Proposal \u2192 Won" })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "row", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "check", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(IconCheck, {}) }),
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { children: "\u201CEnterprise\u201D = deals over $50K" })
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "row", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "check", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(IconCheck, {}) }),
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { children: "\u201CEnterprise\u201D = deals over $50K" })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "row", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "check", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(IconCheck, {}) }),
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { children: "\u201CPipeline\u201D = open deals, stage-weighted" })
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "row", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "check", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(IconCheck, {}) }),
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { children: "\u201CPipeline\u201D = open deals, stage-weighted" })
               ] })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-500)" }, children: "AI that understands revenue" }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h4", { children: "Not another chatbot. An analyst trained on your business." }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "cap-pills", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "Semantic layer" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "Your funnel, resolved" })
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "tag-pill", style: { color: "var(--gold-500)" }, children: "AI that understands revenue" }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("h4", { children: "Not another chatbot. An analyst trained on your business." }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "cap-pills", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "Semantic layer" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "Your funnel, resolved" })
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-changes-bottom reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-preview tint-teal", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { style: { fontSize: 10.5, fontWeight: 800, letterSpacing: ".06em", color: "var(--text-400)", marginBottom: 10 }, children: "CREDITED REVENUE \xB7 BY MODEL" }),
-            attribution2.map((a, i) => /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "gov-bar-row", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "gov-bar-top", style: { fontSize: 12.5 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { children: a.label }),
-                /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("b", { style: { fontSize: 13 }, children: a.value })
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-changes-bottom reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-preview tint-teal", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { style: { fontSize: 10.5, fontWeight: 800, letterSpacing: ".06em", color: "var(--text-400)", marginBottom: 10 }, children: "CREDITED REVENUE \xB7 BY MODEL" }),
+            attribution2.map((a, i) => /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "gov-bar-row", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "gov-bar-top", style: { fontSize: 12.5 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { children: a.label }),
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("b", { style: { fontSize: 13 }, children: a.value })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "gov-bar", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(AnimatedBar, { to: a.to, delay: i * 150, style: { background: a.color } }) })
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "gov-bar", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(AnimatedBar, { to: a.to, delay: i * 150, style: { background: a.color } }) })
             ] }, a.label))
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)" }, children: "Attribution you can trust" }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h4", { children: "Move beyond first-touch and last-touch." }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "cap-pills", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "Markov + Shapley" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "8 models, one view" })
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "tag-pill", style: { color: "var(--teal-500)" }, children: "Attribution you can trust" }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("h4", { children: "Move beyond first-touch and last-touch." }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "cap-pills", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "Markov + Shapley" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "8 models, one view" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "strat-mini-preview tint-red", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-holdout-box", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { className: "strat-holdout-tag", children: "NURTURE SEQUENCE \xB7 HOLDOUT" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "strat-holdout-lift", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(CountUp, { to: 18, prefix: "+", suffix: "%" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { className: "strat-holdout-sub", children: "lift \xB7 95% confidence" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-holdout-split", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { children: "Treatment \xB7 n=1,240" }),
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { children: "Holdout \xB7 n=1,240" })
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "strat-mini-preview tint-red", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-holdout-box", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { className: "strat-holdout-tag", children: "NURTURE SEQUENCE \xB7 HOLDOUT" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "strat-holdout-lift", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(CountUp, { to: 18, prefix: "+", suffix: "%" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { className: "strat-holdout-sub", children: "lift \xB7 95% confidence" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-holdout-split", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { children: "Treatment \xB7 n=1,240" }),
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { children: "Holdout \xB7 n=1,240" })
             ] })
           ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "tag-pill", style: { color: "var(--red-500)" }, children: "Experiments built in" }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h4", { children: "Know what works. Stop guessing." }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "cap-pills", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "Randomized holdouts" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "95% confidence" })
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "tag-pill", style: { color: "var(--red-500)" }, children: "Experiments built in" }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("h4", { children: "Know what works. Stop guessing." }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "cap-pills", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "Randomized holdouts" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "95% confidence" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "strat-mini-preview tint-grey", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "ph-pipeline-top", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { children: "Q4 PIPELINE" }),
-              /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "ph-live", children: "\u25CF LIVE" })
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "strat-mini-preview tint-grey", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "ph-pipeline-top", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { children: "Q4 PIPELINE" }),
+              /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "ph-live", children: "\u25CF LIVE" })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "ph-bars", children: bars.map((h, i) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(AnimatedVerticalBar, { to: h, className: "ph-bar", style: { background: barColor(i) }, delay: i * 80 }, i)) })
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "ph-bars", children: bars.map((h, i) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(AnimatedVerticalBar, { to: h, className: "ph-bar", style: { background: barColor(i) }, delay: i * 80 }, i)) })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-500)" }, children: "Attribution you can trust" }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("h4", { children: "Describe it once. Stratum creates it." }),
-          /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "cap-pills", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "Prompt to dashboard" }),
-            /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("span", { className: "cap-pill", children: "Always live" })
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "tag-pill", style: { color: "var(--blue-500)" }, children: "Attribution you can trust" }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("h4", { children: "Describe it once. Stratum creates it." }),
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "cap-pills", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "Prompt to dashboard" }),
+            /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "cap-pill", children: "Always live" })
           ] })
         ] })
       ] })
@@ -29755,80 +30018,100 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/stratum/StratumWhyChoose.jsx
-  var import_react69 = __toESM(require_react(), 1);
+  var import_react72 = __toESM(require_react(), 1);
 
   // src/assets/deco-tag-cloud.png
   var deco_tag_cloud_default = "assets/img/deco-tag-cloud-7BAHQ63K.png";
 
   // src/sections/stratum/StratumWhyChoose.jsx
-  var import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
   function StratumWhyChoose() {
-    return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("div", { className: "strat-why-wrap reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("h2", { className: "section-title", style: { textAlign: "left", fontSize: "clamp(30px,3vw,36px)" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("section", { className: "section", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)("div", { className: "strat-why-wrap reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)("h2", { className: "section-title", style: { textAlign: "left", fontSize: "clamp(30px,3vw,36px)" }, children: [
           "Why companies",
-          /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("br", {}),
           "choose Stratum."
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 26px" }, children: "Ten reasons, no asterisks. If your team has questions and your data has answers, this is the shortest path between the two." }),
-        /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("div", { className: "hero-ctas", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
+        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("p", { className: "section-sub", style: { textAlign: "left", margin: "14px 0 26px" }, children: "Ten reasons, no asterisks. If your team has questions and your data has answers, this is the shortest path between the two." }),
+        /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)("div", { className: "hero-ctas", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("a", { href: "#video", className: "btn btn-outline", children: "Watch the video" })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("div", { className: "strat-why-cloud", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("img", { src: deco_tag_cloud_default, alt: "" }) })
+      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { className: "strat-why-cloud", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("img", { src: deco_tag_cloud_default, alt: "" }) })
     ] }) }) });
   }
 
   // src/sections/stratum/StratumFAQ.jsx
-  var import_react70 = __toESM(require_react(), 1);
-  var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
-  var faqs3 = [
+  var import_react73 = __toESM(require_react(), 1);
+  var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
+  var faqs6 = [
     {
-      q: "Is Stratum another BI dashboard?",
-      a: "No. Dashboards are only one part of Stratum. The platform combines AI analytics, attribution, experimentation, and conversational querying to help you understand not just what happened, but why\u2014and what to do next."
+      q: "What is Lucrative Analytics?",
+      a: "Lucrative Analytics is an AI-powered business intelligence platform that connects your sales, marketing, CRM, and business systems into one analytics workspace. It allows you to ask questions in plain English and instantly receive reports, dashboards, forecasts, and actionable insights without technical expertise."
     },
     {
-      q: "Do I need SQL or a data analyst?",
-      a: "No. Stratum is built for marketers and revenue teams, not analysts. Ask questions in plain English and Stratum handles the querying, joins, and modeling behind the scenes."
+      q: "How is Lucrative Analytics different from traditional business intelligence tools?",
+      a: "Traditional BI platforms require dashboards, SQL queries, and technical specialists to build reports. Lucrative Analytics lets anyone ask questions in natural language, automatically creates dashboards, explains business trends, and recommends actions based on your data."
     },
     {
-      q: "How is Stratum different from HubSpot reporting?",
-      a: "Native CRM reporting only sees what happens inside that one platform. Stratum connects every source \u2014 CRM, ad platforms, data warehouses \u2014 into one resolved data model, so you get cross-platform answers instead of single-tool snapshots."
+      q: "Which platforms can Lucrative Analytics connect to?",
+      a: "Lucrative Analytics integrates with leading CRM, marketing, advertising, and data platforms, including Salesforce, HubSpot, Google Analytics, Google Ads, Meta Ads, LinkedIn Ads, Mailchimp, Marketo, Snowflake, Amazon Redshift, and many other business applications."
     },
     {
-      q: "How trustworthy is the attribution?",
-      a: "Stratum runs multiple attribution models side by side \u2014 including Markov chain and Shapley value models \u2014 instead of relying on first-touch or last-touch alone, and backs every recommendation with randomized holdout experiments you can validate statistically."
+      q: "Can I create reports without SQL or coding?",
+      a: "Yes. Lucrative Analytics is designed for business users, not data analysts. Simply ask questions in plain English, and the platform automatically generates reports, dashboards, charts, and insights without requiring SQL, coding, or a data warehouse."
     },
     {
-      q: "Is AI included?",
-      a: "Yes. The AI GTM Analyst is included on every plan \u2014 it surfaces ranked recommendations with confidence scores automatically, on top of the natural-language querying and dashboard generation."
+      q: "How does AI help with business analytics?",
+      a: "Lucrative Analytics uses AI to analyze your connected business data, identify trends, explain why performance changed, uncover revenue opportunities, recommend next actions, and generate executive-ready insights that support faster decision-making."
+    },
+    {
+      q: "Does Lucrative Analytics support marketing attribution?",
+      a: "Yes. Lucrative Analytics supports advanced attribution models, including first-touch, last-touch, multi-touch, Markov, and Shapley attribution. This helps businesses understand which marketing activities truly influence pipeline, revenue, and customer acquisition."
+    },
+    {
+      q: "Can Lucrative Analytics automatically build dashboards?",
+      a: "Absolutely. Instead of manually configuring charts and widgets, you simply describe the dashboard you need in natural language. Lucrative Analytics automatically builds interactive dashboards that stay updated as your business data changes."
+    },
+    {
+      q: "Who is Lucrative Analytics designed for?",
+      a: "Lucrative Analytics is built for marketing teams, sales leaders, Revenue Operations, executives, founders, agencies, and business analysts who need faster answers, reliable reporting, and complete visibility into business performance without relying on technical teams."
+    },
+    {
+      q: "Can Lucrative Analytics help improve business decisions?",
+      a: "Yes. Lucrative Analytics goes beyond reporting by identifying trends, highlighting risks, measuring campaign performance, forecasting revenue, validating marketing investments, and recommending actions that help teams improve business outcomes with confidence."
+    },
+    {
+      q: "Why should businesses choose Lucrative Analytics?",
+      a: "Businesses choose Lucrative Analytics because it combines AI-powered business intelligence, conversational analytics, automated dashboard creation, advanced attribution, forecasting, and cross-platform reporting in one solution. Instead of waiting days for reports, teams get accurate answers and actionable insights in seconds."
     }
   ];
-  function FAQ3() {
-    const [open, setOpen] = (0, import_react70.useState)(0);
-    return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "container faq-layout", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "reveal", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("h2", { children: "FAQ's" }),
-        /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("p", { className: "sub", children: "Questions? Answered" })
+  function FAQ6() {
+    const [open, setOpen] = (0, import_react73.useState)(0);
+    return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("section", { className: "section section--grey", id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "container faq-layout", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "reveal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("h2", { children: "FAQ's" }),
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("p", { className: "sub", children: "Questions? Answered" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "reveal", children: faqs3.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "reveal", children: faqs6.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(
         "div",
         {
           className: `faq-item ${open === i ? "open" : ""}`,
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(
+            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(
               "button",
               {
                 className: "faq-q",
                 onClick: () => setOpen(open === i ? -1 : i),
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("span", { className: "faq-title", children: f.q })
+                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { className: "icon", children: open === i ? "\u2212" : "+" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { className: "faq-title", children: f.q })
                 ]
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "faq-a", children: f.a })
+            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "faq-a", children: f.a })
           ]
         },
         f.q
@@ -29837,50 +30120,50 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/sections/stratum/StratumClosingCTA.jsx
-  var import_react71 = __toESM(require_react(), 1);
-  var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
+  var import_react74 = __toESM(require_react(), 1);
+  var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
   function StratumClosingCTA() {
-    return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "closing-cta reveal", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { style: { position: "relative" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("img", { src: icon_padlock_default, alt: "", style: { position: "absolute", width: 46, top: -6, right: 30 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
+    return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { className: "section--tight", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "closing-cta reveal", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { position: "relative" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: mascot_flower_laptop_default, alt: "", className: "floaty" }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: icon_padlock_default, alt: "", style: { position: "absolute", width: 46, top: -6, right: 30 } }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: deco_sparkles_default, alt: "", style: { position: "absolute", width: 60, top: -30, left: -10, opacity: 0.9 } })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("h2", { className: "closing-cta-h2", children: "Stop waiting for reports. Start asking your data questions." }),
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Stratum gives every marketing and revenue team the power of an analyst\u2014without hiring one." }),
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "btns", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
-          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { className: "closing-cta-h2", children: "Stop waiting for reports. Start asking your data questions." }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { marginTop: 14, color: "var(--text-600)", fontSize: 17 }, children: "Stratum gives every marketing and revenue team the power of an analyst\u2014without hiring one." }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "btns", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#audit", className: "btn btn-primary", children: "Start free audit" }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo", className: "btn btn-outline", children: "Book a Demo" })
         ] })
       ] })
     ] }) }) });
   }
 
   // src/pages/StratumPage.jsx
-  var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
   function StratumPage() {
     useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(import_jsx_runtime70.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumHero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumDashboardShowcase, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumProblem, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumFeatureGrid, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumMondayTimeline, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumIntegrationsHub, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumPersonas, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumWhatChanges, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumWhyChoose, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(FAQ3, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(StratumClosingCTA, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Footer, {})
+    return /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)(import_jsx_runtime73.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumHero, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumDashboardShowcase, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumProblem, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumFeatureGrid, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumMondayTimeline, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumIntegrationsHub, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumPersonas, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumWhatChanges, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumWhyChoose, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(FAQ6, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(StratumClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Footer, {})
     ] });
   }
 
   // src/pages/PricingPage.jsx
-  var import_react73 = __toESM(require_react(), 1);
-  var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
+  var import_react76 = __toESM(require_react(), 1);
+  var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
   var CONTACT_TIERS = [
     { n: 5e3, base: 99, name: "Starter Plan" },
     { n: 15e3, base: 199, name: "Growth Plan" },
@@ -30059,8 +30342,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return n.toString();
   }
   function useRevealRoot() {
-    const rootRef = (0, import_react73.useRef)(null);
-    (0, import_react73.useEffect)(() => {
+    const rootRef = (0, import_react76.useRef)(null);
+    (0, import_react76.useEffect)(() => {
       const root = rootRef.current;
       if (!root) return;
       const els = root.querySelectorAll(".lc-reveal");
@@ -30087,29 +30370,29 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   function MatrixCell({ cell }) {
     if (!cell) return null;
     if (cell.kind === "check") {
-      return /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8, color: "#3d8b5c", fontWeight: 700, fontSize: 13 }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 22, height: 22, borderRadius: "50%", background: "rgba(109,199,143,0.18)", flexShrink: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "#3d8b5c", strokeWidth: "3.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("path", { d: "M20 6L9 17l-5-5" }) }) }),
+      return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8, color: "#3d8b5c", fontWeight: 700, fontSize: 13 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 22, height: 22, borderRadius: "50%", background: "rgba(109,199,143,0.18)", flexShrink: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "#3d8b5c", strokeWidth: "3.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("path", { d: "M20 6L9 17l-5-5" }) }) }),
         cell.text
       ] });
     }
     const isBold = cell.color === "blue-bold";
     const color = COLOR_MAP[cell.color || "default"];
-    return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { color, fontWeight: isBold ? 700 : 400, fontSize: isBold ? 17 : 13.5, fontFamily: isBold ? "'Montserrat',sans-serif" : "inherit" }, children: cell.text });
+    return /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { color, fontWeight: isBold ? 700 : 400, fontSize: isBold ? 17 : 13.5, fontFamily: isBold ? "'Montserrat',sans-serif" : "inherit" }, children: cell.text });
   }
   function PricingPage() {
-    const [contactsIdx, setContactsIdx] = (0, import_react73.useState)(0);
-    const [emailsIdx, setEmailsIdx] = (0, import_react73.useState)(0);
-    const [actionsIdx, setActionsIdx] = (0, import_react73.useState)(0);
-    const [seats, setSeats] = (0, import_react73.useState)(5);
+    const [contactsIdx, setContactsIdx] = (0, import_react76.useState)(0);
+    const [emailsIdx, setEmailsIdx] = (0, import_react76.useState)(0);
+    const [actionsIdx, setActionsIdx] = (0, import_react76.useState)(0);
+    const [seats, setSeats] = (0, import_react76.useState)(5);
     function handleContactsChange(value) {
       setContactsIdx(value);
       setEmailsIdx((prev) => Math.max(prev, value));
       setActionsIdx((prev) => Math.max(prev, value));
     }
     const rootRef = useRevealRoot();
-    const matrixSectionRef = (0, import_react73.useRef)(null);
-    const [matrixVisible, setMatrixVisible] = (0, import_react73.useState)(false);
-    (0, import_react73.useEffect)(() => {
+    const matrixSectionRef = (0, import_react76.useRef)(null);
+    const [matrixVisible, setMatrixVisible] = (0, import_react76.useState)(false);
+    (0, import_react76.useEffect)(() => {
       const section = matrixSectionRef.current;
       if (!section) return;
       if (!("IntersectionObserver" in window)) {
@@ -30140,46 +30423,46 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const seatPrice = extraSeats * 5;
     const total = c.base + extendedUsageCost + seatPrice;
     const pct = (val, min, max) => (val - min) / (max - min) * 100;
-    return /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { ref: rootRef, className: "lc-pricing-page", style: { background: "#f6f8fa", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("style", { children: PRICING_CSS }),
-      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("header", { style: { padding: "88px 0 40px", position: "relative", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { maxWidth: 1120, margin: "0 auto", padding: "0 32px", textAlign: "center" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("h1", { className: "lc-hero-title", style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.1, letterSpacing: "-0.03em", color: "#121212" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { ref: rootRef, className: "lc-pricing-page", style: { background: "#f6f8fa", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("style", { children: PRICING_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("header", { style: { padding: "88px 0 40px", position: "relative", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { maxWidth: 1120, margin: "0 auto", padding: "0 32px", textAlign: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("h1", { className: "lc-hero-title", style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.1, letterSpacing: "-0.03em", color: "#121212" }, children: [
           "Build your ",
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { color: "#185fa5" }, children: "custom Lucrative\xA0AI" }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { color: "#185fa5" }, children: "custom Lucrative\xA0AI" }),
           " engine."
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("p", { className: "lc-hero-sub", style: { fontSize: 17, lineHeight: 1.65, color: "#5c5c5c", maxWidth: 640, margin: "24px auto 0" }, children: "AI-Native Pay-As-You-Use architecture. Includes default RevOps consultancy, 1-click system migration, outcome-based conversational CRM building, and 100% pre-validated email deliverability." }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "lc-hero-badges", style: { display: "inline-flex", alignItems: "center", gap: 28, marginTop: 28, flexWrap: "wrap", justifyContent: "center", fontSize: 13, color: "#5c5c5c", fontWeight: 600 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("p", { className: "lc-hero-sub", style: { fontSize: 17, lineHeight: 1.65, color: "#5c5c5c", maxWidth: 640, margin: "24px auto 0" }, children: "AI-Native Pay-As-You-Use architecture. Includes default RevOps consultancy, 1-click system migration, outcome-based conversational CRM building, and 100% pre-validated email deliverability." }),
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-hero-badges", style: { display: "inline-flex", alignItems: "center", gap: 28, marginTop: 28, flexWrap: "wrap", justifyContent: "center", fontSize: 13, color: "#5c5c5c", fontWeight: 600 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
             "AI-Native RevOps Engine"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
             "$99 Baseline"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 8 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
             "Zero Seat Tax"
           ] })
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("section", { id: "configurator", style: { padding: "40px 0 96px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 28, alignItems: "stretch" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "lc-reveal", style: { background: "#fff", borderRadius: 22, boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", padding: 34, display: "flex", flexDirection: "column", justifyContent: "space-between" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { marginBottom: 34 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212" }, children: "Active Contact Database" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: "Determines base infrastructure scale." })
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("section", { id: "configurator", style: { padding: "40px 0 96px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 28, alignItems: "stretch" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-reveal", style: { background: "#fff", borderRadius: 22, boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", padding: 34, display: "flex", flexDirection: "column", justifyContent: "space-between" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { marginBottom: 34 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212" }, children: "Active Contact Database" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: "Determines base infrastructure scale." })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
                   fmtNum(c.n),
                   " Contacts"
                 ] }, `contacts-${contactsIdx}`)
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
                 "input",
                 {
                   type: "range",
@@ -30192,26 +30475,26 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   style: { "--pct": pct(contactsIdx, 0, 5) + "%" }
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "mono", style: { display: "flex", justifyContent: "space-between", marginTop: 10, fontSize: 11, color: "#a0a0a0", letterSpacing: "0.04em" }, children: CONTACT_LABELS.map((l) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { children: l }, l)) })
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "mono", style: { display: "flex", justifyContent: "space-between", marginTop: 10, fontSize: 11, color: "#a0a0a0", letterSpacing: "0.04em" }, children: CONTACT_LABELS.map((l) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { children: l }, l)) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { marginBottom: 34 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212", display: "inline-flex", alignItems: "center", gap: 8 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { marginBottom: 34 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212", display: "inline-flex", alignItems: "center", gap: 8 }, children: [
                     "Verified Email Sends / Month",
-                    /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "#4fa76f", "aria-hidden": "true", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("circle", { cx: "12", cy: "12", r: "10" }),
-                      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("path", { d: "M8 12.5l2.5 2.5 5-5.5", fill: "none", stroke: "#fff", strokeWidth: "2.4", strokeLinecap: "round", strokeLinejoin: "round" })
+                    /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "#4fa76f", "aria-hidden": "true", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("circle", { cx: "12", cy: "12", r: "10" }),
+                      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("path", { d: "M8 12.5l2.5 2.5 5-5.5", fill: "none", stroke: "#fff", strokeWidth: "2.4", strokeLinecap: "round", strokeLinejoin: "round" })
                     ] })
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: "100% Real-Time Deliverability Validation included before sending." })
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: "100% Real-Time Deliverability Validation included before sending." })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(109,199,143,0.16)", color: "#3d8b5c", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(109,199,143,0.16)", color: "#3d8b5c", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
                   fmtNum(e.n),
                   " Emails"
                 ] }, `emails-${emailsIdx}`)
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
                 "input",
                 {
                   type: "range",
@@ -30224,20 +30507,20 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   style: { "--pct": pct(emailsIdx, 0, 5) + "%" }
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "mono", style: { display: "flex", justifyContent: "space-between", marginTop: 10, fontSize: 11, color: "#a0a0a0", letterSpacing: "0.04em" }, children: EMAIL_LABELS.map((l) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { children: l }, l)) })
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "mono", style: { display: "flex", justifyContent: "space-between", marginTop: 10, fontSize: 11, color: "#a0a0a0", letterSpacing: "0.04em" }, children: EMAIL_LABELS.map((l) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { children: l }, l)) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { marginBottom: 34 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212" }, children: "AI Native Credits / Month" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: "SDR Email Drafting, CPQ Approvals, Persona Alignment & Workflows." })
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { marginBottom: 34 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212" }, children: "AI Native Credits / Month" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: "SDR Email Drafting, CPQ Approvals, Persona Alignment & Workflows." })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
                   fmtNum(a.n),
                   " Actions"
                 ] }, `actions-${actionsIdx}`)
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
                 "input",
                 {
                   type: "range",
@@ -30250,26 +30533,26 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   style: { "--pct": pct(actionsIdx, 0, 5) + "%" }
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "mono", style: { display: "flex", justifyContent: "space-between", marginTop: 10, fontSize: 11, color: "#a0a0a0", letterSpacing: "0.04em" }, children: ACTION_LABELS.map((l) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { children: l }, l)) })
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "mono", style: { display: "flex", justifyContent: "space-between", marginTop: 10, fontSize: 11, color: "#a0a0a0", letterSpacing: "0.04em" }, children: ACTION_LABELS.map((l) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { children: l }, l)) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212", display: "inline-flex", alignItems: "center", gap: 10 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, gap: 16 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212", display: "inline-flex", alignItems: "center", gap: 10 }, children: [
                     "Active Team Seats",
-                    /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { padding: "3px 10px", borderRadius: 9999, background: "rgba(237,178,62,0.16)", color: "#a67518", fontSize: 11, fontWeight: 700, letterSpacing: "0.04em" }, children: "First 5 Free" })
+                    /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { padding: "3px 10px", borderRadius: 9999, background: "rgba(237,178,62,0.16)", color: "#a67518", fontSize: 11, fontWeight: 700, letterSpacing: "0.04em" }, children: "First 5 Free" })
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontSize: 13, color: "#7e7e7d", marginTop: 2 }, children: [
                     "Extra seats: $5/mo. ",
-                    /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("strong", { style: { color: "#3d8b5c" }, children: "30-Day Auto-Inactivity Waiver included." })
+                    /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("strong", { style: { color: "#3d8b5c" }, children: "30-Day Auto-Inactivity Waiver included." })
                   ] })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { className: "mono lc-value-pulse", style: { padding: "6px 14px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }, children: [
                   seats,
                   " Users"
                 ] }, `seats-${seats}`)
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
                 "input",
                 {
                   type: "range",
@@ -30284,159 +30567,159 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               )
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { background: "#0f2e4d", borderRadius: 22, padding: 0, overflow: "hidden", position: "relative", height: "100%", display: "flex", flexDirection: "column" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { padding: "26px 28px 22px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "#7fa8d4", fontWeight: 700 }, children: "Workspace Estimate" }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff", marginTop: 6 }, children: plan.name })
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { background: "#0f2e4d", borderRadius: 22, padding: 0, overflow: "hidden", position: "relative", height: "100%", display: "flex", flexDirection: "column" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { padding: "26px 28px 22px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "#7fa8d4", fontWeight: 700 }, children: "Workspace Estimate" }),
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff", marginTop: 6 }, children: plan.name })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { className: "mono", style: { padding: "5px 11px", borderRadius: 9999, background: "rgba(255,255,255,0.08)", color: "#b5d4f4", fontSize: 11, fontWeight: 700 }, children: "$99/mo Base Minimum" })
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { className: "mono", style: { padding: "5px 11px", borderRadius: 9999, background: "rgba(255,255,255,0.08)", color: "#b5d4f4", fontSize: 11, fontWeight: 700 }, children: "$99/mo Base Minimum" })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { padding: "22px 28px", display: "grid", gap: 18 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { padding: "22px 28px", display: "grid", gap: 18 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
                   "Base Infrastructure (Up to ",
                   plan.n.toLocaleString(),
                   " Contacts)"
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
                   "$",
                   plan.base
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
                     "Verified Emails (",
                     e.n.toLocaleString(),
                     ")"
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 12, color: "#7fa8d4", marginTop: 2 }, children: e.price === 0 ? "Included in plan" : "Usage-based tier" })
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 12, color: "#7fa8d4", marginTop: 2 }, children: e.price === 0 ? "Included in plan" : "Usage-based tier" })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
                   "$",
                   e.price
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
                     "AI Credits (",
                     a.n.toLocaleString(),
                     ")"
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 12, color: "#7fa8d4", marginTop: 2 }, children: a.price === 0 ? "Included in plan" : "Usage-based tier" })
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 12, color: "#7fa8d4", marginTop: 2 }, children: a.price === 0 ? "Included in plan" : "Usage-based tier" })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
                   "$",
                   a.price
                 ] })
               ] }),
-              extendedUsageCost > 0 && /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: "Extended Usage" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 12, color: "#f4c96a", marginTop: 2 }, children: "Emails/AI Credits usage exceeds your Contacts tier" })
+              extendedUsageCost > 0 && /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: "Extended Usage" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 12, color: "#f4c96a", marginTop: 2 }, children: "Emails/AI Credits usage exceeds your Contacts tier" })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
                   "$",
                   extendedUsageCost
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontSize: 14.5, color: "#fff", fontWeight: 700 }, children: [
                     "User Seats (",
                     seats,
                     " Users)"
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 12, color: "#6dc78f", marginTop: 2, fontWeight: 700 }, children: extraSeats === 0 ? "5 Free + Auto-Waive Active" : `5 Free + ${extraSeats} extra @ $5/mo` })
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 12, color: "#6dc78f", marginTop: 2, fontWeight: 700 }, children: extraSeats === 0 ? "5 Free + Auto-Waive Active" : `5 Free + ${extraSeats} extra @ $5/mo` })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 18, color: "#fff", whiteSpace: "nowrap" }, children: [
                   "$",
                   seatPrice
                 ] })
               ] })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { padding: "22px 28px 26px", borderTop: "1px solid rgba(255,255,255,0.08)" }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 12 }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 14, color: "#b5d4f4" }, children: "Total Monthly Investment" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 12, color: "#6dc78f", fontWeight: 700, marginTop: 3 }, children: "$99/mo Base Floor Guaranteed" })
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { padding: "22px 28px 26px", borderTop: "1px solid rgba(255,255,255,0.08)" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 12 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 14, color: "#b5d4f4" }, children: "Total Monthly Investment" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 12, color: "#6dc78f", fontWeight: 700, marginTop: 3 }, children: "$99/mo Base Floor Guaranteed" })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", alignItems: "baseline", gap: 4 }, children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "lc-value-pulse", style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 700, fontSize: 44, color: "#fff", letterSpacing: "-0.02em" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", alignItems: "baseline", gap: 4 }, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-value-pulse", style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 700, fontSize: 44, color: "#fff", letterSpacing: "-0.02em" }, children: [
                     "$",
                     total.toLocaleString()
                   ] }, total),
-                  /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 14, color: "#b5d4f4" }, children: "/ mo" })
+                  /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 14, color: "#b5d4f4" }, children: "/ mo" })
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("a", { href: "#", className: "lc-btn-primary", style: { marginTop: 22, width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px" }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "#edb23e", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("path", { d: "M12 2l2 6h6l-5 4 2 7-7-4-7 4 2-7-5-4h6z" }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("a", { href: "#", className: "lc-btn-primary", style: { marginTop: 22, width: "100%", justifyContent: "center", background: "#185fa5", fontSize: 15.5, padding: "15px 26px" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "#edb23e", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("path", { d: "M12 2l2 6h6l-5 4 2 7-7-4-7 4 2-7-5-4h6z" }) }),
                 "Deploy Workspace Now"
               ] })
             ] })
           ] }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { maxWidth: 1240, margin: "40px auto 0", padding: "0 32px" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { background: "#fff", borderRadius: 24, boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", padding: "40px 44px" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, marginBottom: 32, flexWrap: "wrap" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("h3", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 26, letterSpacing: "-0.02em", color: "#121212" }, children: "Built-in capabilities & services." }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("p", { style: { fontSize: 14, color: "#7e7e7d", marginTop: 6, maxWidth: 520 }, children: "Everything that ships with your workspace \u2014 no add-ons required." })
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { maxWidth: 1240, margin: "40px auto 0", padding: "0 32px" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { background: "#fff", borderRadius: 24, boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", padding: "40px 44px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, marginBottom: 32, flexWrap: "wrap" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("h3", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 26, letterSpacing: "-0.02em", color: "#121212" }, children: "Built-in capabilities & services." }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("p", { style: { fontSize: 14, color: "#7e7e7d", marginTop: 6, maxWidth: 520 }, children: "Everything that ships with your workspace \u2014 no add-ons required." })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", gap: 8, flexWrap: "wrap" }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 12px", borderRadius: 9999, background: "rgba(109,199,143,0.16)", color: "#3d8b5c", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.04em" }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#4fa76f" } }),
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", gap: 8, flexWrap: "wrap" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 12px", borderRadius: 9999, background: "rgba(109,199,143,0.16)", color: "#3d8b5c", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.04em" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#4fa76f" } }),
                 "Included ($0)"
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 12px", borderRadius: 9999, background: "rgba(24,95,165,0.1)", color: "#185fa5", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.04em" }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 12px", borderRadius: 9999, background: "rgba(24,95,165,0.1)", color: "#185fa5", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.04em" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5" } }),
                 "Usage-based"
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 12px", borderRadius: 9999, background: "#f2f0ed", color: "#7e7e7d", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.04em" }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#a0a0a0" } }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 12px", borderRadius: 9999, background: "#f2f0ed", color: "#7e7e7d", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.04em" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#a0a0a0" } }),
                 "Higher plan"
               ] })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: CAPABILITY_CARDS.map((card, i) => card.locked ? /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "lc-reveal lc-cap-card", style: { transitionDelay: `${i * 60}ms`, borderRadius: 16, padding: 22, background: "#f7f5f2", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 14, gridColumn: "span 2" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "space-between" }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 36, height: 36, borderRadius: 10, background: "#e6e2dc", color: "#7e7e7d" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", "aria-hidden": "true", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: CAPABILITY_CARDS.map((card, i) => card.locked ? /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-reveal lc-cap-card", style: { transitionDelay: `${i * 60}ms`, borderRadius: 16, padding: 22, background: "#f7f5f2", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 14, gridColumn: "span 2" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "space-between" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 36, height: 36, borderRadius: 10, background: "#e6e2dc", color: "#7e7e7d" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("svg", { width: "16", height: "16", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", "aria-hidden": "true", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
               ] }) }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#7e7e7d" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { padding: "3px 9px", borderRadius: 9999, background: "rgba(237,178,62,0.16)", color: "#a67518" }, children: card.plan }) })
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#7e7e7d" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { padding: "3px 9px", borderRadius: 9999, background: "rgba(237,178,62,0.16)", color: "#a67518" }, children: card.plan }) })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 16 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 14.5, color: "#5c5c5c", marginBottom: 6 }, children: card.title }),
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 13, color: "#a0a0a0", lineHeight: 1.55 }, children: card.body })
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 16 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 14.5, color: "#5c5c5c", marginBottom: 6 }, children: card.title }),
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 13, color: "#a0a0a0", lineHeight: 1.55 }, children: card.body })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("a", { href: "#", style: { flexShrink: 0, fontSize: 12.5, fontWeight: 700, color: "#185fa5", display: "inline-flex", alignItems: "center", gap: 4 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("a", { href: "#", style: { flexShrink: 0, fontSize: 12.5, fontWeight: 700, color: "#185fa5", display: "inline-flex", alignItems: "center", gap: 4 }, children: [
                 "Upgrade",
-                /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2.5", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("polyline", { points: "9 18 15 12 9 6" }) })
+                /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2.5", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("polyline", { points: "9 18 15 12 9 6" }) })
               ] })
             ] })
-          ] }, card.title) : /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "lc-reveal lc-cap-card", style: { transitionDelay: `${i * 60}ms`, borderRadius: 16, padding: 22, background: card.badge === "Included" ? "#fbfaf9" : "rgba(24,95,165,0.04)", boxShadow: card.badge === "Included" ? "inset 0 0 0 1px rgba(18,18,18,0.05)" : "inset 0 0 0 1px rgba(24,95,165,0.16)", display: "flex", flexDirection: "column", gap: 14 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "space-between" }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 36, height: 36, borderRadius: 10, background: card.iconBg, color: card.iconColor }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("circle", { cx: "12", cy: "12", r: "9" }) }) }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { fontSize: 10.5, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: card.badgeColor }, children: card.badge })
+          ] }, card.title) : /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-reveal lc-cap-card", style: { transitionDelay: `${i * 60}ms`, borderRadius: 16, padding: 22, background: card.badge === "Included" ? "#fbfaf9" : "rgba(24,95,165,0.04)", boxShadow: card.badge === "Included" ? "inset 0 0 0 1px rgba(18,18,18,0.05)" : "inset 0 0 0 1px rgba(24,95,165,0.16)", display: "flex", flexDirection: "column", gap: 14 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "space-between" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 36, height: 36, borderRadius: 10, background: card.iconBg, color: card.iconColor }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("circle", { cx: "12", cy: "12", r: "9" }) }) }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { fontSize: 10.5, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: card.badgeColor }, children: card.badge })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 14.5, color: "#121212", marginBottom: 6 }, children: card.title }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontSize: 13, color: "#5c5c5c", lineHeight: 1.55 }, children: card.body })
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 14.5, color: "#121212", marginBottom: 6 }, children: card.title }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontSize: 13, color: "#5c5c5c", lineHeight: 1.55 }, children: card.body })
             ] })
           ] }, card.title)) })
         ] }) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("section", { id: "matrix", ref: matrixSectionRef, style: { background: "#eaeef3", padding: "96px 0", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 820, margin: "0 auto 48px" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("span", { style: { display: "inline-block", padding: "6px 16px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 18, border: "1px solid rgba(24,95,165,0.2)" }, children: "Market Intelligence" }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(30px,3.8vw,46px)", lineHeight: 1.1, letterSpacing: "-0.025em", color: "#121212", marginBottom: 16 }, children: "Side-by-side competitor benchmarking." }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("p", { style: { fontSize: 16, color: "#5c5c5c", lineHeight: 1.65 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("section", { id: "matrix", ref: matrixSectionRef, style: { background: "#eaeef3", padding: "96px 0", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 820, margin: "0 auto 48px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { display: "inline-block", padding: "6px 16px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 18, border: "1px solid rgba(24,95,165,0.2)" }, children: "Market Intelligence" }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(30px,3.8vw,46px)", lineHeight: 1.1, letterSpacing: "-0.025em", color: "#121212", marginBottom: 16 }, children: "Side-by-side competitor benchmarking." }),
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("p", { style: { fontSize: 16, color: "#5c5c5c", lineHeight: 1.65 }, children: [
             "See how your selected requirements",
             " ",
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("span", { className: "mono", style: { padding: "2px 8px", borderRadius: 6, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", color: "#121212", fontSize: 13.5 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("span", { className: "mono", style: { padding: "2px 8px", borderRadius: 6, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", color: "#121212", fontSize: 13.5 }, children: [
               fmtNum(c.n),
               " Contacts, ",
               fmtNum(e.n),
@@ -30448,11 +30731,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             "compare against major enterprise platforms."
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { id: "matrixBody", className: matrixVisible ? "is-visible" : "", style: { display: "flex", flexDirection: "column", gap: 10 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1.7fr 1.1fr 1fr 1fr 1fr 1fr 1fr", alignItems: "center", background: "linear-gradient(180deg,#e6eef8 0%,#dbe6f4 100%)", borderRadius: 24, padding: "18px 24px", gap: 12 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.16em", textTransform: "uppercase", color: "#5c5c5c" }, children: "Platform Solution" }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.14em", textTransform: "uppercase", color: "#185fa5", paddingLeft: 14 }, children: "Lucrative AI" }),
-            ["GoHighLevel", "HubSpot", "Klaviyo", "Mailchimp", "Salesforce"].map((name) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "#a0a0a0", paddingLeft: 10 }, children: name }, name))
+        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { id: "matrixBody", className: matrixVisible ? "is-visible" : "", style: { display: "flex", flexDirection: "column", gap: 10 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1.7fr 1.1fr 1fr 1fr 1fr 1fr 1fr", alignItems: "center", background: "linear-gradient(180deg,#e6eef8 0%,#dbe6f4 100%)", borderRadius: 24, padding: "18px 24px", gap: 12 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.16em", textTransform: "uppercase", color: "#5c5c5c" }, children: "Platform Solution" }),
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.14em", textTransform: "uppercase", color: "#185fa5", paddingLeft: 14 }, children: "Lucrative AI" }),
+            ["GoHighLevel", "HubSpot", "Klaviyo", "Mailchimp", "Salesforce"].map((name) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "#a0a0a0", paddingLeft: 10 }, children: name }, name))
           ] }),
           MATRIX_ROWS.map((r, idx) => {
             let rowBg = "#fff";
@@ -30465,15 +30748,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               rowBg = "rgba(109,199,143,0.10)";
               usBg = "rgba(109,199,143,0.22)";
             }
-            return /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "lc-matrix-row", style: { animationDelay: `${idx * 32}ms`, display: "grid", gridTemplateColumns: "1.7fr 1.1fr 1fr 1fr 1fr 1fr 1fr", alignItems: "center", background: rowBg, borderRadius: 24, padding: "16px 24px", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.05)", gap: 12 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 13.5, color: "#121212", lineHeight: 1.4 }, children: r.label }),
-              /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { background: usBg, borderRadius: 14, padding: "10px 14px", minHeight: 44, display: "flex", alignItems: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(MatrixCell, { cell: r.us }) }),
-              r.cells.map((cell, ci) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { style: { padding: "6px 10px" }, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(MatrixCell, { cell }) }, ci))
+            return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-matrix-row", style: { animationDelay: `${idx * 32}ms`, display: "grid", gridTemplateColumns: "1.7fr 1.1fr 1fr 1fr 1fr 1fr 1fr", alignItems: "center", background: rowBg, borderRadius: 24, padding: "16px 24px", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.05)", gap: 12 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 13.5, color: "#121212", lineHeight: 1.4 }, children: r.label }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { background: usBg, borderRadius: 14, padding: "10px 14px", minHeight: 44, display: "flex", alignItems: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(MatrixCell, { cell: r.us }) }),
+              r.cells.map((cell, ci) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { padding: "6px 10px" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(MatrixCell, { cell }) }, ci))
             ] }, r.label);
           })
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Footer, {})
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Footer, {})
     ] });
   }
   var PRICING_CSS = `
@@ -30518,7 +30801,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
 `;
 
   // src/pages/ContactPage.jsx
-  var import_react74 = __toESM(require_react(), 1);
+  var import_react77 = __toESM(require_react(), 1);
 
   // src/assets/contact/hero.webp
   var hero_default = "assets/img/hero-WNL63YHY.webp";
@@ -30563,7 +30846,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var logo_claude_default = "assets/img/logo-claude-EOUXGLOP.png";
 
   // src/pages/ContactPage.jsx
-  var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
   var DEPLOYMENT_CARDS = [
     { tag: "Migration", tagColor: "#185fa5", title: "CRM Migrations", body: "Move your data and workflows without disruption." },
     { tag: "Marketing", tagColor: "#3d8b5c", title: "Marketing Automation", body: "Automate campaigns, journeys, and lead nurturing." },
@@ -30580,18 +30863,18 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       iconColor: "#185fa5",
       title: "AI-Native Platform",
       body: "Built from the ground up around AI\u2014not retrofitted onto legacy software.",
-      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("path", { d: "M12 2l2 6h6l-5 4 2 7-7-4-7 4 2-7-5-4h6z" })
+      icon: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("path", { d: "M12 2l2 6h6l-5 4 2 7-7-4-7 4 2-7-5-4h6z" })
     },
     {
       iconBg: "rgba(109,199,143,0.16)",
       iconColor: "#3d8b5c",
       title: "One Unified Workspace",
       body: "CRM, marketing, analytics, governance, and contracting in one platform.",
-      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "3", y: "3", width: "7", height: "7" }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "14", y: "3", width: "7", height: "7" }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "3", y: "14", width: "7", height: "7" }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "14", y: "14", width: "7", height: "7" })
+      icon: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)(import_jsx_runtime75.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("rect", { x: "3", y: "3", width: "7", height: "7" }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("rect", { x: "14", y: "3", width: "7", height: "7" }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("rect", { x: "3", y: "14", width: "7", height: "7" }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("rect", { x: "14", y: "14", width: "7", height: "7" })
       ] })
     },
     {
@@ -30599,9 +30882,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       iconColor: "#a67518",
       title: "Enterprise Ready",
       body: "Secure architecture, governance controls, and scalable deployments.",
-      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
+      icon: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)(import_jsx_runtime75.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
       ] })
     },
     {
@@ -30609,9 +30892,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       iconColor: "#185fa5",
       title: "Human Support",
       body: "Work directly with product specialists, solution engineers, and customer success managers.",
-      icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("circle", { cx: "12", cy: "8", r: "4" }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("path", { d: "M4 21c0-4 3.5-7 8-7s8 3 8 7" })
+      icon: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)(import_jsx_runtime75.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("circle", { cx: "12", cy: "8", r: "4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("path", { d: "M4 21c0-4 3.5-7 8-7s8 3 8 7" })
       ] })
     }
   ];
@@ -30638,8 +30921,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { src: logo_claude_default, alt: "Claude" }
   ];
   function useRevealRoot2() {
-    const rootRef = (0, import_react74.useRef)(null);
-    (0, import_react74.useEffect)(() => {
+    const rootRef = (0, import_react77.useRef)(null);
+    (0, import_react77.useEffect)(() => {
       const root = rootRef.current;
       if (!root) return;
       const els = root.querySelectorAll(".lc-reveal");
@@ -30686,8 +30969,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return hubspotScriptPromise;
   }
   function HubSpotForm({ portalId, formId, region }) {
-    const containerRef = (0, import_react74.useRef)(null);
-    (0, import_react74.useEffect)(() => {
+    const containerRef = (0, import_react77.useRef)(null);
+    (0, import_react77.useEffect)(() => {
       let cancelled = false;
       loadHubSpotScript().then(() => {
         if (cancelled || !containerRef.current || !window.hbspt) return;
@@ -30703,82 +30986,82 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         cancelled = true;
       };
     }, [portalId, formId, region]);
-    return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { ref: containerRef, id: "hubspot-contact-form", className: "lc-hubspot-form" });
+    return /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { ref: containerRef, id: "hubspot-contact-form", className: "lc-hubspot-form" });
   }
   function ContactPage() {
     const rootRef = useRevealRoot2();
-    return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { ref: rootRef, className: "lc-contact-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("style", { children: CONTACT_CSS }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("header", { className: "lc-hero", style: { padding: "88px 0 48px", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(34px,4.4vw,52px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { ref: rootRef, className: "lc-contact-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("style", { children: CONTACT_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("header", { className: "lc-hero", style: { padding: "88px 0 48px", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { className: "lc-reveal", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(34px,4.4vw,52px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
             "Let's Build the Future of ",
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { color: "#185fa5" }, children: "Your Revenue Operations" })
+            /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("span", { style: { color: "#185fa5" }, children: "Your Revenue Operations" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 520, margin: "24px 0 0" }, children: "Whether you're evaluating Lucrative AI, planning a migration, exploring enterprise deployment, or looking to automate your sales and marketing operations, our team is here to help." }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "flex", gap: 14, marginTop: 32 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-primary", children: "Book a Demo" }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-secondary", children: "Talk to Sales" })
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 520, margin: "24px 0 0" }, children: "Whether you're evaluating Lucrative AI, planning a migration, exploring enterprise deployment, or looking to automate your sales and marketing operations, our team is here to help." }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { display: "flex", gap: 14, marginTop: 32 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("a", { href: "#demo-form", className: "lc-btn-primary", children: "Book a Demo" }),
+            /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("a", { href: "#demo-form", className: "lc-btn-secondary", children: "Talk to Sales" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: hero_default, alt: "", style: { width: "100%", height: 420, borderRadius: 20, objectFit: "cover", display: "block" } }) })
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("img", { src: hero_default, alt: "", style: { width: "100%", height: 420, borderRadius: 20, objectFit: "cover", display: "block" } }) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { id: "demo-form", style: { background: "#eef2f6", padding: "64px 0 96px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1.15fr", gap: 40, alignItems: "stretch" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { paddingTop: 12, display: "flex", flexDirection: "column" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212", lineHeight: 1.2 }, children: "See Lucrative AI in Action" }),
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 16, maxWidth: 420 }, children: "Tell us about your business and we'll tailor the demonstration to your sales process, marketing strategy, and revenue operations." })
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("section", { id: "demo-form", style: { background: "#eef2f6", padding: "64px 0 96px" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1.15fr", gap: 40, alignItems: "stretch" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { className: "lc-reveal", style: { paddingTop: 12, display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212", lineHeight: 1.2 }, children: "See Lucrative AI in Action" }),
+            /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 16, maxWidth: 420 }, children: "Tell us about your business and we'll tailor the demonstration to your sales process, marketing strategy, and revenue operations." })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: form_side_default, alt: "", style: { maxWidth: 440, width: "100%", marginTop: "auto", alignSelf: "center" } })
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("img", { src: form_side_default, alt: "", style: { maxWidth: 440, width: "100%", marginTop: "auto", alignSelf: "center" } })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#ffffff", borderRadius: 22, padding: "36px 34px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(HubSpotForm, { portalId: "6539536", formId: "8dc97cfd-d0af-4beb-8539-f5da30788a99", region: "na1" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#ffffff", borderRadius: 22, padding: "36px 34px" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(HubSpotForm, { portalId: "6539536", formId: "8dc97cfd-d0af-4beb-8539-f5da30788a99", region: "na1" }) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "80px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212", lineHeight: 1.2 }, children: "Planning an Enterprise Rollout?" }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 16 }, children: "Our solution architects work alongside your team to design secure, scalable deployments tailored to your business. We assist with:" })
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("section", { style: { padding: "80px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { className: "lc-reveal", style: { maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212", lineHeight: 1.2 }, children: "Planning an Enterprise Rollout?" }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 16 }, children: "Our solution architects work alongside your team to design secure, scalable deployments tailored to your business. We assist with:" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: DEPLOYMENT_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: `${i * 40}ms`, borderRadius: 16, padding: 22, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 12 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { display: "inline-block", alignSelf: "flex-start", padding: "4px 12px", borderRadius: 9999, fontSize: 11, fontWeight: 700, letterSpacing: "0.02em", color: card.tagColor, boxShadow: `inset 0 0 0 1px ${card.tagColor}59` }, children: card.tag }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212" }, children: card.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", lineHeight: 1.5 }, children: card.body })
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: DEPLOYMENT_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: `${i * 40}ms`, borderRadius: 16, padding: 22, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 12 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("span", { style: { display: "inline-block", alignSelf: "flex-start", padding: "4px 12px", borderRadius: 9999, fontSize: 11, fontWeight: 700, letterSpacing: "0.02em", color: card.tagColor, boxShadow: `inset 0 0 0 1px ${card.tagColor}59` }, children: card.tag }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: "#121212" }, children: card.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", lineHeight: 1.5 }, children: card.body })
         ] }, card.title)) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "80px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 680, margin: "0 auto 44px" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Global Integrations" }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 14 }, children: "Lucrative AI integrates with the platforms your business already uses." })
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("section", { style: { padding: "80px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 680, margin: "0 auto 44px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Global Integrations" }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("p", { style: { fontSize: 15.5, color: "#5c5c5c", lineHeight: 1.7, marginTop: 14 }, children: "Lucrative AI integrates with the platforms your business already uses." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(6,1fr)", gap: 14 }, children: LOGO_GRID.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(6,1fr)", gap: 14 }, children: LOGO_GRID.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 640, margin: "0 auto 48px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Why Teams Choose Lucrative AI" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: WHY_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: `${i * 60}ms`, borderRadius: 16, padding: 26, background: "#fbfaf9", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.05)", display: "flex", flexDirection: "column", gap: 14 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 38, height: 38, borderRadius: 10, background: card.iconBg, color: card.iconColor }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", "aria-hidden": "true", children: card.icon }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15.5, color: "#121212" }, children: card.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { style: { fontSize: 13.5, color: "#5c5c5c", lineHeight: 1.55 }, children: card.body })
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("section", { style: { padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", maxWidth: 640, margin: "0 auto 48px" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Why Teams Choose Lucrative AI" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }, children: WHY_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: `${i * 60}ms`, borderRadius: 16, padding: 26, background: "#fbfaf9", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.05)", display: "flex", flexDirection: "column", gap: 14 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("span", { style: { display: "inline-flex", alignItems: "center", justifyContent: "center", width: 38, height: 38, borderRadius: 10, background: card.iconBg, color: card.iconColor }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", "aria-hidden": "true", children: card.icon }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15.5, color: "#121212" }, children: card.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { style: { fontSize: 13.5, color: "#5c5c5c", lineHeight: 1.55 }, children: card.body })
         ] }, card.title)) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { background: "#eef2f6", padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { maxWidth: 820, margin: "0 auto", padding: "0 32px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 44 }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Frequently Asked Questions" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", children: FAQ_ITEMS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("details", { className: "lc-faq", open: i === 0, style: { borderBottom: "1px solid rgba(18,18,18,0.08)" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("summary", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("section", { style: { background: "#eef2f6", padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { maxWidth: 820, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 44 }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(26px,3vw,36px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Frequently Asked Questions" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-reveal", children: FAQ_ITEMS.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("details", { className: "lc-faq", open: i === 0, style: { borderBottom: "1px solid rgba(18,18,18,0.08)" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("summary", { children: [
             item.q,
-            /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("svg", { className: "lc-faq-chevron", width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "#5c5c5c", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("polyline", { points: "6 9 12 15 18 9" }) })
+            /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("svg", { className: "lc-faq-chevron", width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "#5c5c5c", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("polyline", { points: "6 9 12 15 18 9" }) })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { children: item.a })
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("p", { children: item.a })
         ] }, item.q)) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("section", { style: { padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "lc-reveal", style: { maxWidth: 1e3, margin: "0 auto", padding: "0 32px" }, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { background: "#0f2e4d", borderRadius: 28, padding: "64px 56px", textAlign: "center" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(28px,3.4vw,40px)", letterSpacing: "-0.02em", color: "#fff", lineHeight: 1.2 }, children: "Ready to Modernize Your Revenue Operations?" }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("p", { style: { fontSize: 16, color: "#b5d4f4", lineHeight: 1.7, maxWidth: 600, margin: "18px auto 0" }, children: "See how Lucrative AI helps organizations unify CRM, marketing, analytics, governance, and intelligent contracting in one AI-native platform." }),
-        /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", { style: { display: "flex", gap: 14, justifyContent: "center", marginTop: 32 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-primary", style: { background: "#185fa5" }, children: "Book a Demo" }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("a", { href: "#demo-form", className: "lc-btn-secondary", style: { background: "transparent", color: "#fff", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.3)" }, children: "Talk to Sales" })
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("section", { style: { padding: "96px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", { className: "lc-reveal", style: { maxWidth: 1e3, margin: "0 auto", padding: "0 32px" }, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { background: "#0f2e4d", borderRadius: 28, padding: "64px 56px", textAlign: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(28px,3.4vw,40px)", letterSpacing: "-0.02em", color: "#fff", lineHeight: 1.2 }, children: "Ready to Modernize Your Revenue Operations?" }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("p", { style: { fontSize: 16, color: "#b5d4f4", lineHeight: 1.7, maxWidth: 600, margin: "18px auto 0" }, children: "See how Lucrative AI helps organizations unify CRM, marketing, analytics, governance, and intelligent contracting in one AI-native platform." }),
+        /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", { style: { display: "flex", gap: 14, justifyContent: "center", marginTop: 32 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("a", { href: "#demo-form", className: "lc-btn-primary", style: { background: "#185fa5" }, children: "Book a Demo" }),
+          /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("a", { href: "#demo-form", className: "lc-btn-secondary", style: { background: "transparent", color: "#fff", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.3)" }, children: "Talk to Sales" })
         ] })
       ] }) }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Footer, {})
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Footer, {})
     ] });
   }
   var CONTACT_CSS = `
@@ -30844,7 +31127,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
 `;
 
   // src/pages/PartnersPage.jsx
-  var import_react75 = __toESM(require_react(), 1);
+  var import_react78 = __toESM(require_react(), 1);
 
   // src/assets/partners/logo-aws.png
   var logo_aws_default = "assets/img/logo-aws-RY7KTP2M.png";
@@ -30856,7 +31139,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var logo_elevenlabs_default = "assets/img/logo-elevenlabs-2GLLOPCO.png";
 
   // src/pages/PartnersPage.jsx
-  var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
   var PARTNER_CARDS = [
     { tag: "Integration", tagColor: "#185fa5", title: "Technology Companies", body: "Integrate your platform natively into the Lucrative AI ecosystem." },
     { tag: "Consulting", tagColor: "#3d8b5c", title: "CRM & RevOps Consultants", body: "Deliver Lucrative AI implementations to your client base." },
@@ -30871,8 +31154,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { src: logo_elevenlabs_default, alt: "ElevenLabs" }
   ];
   function useRevealRoot3() {
-    const rootRef = (0, import_react75.useRef)(null);
-    (0, import_react75.useEffect)(() => {
+    const rootRef = (0, import_react78.useRef)(null);
+    (0, import_react78.useEffect)(() => {
       const root = rootRef.current;
       if (!root) return;
       const els = root.querySelectorAll(".lc-reveal");
@@ -30919,8 +31202,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return hubspotScriptPromise2;
   }
   function HubSpotForm2({ portalId, formId, region }) {
-    const containerRef = (0, import_react75.useRef)(null);
-    (0, import_react75.useEffect)(() => {
+    const containerRef = (0, import_react78.useRef)(null);
+    (0, import_react78.useEffect)(() => {
       let cancelled = false;
       loadHubSpotScript2().then(() => {
         if (cancelled || !containerRef.current || !window.hbspt) return;
@@ -30936,42 +31219,42 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         cancelled = true;
       };
     }, [portalId, formId, region]);
-    return /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { ref: containerRef, id: "hubspot-partners-form", className: "lc-hubspot-form" });
+    return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { ref: containerRef, id: "hubspot-partners-form", className: "lc-hubspot-form" });
   }
   function PartnersPage() {
     const rootRef = useRevealRoot3();
-    return /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { ref: rootRef, className: "lc-partners-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("style", { children: PARTNERS_CSS }),
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-reveal", style: { padding: "88px 0 40px", position: "relative", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { style: { maxWidth: 840, margin: "0 auto", padding: "0 32px", textAlign: "center" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(34px,4.4vw,52px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { ref: rootRef, className: "lc-partners-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("style", { children: PARTNERS_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "lc-reveal", style: { padding: "88px 0 40px", position: "relative", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { style: { maxWidth: 840, margin: "0 auto", padding: "0 32px", textAlign: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(34px,4.4vw,52px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
           "Build the Future of ",
-          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("span", { style: { color: "#185fa5" }, children: "AI-Powered Revenue Operations" }),
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("span", { style: { color: "#185fa5" }, children: "AI-Powered Revenue Operations" }),
           " Together"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "24px auto 0" }, children: "Lucrative AI partners with organizations that share our vision of helping businesses modernize customer engagement, marketing automation, revenue operations, and AI-driven growth. From technology integrations to implementation services and strategic alliances, we're committed to building partnerships that deliver measurable value." }),
-        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "16px auto 0" }, children: "If you're interested in partnering with Lucrative AI, complete the form and our partnerships team will contact you to discuss the next steps." })
+        /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "24px auto 0" }, children: "Lucrative AI partners with organizations that share our vision of helping businesses modernize customer engagement, marketing automation, revenue operations, and AI-driven growth. From technology integrations to implementation services and strategic alliances, we're committed to building partnerships that deliver measurable value." }),
+        /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("p", { style: { fontSize: 17, lineHeight: 1.7, color: "#5c5c5c", maxWidth: 680, margin: "16px auto 0" }, children: "If you're interested in partnering with Lucrative AI, complete the form and our partnerships team will contact you to discuss the next steps." })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("section", { id: "partner-form", style: { background: "#eef2f6", padding: "64px 0 96px" }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.15fr 1fr", gap: 28, alignItems: "stretch" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { className: "lc-reveal", style: { display: "flex", flexDirection: "column" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("h3", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, letterSpacing: "-0.02em", color: "#121212", marginBottom: 26 }, children: "We Partner With" }),
-          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, flexGrow: 1 }, children: PARTNER_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { className: "lc-reveal lc-partner-card", style: { transitionDelay: `${i * 40}ms`, borderRadius: 16, padding: 22, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 12 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("span", { style: { display: "inline-block", alignSelf: "flex-start", padding: "4px 12px", borderRadius: 9999, fontSize: 11, fontWeight: 700, letterSpacing: "0.02em", color: card.tagColor, boxShadow: `inset 0 0 0 1px ${card.tagColor}59` }, children: card.tag }),
-            /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15.5, color: "#121212" }, children: card.title }),
-            /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", lineHeight: 1.5 }, children: card.body })
+      /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("section", { id: "partner-form", style: { background: "#eef2f6", padding: "64px 0 96px" }, children: /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.15fr 1fr", gap: 28, alignItems: "stretch" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { className: "lc-reveal", style: { display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("h3", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, letterSpacing: "-0.02em", color: "#121212", marginBottom: 26 }, children: "We Partner With" }),
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, flexGrow: 1 }, children: PARTNER_CARDS.map((card, i) => /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { className: "lc-reveal lc-partner-card", style: { transitionDelay: `${i * 40}ms`, borderRadius: 16, padding: 22, background: "#fff", boxShadow: "inset 0 0 0 1px rgba(18,18,18,0.06)", display: "flex", flexDirection: "column", gap: 12 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("span", { style: { display: "inline-block", alignSelf: "flex-start", padding: "4px 12px", borderRadius: 9999, fontSize: 11, fontWeight: 700, letterSpacing: "0.02em", color: card.tagColor, boxShadow: `inset 0 0 0 1px ${card.tagColor}59` }, children: card.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15.5, color: "#121212" }, children: card.title }),
+            /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { style: { fontSize: 13, color: "#7e7e7d", lineHeight: 1.5 }, children: card.body })
           ] }, card.title)) }),
-          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("p", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 19, color: "#121212", marginTop: 30, letterSpacing: "-0.01em" }, children: "Let's build smarter solutions\u2014together." })
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("p", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 19, color: "#121212", marginTop: 30, letterSpacing: "-0.01em" }, children: "Let's build smarter solutions\u2014together." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px", display: "flex", flexDirection: "column" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(HubSpotForm2, { portalId: "6539536", formId: "d404e171-176d-42fa-bdf9-650486ac3fc9", region: "na1" })
+        /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { className: "lc-reveal", style: { transitionDelay: "120ms", background: "#fff", borderRadius: 22, padding: "36px 34px", display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(HubSpotForm2, { portalId: "6539536", formId: "d404e171-176d-42fa-bdf9-650486ac3fc9", region: "na1" })
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("section", { style: { padding: "72px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 36 }, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(24px,2.8vw,32px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Partners Who Trust Us" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 800, margin: "0 auto" }, children: TRUST_LOGOS.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
+      /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("section", { style: { padding: "72px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 36 }, children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(24px,2.8vw,32px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Partners Who Trust Us" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 800, margin: "0 auto" }, children: TRUST_LOGOS.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Footer, {})
+      /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Footer, {})
     ] });
   }
   var PARTNERS_CSS = `
@@ -31028,8 +31311,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
 `;
 
   // src/pages/InvestorsPage.jsx
-  var import_react76 = __toESM(require_react(), 1);
-  var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
+  var import_react79 = __toESM(require_react(), 1);
+  var import_jsx_runtime77 = __toESM(require_jsx_runtime(), 1);
   var HERO_BULLETS = [
     "Lucrative AI is building an AI-native platform that unifies CRM, marketing automation, analytics, revenue governance, and contracting into one intelligent ecosystem.",
     "We're actively seeking strategic partners, technology alliances, implementation firms, and investors who want to help shape the future of AI-powered revenue operations.",
@@ -31041,8 +31324,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     { src: logo_elevenlabs_default, alt: "ElevenLabs" }
   ];
   function useRevealRoot4() {
-    const rootRef = (0, import_react76.useRef)(null);
-    (0, import_react76.useEffect)(() => {
+    const rootRef = (0, import_react79.useRef)(null);
+    (0, import_react79.useEffect)(() => {
       const root = rootRef.current;
       if (!root) return;
       const els = root.querySelectorAll(".lc-reveal");
@@ -31089,8 +31372,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return hubspotScriptPromise3;
   }
   function HubSpotForm3({ portalId, formId, region }) {
-    const containerRef = (0, import_react76.useRef)(null);
-    (0, import_react76.useEffect)(() => {
+    const containerRef = (0, import_react79.useRef)(null);
+    (0, import_react79.useEffect)(() => {
       let cancelled = false;
       loadHubSpotScript3().then(() => {
         if (cancelled || !containerRef.current || !window.hbspt) return;
@@ -31106,36 +31389,36 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         cancelled = true;
       };
     }, [portalId, formId, region]);
-    return /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { ref: containerRef, id: "hubspot-investors-form", className: "lc-hubspot-form" });
+    return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { ref: containerRef, id: "hubspot-investors-form", className: "lc-hubspot-form" });
   }
   function InvestorsPage() {
     const rootRef = useRevealRoot4();
-    return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { ref: rootRef, className: "lc-investors-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("style", { children: INVESTORS_CSS }),
-      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { padding: "88px 0 96px", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 56, alignItems: "center" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { className: "lc-reveal", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { display: "inline-block", padding: "6px 16px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 22, border: "1px solid rgba(24,95,165,0.2)" }, children: "Partner & Investors" }),
-          /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(32px,3.6vw,46px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("div", { ref: rootRef, className: "lc-investors-page", style: { background: "#f9fafb", color: "#121212", fontFamily: "'Lato',sans-serif" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("style", { children: INVESTORS_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { style: { padding: "88px 0 96px", position: "relative" }, children: /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: 56, alignItems: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("div", { className: "lc-reveal", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("span", { style: { display: "inline-block", padding: "6px 16px", borderRadius: 9999, background: "rgba(24,95,165,0.08)", color: "#185fa5", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 22, border: "1px solid rgba(24,95,165,0.2)" }, children: "Partner & Investors" }),
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("h1", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(32px,3.6vw,46px)", lineHeight: 1.15, letterSpacing: "-0.02em", color: "#121212" }, children: [
             "Partner with the Next Generation of ",
-            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { color: "#185fa5" }, children: "Revenue Technology" })
+            /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("span", { style: { color: "#185fa5" }, children: "Revenue Technology" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("ul", { style: { margin: "26px 0 0", display: "flex", flexDirection: "column", gap: 14 }, children: HERO_BULLETS.map((text) => /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("li", { style: { display: "flex", gap: 12, fontSize: 15.5, lineHeight: 1.65, color: "#5c5c5c" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5", flexShrink: 0, marginTop: 10 } }),
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("ul", { style: { margin: "26px 0 0", display: "flex", flexDirection: "column", gap: 14 }, children: HERO_BULLETS.map((text) => /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("li", { style: { display: "flex", gap: 12, fontSize: 15.5, lineHeight: 1.65, color: "#5c5c5c" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("span", { style: { width: 6, height: 6, borderRadius: "50%", background: "#185fa5", flexShrink: 0, marginTop: 10 } }),
             text
           ] }, text)) }),
-          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("p", { style: { fontSize: 16, lineHeight: 1.6, color: "#121212", fontWeight: 600, margin: "24px 0 0" }, children: "Submit the form and our team will get back to you shortly." })
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("p", { style: { fontSize: 16, lineHeight: 1.6, color: "#121212", fontWeight: 600, margin: "24px 0 0" }, children: "Submit the form and our team will get back to you shortly." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { id: "investor-form", className: "lc-reveal", style: { transitionDelay: "120ms", background: "#0f2e4d", borderRadius: 22, padding: "36px 34px" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(HubSpotForm3, { portalId: "6539536", formId: "d404e171-176d-42fa-bdf9-650486ac3fc9", region: "na1" })
+        /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("div", { id: "investor-form", className: "lc-reveal", style: { transitionDelay: "120ms", background: "#fff", borderRadius: 22, padding: "36px 34px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { style: { marginBottom: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: 24, color: "#fff" }, children: "Get in touch" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(HubSpotForm3, { portalId: "6539536", formId: "d404e171-176d-42fa-bdf9-650486ac3fc9", region: "na1" })
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("section", { style: { background: "#eef2f6", padding: "72px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 36 }, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(24px,2.8vw,32px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Partners Who Trust Us" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 800, margin: "0 auto" }, children: TRUST_LOGOS2.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
+      /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("section", { style: { background: "#eef2f6", padding: "72px 0" }, children: /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("div", { style: { maxWidth: 1240, margin: "0 auto", padding: "0 32px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { className: "lc-reveal", style: { textAlign: "center", marginBottom: 36 }, children: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("h2", { style: { fontFamily: "'Montserrat',sans-serif", fontWeight: 500, fontSize: "clamp(24px,2.8vw,32px)", letterSpacing: "-0.02em", color: "#121212" }, children: "Partners Who Trust Us" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { className: "lc-reveal", style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, maxWidth: 800, margin: "0 auto" }, children: TRUST_LOGOS2.map((logo) => /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { className: "lc-logo-chip", children: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("img", { src: logo.src, alt: logo.alt }) }, logo.alt)) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Footer, {})
+      /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(Footer, {})
     ] });
   }
   var INVESTORS_CSS = `
@@ -31190,107 +31473,107 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
 `;
 
   // src/App.jsx
-  var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
   function HomePage() {
     useReveal();
-    return /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)(import_jsx_runtime75.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Nav, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Hero, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LLMDiagram, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LogoStrip, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ProductOverview, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PowerHouse, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ComparisonTable, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(FeaturePairs, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ProblemTabs, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(OrbitDiagram, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PersonaSwitcher, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(CapabilitiesGrid, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Testimonial, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(CTABanner, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(FAQ, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ClosingCTA, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Footer, {})
+    return /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)(import_jsx_runtime78.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(Nav, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(Hero, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(LLMDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(LogoStrip, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ProductOverview, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(PowerHouse, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ComparisonTable, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(FeaturePairs, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ProblemTabs, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(OrbitDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(PersonaSwitcher, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(CapabilitiesGrid, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(Testimonial, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(CTABanner, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(FAQ, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ClosingCTA, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(Footer, {})
     ] });
   }
   function App() {
-    return /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(BrowserRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)(Routes, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(BrowserRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)(Routes, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(HomePage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(HomePage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/pricing",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PricingPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(PricingPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/contact",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ContactPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ContactPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/partners",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(PartnersPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(PartnersPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/investors",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(InvestorsPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(InvestorsPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/loft",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LoftPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(LoftPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/loft-marketing",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(LoftMarketingPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(LoftMarketingPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/stratum",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(StratumPage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(StratumPage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/quotebase",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(QuotebasePage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(QuotebasePage, {})
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Route,
         {
           path: "/governance",
-          element: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(GovernancePage, {})
+          element: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(GovernancePage, {})
         }
       )
     ] }) });
   }
 
   // src/main.jsx
-  var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
-  (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime76.jsx)(App, {}));
+  var import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
+  (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime79.jsx)(App, {}));
 })();
 /*! Bundled license information:
 
