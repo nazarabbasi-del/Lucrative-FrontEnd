@@ -31,6 +31,9 @@ import QuotebasePage from './pages/QuotebasePage.jsx';
 import StratumPage from './pages/StratumPage.jsx';
 
 
+//navbar pages
+import PricingPage from './pages/PricingPage.jsx';
+
 function HomePage() {
   useReveal();
 
@@ -70,6 +73,10 @@ export default function App() {
           path="/"
           element={<HomePage />}
         />
+        <Route
+          path="/pricing"
+          element={<PricingPage />}
+        />  
 
         {/* Services */}
         <Route

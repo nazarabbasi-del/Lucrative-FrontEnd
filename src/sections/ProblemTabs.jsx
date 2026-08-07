@@ -101,6 +101,18 @@ const tabs = [
       </div>
     ),
   },
+  {
+    label: 'Build your own pricing',
+    title: 'Build your own pricing',
+    desc: 'Flexible pricing designed around your business. Pay only for what you use and expand as your needs grow.',
+    visual: (
+      <div className="stat-card">
+        <div className="stat-line"><span>RevOps consultancy </span><span className="badge badge-red">included</span></div>
+        <div className="stat-line"><span>Sales Sequence</span><span className="badge badge-gold">included</span></div>
+        <div className="stat-line"><span>Native CPQ & Contract Generator</span><span className="badge badge-red">included</span></div>
+      </div>
+    ),
+  },
 ];
 
 // Sticky top offset used by both the left nav (.tabs-list) and the right
@@ -111,7 +123,7 @@ const STICKY_OFFSET = 100;
 
 export default function ProblemTabs() {
   const [active, setActive] = useState(0);
-  const mascots = [mascotWorkflow, mascotWorkflow, mascotBench, mascotWorkflow, mascotBench, mascotWorkflow, mascotBench];
+  const mascots = [mascotWorkflow, mascotWorkflow, mascotBench, mascotWorkflow, mascotBench, mascotWorkflow, mascotBench, mascotWorkflow];
   const cardRefs = useRef([]);
   const itemRefs = useRef([]);
 
@@ -190,7 +202,7 @@ export default function ProblemTabs() {
                     <div className="copy">
                       <h3>{t.title}</h3>
                       <p>{t.desc}</p>
-              
+
                     </div>
                     <div className="tab-visual">{t.visual}</div>
                   </div>
