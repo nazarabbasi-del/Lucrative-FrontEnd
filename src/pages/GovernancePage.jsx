@@ -17,7 +17,7 @@ import Footer from '../sections/Footer.jsx';
 export default function GovernancePage() {
   useReveal();
   return (
-    <>
+    <div className="gov-page">
       <Nav />
       <GovernanceHero />
       <GovernanceDashboardGrid />
@@ -30,6 +30,6 @@ export default function GovernancePage() {
       <FAQ />
       <GovernanceClosingCTA />
       <Footer />
-    </>
+    </div>
   );
 }

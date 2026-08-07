@@ -18,9 +18,9 @@ const personas = [
     card: {
       label: 'YOUR FIRST AUDIT', amount: '87/100', sub: 'HubSpot · Marketing Hub Enterprise',
       rows: [
-        ['Legacy fields to retire', '#D5453F', '23'],
-        ['Orphaned workflows', '#D6931F', '8'],
-        ['Marketing seats freed', '#175FA4', '$4.2k/mo'],
+        ['Legacy fields to retire', '#E8615A','23'],
+        ['Orphaned workflows', '#E8A63D','8'],
+        ['Marketing seats freed', '#2F72C4','$4.2k/mo'],
       ],
       foot: 'One workspace. One score to defend at every QBR.',
     },
@@ -33,9 +33,9 @@ const personas = [
     card: {
       label: 'CROSS-CRM AUDIT', amount: '81/100', sub: 'HubSpot + Salesforce · Combined',
       rows: [
-        ['Duplicate accounts across CRMs', '#D5453F', '96'],
-        ['Fields unmapped in migration', '#D6931F', '14'],
-        ['Records reconciled', '#175FA4', '2,310'],
+        ['Duplicate accounts across CRMs', '#E8615A','96'],
+        ['Fields unmapped in migration', '#E8A63D','14'],
+        ['Records reconciled', '#2F72C4','2,310'],
       ],
       foot: 'One workspace. Every CRM, one governance score.',
     },
@@ -48,9 +48,9 @@ const personas = [
     card: {
       label: 'INHERITED WORKSPACE', amount: '58/100', sub: 'HubSpot · Unowned for 14 months',
       rows: [
-        ['Undocumented workflows', '#D5453F', '41'],
-        ['Fields with no owner', '#D6931F', '118'],
-        ['Safe-to-archive flagged', '#175FA4', '63'],
+        ['Undocumented workflows', '#E8615A','41'],
+        ['Fields with no owner', '#E8A63D','118'],
+        ['Safe-to-archive flagged', '#2F72C4','63'],
       ],
       foot: 'One audit. Every landmine, mapped before you touch it.',
     },
@@ -63,9 +63,9 @@ const personas = [
     card: {
       label: 'AI READINESS', amount: '74/100', sub: 'Salesforce · Pre-deployment check',
       rows: [
-        ['Missing required fields', '#D5453F', '29'],
-        ['Duplicate contact records', '#D6931F', '312'],
-        ['Records ready for training', '#175FA4', '91%'],
+        ['Missing required fields', '#E8615A','29'],
+        ['Duplicate contact records', '#E8A63D','312'],
+        ['Records ready for training', '#2F72C4','91%'],
       ],
       foot: 'One score. Every model, trained on clean data.',
     },
@@ -78,21 +78,30 @@ const personas = [
     card: {
       label: 'CLIENT PORTFOLIO', amount: '12', sub: 'Active governance audits',
       rows: [
-        ['Avg. score across clients', '#175FA4', '79'],
-        ['Critical issues this quarter', '#D5453F', '17'],
-        ['Client hours saved', '#D6931F', '214'],
+        ['Avg. score across clients', '#2F72C4','79'],
+        ['Critical issues this quarter', '#E8615A','17'],
+        ['Client hours saved', '#E8A63D','214'],
       ],
       foot: 'One dashboard. Every client, audited on schedule.',
     },
   },
 ];
 
+// Keyed by colour rather than row index: the Agency persona lists its rows in
+// a different order (blue first), so an index-based lookup would pair the
+// alert glyph with the positive-blue chip.
+const GLYPH_BY_TONE = {
+  '#E8615A': '!',
+  '#E8A63D': '–',
+  '#2F72C4': '$',
+};
+
 export default function GovernancePersonas() {
   const [active, setActive] = useState(0);
   const p = personas[active];
 
   return (
-    <section className="section--grey section--tight">
+    <section className="section--grey section--tight gov-personas">
       <div className="container">
         <p className="eyebrow" style={{ textAlign: 'center', width: '100%' }}>Use Cases</p>
         <h2 className="section-title reveal">Who runs governance audits?</h2>
@@ -107,12 +116,19 @@ export default function GovernancePersonas() {
           ))}
         </div>
 
-        <div className="persona-panel reveal" key={active}>
+        {/* No `reveal` here: key={active} remounts this node on every tab
+            change, and useReveal only observes the elements that existed when
+            it first ran — so a fresh node would keep .reveal's opacity:0 and
+            vanish the moment its fade-in animation finished. The panel has its
+            own fade-in, which replays on each switch. */}
+        <div className="persona-panel" key={active}>
           <div>
             <div className="avatar-row">
               <img src={p.img} alt="" />
-              <span className="tag-pill" style={{ color: p.color }}>{p.tag}</span>
-              <span className="index">PERSONA 0{active + 1}/05</span>
+              <div className="avatar-meta">
+                <span className="tag-pill" style={{ color: p.color }}>{p.tag}</span>
+                <span className="index">PERSONA 0{active + 1} / 05</span>
+              </div>
             </div>
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
@@ -123,15 +139,17 @@ export default function GovernancePersonas() {
               <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.08em', color: 'var(--text-400)' }}>{p.card.label}</span>
               <span className="dots"><span style={{ background: '#E8615A' }} /><span style={{ background: '#E8A63D' }} /><span style={{ background: '#37A55F' }} /></span>
             </div>
-            <div className="amount">{p.card.amount}</div>
-            <div className="sub">{p.card.sub}</div>
-            {p.card.rows.map(([label, color, val]) => (
-              <div className="pipeline-row" key={label}>
-                <span className="ic" style={{ background: color }}>●</span>
-                <span>{label}</span>
-                <span className="right">{val}</span>
-              </div>
-            ))}
+            <div className="pipeline-inner">
+              <div className="amount">{p.card.amount}</div>
+              <div className="sub">{p.card.sub}</div>
+              {p.card.rows.map(([label, color, val]) => (
+                <div className="pipeline-row" key={label}>
+                  <span className="ic" style={{ background: color }}>{GLYPH_BY_TONE[color]}</span>
+                  <span>{label}</span>
+                  <span className="right">{val}</span>
+                </div>
+              ))}
+            </div>
             <div className="pipeline-foot">
               <b>{p.card.foot.split('.')[0]}.</b> {p.card.foot.split('.').slice(1).join('.').trim()}
             </div>

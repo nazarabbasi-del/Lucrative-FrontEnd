@@ -45,6 +45,9 @@ export const IconArrowUpRight = (p) => (
 export const IconCheck = (p) => (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" {...p}><path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>
 );
+export const IconShield = (p) => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" {...p}><path d="M12 3l7.5 3v5.2c0 4.4-3.1 8.1-7.5 9.3-4.4-1.2-7.5-4.9-7.5-9.3V6L12 3z" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"/></svg>
+);
 export const IconX = (p) => (
   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" {...p}><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg>
 );
