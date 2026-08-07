@@ -25080,6 +25080,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(IconCheck, { style: { color: "var(--blue-600)" } }),
         c
       ] }, c)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "mini-cta", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "mini-cta-btns", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("button", { className: "btn btn-primary", children: "Signup Now" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("button", { className: "btn btn-outline", children: "Watch Demo" })
+      ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "comparison--wrap reveal", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("table", { className: "comparison", children: [
         /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "Capabilities" }),
@@ -29880,26 +29884,26 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var CONTACT_TIERS = [
     { n: 5e3, base: 99, name: "Starter Plan" },
     { n: 15e3, base: 199, name: "Growth Plan" },
-    { n: 35e3, base: 399, name: "Scale Plan" },
-    { n: 75e3, base: 799, name: "Business Plan" },
-    { n: 25e4, base: 1799, name: "Enterprise Plan" },
-    { n: 1e6, base: 3999, name: "Enterprise+ Plan" }
+    { n: 35e3, base: 399, name: "Pro Plan" },
+    { n: 75e3, base: 699, name: "Scale Plan" },
+    { n: 25e4, base: 1299, name: "High-Volume Plan" },
+    { n: 1e6, base: 2299, name: "Ultra Enterprise" }
   ];
   var EMAIL_TIERS = [
     { n: 5e4, price: 0 },
-    { n: 15e4, price: 150 },
-    { n: 35e4, price: 350 },
-    { n: 75e4, price: 750 },
-    { n: 15e5, price: 1500 },
-    { n: 25e5, price: 2500 }
+    { n: 15e4, price: 0 },
+    { n: 35e4, price: 0 },
+    { n: 75e4, price: 0 },
+    { n: 15e5, price: 0 },
+    { n: 25e5, price: 0 }
   ];
   var ACTION_TIERS = [
     { n: 1e3, price: 0 },
-    { n: 6e3, price: 120 },
-    { n: 15e3, price: 280 },
-    { n: 35e3, price: 640 },
-    { n: 75e3, price: 1300 },
-    { n: 15e4, price: 2500 }
+    { n: 6e3, price: 0 },
+    { n: 15e3, price: 0 },
+    { n: 35e3, price: 0 },
+    { n: 75e3, price: 0 },
+    { n: 15e4, price: 0 }
   ];
   var CONTACT_LABELS = ["5k", "15k", "35k", "75k", "250k", "1M"];
   var EMAIL_LABELS = ["50k", "150k", "350k", "750k", "1.5M", "2.5M"];

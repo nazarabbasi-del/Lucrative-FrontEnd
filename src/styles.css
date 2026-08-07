@@ -1751,7 +1751,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 .ph-dot--red { background: var(--red-500); }
 .ph-dot--gold { background: var(--gold-500); }
 .ph-dot--blue { background: var(--blue-600); }
-.stat-line { display:flex; align-items:center; gap:10px; }
+.stat-line {
+  display: flex;
+  align-items: center;
+
+  padding: 9px 0;
+
+  border-top: 1px solid var(--border-soft);
+  font-size: 13.5px;
+}
 .ph-migration { display:flex; flex-direction:column; align-items:center; min-height:150px; justify-content:space-between; }
 .ph-migration-row { display:flex; align-items:center; gap:16px; justify-content:center; width:100%; }
 .ph-mig-chip { font-size:12px; font-weight:800; color: var(--green-600); }
@@ -1912,7 +1920,7 @@ table.comparison tbody tr:hover {
   color: var(--red-500);
 }
 
-.mini-cta { text-align:center; margin-top:0px; padding-top:48px; border-top:1px solid var(--border-soft); }
+.mini-cta { text-align:center; margin-top:0px; padding-top:20px; border-top:1px solid var(--border-soft); }
 .mini-cta-tag {
   font-size: 17px;
   font-weight: 400;

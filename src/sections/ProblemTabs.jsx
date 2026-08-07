@@ -161,7 +161,7 @@ export default function ProblemTabs() {
   }, []);
 
   function scrollToCard(i) {
-    const el = itemRefs.current[i];
+    const el = itemRefs.current[i];                                     
     if (!el) return;
     const rect = el.getBoundingClientRect();
     const targetY = window.scrollY + rect.top - STICKY_OFFSET - 8;

@@ -12,26 +12,28 @@ import Footer from '../sections/Footer';
 const CONTACT_TIERS = [
   { n: 5000, base: 99, name: 'Starter Plan' },
   { n: 15000, base: 199, name: 'Growth Plan' },
-  { n: 35000, base: 399, name: 'Scale Plan' },
-  { n: 75000, base: 799, name: 'Business Plan' },
-  { n: 250000, base: 1799, name: 'Enterprise Plan' },
-  { n: 1000000, base: 3999, name: 'Enterprise+ Plan' },
+  { n: 35000, base: 399, name: 'Pro Plan' },
+  { n: 75000, base: 699, name: 'Scale Plan' },
+  { n: 250000, base: 1299, name: 'High-Volume Plan' },
+  { n: 1000000, base: 2299, name: 'Ultra Enterprise' },
 ];
+// Emails and AI Credits are bundled with whatever contact tier you're on —
+// they never add cost of their own, at any tier.
 const EMAIL_TIERS = [
   { n: 50000, price: 0 },
-  { n: 150000, price: 150 },
-  { n: 350000, price: 350 },
-  { n: 750000, price: 750 },
-  { n: 1500000, price: 1500 },
-  { n: 2500000, price: 2500 },
+  { n: 150000, price: 0 },
+  { n: 350000, price: 0 },
+  { n: 750000, price: 0 },
+  { n: 1500000, price: 0 },
+  { n: 2500000, price: 0 },
 ];
 const ACTION_TIERS = [
   { n: 1000, price: 0 },
-  { n: 6000, price: 120 },
-  { n: 15000, price: 280 },
-  { n: 35000, price: 640 },
-  { n: 75000, price: 1300 },
-  { n: 150000, price: 2500 },
+  { n: 6000, price: 0 },
+  { n: 15000, price: 0 },
+  { n: 35000, price: 0 },
+  { n: 75000, price: 0 },
+  { n: 150000, price: 0 },
 ];
 
 const CONTACT_LABELS = ['5k', '15k', '35k', '75k', '250k', '1M'];

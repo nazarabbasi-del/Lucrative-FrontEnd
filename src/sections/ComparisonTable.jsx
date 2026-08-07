@@ -33,7 +33,12 @@ export default function ComparisonTable() {
             <span key={c}><IconCheck style={{ color: 'var(--blue-600)' }} />{c}</span>
           ))}
         </div>
-
+        <div className="mini-cta">
+          <div className="mini-cta-btns">
+            <button className="btn btn-primary">Signup Now</button>
+            <button className="btn btn-outline">Watch Demo</button>
+          </div>
+        </div>
         <div className="comparison--wrap reveal">
           <table className="comparison">
             <thead>
