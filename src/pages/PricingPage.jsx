@@ -310,7 +310,7 @@ export default function PricingPage() {
             <div style={{ marginBottom: 34 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10, gap: 16 }}>
                 <div>
-                  <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: '#121212' }}>AI Native Actions &amp; Prompts / Month</div>
+                  <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 600, fontSize: 15, color: '#121212' }}>AI Native Credits / Month</div>
                   <div style={{ fontSize: 13, color: '#7e7e7d', marginTop: 2 }}>SDR Email Drafting, CPQ Approvals, Persona Alignment &amp; Workflows.</div>
                 </div>
                 <span key={`actions-${actionsIdx}`} className="mono lc-value-pulse" style={{ padding: '6px 14px', borderRadius: 9999, background: 'rgba(24,95,165,0.08)', color: '#185fa5', fontSize: 13, fontWeight: 700, whiteSpace: 'nowrap' }}>

@@ -18,7 +18,7 @@ export default function CTABanner() {
             <p>Whether you need an AI CRM, governance, business intelligence, or intelligent quoting — Lucrative Suite grows with your business.</p>
             <div className="btns">
               <a href="#demo" className="btn btn-white">Book a Demo</a>
-              <a href="#pricing-detail" className="btn btn-outline-light">See Pricing</a>
+              <a href="/pricing" className="btn btn-outline-light">See Pricing</a>
             </div>
           </div>
           <div className="cta-check-list reveal">
