@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 // Adjust these two import paths/names to match your actual files if they
 // differ. Based on your file tree these live at: src/sections/Nav.jsx and
@@ -58,23 +58,6 @@ const FAQ_ITEMS = [
   { q: 'What happens after I submit the form?', a: 'A member of our team will review your requirements and contact you to schedule a discovery call or product demonstration based on your needs.' },
 ];
 
-const HUBSPOT_PORTAL_ID = '6539536';
-const HUBSPOT_FORM_ID = '8dc97cfd-d0af-4beb-8539-f5da30788a99';
-
-const CRM_OPTIONS = ['Salesforce', 'HubSpot', 'Microsoft Dynamics', 'Pipedrive', 'Zoho', 'Attio', 'Monday CRM', 'GoHighLevel', 'Other'];
-
-// Matches the fields configured on your live HubSpot form. The internal
-// property names below are HubSpot's own standard defaults for the first
-// five (guaranteed correct on any portal). The last three — crm,
-// interests, message — are custom properties on YOUR HubSpot account, so
-// I can't know their exact internal names for certain (HubSpot didn't
-// let me read the form definition directly — blocked by robots.txt).
-// To verify/fix: open this form in HubSpot (Marketing > Lead Capture >
-// Forms), click each of those three fields, and check the "Internal
-// name" shown in the field editor — update the `name:` values below to
-// match if they differ.
-const INTEREST_OPTIONS = ['Loft for Marketing', 'Loft for Sales', 'Stratum Analytics', 'Revenue Governance', 'Quotebase'];
-
 const LOGO_GRID = [
   { src: logoSalesforce, alt: 'Salesforce' },
   { src: logoHubspot, alt: 'HubSpot' },
@@ -121,138 +104,60 @@ function useRevealRoot() {
   return rootRef;
 }
 
-// Fully custom-styled form — no HubSpot widget, no iframe. On submit it
-// POSTs straight to HubSpot's Forms Submission API, so the lead still
-// lands in your HubSpot account exactly like the embedded widget would,
-// but every pixel of the form itself is ours to style with plain CSS.
-function ContactForm() {
-  const [values, setValues] = useState({ firstname: '', lastname: '', email: '', company: '', jobtitle: '', crm: '', message: '' });
-  const [interests, setInterests] = useState([]);
-  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+// Loads the HubSpot forms embed script once (shared across any number of
+// HubSpotForm instances / page navigations) and renders the given form
+// into this component's own container via hbspt.forms.create's `target`
+// option, rather than relying on HubSpot's script-position auto-injection
+// — which doesn't work reliably once React has taken over the DOM.
+let hubspotScriptPromise = null;
+function loadHubSpotScript() {
+  if (typeof window === 'undefined') return Promise.resolve();
+  if (window.hbspt) return Promise.resolve();
+  if (hubspotScriptPromise) return hubspotScriptPromise;
 
-  function update(field, value) {
-    setValues((v) => ({ ...v, [field]: value }));
-  }
-
-  function toggleInterest(name) {
-    setInterests((prev) => (prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]));
-  }
-
-  async function handleSubmit(ev) {
-    ev.preventDefault();
-    setStatus('submitting');
-    try {
-      const res = await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            fields: [
-              { name: 'firstname', value: values.firstname },
-              { name: 'lastname', value: values.lastname },
-              { name: 'email', value: values.email },
-              { name: 'company', value: values.company },
-              { name: 'jobtitle', value: values.jobtitle },
-              // See the comment above INTEREST_OPTIONS — verify these 3
-              // internal field names against your actual HubSpot form.
-              { name: 'crm', value: values.crm },
-              { name: 'interests', value: interests.join(';') },
-              { name: 'message', value: values.message },
-            ],
-            context: {
-              pageUri: typeof window !== 'undefined' ? window.location.href : '',
-              pageName: typeof document !== 'undefined' ? document.title : '',
-            },
-          }),
-        }
-      );
-      if (!res.ok) throw new Error(`HubSpot submission failed: ${res.status}`);
-      setStatus('success');
-    } catch (err) {
-      console.error('Contact form submission failed:', err);
-      setStatus('error');
+  hubspotScriptPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector('script[src*="js.hsforms.net/forms/embed/v2.js"]');
+    if (existing) {
+      existing.addEventListener('load', () => resolve());
+      existing.addEventListener('error', reject);
+      return;
     }
-  }
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    script.addEventListener('load', () => resolve());
+    script.addEventListener('error', reject);
+    document.body.appendChild(script);
+  });
+  return hubspotScriptPromise;
+}
 
-  if (status === 'success') {
-    return (
-      <div style={{ color: '#fff', fontSize: 15.5, lineHeight: 1.6 }}>
-        Thanks — your message is in. Our team will get back to you shortly.
-      </div>
-    );
-  }
+function HubSpotForm({ portalId, formId, region }) {
+  const containerRef = useRef(null);
 
-  return (
-    <form style={{ display: 'flex', flexDirection: 'column', gap: 18 }} onSubmit={handleSubmit}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-        <div>
-          <label className="lc-field-label">First name</label>
-          <input type="text" className="lc-field" placeholder="Jane" required value={values.firstname} onChange={(ev) => update('firstname', ev.target.value)} />
-        </div>
-        <div>
-          <label className="lc-field-label">Last name</label>
-          <input type="text" className="lc-field" placeholder="Doe" required value={values.lastname} onChange={(ev) => update('lastname', ev.target.value)} />
-        </div>
-      </div>
+  useEffect(() => {
+    let cancelled = false;
+    loadHubSpotScript()
+      .then(() => {
+        if (cancelled || !containerRef.current || !window.hbspt) return;
+        // Clear first — guards against a duplicate form appearing if this
+        // effect re-runs (e.g. React StrictMode's double-invoke in dev).
+        containerRef.current.innerHTML = '';
+        window.hbspt.forms.create({
+          portalId,
+          formId,
+          region,
+          target: `#${containerRef.current.id}`,
+        });
+      })
+      .catch((err) => console.error('Failed to load HubSpot form:', err));
+    return () => {
+      cancelled = true;
+    };
+  }, [portalId, formId, region]);
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-        <div>
-          <label className="lc-field-label">Business email</label>
-          <input type="email" className="lc-field" placeholder="jane@company.com" required value={values.email} onChange={(ev) => update('email', ev.target.value)} />
-        </div>
-        <div>
-          <label className="lc-field-label">Company</label>
-          <input type="text" className="lc-field" placeholder="Acme Inc." value={values.company} onChange={(ev) => update('company', ev.target.value)} />
-        </div>
-      </div>
-
-      <div>
-        <label className="lc-field-label">Job title</label>
-        <input type="text" className="lc-field" placeholder="VP of Revenue Operations" value={values.jobtitle} onChange={(ev) => update('jobtitle', ev.target.value)} />
-      </div>
-
-      <div>
-        <label className="lc-field-label">CRM currently using</label>
-        <select className="lc-field" value={values.crm} onChange={(ev) => update('crm', ev.target.value)}>
-          <option value="" disabled hidden></option>
-          {CRM_OPTIONS.map((opt) => (
-            <option key={opt} value={opt}>{opt}</option>
-          ))}
-        </select>
-      </div>
-
-      <div>
-        <label className="lc-field-label">Select your area of interest</label>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {INTEREST_OPTIONS.map((opt) => (
-            <label key={opt} className="lc-checkbox">
-              <input
-                type="checkbox"
-                checked={interests.includes(opt)}
-                onChange={() => toggleInterest(opt)}
-              />
-              {opt}
-            </label>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <label className="lc-field-label">Biggest challenge</label>
-        <textarea className="lc-field" rows={3} placeholder="Tell us what you're trying to solve" value={values.message} onChange={(ev) => update('message', ev.target.value)} />
-      </div>
-
-      {status === 'error' && (
-        <div style={{ color: '#f4a68a', fontSize: 13 }}>Something went wrong sending that — please try again.</div>
-      )}
-
-      <button type="submit" className="lc-btn-primary" disabled={status === 'submitting'} style={{ width: '100%', justifyContent: 'center', background: '#185fa5', fontSize: 15.5, padding: '15px 26px', marginTop: 4, opacity: status === 'submitting' ? 0.7 : 1 }}>
-        {status === 'submitting' ? 'Submitting…' : 'Submit'}
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-      </button>
-    </form>
-  );
+  return <div ref={containerRef} id="hubspot-contact-form" className="lc-hubspot-form" />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -302,9 +207,9 @@ export default function ContactPage() {
             <img src={formSideImg} alt="" style={{ maxWidth: 440, width: '100%', marginTop: 'auto', alignSelf: 'center' }} />
           </div>
 
-          {/* RIGHT: Form (custom-styled, submits to HubSpot via fetch) */}
+          {/* RIGHT: Form (HubSpot embed) */}
           <div className="lc-reveal" style={{ transitionDelay: '120ms', background: '#0f2e4d', borderRadius: 22, padding: '36px 34px' }}>
-            <ContactForm />
+            <HubSpotForm portalId="6539536" formId="8dc97cfd-d0af-4beb-8539-f5da30788a99" region="na1" />
           </div>
         </div>
       </section>
@@ -434,8 +339,30 @@ const CONTACT_CSS = `
 .lc-contact-page .lc-reveal{opacity:0;transform:translateY(26px);transition:opacity 700ms cubic-bezier(.2,.7,.3,1),transform 700ms cubic-bezier(.2,.7,.3,1);}
 .lc-contact-page .lc-reveal.is-visible{opacity:1;transform:translateY(0);}
 
-.lc-contact-page .lc-checkbox{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,0.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);cursor:pointer;font-size:13.5px;color:#fff;}
-.lc-contact-page .lc-checkbox input{accent-color:#185fa5;width:16px;height:16px;flex-shrink:0;}
+/* Best-effort restyle of the embedded HubSpot form to match the dark
+   card it sits in. HubSpot injects its own default stylesheet with its
+   own specificity, so these need !important to reliably win. HubSpot's
+   exact class names can vary slightly by form/portal config — inspect
+   the rendered form once live and adjust selectors here if anything
+   still shows through unstyled. */
+.lc-contact-page .lc-hubspot-form .hs-form-field{margin-bottom:0 !important;}
+.lc-contact-page .lc-hubspot-form form{display:flex !important;flex-direction:column;gap:18px;}
+.lc-contact-page .lc-hubspot-form label{font-size:13px !important;font-weight:600 !important;color:#a9c6e6 !important;margin-bottom:8px !important;display:block !important;}
+.lc-contact-page .lc-hubspot-form .hs-form-required{color:#f4c96a !important;}
+.lc-contact-page .lc-hubspot-form input[type="text"],
+.lc-contact-page .lc-hubspot-form input[type="email"],
+.lc-contact-page .lc-hubspot-form input[type="tel"],
+.lc-contact-page .lc-hubspot-form select,
+.lc-contact-page .lc-hubspot-form textarea{-webkit-appearance:none;appearance:none;width:100% !important;padding:13px 16px !important;border:none !important;border-radius:12px !important;background:rgba(255,255,255,0.08) !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16) !important;color:#fff !important;font-family:'Lato',sans-serif !important;font-size:14.5px !important;outline:none !important;transition:box-shadow 150ms ease;}
+.lc-contact-page .lc-hubspot-form input:focus,
+.lc-contact-page .lc-hubspot-form select:focus,
+.lc-contact-page .lc-hubspot-form textarea:focus{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.45) !important;}
+.lc-contact-page .lc-hubspot-form ::placeholder{color:#7fa8d4 !important;}
+.lc-contact-page .lc-hubspot-form .hs-error-msgs{list-style:none;margin:6px 0 0;padding:0;}
+.lc-contact-page .lc-hubspot-form .hs-error-msgs label{color:#f4a68a !important;font-weight:500 !important;}
+.lc-contact-page .lc-hubspot-form .hs-button{width:100% !important;justify-content:center;background:#185fa5 !important;color:#fff !important;border:none !important;border-radius:9999px !important;font-weight:700 !important;font-size:15.5px !important;padding:15px 26px !important;margin-top:4px !important;cursor:pointer;}
+.lc-contact-page .lc-hubspot-form .hs-button:hover{background:#0f4c85 !important;}
+.lc-contact-page .lc-hubspot-form .submitted-message{color:#fff !important;font-size:15px;line-height:1.6;}
 
 @media (max-width: 900px) {
   .lc-contact-page .lc-hero > div,
